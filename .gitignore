@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 환경 변수
+.env
+.env.local
+
+# 대용량 원본 데이터 (필요시 주석 해제)
+# data/raw/*.txt
+# data/raw/*.pdf
+
+# 임시 파일
+*.tmp
+*.temp
+~$*
+
+# 로그
+*.log
+logs/
