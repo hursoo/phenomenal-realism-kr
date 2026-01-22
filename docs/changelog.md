@@ -27,6 +27,9 @@
 - `scripts/calc_similarity_stats.py`: 유사도 분포 통계 분석 스크립트
 - `scripts/analyze_jinhwa_context.py`: '進化' 맥락 분류 스크립트
 - `docs/REVISION_LOG.md`: 비평 및 수정 과정 기록
+- I장 "연구 방법": 메치니코프 장(章) 문장 단위 선행 분석 결과 참조 박스 추가
+  - 제8장 689문장 → 175문장 압축 (1/3)
+  - LLR 분석: 과학 어휘 생존, 철학/권위 어휘 삭제 패턴 확인
 
 ### 참고
 - 상세 비평 및 수정 근거: `docs/REVISION_LOG.md` 참조
