@@ -165,7 +165,7 @@ chapter_labels_1924 = {
     'C03': '제3장\n人乃天과眞理',
     'C04': '제4장\n人乃天의目的',
     'C05': '제5장\n人乃天의修煉',
-    'C06': '제6장\n雜感'
+    'C06': '제6장\n인내천의雜感'
 }
 
 col_labels = [chapter_labels_1924.get(c, c) for c in chapters_1924]
