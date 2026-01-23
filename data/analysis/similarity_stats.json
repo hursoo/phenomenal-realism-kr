@@ -1,0 +1,97 @@
+{
+  "calculation_date": "2026-01-23",
+  "version": "v2 (hybrid aggregation)",
+  "threshold": 0.1,
+  "filter_conditions": {
+    "include": "line_class = 'TEXT'",
+    "exclude": "structure_id in ['TOC', 'ROOT']"
+  },
+  "paragraph_counts": {
+    "1915": 626,
+    "1924": 365
+  },
+  "total_pairs": 228490,
+  "pairs_above_threshold": 135,
+  "pairs_above_threshold_pct": 0.0591,
+  "statistics": {
+    "mean": 0.005036,
+    "std": 0.010333,
+    "min": 0.0,
+    "max": 0.307692,
+    "median": 0.0
+  },
+  "percentiles": {
+    "P90": 0.018519,
+    "P95": 0.025641,
+    "P99": 0.042857,
+    "P99.5": 0.051724
+  },
+  "aggregation_method": {
+    "chapter_section_max": "해당 구간 내 최대 유사도",
+    "chapter_section_count": "0.1 이상인 문단 쌍 개수",
+    "chapter_chapter_max": "해당 구간 내 최대 유사도",
+    "chapter_chapter_count": "0.1 이상인 문단 쌍 개수"
+  },
+  "top10_pairs": [
+    {
+      "rank": 1,
+      "pid_1915": "C13-S01-P05",
+      "pid_1924": "C06-S06-P06",
+      "similarity": 0.3076923076923077
+    },
+    {
+      "rank": 2,
+      "pid_1915": "C02-P29",
+      "pid_1924": "C03-S04-I02-P01",
+      "similarity": 0.25
+    },
+    {
+      "rank": 3,
+      "pid_1915": "C06-P17",
+      "pid_1924": "C03-S04-I05-P03",
+      "similarity": 0.25
+    },
+    {
+      "rank": 4,
+      "pid_1915": "C13-S03-P02",
+      "pid_1924": "C06-S06-P02",
+      "similarity": 0.25
+    },
+    {
+      "rank": 5,
+      "pid_1915": "C14-S03-P01",
+      "pid_1924": "C06-S06-P09",
+      "similarity": 0.25
+    },
+    {
+      "rank": 6,
+      "pid_1915": "C21-P16",
+      "pid_1924": "C01-S02-I03-P01",
+      "similarity": 0.25
+    },
+    {
+      "rank": 7,
+      "pid_1915": "C01-S03-P02",
+      "pid_1924": "C06-S06-P02",
+      "similarity": 0.2
+    },
+    {
+      "rank": 8,
+      "pid_1915": "C01-S03-P03",
+      "pid_1924": "C06-S06-P09",
+      "similarity": 0.2
+    },
+    {
+      "rank": 9,
+      "pid_1915": "C13-S01-P01",
+      "pid_1924": "C06-S06-P02",
+      "similarity": 0.2
+    },
+    {
+      "rank": 10,
+      "pid_1915": "C14-S03-P04",
+      "pid_1924": "C06-S06-P14",
+      "similarity": 0.1836734693877551
+    }
+  ]
+}
