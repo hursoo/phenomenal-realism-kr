@@ -57,5 +57,5 @@ streamlit run app/app.py              # 발표용 웹앱 실행
 | `docs/research-log/2025-01-23-철학빈도분석.md` | '哲學' 빈도 분석 기록 |
 | `docs/research-log/2025-01-23-허수논문반영.md` | 허수(2025) 논문 반영 작업 |
 | `docs/analysis-notes/paragraph-similarity.md` | 문단 유사도 분석 방법론 및 결과 |
-| `docs/analysis-notes/chapter-heatmap.md` | 장-장 히트맵 분석 |
+| `docs/analysis-notes/chapter-heatmap.md` | 장-장 히트맵 분석, **방법론 요약 포함** |
 | `docs/analysis-notes/chapter-pairs-detail.md` | 주요 장-장 조합 상세 분석 |
