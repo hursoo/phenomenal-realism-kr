@@ -69,6 +69,22 @@ streamlit run app/app.py              # 발표용 웹앱 실행
 - C03 人乃天과眞理: 45개
 - C06 인내천의雜感: 63개
 
+## 종합 분석 보고서
+
+**`docs/analysis-reports/paragraph-similarity-analysis-report.md`** — 독립적으로 이해 가능한 완결적 분석 보고서
+
+| 장 | 내용 |
+|---|------|
+| 제1장 | 연구 배경과 목적 |
+| 제2장 | 연구 방법론 (코퍼스 구축, 한자어 자카드 유사도) |
+| 제3장 | 유사도 분포와 임계값 0.1 설정의 타당성 |
+| 제4장 | 노이즈 필터링 (135개 → 111개) |
+| 제5장 | 장-장 단위 분포 분석 (히트맵) |
+| 제6장 | 핵심 구간 상세 분석 (C03-S04, C06-S06) |
+| 제7장 | 종합 해석 ('이데올로기적 모듈'로서의 차용) |
+| 제8장 | 결론 및 한계 |
+| 부록 | 데이터 파일 목록, 상위 20개 참조쌍, 관련 문서 목록 |
+
 ## 상세 문서
 
 | 문서 | 내용 |
@@ -83,6 +99,7 @@ streamlit run app/app.py              # 발표용 웹앱 실행
 | `docs/analysis-notes/i02-realite-flow-analysis.md` | **I02 實在와 人乃天 논리 흐름 분석** |
 | `docs/analysis-notes/i05-consciousness-flow-analysis.md` | **I05 意識과 人乃天 논리 흐름 분석** |
 | `docs/analysis-notes/c06-reference-analysis.md` | **C06 인내천의 雜感 참조 분석** (70개 쌍, S06 집중) |
+| `docs/analysis-notes/c13-c06-reference-analysis.md` | **C13×C06 儒基 비교 프레임워크 차용** (31개 쌍) |
 | `docs/analysis-notes/c14-c06-reference-analysis.md` | **C14×C06 佛基 비교 프레임워크 차용** (20개 쌍) |
 | `docs/analysis-notes/validated-pairs-filtering.md` | **참조쌍 노이즈 필터링 검증** (135→111개) |
 
@@ -94,3 +111,4 @@ streamlit run app/app.py              # 발표용 웹앱 실행
 | `app/data/C06_참조분석.xlsx` | 제6장 섹션별 참조쌍 분석 (70개) |
 | `app/data/人乃天主義_분포.xlsx` | '人乃天主義' 용어 사용 분포 (19회) |
 | `data/analysis/validated_pairs_final.csv` | **최종 검증된 참조쌍** (111개, 노이즈 24개 제외) |
+| `docs/analysis-reports/paragraph-similarity-data.xlsx` | **종합 보고서 데이터** (6개 시트: 요약통계, 장별분포, 주요조합, C03/C06 참조쌍, 전체 111개) |
