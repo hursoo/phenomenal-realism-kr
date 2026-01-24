@@ -85,7 +85,7 @@
 |--------|------|
 | `calc_paragraph_similarity_v2.py` | **메인 산출 스크립트** (재현용) |
 | `compare_methods.py` | 기존 vs 새 분석 비교 |
-| `show_c06_pairs.py` | C06×C03-S04 24개 쌍 상세 출력 |
+| `show_c06_pairs.py` | C06×C03-S04 23개 쌍 상세 출력 |
 | `check_mechnikov_similarity.py` | 맹장 구간 검증 |
 
 ## app.py 수정 내역
