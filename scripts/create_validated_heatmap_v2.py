@@ -113,7 +113,7 @@ ax.set_facecolor('white')
 
 ax.set_xlabel('『인내천요의』(1924)', fontsize=14, fontweight='bold')
 ax.set_ylabel('『철학과 종교』(1915)', fontsize=14, fontweight='bold')
-ax.set_title(f'문단 유사도 ≥ 0.1 기준 장-장 평균 히트맵\n(유효 {len(df)}개, 노이즈 24개 제외, 흰색 = 유의미한 참조 쌍 없음)', fontsize=16, fontweight='bold', pad=20)
+ax.set_title(f'장-장 단위 유효 참조쌍 분포 ({len(df)}개)\n한자어 자카드 유사도 ≥ 0.1, 노이즈 24개 제외', fontsize=16, fontweight='bold', pad=20)
 
 # y축 레이블 가로쓰기
 ax.set_yticklabels(ax.get_yticklabels(), rotation=0, fontsize=9)
