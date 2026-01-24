@@ -68,14 +68,14 @@ streamlit run app/app.py              # 발표용 웹앱 실행
 
 **유효 쌍 분포 (1924 장별)**:
 - C01 緖言: 3개
-- C03 人乃天과眞理: 45개
-- C06 인내천의雜感: 63개
+- C03 人乃天과 眞理: 45개
+- C06 人乃天에 對한 雜感: 63개
 
 ## 종합 분석 보고서
 
 ### 통합 보고서 (논문/발표용)
 
-**`docs/analysis-reports/integrated-analysis-report.md`** — 3장6절 체제의 논문/발표용 통합 보고서
+**`docs/analysis-reports/integrated-analysis-report.md`** — 「디지털문헌학으로 본 20세기 초 현상즉실재론의 한국 유입: 『철학과 종교』에 대한 이돈화의 취사선택을 중심으로」
 
 | 장 | 절 | 내용 |
 |---|---|------|
@@ -114,7 +114,7 @@ streamlit run app/app.py              # 발표용 웹앱 실행
 | `docs/analysis-notes/c03s04-reference-analysis.md` | **C03-S04 항별 참조 분석** (52개 쌍) |
 | `docs/analysis-notes/i02-realite-flow-analysis.md` | **I02 實在와 人乃天 논리 흐름 분석** |
 | `docs/analysis-notes/i05-consciousness-flow-analysis.md` | **I05 意識과 人乃天 논리 흐름 분석** |
-| `docs/analysis-notes/c06-reference-analysis.md` | **C06 인내천의 雜感 참조 분석** (70개 쌍, S06 집중) |
+| `docs/analysis-notes/c06-reference-analysis.md` | **C06 人乃天에 對한 雜感 참조 분석** (70개 쌍, S06 집중) |
 | `docs/analysis-notes/c13-c06-reference-analysis.md` | **C13×C06 儒基 비교 프레임워크 차용** (31개 쌍) |
 | `docs/analysis-notes/c14-c06-reference-analysis.md` | **C14×C06 佛基 비교 프레임워크 차용** (20개 쌍) |
 | `docs/analysis-notes/validated-pairs-filtering.md` | **참조쌍 노이즈 필터링 검증** (135→111개) |
