@@ -83,6 +83,7 @@ streamlit run app/app.py              # 발표용 웹앱 실행
 | `docs/analysis-notes/i02-realite-flow-analysis.md` | **I02 實在와 人乃天 논리 흐름 분석** |
 | `docs/analysis-notes/i05-consciousness-flow-analysis.md` | **I05 意識과 人乃天 논리 흐름 분석** |
 | `docs/analysis-notes/c06-reference-analysis.md` | **C06 인내천의 雜感 참조 분석** (70개 쌍, S06 집중) |
+| `docs/analysis-notes/c14-c06-reference-analysis.md` | **C14×C06 佛基 비교 프레임워크 차용** (20개 쌍) |
 | `docs/analysis-notes/validated-pairs-filtering.md` | **참조쌍 노이즈 필터링 검증** (135→111개) |
 
 ## 데이터 파일
