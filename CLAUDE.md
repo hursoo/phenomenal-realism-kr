@@ -59,3 +59,13 @@ streamlit run app/app.py              # 발표용 웹앱 실행
 | `docs/analysis-notes/paragraph-similarity.md` | 문단 유사도 분석 방법론 및 결과 |
 | `docs/analysis-notes/chapter-heatmap.md` | 장-장 히트맵 분석, **방법론 요약 포함** |
 | `docs/analysis-notes/chapter-pairs-detail.md` | 주요 장-장 조합 상세 분석 |
+| `docs/analysis-notes/c03s04-reference-analysis.md` | **C03-S04 항별 참조 분석** (52개 쌍) |
+| `docs/analysis-notes/i02-realite-flow-analysis.md` | **I02 實在와 人乃天 논리 흐름 분석** |
+| `docs/analysis-notes/i05-consciousness-flow-analysis.md` | **I05 意識과 人乃天 논리 흐름 분석** |
+
+## 데이터 파일
+
+| 파일 | 내용 |
+|------|------|
+| `app/data/C03-S04_참조분석.xlsx` | 제3장4절 항별 참조쌍 분석 (52개) |
+| `app/data/人乃天主義_분포.xlsx` | '人乃天主義' 용어 사용 분포 (19회) |
