@@ -72,7 +72,7 @@ col_labels = [chapter_labels_1924.get(c, c) for c in chapters_1924]
 # 히트맵용 마스크 (NaN인 곳)
 mask = pivot_avg.isna()
 
-# 어노테이션용: 평균값과 개수 함께 표시
+# 어노테이션용: 개수를 먼저, 괄호 안에 평균 유사도
 annot_data = []
 for i, idx in enumerate(chapters_1915):
     row_annot = []
@@ -82,26 +82,29 @@ for i, idx in enumerate(chapters_1915):
         if pd.isna(avg_val) or cnt_val == 0:
             row_annot.append('')  # 빈 셀
         else:
-            row_annot.append(f'{avg_val:.2f}\n({int(cnt_val)}개)')
+            row_annot.append(f'{int(cnt_val)}개\n({avg_val:.2f})')
     annot_data.append(row_annot)
 
 annot_df = pd.DataFrame(annot_data, index=chapters_1915, columns=chapters_1924)
 
-# 히트맵
+# 개수 기준 마스크 (0인 곳)
+mask_count = pivot_count == 0
+
+# 히트맵 (개수 기준 색상)
 sns.heatmap(
-    pivot_avg,
+    pivot_count,
     annot=annot_df,
     fmt='',
     cmap='YlOrRd',
     xticklabels=col_labels,
     yticklabels=chapters_1915,
-    cbar_kws={'label': '평균 유사도 (노이즈 24개 제외)', 'shrink': 0.5},
+    cbar_kws={'label': '참조쌍 개수 (노이즈 24개 제외)', 'shrink': 0.5},
     ax=ax,
-    vmin=0.1,
-    vmax=0.25,
+    vmin=0,
+    vmax=35,
     linewidths=0.5,
     linecolor='lightgray',
-    mask=mask,
+    mask=mask_count,
     annot_kws={'fontsize': 8}
 )
 
