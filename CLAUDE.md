@@ -47,6 +47,8 @@ streamlit run app/app.py              # 발표용 웹앱 실행
 
 ## 현재 작업 상태 (2026-01-24)
 
+**통합 보고서 완성**: 3장6절 체제 논문/발표용 보고서 (`integrated-analysis-report.md`) 작성 완료.
+
 문단 유사도 재산출 완료 (228,490개 쌍, 임계값 0.1). **최종 검증 완료: 135개 → 111개 유효 쌍** (24개 노이즈 제외).
 
 ### 참조쌍 노이즈 필터링 (2026-01-24 확정)
@@ -71,7 +73,21 @@ streamlit run app/app.py              # 발표용 웹앱 실행
 
 ## 종합 분석 보고서
 
-**`docs/analysis-reports/paragraph-similarity-analysis-report.md`** — 독립적으로 이해 가능한 완결적 분석 보고서
+### 통합 보고서 (논문/발표용)
+
+**`docs/analysis-reports/integrated-analysis-report.md`** — 3장6절 체제의 논문/발표용 통합 보고서
+
+| 장 | 절 | 내용 |
+|---|---|------|
+| Ⅰ | 머리말 | 연구 배경, 선행연구(허수 2011, 2015), 연구 질문 |
+| Ⅱ | 연구 설계 | 2.1 코퍼스 구축, 2.2 분석 방법론 (자카드 유사도) |
+| Ⅲ | 참조쌍 분석 | 3.1 분포 분석, 3.2 핵심 구간 분석 (C03-S04, C06-S06) |
+| Ⅳ | 차용의 양상과 해석 | 4.1 지식의 차용, 4.2 '哲學' 기표의 소거 |
+| Ⅴ | 맺음말 | 결론 및 한계 |
+
+### 상세 분석 보고서
+
+**`docs/analysis-reports/paragraph-similarity-analysis-report.md`** — 8장 체제 상세 분석 보고서
 
 | 장 | 내용 |
 |---|------|
@@ -102,6 +118,7 @@ streamlit run app/app.py              # 발표용 웹앱 실행
 | `docs/analysis-notes/c13-c06-reference-analysis.md` | **C13×C06 儒基 비교 프레임워크 차용** (31개 쌍) |
 | `docs/analysis-notes/c14-c06-reference-analysis.md` | **C14×C06 佛基 비교 프레임워크 차용** (20개 쌍) |
 | `docs/analysis-notes/validated-pairs-filtering.md` | **참조쌍 노이즈 필터링 검증** (135→111개) |
+| `docs/analysis-reports/chapter8-philosophy-signifier-analysis.md` | **'哲學' 기표 소거 분석** (대체어 패턴 3종) |
 
 ## 데이터 파일
 
