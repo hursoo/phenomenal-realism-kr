@@ -204,8 +204,8 @@ def render_common_tokens_table():
     render_table("common_tokens_table")
 
 
-def render_range_table():
-    render_table("range_table")
+def render_range_example_table():
+    render_table("range_example_table")
 
 
 def render_valid_pairs_table():
@@ -385,7 +385,7 @@ COMPONENTS_02_1 = {
 COMPONENTS_02_2 = {
     "stats_table": render_stats_table,
     "common_tokens_table": render_common_tokens_table,
-    "range_table": render_range_table,
+    "range_example_table": render_range_example_table,
     "valid_pairs_table": render_valid_pairs_table,
 }
 
