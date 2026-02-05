@@ -34,6 +34,14 @@ Thumbs.db
 *.tmp
 *.temp
 ~$*
+temp_*
+nul
+
+# Claude Code
+.claude/
+
+# 기타 임시 이미지/문서
+표오류형태.jpg
 
 # 로그
 *.log
