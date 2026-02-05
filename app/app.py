@@ -237,6 +237,17 @@ def render_heatmap():
                 st.info("히트맵 이미지 파일을 찾을 수 없습니다.")
 
 
+def render_network_graph():
+    network_path = os.path.join(os.path.dirname(__file__), "..", "images", "reference_pairs_network.html")
+    if os.path.exists(network_path):
+        with open(network_path, "r", encoding="utf-8") as f:
+            html_content = f.read()
+        import streamlit.components.v1 as components
+        components.html(html_content, height=1400, scrolling=True)
+    else:
+        st.info("네트워크 그래프 파일을 찾을 수 없습니다.")
+
+
 def render_ref_table():
     render_table("ref_table")
 
@@ -268,6 +279,10 @@ def render_phil_freq_table():
 def render_rank_chart():
     fig = create_philosophy_rank_chart()
     st.plotly_chart(fig, use_container_width=True)
+
+
+def render_freq_compare_table():
+    render_table("freq_compare_table")
 
 
 def render_inverse_table():
@@ -392,6 +407,7 @@ COMPONENTS_02_2 = {
 COMPONENTS_03_1 = {
     "chapter_dist_table": render_chapter_dist_table,
     "heatmap": render_heatmap,
+    "network_graph": render_network_graph,
     "ref_table": render_ref_table,
     "c03s04_table": render_c03s04_table,
     "c06s06_table": render_c06s06_table,
@@ -404,6 +420,7 @@ COMPONENTS_03_2 = {
 
 COMPONENTS_04_1 = {
     "phil_freq_table": render_phil_freq_table,
+    "freq_compare_table": render_freq_compare_table,
     "inverse_table": render_inverse_table,
 }
 
