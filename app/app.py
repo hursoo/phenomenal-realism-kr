@@ -327,10 +327,25 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# 다운로드 툴바 숨기기
+# 스타일 설정
 st.markdown("""
     <style>
+    /* 다운로드 툴바 숨기기 */
     [data-testid="stElementToolbar"] { display: none; }
+
+    /* 사이드바 너비 축소 */
+    [data-testid="stSidebar"] { min-width: 240px; max-width: 240px; }
+
+    /* 사이드바 목차 */
+    .toc a {
+        display: block;
+        padding: 3px 0;
+        color: inherit;
+        text-decoration: none;
+        font-size: 13px;
+    }
+    .toc a:hover { color: #ff4b4b; }
+    .toc a.sub { padding-left: 12px; font-size: 12px; }
     </style>
     """, unsafe_allow_html=True)
 
@@ -340,23 +355,22 @@ st.markdown("""
 # =============================================================================
 
 st.sidebar.title("목차")
-selection = st.sidebar.radio(
-    "이동하기",
-    [
-        "Ⅰ. 머리말",
-        "Ⅱ. DB 구축과 다국어 비교 방법",
-        "　　1. 문단별 데이터를 비교 단위로",
-        "　　2. 공통 한자어 비율을 계산",
-        "Ⅲ. 취사선택 양상과 특징",
-        "　　1. 실재, 의식 및 종교 비교",
-        "　　2. 보편화하기와 비교하기",
-        "Ⅳ. 철학 개념을 다루는 방식",
-        "　　1. 철학적이지만 '철학'은 회피",
-        "　　2. 哲理로서의 인내천",
-        "Ⅴ. 맺음말",
-        "부록"
-    ]
-)
+st.sidebar.markdown("""
+<div class="toc">
+<a href="#sec-1" target="_self">Ⅰ. 머리말</a>
+<a href="#sec-2" target="_self">Ⅱ. DB 구축과 다국어 비교 방법</a>
+<a class="sub" href="#sec-2-1" target="_self">1. 문단별 데이터를 비교 단위로</a>
+<a class="sub" href="#sec-2-2" target="_self">2. 공통 한자어 비율을 계산</a>
+<a href="#sec-3" target="_self">Ⅲ. 취사선택 양상과 특징</a>
+<a class="sub" href="#sec-3-1" target="_self">1. 실재, 의식 및 종교 비교</a>
+<a class="sub" href="#sec-3-2" target="_self">2. 보편화하기와 비교하기</a>
+<a href="#sec-4" target="_self">Ⅳ. 철학 개념을 다루는 방식</a>
+<a class="sub" href="#sec-4-1" target="_self">1. 철학적이지만 '철학'은 회피</a>
+<a class="sub" href="#sec-4-2" target="_self">2. 哲理로서의 인내천</a>
+<a href="#sec-5" target="_self">Ⅴ. 맺음말</a>
+<a href="#sec-6" target="_self">부록</a>
+</div>
+""", unsafe_allow_html=True)
 
 
 # =============================================================================
@@ -411,76 +425,67 @@ COMPONENTS_06 = {
 # Ⅰ. 머리말
 # =============================================================================
 
-if selection == "Ⅰ. 머리말":
-    content = load_section("01_머리말.md")
-    render_section(content, {})
+st.markdown('<div id="sec-1"></div>', unsafe_allow_html=True)
+render_section(load_section("01_머리말.md"), {})
 
 
 # =============================================================================
-# Ⅱ. 연구 설계
+# Ⅱ. DB 구축과 다국어 비교 방법
 # =============================================================================
 
-elif selection in ["Ⅱ. DB 구축과 다국어 비교 방법", "　　1. 문단별 데이터를 비교 단위로", "　　2. 공통 한자어 비율을 계산"]:
-    st.header("Ⅱ. DB 구축과 다국어 비교 방법")
+st.markdown('<div id="sec-2"></div>', unsafe_allow_html=True)
+st.header("Ⅱ. DB 구축과 다국어 비교 방법")
 
-    if selection in ["Ⅱ. DB 구축과 다국어 비교 방법", "　　1. 문단별 데이터를 비교 단위로"]:
-        content = load_section("02-1_문단별_데이터.md")
-        render_section(content, COMPONENTS_02_1)
+st.markdown('<div id="sec-2-1"></div>', unsafe_allow_html=True)
+render_section(load_section("02-1_문단별_데이터.md"), COMPONENTS_02_1)
 
-    if selection in ["Ⅱ. DB 구축과 다국어 비교 방법", "　　2. 공통 한자어 비율을 계산"]:
-        content = load_section("02-2_공통_한자어_비율.md")
-        render_section(content, COMPONENTS_02_2)
+st.markdown('<div id="sec-2-2"></div>', unsafe_allow_html=True)
+render_section(load_section("02-2_공통_한자어_비율.md"), COMPONENTS_02_2)
 
 
 # =============================================================================
 # Ⅲ. 취사선택 양상과 특징
 # =============================================================================
 
-elif selection in ["Ⅲ. 취사선택 양상과 특징", "　　1. 실재, 의식 및 종교 비교", "　　2. 보편화하기와 비교하기"]:
-    st.header("Ⅲ. 취사선택 양상과 특징")
+st.markdown('<div id="sec-3"></div>', unsafe_allow_html=True)
+st.header("Ⅲ. 취사선택 양상과 특징")
 
-    if selection in ["Ⅲ. 취사선택 양상과 특징", "　　1. 실재, 의식 및 종교 비교"]:
-        content = load_section("03-1_분포와_특징.md")
-        render_section(content, COMPONENTS_03_1)
+st.markdown('<div id="sec-3-1"></div>', unsafe_allow_html=True)
+render_section(load_section("03-1_분포와_특징.md"), COMPONENTS_03_1)
 
-    if selection in ["Ⅲ. 취사선택 양상과 특징", "　　2. 보편화하기와 비교하기"]:
-        content = load_section("03-2_보편화와_비교.md")
-        render_section(content, COMPONENTS_03_2)
+st.markdown('<div id="sec-3-2"></div>', unsafe_allow_html=True)
+render_section(load_section("03-2_보편화와_비교.md"), COMPONENTS_03_2)
 
 
 # =============================================================================
 # Ⅳ. 철학 개념을 다루는 방식
 # =============================================================================
 
-elif selection in ["Ⅳ. 철학 개념을 다루는 방식", "　　1. 철학적이지만 '철학'은 회피", "　　2. 哲理로서의 인내천"]:
-    st.header("Ⅳ. 철학 개념을 다루는 방식")
+st.markdown('<div id="sec-4"></div>', unsafe_allow_html=True)
+st.header("Ⅳ. 철학 개념을 다루는 방식")
 
-    if selection in ["Ⅳ. 철학 개념을 다루는 방식", "　　1. 철학적이지만 '철학'은 회피"]:
-        content = load_section("04-1_철학_기표_소거.md")
-        render_section(content, COMPONENTS_04_1)
+st.markdown('<div id="sec-4-1"></div>', unsafe_allow_html=True)
+render_section(load_section("04-1_철학_기표_소거.md"), COMPONENTS_04_1)
 
-    if selection in ["Ⅳ. 철학 개념을 다루는 방식", "　　2. 哲理로서의 인내천"]:
-        content = load_section("04-2_철리_인내천.md")
-        render_section(content, COMPONENTS_04_2)
+st.markdown('<div id="sec-4-2"></div>', unsafe_allow_html=True)
+render_section(load_section("04-2_철리_인내천.md"), COMPONENTS_04_2)
 
 
 # =============================================================================
 # Ⅴ. 맺음말
 # =============================================================================
 
-elif selection == "Ⅴ. 맺음말":
-    content = load_section("05_맺음말.md")
-    render_section(content, {})
+st.markdown('<div id="sec-5"></div>', unsafe_allow_html=True)
+render_section(load_section("05_맺음말.md"), {})
 
 
 # =============================================================================
 # 부록
 # =============================================================================
 
-elif selection == "부록":
-    st.header("부록")
-    content = load_section("06_부록.md")
-    render_section(content, COMPONENTS_06)
+st.markdown('<div id="sec-6"></div>', unsafe_allow_html=True)
+st.header("부록")
+render_section(load_section("06_부록.md"), COMPONENTS_06)
 
 
 # =============================================================================
