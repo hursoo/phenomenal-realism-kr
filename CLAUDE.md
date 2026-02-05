@@ -13,11 +13,25 @@ streamlit run app/app.py              # 발표용 웹앱 실행
 
 ## Architecture
 
-- **app/app.py**: Streamlit 발표용 웹앱 (I.서론 ~ V.가치의전복)
-- **app/data/**: `BK_IT_1915_PR_v1.3.xlsx` (11,088행), `BK_YD_1924_IY_v1.2.xlsx` (2,254행)
-- **data/analysis/**: 유사도 분석 결과 (CSV, JSON)
-- **scripts/**: 분석 스크립트
-- **docs/**: 상세 문서
+```
+phenomenal-realism-kr/
+├── app/
+│   ├── app.py                  # Streamlit 발표용 웹앱 (Ⅰ.머리말 ~ Ⅴ.맺음말)
+│   └── requirements.txt
+├── data/
+│   ├── corpus/                 # 코퍼스 원본 DB (1벌)
+│   │   ├── BK_IT_1915_PR_v1.3.xlsx   # 철학과 종교 (11,088행)
+│   │   ├── BK_IT_1915_PR.txt
+│   │   ├── BK_YD_1924_IY_v1.2.xlsx   # 인내천요의 (2,254행)
+│   │   └── BK_YD_1924_IY.txt
+│   └── analysis/               # 유사도 분석 결과 (CSV, JSON)
+├── docs/                       # 연구 문서, 분석 노트, 보고서
+├── images/                     # 앱 사용 이미지
+├── scripts/                    # 분석 스크립트
+├── 삭제검토대상/                 # 삭제 검토 중인 파일
+├── CLAUDE.md
+└── README.md
+```
 
 ### Data Structure
 
@@ -45,7 +59,7 @@ streamlit run app/app.py              # 발표용 웹앱 실행
 - **포함**: `line_class`가 `TEXT`, `STRUCT`인 행
 - **제외**: `RTC_TEXT`, `ANNOTATION`, `structure_id`가 `TOC`/`ROOT`
 
-## 현재 작업 상태 (2026-02-04)
+## 현재 작업 상태 (2026-02-05)
 
 ### 학술대회 발표문 웹앱 업데이트 (진행 중)
 
@@ -54,6 +68,7 @@ streamlit run app/app.py              # 발표용 웹앱 실행
 **완료된 작업**:
 1. 현재 웹앱 스토리라인 점검 완료
 2. 장절별 논지 중심 스토리라인 정리 → `docs/presentation-storyline.md` 저장
+3. 폴더 구조 단순화 완료 (DB 통합, 빈 디렉토리 정리, 구버전 삭제)
 
 **다음 작업**:
 - 스토리라인 기반으로 웹앱 내용 수정/보완 필요
@@ -144,8 +159,7 @@ streamlit run app/app.py              # 발표용 웹앱 실행
 
 | 파일 | 내용 |
 |------|------|
-| `app/data/C03-S04_참조분석.xlsx` | 제3장4절 항별 참조쌍 분석 (52개) |
-| `app/data/C06_참조분석.xlsx` | 제6장 섹션별 참조쌍 분석 (70개) |
-| `app/data/人乃天主義_분포.xlsx` | '人乃天主義' 용어 사용 분포 (19회) |
+| `data/corpus/BK_IT_1915_PR_v1.3.xlsx` | 철학과 종교 코퍼스 DB (11,088행) |
+| `data/corpus/BK_YD_1924_IY_v1.2.xlsx` | 인내천요의 코퍼스 DB (2,254행) |
 | `data/analysis/validated_pairs_final.csv` | **최종 검증된 참조쌍** (111개, 노이즈 24개 제외) |
 | `docs/analysis-reports/paragraph-similarity-data.xlsx` | **종합 보고서 데이터** (6개 시트: 요약통계, 장별분포, 주요조합, C03/C06 참조쌍, 전체 111개) |
