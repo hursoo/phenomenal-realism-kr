@@ -26,9 +26,8 @@ Thumbs.db
 .env
 .env.local
 
-# 대용량 원본 데이터 (필요시 주석 해제)
-# data/raw/*.txt
-# data/raw/*.pdf
+# 대용량 원본 데이터 (GitHub 100MB 제한 초과)
+data/1_raw_data/philo_relig_1915.pdf
 
 # 임시 파일
 *.tmp
