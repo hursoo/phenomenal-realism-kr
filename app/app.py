@@ -3,6 +3,7 @@ import pandas as pd
 import plotly.graph_objects as go
 import os
 import re
+import json
 
 
 # =============================================================================
@@ -64,6 +65,25 @@ def render_section(content: str, components: dict):
         else:  # 컴포넌트 이름
             if part in components:
                 components[part]()
+
+
+TABLES_PATH = os.path.join(os.path.dirname(__file__), "tables.json")
+
+
+@st.cache_data
+def load_tables() -> dict:
+    """tables.json에서 테이블 데이터를 캐싱하여 로드합니다."""
+    with open(TABLES_PATH, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def render_table(key: str):
+    """tables.json의 키를 기준으로 테이블을 렌더링합니다."""
+    tables = load_tables()
+    entry = tables[key]
+    st.table(pd.DataFrame(entry["data"]))
+    if "caption" in entry:
+        st.caption(entry["caption"])
 
 
 # =============================================================================
@@ -167,72 +187,35 @@ def create_chapter_distribution_chart() -> go.Figure:
 # --- Ⅱ-1. 문단별 데이터 ---
 
 def render_corpus_table():
-    df = pd.DataFrame({
-        '텍스트': ['『철학과 종교』', '『인내천요의』', '**비율 (1915:1924)**'],
-        '원저자': ['이노우에 데츠지로', '이돈화', ''],
-        '간행년': ['1915', '1924', ''],
-        '행 수': ['11,088', '2,254', '**4.9:1**'],
-        '문단 수': ['626', '366', '**1.7:1**'],
-        '한자어 토큰': ['39,938', '15,868', '**2.5:1**']
-    })
-    st.table(df)
+    render_table("corpus_table")
 
 
 def render_paragraph_table():
-    df = pd.DataFrame({
-        '텍스트': ['1915 철학과 종교', '1924 인내천요의'],
-        '문단 수': ['626개', '366개'],
-        '문단당 평균 한자어 종류': ['**40.2종**', '**31.7종**']
-    })
-    st.table(df)
-    st.caption("*주: 자카드 유사도는 집합 연산이므로, 중복을 제거한 고유 단어 종류(types)를 기준으로 산출한다.*")
+    render_table("paragraph_table")
 
 
 # --- Ⅱ-2. 공통 한자어 비율 ---
 
 def render_stats_table():
-    df = pd.DataFrame({
-        '통계량': ['평균 (μ)', '표준편차 (σ)', '중앙값', 'P99', 'P99.94 (135개)'],
-        '값': ['0.005', '0.013', '0.000', '0.048', '0.100']
-    })
-    st.table(df)
+    render_table("stats_table")
 
 
 def render_common_tokens_table():
-    df = pd.DataFrame({
-        '문단A 종류': ['10종', '20종', '**40종**'],
-        '문단B 종류': ['10종', '20종', '**32종**'],
-        '필요 공통 종류': ['최소 2종', '최소 4종', '**최소 7종**']
-    })
-    st.table(df)
+    render_table("common_tokens_table")
 
 
 def render_range_table():
-    df = pd.DataFrame({
-        '유사도 구간': ['0.10~0.149', '0.15~0.199', '0.20 이상', '**합계**'],
-        '쌍 수': ['76개', '32개', '27개', '**135개**']
-    })
-    st.table(df)
+    render_table("range_table")
 
 
 def render_valid_pairs_table():
-    df = pd.DataFrame({
-        '구분': ['초기 후보', '노이즈 (서수)', '노이즈 (범용어)', '**유효 쌍**'],
-        '개수': ['135개', '-7개', '-17개', '**111개**']
-    })
-    st.table(df)
+    render_table("valid_pairs_table")
 
 
 # --- Ⅲ-1. 분포와 특징 ---
 
 def render_chapter_dist_table():
-    df = pd.DataFrame({
-        '1924 장': ['C01', 'C02', 'C03', 'C04', 'C05', 'C06', '**합계**'],
-        '제목': ['緖言', '人乃天과 天道', '人乃天과 眞理', '人乃天의 目的', '人乃天의 修煉', '人乃天에 對한 雜感', ''],
-        '유효 쌍': ['3개', '0개', '45개', '0개', '0개', '63개', '**111개**'],
-        '비율': ['3%', '0%', '41%', '0%', '0%', '57%', '**100%**']
-    })
-    st.table(df)
+    render_table("chapter_dist_table")
 
 
 def render_chapter_dist_chart():
@@ -255,64 +238,31 @@ def render_heatmap():
 
 
 def render_ref_table():
-    df = pd.DataFrame({
-        '1915 장': ['C02 (현상즉실재론)', 'C06 (의식론)', 'C13 (기독교와 유교)', 'C14 (불교와 기독교)'],
-        '1924 장': ['C03 (人乃天과 眞理)', 'C03 (人乃天과 眞理)', 'C06 (人乃天에 對한 雜感)', 'C06 (人乃天에 對한 雜感)'],
-        '쌍 수': ['13개', '24개', '31개', '20개'],
-        '내용': ['唯物/唯心→實在 논증', '헤켈 6종 의식론', '儒基 비교 프레임', '佛基 비교 프레임']
-    })
-    st.table(df)
+    render_table("ref_table")
 
 
 def render_c03s04_table():
-    df = pd.DataFrame({
-        '항': ['I01', '**I02**', 'I03', 'I04', '**I05**', 'I06', 'I07'],
-        '제목': ['實現思想과 人乃天', '**實在와 人乃天**', '汎神觀과 人乃天', '生命과 人乃天', '**意識과 人乃天**', '靈魂과 人乃天', '進化와 人乃天'],
-        '참조쌍': ['0개', '**13개**', '0개', '5개', '**21개**', '4개', '1개'],
-        '참조 원천 (1915)': ['-', 'C02 (현상즉실재론)', '-', 'C05 (생명론)', 'C06 (의식론)', 'C05 (생명론)', 'C08 (진화론)']
-    })
-    st.table(df)
+    render_table("c03s04_table")
 
 
 def render_c06s06_table():
-    df = pd.DataFrame({
-        '1915 장': ['C13 (기독교와 유교)', 'C14 (불교와 기독교)'],
-        '1924 절': ['C06-S06', 'C06-S06'],
-        '쌍 수': ['31개', '20개'],
-        '비교 항목': ['信仰/德敎, 創造/發展, 復活, 兼愛/差別愛', '沒我敎/主我敎, 涅槃/天國, 汎神/一神']
-    })
-    st.table(df)
+    render_table("c06s06_table")
 
 
 # --- Ⅲ-2. 보편화와 비교 ---
 
 def render_borrow_table():
-    df = pd.DataFrame({
-        '차용된 내용': ['현상즉실재론 (C02)', '헤켈 의식론 (C06)', '생명론 (C05)', '儒基/佛基 비교 프레임 (C13-14)'],
-        '차용되지 않은 내용': ['일본 국체론 (C24-28)', '일본 신도론 (C25)', '일본 불교 우월론', '일본 중심주의']
-    })
-    st.table(df)
+    render_table("borrow_table")
 
 
 def render_invert_table():
-    df = pd.DataFrame({
-        '비교 항목': ['沒我敎/主我敎', '汎神敎/一神敎', '唯物/唯心'],
-        '이노우에의 평가': ['불교의 특성으로 제시', '종교 유형 분류', '실재론으로 지양'],
-        '이돈화의 활용': ['인내천은 이 구분을 초월', '인내천은 양자를 종합', '인내천으로 지양']
-    })
-    st.table(df)
+    render_table("invert_table")
 
 
 # --- Ⅳ-1. 철학 기표 소거 ---
 
 def render_phil_freq_table():
-    df = pd.DataFrame({
-        '텍스트': ['1915 철학과 종교', '1924 인내천요의'],
-        "'哲學' 순위": ['**8위**', '**518위**'],
-        '빈도': ['365회', '6회'],
-        '상대빈도(‰)': ['9.14‰', '0.38‰']
-    })
-    st.table(df)
+    render_table("phil_freq_table")
 
 
 def render_rank_chart():
@@ -321,13 +271,7 @@ def render_rank_chart():
 
 
 def render_inverse_table():
-    df = pd.DataFrame({
-        '항': ['I02', 'I05', 'I07'],
-        '제목': ['實在와 人乃天', '意識과 人乃天', '進化와 人乃天'],
-        '참조쌍': ['**13개**', '**21개**', '1개'],
-        "'哲學' 출현": ['**0회**', '**0회**', '3회']
-    })
-    st.table(df)
+    render_table("inverse_table")
 
 
 def render_paradox_image():
@@ -345,43 +289,17 @@ def render_paradox_image():
 # --- Ⅳ-2. 철리 인내천 ---
 
 def render_sub_stats_table():
-    df = pd.DataFrame({
-        '구분': ['1915에 \'哲學\' 포함 참조쌍', '그 중 1924에도 \'哲學\' 있음', '**1924에서 \'哲學\' 소거됨**'],
-        '개수': ['5개', '1개', '**4개**']
-    })
-    st.table(df)
+    render_table("sub_stats_table")
 
 
 def render_pattern_table():
-    df = pd.DataFrame({
-        '패턴': ['**A**', '**B**', '**C**'],
-        '1915 원어': ['哲學的價値, 哲學系統', '哲學宗敎의 特色', '哲學宗敎의 特色'],
-        '1924 대체어': ['哲人 + 眞理', '理想의 境涯', '沒我敎/主我敎'],
-        '전략': ['학문 체계 → 행위자 + 목표', '학문적 범주 → 도달해야 할 경지', '학문적 분류 → 종교 내적 명명']
-    })
-    st.table(df)
+    render_table("pattern_table")
 
 
 # --- 부록 ---
 
 def render_file_table():
-    df = pd.DataFrame({
-        '파일': [
-            'data/analysis/validated_pairs_final.csv',
-            'data/analysis/word_rank_1915.csv',
-            'data/analysis/word_rank_1924.csv',
-            'data/analysis/c03s04_item_analysis.csv',
-            'data/analysis/philosophy_substitution_patterns.csv'
-        ],
-        '내용': [
-            '111개 유효 참조쌍',
-            '1915 텍스트 한자어 순위',
-            '1924 텍스트 한자어 순위',
-            'C03-S04 항별 분석',
-            '대체어 패턴'
-        ]
-    })
-    st.table(df)
+    render_table("file_table")
 
 
 def render_pairs_data():
@@ -396,15 +314,7 @@ def render_pairs_data():
         else:
             st.dataframe(df_pairs.head(20), height=500)
     else:
-        df_top = pd.DataFrame({
-            '순위': [1, 2, 3, 4, 5],
-            '유사도': [0.3077, 0.2500, 0.2500, 0.2500, 0.2500],
-            '1915 문단': ['C13-S01-P05', 'C02-P29', 'C06-P17', 'C13-S03-P02', 'C14-S03-P01'],
-            '1924 문단': ['C06-S06-P06', 'C03-S04-I02-P01', 'C03-S04-I05-P03', 'C06-S06-P02', 'C06-S06-P09'],
-            '공통 토큰': ['復活, 基督, 基督敎, 儒敎', '唯物論, 唯心論, 實在論', '意識, 本位, 細胞', '基督敎, 儒敎, 差異點', '佛敎, 基督敎, 宗敎']
-        })
-        st.table(df_top)
-        st.caption("*전체 111개 참조쌍은 data/analysis/validated_pairs_final.csv 참조*")
+        render_table("pairs_fallback_table")
 
 
 # =============================================================================
