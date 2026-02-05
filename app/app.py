@@ -228,11 +228,11 @@ def render_heatmap():
     with col2:
         heatmap_path = os.path.join(os.path.dirname(__file__), "..", "images", "chapter_heatmap_avg_above_threshold.png")
         if os.path.exists(heatmap_path):
-            st.image(heatmap_path, caption="그림 1. 장-장 단위 유효 참조쌍 분포 (111개, 자카드 유사도 ≥ 0.1). 색상은 참조쌍 개수, 괄호 안은 평균 유사도.")
+            st.image(heatmap_path, caption="111개 유효 참조쌍 (자카드 유사도 ≥ 0.1). 색상은 참조쌍 개수, 괄호 안은 평균 유사도.")
         else:
             alt_path = os.path.join(os.path.dirname(__file__), "..", "images", "chapter_heatmap_avg_above_threshold.png")
             if os.path.exists(alt_path):
-                st.image(alt_path, caption="그림 1. 장-장 단위 유효 참조쌍 분포")
+                st.image(alt_path, caption="장-장 단위 유효 참조쌍 분포")
             else:
                 st.info("히트맵 이미지 파일을 찾을 수 없습니다.")
 
@@ -279,11 +279,11 @@ def render_paradox_image():
     with col2:
         paradox_path = os.path.join(os.path.dirname(__file__), "..", "images", "c03s04_philosophy_paradox.png")
         if os.path.exists(paradox_path):
-            st.image(paradox_path, caption="그림 2. C03-S04 항별 참조쌍 개수(막대)와 '哲學' 출현 빈도(선). 참조 밀도가 높은 I02, I05에서 '哲學'은 0회.")
+            st.image(paradox_path, caption="C03-S04 항별 참조쌍 개수(막대)와 '哲學' 출현 빈도(선). 참조 밀도가 높은 I02, I05에서 '哲學'은 0회.")
         else:
             alt_path = os.path.join(os.path.dirname(__file__), "..", "images", "c03s04_philosophy_paradox.png")
             if os.path.exists(alt_path):
-                st.image(alt_path, caption="그림 2. C03-S04 항별 참조쌍 개수와 '哲學' 출현 빈도의 역상관")
+                st.image(alt_path, caption="C03-S04 항별 참조쌍 개수와 '哲學' 출현 빈도의 역상관")
 
 
 # --- Ⅳ-2. 철리 인내천 ---
