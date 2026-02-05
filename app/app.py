@@ -303,6 +303,14 @@ def render_paradox_image():
 
 # --- Ⅳ-2. 철리 인내천 ---
 
+def render_diff_vocab_table():
+    render_table("diff_vocab_table")
+
+
+def render_phil_compound_table():
+    render_table("phil_compound_table")
+
+
 def render_sub_stats_table():
     render_table("sub_stats_table")
 
@@ -381,7 +389,8 @@ st.sidebar.markdown("""
 <a class="sub" href="#sec-3-2" target="_self">2. 가져온 것과 버린 것</a>
 <a href="#sec-4" target="_self">Ⅳ. 철학 개념을 다루는 방식</a>
 <a class="sub" href="#sec-4-1" target="_self">1. '철학'이라는 이름 지우기</a>
-<a class="sub" href="#sec-4-2" target="_self">2. '哲學'의 자리를 대신한 것들</a>
+<a class="sub" href="#sec-4-2" target="_self">2. 원문에서 읽는 대체 패턴</a>
+<a class="sub" href="#sec-4-3" target="_self">3. 패턴의 검증</a>
 <a href="#sec-5" target="_self">Ⅴ. 맺음말</a>
 <a href="#sec-6" target="_self">부록</a>
 </div>
@@ -427,6 +436,11 @@ COMPONENTS_04_1 = {
 COMPONENTS_04_2 = {
     "sub_stats_table": render_sub_stats_table,
     "pattern_table": render_pattern_table,
+}
+
+COMPONENTS_04_3 = {
+    "diff_vocab_table": render_diff_vocab_table,
+    "phil_compound_table": render_phil_compound_table,
 }
 
 COMPONENTS_06 = {
@@ -483,6 +497,9 @@ render_section(load_section("04-1_철학_기표_소거.md"), COMPONENTS_04_1)
 
 st.markdown('<div id="sec-4-2"></div>', unsafe_allow_html=True)
 render_section(load_section("04-2_철리_인내천.md"), COMPONENTS_04_2)
+
+st.markdown('<div id="sec-4-3"></div>', unsafe_allow_html=True)
+render_section(load_section("04-3_패턴의_검증.md"), COMPONENTS_04_3)
 
 
 # =============================================================================
