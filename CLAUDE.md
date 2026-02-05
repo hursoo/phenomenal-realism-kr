@@ -72,6 +72,8 @@ phenomenal-realism-kr/
 3. 폴더 구조 단순화 완료 (DB 통합, 빈 디렉토리 정리, 구버전 삭제)
 4. 발표문 텍스트를 `app/sections/` 마크다운 파일로 분리 완료 (9개 .md 파일)
 5. app.py를 `render_section()` + `<!-- component: name -->` 마커 기반 구조로 리팩터링 완료
+6. 테이블 데이터를 `app/tables.json`으로 분리 완료 (18개 테이블)
+7. 미사용 파일 `삭제검토대상/`으로 이동 완료
 
 **다음 작업**:
 - 스토리라인 기반으로 웹앱 내용 수정/보완 필요
@@ -80,6 +82,7 @@ phenomenal-realism-kr/
 **참고 파일**:
 - `app/app.py`: 발표용 웹앱 (렌더링 엔진 + 컴포넌트 함수)
 - `app/sections/`: 발표문 텍스트 마크다운 (9개 파일, `<!-- component: name -->` 마커 포함)
+- `app/tables.json`: 테이블 데이터 (18개 테이블)
 - `docs/presentation-storyline.md`: 장절별 스토리라인 정리
 
 ---
