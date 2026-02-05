@@ -391,7 +391,6 @@ COMPONENTS_02_2 = {
 
 COMPONENTS_03_1 = {
     "chapter_dist_table": render_chapter_dist_table,
-    "chapter_dist_chart": render_chapter_dist_chart,
     "heatmap": render_heatmap,
     "ref_table": render_ref_table,
     "c03s04_table": render_c03s04_table,
@@ -405,9 +404,7 @@ COMPONENTS_03_2 = {
 
 COMPONENTS_04_1 = {
     "phil_freq_table": render_phil_freq_table,
-    "rank_chart": render_rank_chart,
     "inverse_table": render_inverse_table,
-    "paradox_image": render_paradox_image,
 }
 
 COMPONENTS_04_2 = {
