@@ -18,9 +18,16 @@ phenomenal-realism-kr/
 ├── app/
 │   ├── app.py                  # Streamlit 발표용 웹앱 (렌더링 엔진 + 컴포넌트 함수)
 │   ├── sections/               # 발표문 텍스트 (마크다운, <!-- component: name --> 마커 포함)
+│   ├── tables.json             # 테이블 데이터 (18개 테이블)
 │   └── requirements.txt
 ├── data/
-│   ├── corpus/                 # 코퍼스 원본 DB (1벌)
+│   ├── 1_raw_data/             # 원본 PDF 스캔본
+│   │   ├── innae_yoeui_1924.pdf      # 인내천요의 (15MB)
+│   │   └── philo_relig_1915.pdf      # 철학과 종교 (221MB, .gitignore)
+│   ├── 2_cut_renumbering/      # 페이지 분할 및 재넘버링
+│   │   ├── PR_cut_renumber/          # 1915: 832장 JPG
+│   │   └── IY_cut_renumber/          # 1924: 290장 PNG
+│   ├── 3_corpus/               # 코퍼스 원본 DB
 │   │   ├── BK_IT_1915_PR_v1.3.xlsx   # 철학과 종교 (11,088행)
 │   │   ├── BK_IT_1915_PR.txt
 │   │   ├── BK_YD_1924_IY_v1.2.xlsx   # 인내천요의 (2,254행)
@@ -96,9 +103,24 @@ phenomenal-realism-kr/
       - 주2: Sturgeon(2018), McManus & Li(2025) 서지사항 + URL
       - 주3: 허수(2011) 『이돈화 연구』 서지사항 + 교보문고 URL
       - 주4: 허수(2015) 「개벽의 종교적 사회운동론」 서지사항 + DOI + KCI URL
+11. data 폴더 구조 재편 및 코퍼스 구축 과정 기술:
+    - `data/corpus/` → `data/1_raw_data/`, `data/2_cut_renumbering/`, `data/3_corpus/`로 재구성
+    - 1915 PDF(221MB) `.gitignore` 처리, NDL 링크(`https://dl.ndl.go.jp/pid/952938`)로 대체
+    - Ⅱ-1에 코퍼스 구축 5단계(원본 확보→페이지 분할→OCR→검수→계층적 DB) 기술 + GitHub 링크 연결
+    - 각주 5(NDL 서지), 각주 6(식별자 체계 설명) 신설
+12. 표·그림 넘버링 및 본문 참조 구체화:
+    - 전체 섹션에 표 1~18, 그림 1~4 캡션 추가
+    - 본문의 모호한 지시("위 표", "아래 그래프" 등) → 구체적 번호 참조(<표 N>, <그림 N>)로 변경
+13. Ⅱ-1 본문 다수 수정:
+    - "정교한" 삭제, 양 텍스트 편집 성격 설명 추가
+    - ⑤ 계층적 DB 설명 강화: 장›절›항›문단›문장 계층, 전역 식별자(BK_IT_1915_PR), 문장 단위 분석 활용(Ⅳ-2) 언급
+    - 2.5:1 비대칭성 평이한 설명으로 개선
+    - "분석의 기본 단위" → "비교의 기본 단위"
+    - Ⅱ-2로의 전환 문장 자연스럽게 수정
+14. Ⅱ-2 자카드 유사도 설명에 types/tokens 구분 통합 (표 2 캡션 주석에서 이동)
 
 **다음 작업**:
-- 발표문 웹앱 최종 검토 (내용·레이아웃·시각화)
+- 발표문 웹앱 Ⅱ장 이후 섹션 검토 및 수정 (Ⅲ, Ⅳ, Ⅴ장)
 
 **참고 파일**:
 - `app/app.py`: 발표용 웹앱 (한 페이지 스크롤 + 사이드바 앵커 목차)
@@ -187,7 +209,7 @@ phenomenal-realism-kr/
 
 | 파일 | 내용 |
 |------|------|
-| `data/corpus/BK_IT_1915_PR_v1.3.xlsx` | 철학과 종교 코퍼스 DB (11,088행) |
-| `data/corpus/BK_YD_1924_IY_v1.2.xlsx` | 인내천요의 코퍼스 DB (2,254행) |
+| `data/3_corpus/BK_IT_1915_PR_v1.3.xlsx` | 철학과 종교 코퍼스 DB (11,088행) |
+| `data/3_corpus/BK_YD_1924_IY_v1.2.xlsx` | 인내천요의 코퍼스 DB (2,254행) |
 | `data/analysis/validated_pairs_final.csv` | **최종 검증된 참조쌍** (111개, 노이즈 24개 제외) |
 | `docs/analysis-reports/paragraph-similarity-data.xlsx` | **종합 보고서 데이터** (6개 시트: 요약통계, 장별분포, 주요조합, C03/C06 참조쌍, 전체 111개) |
