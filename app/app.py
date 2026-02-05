@@ -362,11 +362,11 @@ st.sidebar.markdown("""
 <a class="sub" href="#sec-2-1" target="_self">1. 문단별 데이터를 비교 단위로</a>
 <a class="sub" href="#sec-2-2" target="_self">2. 공통 한자어 비율을 계산</a>
 <a href="#sec-3" target="_self">Ⅲ. 취사선택 양상과 특징</a>
-<a class="sub" href="#sec-3-1" target="_self">1. 실재, 의식 및 종교 비교</a>
-<a class="sub" href="#sec-3-2" target="_self">2. 보편화하기와 비교하기</a>
+<a class="sub" href="#sec-3-1" target="_self">1. 참조쌍의 분포: 두 장에 97%가 집중</a>
+<a class="sub" href="#sec-3-2" target="_self">2. 가져온 것과 버린 것</a>
 <a href="#sec-4" target="_self">Ⅳ. 철학 개념을 다루는 방식</a>
-<a class="sub" href="#sec-4-1" target="_self">1. 철학적이지만 '철학'은 회피</a>
-<a class="sub" href="#sec-4-2" target="_self">2. 哲理로서의 인내천</a>
+<a class="sub" href="#sec-4-1" target="_self">1. '철학'이라는 이름 지우기</a>
+<a class="sub" href="#sec-4-2" target="_self">2. '哲學'의 자리를 대신한 것들</a>
 <a href="#sec-5" target="_self">Ⅴ. 맺음말</a>
 <a href="#sec-6" target="_self">부록</a>
 </div>
