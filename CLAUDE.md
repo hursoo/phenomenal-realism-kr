@@ -16,7 +16,8 @@ streamlit run app/app.py              # 발표용 웹앱 실행
 ```
 phenomenal-realism-kr/
 ├── app/
-│   ├── app.py                  # Streamlit 발표용 웹앱 (Ⅰ.머리말 ~ Ⅴ.맺음말)
+│   ├── app.py                  # Streamlit 발표용 웹앱 (렌더링 엔진 + 컴포넌트 함수)
+│   ├── sections/               # 발표문 텍스트 (마크다운, <!-- component: name --> 마커 포함)
 │   └── requirements.txt
 ├── data/
 │   ├── corpus/                 # 코퍼스 원본 DB (1벌)
@@ -69,13 +70,16 @@ phenomenal-realism-kr/
 1. 현재 웹앱 스토리라인 점검 완료
 2. 장절별 논지 중심 스토리라인 정리 → `docs/presentation-storyline.md` 저장
 3. 폴더 구조 단순화 완료 (DB 통합, 빈 디렉토리 정리, 구버전 삭제)
+4. 발표문 텍스트를 `app/sections/` 마크다운 파일로 분리 완료 (9개 .md 파일)
+5. app.py를 `render_section()` + `<!-- component: name -->` 마커 기반 구조로 리팩터링 완료
 
 **다음 작업**:
 - 스토리라인 기반으로 웹앱 내용 수정/보완 필요
 - 구조, 시각화, 레이아웃 등 추가 업데이트 검토
 
 **참고 파일**:
-- `app/app.py`: 현재 발표용 웹앱 (Ⅰ.머리말 ~ Ⅴ.맺음말 + 부록)
+- `app/app.py`: 발표용 웹앱 (렌더링 엔진 + 컴포넌트 함수)
+- `app/sections/`: 발표문 텍스트 마크다운 (9개 파일, `<!-- component: name -->` 마커 포함)
 - `docs/presentation-storyline.md`: 장절별 스토리라인 정리
 
 ---
