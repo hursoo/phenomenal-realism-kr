@@ -9,6 +9,8 @@
 ```bash
 pip install -r app/requirements.txt   # 의존성 설치
 streamlit run app/app.py              # 발표용 웹앱 실행
+python scripts/export_pdf.py          # 웹앱 → PDF 변환 (Playwright)
+python scripts/export_docx.py         # 웹앱 → Word 변환 (python-docx)
 ```
 
 ## Architecture
@@ -35,7 +37,11 @@ phenomenal-realism-kr/
 │   └── analysis/               # 유사도 분석 결과 (CSV, JSON)
 ├── docs/                       # 연구 문서, 분석 노트, 보고서
 ├── images/                     # 앱 사용 이미지
-├── scripts/                    # 분석 스크립트
+├── scripts/
+│   ├── export_pdf.py           # 웹앱 → PDF (Playwright, 브라우저 렌더링)
+│   └── export_docx.py          # 웹앱 → Word (python-docx, 동일 데이터 소스)
+├── 발표문.pdf                   # PDF 출력물 (24쪽, 2.2MB)
+├── 발표문.docx                  # Word 출력물 (export_docx.py로 생성)
 ├── 삭제검토대상/                 # 삭제 검토 중인 파일
 ├── CLAUDE.md
 └── README.md
@@ -67,7 +73,20 @@ phenomenal-realism-kr/
 - **포함**: `line_class`가 `TEXT`, `STRUCT`인 행
 - **제외**: `RTC_TEXT`, `ANNOTATION`, `structure_id`가 `TOC`/`ROOT`
 
-## 현재 작업 상태 (2026-02-06)
+## 현재 작업 상태 (2026-02-08)
+
+### 발표문 Word 변환 스크립트 추가 (2026-02-08)
+
+**`scripts/export_docx.py`**: 웹앱과 동일한 데이터 소스(`app/sections/*.md` + `app/tables.json`)를 읽어 Word 문서를 생성.
+
+- **방식**: python-docx로 직접 생성 (PDF 레이아웃 참고)
+- **데이터 소스**: 섹션 마크다운 10개 + tables.json 18개 테이블 + PNG 이미지 2개
+- **이미지 처리**: 히트맵(PNG 직접 삽입), 네트워크 그래프(기존 PDF에서 PyMuPDF로 추출)
+- **마크다운 파서**: `<!-- component: name -->` 마커 기반 분할, 인라인 서식(볼드/위첨자/링크) 처리
+- **출력**: `발표문.docx` (A4, 맑은 고딕 12pt, 페이지 번호 자동, 목차 박스 포함)
+- **의존성**: python-docx, plotly, kaleido, PyMuPDF(fitz), pandas
+
+**`scripts/export_pdf.py`**: Playwright로 Streamlit 앱을 브라우저 렌더링하여 PDF 생성 (기존).
 
 ### 학술대회 발표문 웹앱 업데이트 (전체 섹션 검토 완료)
 
