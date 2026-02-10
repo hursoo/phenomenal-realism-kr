@@ -39,7 +39,8 @@ phenomenal-realism-kr/
 ├── images/                     # 앱 사용 이미지
 ├── scripts/
 │   ├── export_pdf.py           # 웹앱 → PDF (Playwright, 브라우저 렌더링)
-│   └── export_docx.py          # 웹앱 → Word (python-docx, 동일 데이터 소스)
+│   ├── export_docx.py          # 웹앱 → Word (python-docx, 동일 데이터 소스)
+│   └── reproduce_semantic_field.py  # 의미장 26문단 도출 재현 스크립트
 ├── 발표문.pdf                   # PDF 출력물 (24쪽, 2.2MB)
 ├── 발표문.docx                  # Word 출력물 (export_docx.py로 생성)
 ├── 삭제검토대상/                 # 삭제 검토 중인 파일
@@ -227,6 +228,7 @@ phenomenal-realism-kr/
 | `docs/analysis-notes/c13-c06-reference-analysis.md` | **C13×C06 儒基 비교 프레임워크 차용** (31개 쌍) |
 | `docs/analysis-notes/c14-c06-reference-analysis.md` | **C14×C06 佛基 비교 프레임워크 차용** (20개 쌍) |
 | `docs/analysis-notes/validated-pairs-filtering.md` | **참조쌍 노이즈 필터링 검증** (135→111개) |
+| `docs/analysis-notes/semantic-field-26-paragraphs.md` | **의미장 분석 26개 문단** (도출 방식, 전체 목록, 대표 사례 3개) |
 | `docs/analysis-reports/chapter8-philosophy-signifier-analysis.md` | **'哲學' 기표 소거 분석** (대체어 패턴 3종) |
 
 ## 데이터 파일
