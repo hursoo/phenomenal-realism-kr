@@ -124,6 +124,11 @@ YID_AUTHORS = ('李敦化', '夜雷', '야뢰', '白頭山人', '백두산인',
 특히 **「없다」는 판정에 주의해야 한다.** 어떤 낱말이 0회라는 사실은 원문에 없다는 뜻일 수도
 있고 판독이 다르게 읽었다는 뜻일 수도 있다.
 
+**남은 눈 판단을 기계가 어디까지 줄일 수 있는지**는 따로 재 보았다 —
+[`../data/5_magazine_sources/wolbo/marker_resolution_experiment.md`](../data/5_magazine_sources/wolbo/marker_resolution_experiment.md).
+요지는 **이미지로 푸는 문제(한자·음절)와 문법으로 푸는 문제(종성 유무)가 다르다**는 것이고,
+검수 범위를 54편에서 85편으로 넓혀야 하는 이유도 그 문서 §7에 적었다.
+
 **그래서 인용은 편 단위 검수와 별도로 대목마다 지면을 대조한다.** 그 기록이
 [`../data/5_magazine_sources/wolbo/verified_passages.md`](../data/5_magazine_sources/wolbo/verified_passages.md)에
 있다. 대조를 마친 대목만 그 파일에 들어가며, **거기에 없는 대목은 대조하지 않은 것이다.**
@@ -223,6 +228,7 @@ YID_AUTHORS = ('李敦化', '夜雷', '야뢰', '白頭山人', '백두산인',
 | **원문 대조를 마친 대목의 기록** (`verified_passages.md`) | **2대목** |
 | **선별 기록** (`screening_1922.md` — 1922년 이전 3분법 어휘 훑기) | **82편 대상** |
 | **지면 무결성 대장** (`wolbo54_status/` — SHA-256 · v2 차단 기록) | **288면** |
+| **마커 자동 해소 실험** (`marker_resolution_experiment.md` · `marker_decisions.csv`) | **656건** |
 | `series_index.csv` · 배치 요약 · 키워드 감사 | |
 
 **원본 지면이 있다는 것이 이 자료의 요점이다.** 국립중앙도서관 스캔이며 `meta.json`에 서지가
