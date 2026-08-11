@@ -1,5 +1,9 @@
 # 전처리 과정 (Preprocessing)
 
+> ⚠️ **이 문서는 2026-01 시점의 뼈대이며, 핵심 절이 「(작성 예정)」으로 비어 있다.**
+> 내용은 [`02_digitization.md`](02_digitization.md)·[`04_normalization.md`](04_normalization.md)로
+> 대체되었다. 당시의 계획을 남겨 두기 위해 보존한다.
+
 > 원본 텍스트를 분석 가능한 데이터로 변환하는 과정을 기록합니다.
 
 ## 1. OCR 및 텍스트 추출
