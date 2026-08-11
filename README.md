@@ -161,15 +161,15 @@ Investigate · 해석 Signify · 발표 Present.** 물질성 → 구조 → 관�
 
 | 단계 | 산출물 | 문서 | 코드 |
 |---|---|---|---|
-| ① 저본 | `data/1_raw_data/` · [`IMAGES.md`](IMAGES.md) | [01 원사료](docs/01_sources.md) | — |
-| ② 분할·재넘버링 | `data/2_cut_renumbering/` | [02 §②](docs/02_digitization.md) · [03 §5-2](docs/03_db_structure.md) | `scripts/01_page_split/` |
-| ③ 판독 | `data/3_corpus/*.txt` | [02 §③](docs/02_digitization.md) · [06 AI 고지](docs/06_ai_disclosure.md) | — |
-| ④⑤ 교정·태깅 | `data/3_corpus/revisions/` | [02 §④⑤](docs/02_digitization.md) | `n8n_code_node.txt`(명세) |
-| ⑥ 문장분리·ID | `data/3_corpus/*_v1.0/v1.1.xlsx` | [03 DB 구조](docs/03_db_structure.md) | `scripts/04_build_db/` |
-| ⑦ 정리 | `*_v1.2/v1.3.xlsx` | [03 §2 버전 이력](docs/03_db_structure.md) | — |
-| ⑧ 묶음 단위 | `*_v1.4.xlsx` | [03 §6 묶음 ID](docs/03_db_structure.md) | — |
-| ⑨ 정규화 | `data/4_tokens/` | [04 정규화](docs/04_normalization.md) · `docs/normalization_spec_2026-05-21.md` | `scripts/02_normalize/` |
-| ⑩ 유사도 | `data/analysis/` · `images/` | [05 유사도](docs/05_similarity.md) | `scripts/03_similarity/` · `scripts/figures/` |
+| **①&nbsp;저본&nbsp;확보** | `data/1_raw_data/` · [`IMAGES.md`](IMAGES.md) | [01 원사료](docs/01_sources.md) | — |
+| **②&nbsp;페이지&nbsp;분할·재넘버링** | `data/2_cut_renumbering/` | [02 §②](docs/02_digitization.md) · [03 §5-2](docs/03_db_structure.md) | `scripts/01_page_split/` |
+| **③&nbsp;판독** | `data/3_corpus/*.txt` | [02 §③](docs/02_digitization.md) · [06 AI 고지](docs/06_ai_disclosure.md) | — |
+| **④⑤&nbsp;교정·문장&nbsp;태깅** | `data/3_corpus/revisions/` | [02 §④⑤](docs/02_digitization.md) | `n8n_code_node.txt` (명세) |
+| **⑥&nbsp;문장&nbsp;분리·ID&nbsp;부여** | `data/3_corpus/*_v1.0/v1.1.xlsx` | [03 DB 구조](docs/03_db_structure.md) | `scripts/04_build_db/` |
+| **⑦&nbsp;정리** | `*_v1.2/v1.3.xlsx` | [03 §2 버전 이력](docs/03_db_structure.md) | — |
+| **⑧&nbsp;묶음&nbsp;단위&nbsp;부여** | `*_v1.4.xlsx` | [03 §6 묶음 ID](docs/03_db_structure.md) | — |
+| **⑨&nbsp;정규화** | `data/4_tokens/` | [04 정규화](docs/04_normalization.md) · `docs/normalization_spec_2026-05-21.md` | `scripts/02_normalize/` |
+| **⑩&nbsp;유사도&nbsp;산출** | `data/analysis/` · `images/` | [05 유사도](docs/05_similarity.md) | `scripts/03_similarity/` · `scripts/figures/` |
 
 ### 어디부터 읽을 것인가
 
