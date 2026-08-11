@@ -4,6 +4,8 @@
 전문(全文) 코퍼스, **원본에서 분석 텍스트에 이르는 가공 절차 전 과정**, 그리고 두 책의 관계를
 디지털 문헌학으로 분석한 연구의 자료와 산출물.
 
+편자: 허수(서울대학교 역사학부) · [hs-kmhistory.com](https://hs-kmhistory.com)
+
 > *A full-text corpus of Inoue Tetsujirō's* Philosophy and Religion *(1915) and Yi Don-hwa's*
 > The Essentials of Innaecheon *(1924), with the complete digitization and normalization
 > pipeline. Documentation is in Korean.*
@@ -199,6 +201,9 @@
   인내천 논증이 되었는가」, 한국역사연구회 개념사연구반 발표문, 2026. 8. 21.
 - 허수, 「인내천 논증을 통한 이돈화의 현상즉실재론 전유 — 디지털 문헌학으로 본 매개 경로와
   번안 양상」, 세미나반 내부발표, 2026. 6. 12.
+
+발표 자리와 일정은 편자의 홈페이지에도 정리되어 있다 —
+[hs-kmhistory.com](https://hs-kmhistory.com/activities/).
 
 ## 관련 저장소
 
