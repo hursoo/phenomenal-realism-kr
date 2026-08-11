@@ -159,7 +159,7 @@ Investigate · 해석 Signify · 발표 Present.** 물질성 → 구조 → 관�
 
 ### 단계별 — 자료 · 문서 · 코드
 
-| 단계 | 산출물 | 문서 | 코드 |
+| 단계&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 산출물 | 문서 | 코드 |
 |---|---|---|---|
 | **①&nbsp;저본&nbsp;확보** | `data/1_raw_data/` · [`IMAGES.md`](IMAGES.md) | [01 원사료](docs/01_sources.md) | — |
 | **②&nbsp;페이지&nbsp;분할·재넘버링** | `data/2_cut_renumbering/` | [02 §②](docs/02_digitization.md) · [03 §5-2](docs/03_db_structure.md) | `scripts/01_page_split/` |
