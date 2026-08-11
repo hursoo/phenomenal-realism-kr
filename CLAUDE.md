@@ -41,12 +41,11 @@ phenomenal-realism-kr/
 │   ├── export_pdf.py           # 웹앱 → PDF (Playwright, 브라우저 렌더링)
 │   ├── export_docx.py          # 웹앱 → Word (python-docx, 동일 데이터 소스)
 │   └── reproduce_semantic_field.py  # 의미장 26문단 도출 재현 스크립트
-├── 발표문.pdf                   # PDF 출력물 (24쪽, 2.2MB)
-├── 발표문.docx                  # Word 출력물 (export_docx.py로 생성)
-├── 발표문송부/                   # 학술대회 제출용 파일
-│   ├── 발표문_허수_1.docx             # 제출본 (Word)
-│   ├── 발표문_허수_1.pdf              # 제출본 (PDF)
-│   └── 참고/                          # 이전 버전 (docx, hwp)
+├── presentations/               # 발표 산출물 — 날짜별 (2026-08-11 재편)
+│   └── 2026-02-11_.../
+│       ├── 발표문.pdf                 # PDF 출력물 (24쪽, 2.2MB)
+│       ├── 발표문.docx                # Word 출력물 (export_docx.py로 생성)
+│       └── 송부본/                    # 학술대회 제출본과 이전 버전
 ├── 삭제검토대상/                 # 삭제 검토 중인 파일
 ├── CLAUDE.md
 └── README.md
