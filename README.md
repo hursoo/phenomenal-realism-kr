@@ -61,7 +61,8 @@
 ```
 ├── docs/
 │   ├── 01_sources.md          원사료 서지 — 판권지 실측 · 저본 · 소장
-│   ├── 02_digitization.md     원본 → 페이지 분할 → 판독 → 교정 → DB
+│   ├── 02_digitization.md     원본 → 페이지 분할 → 판독 → 교정 → DB (단행본)
+│   ├── 02b_digitization_magazines.md  잡지의 디지털화 — 개벽·월보
 │   ├── 03_db_structure.md     스키마 · ID 체계 · line_class · 버전 이력
 │   ├── 04_normalization.md    토큰화 · 정규화 · stoplist
 │   ├── 05_similarity.md       자카드 — 정의 · 단위 · 문턱 · 층위별 값
@@ -179,6 +180,7 @@ Investigate · 해석 Signify · 발표 Present.** 물질성 → 구조 → 관�
 | **① 저본** | `data/1_raw_data/` · [`IMAGES.md`](IMAGES.md) | [01 원사료](docs/01_sources.md) | — |
 | **② 페이지 분할·재넘버링** | `data/2_cut_renumbering/` | [02 §②](docs/02_digitization.md) · [03 §5-2](docs/03_db_structure.md) | `scripts/01_page_split/` |
 | **③ 판독** | `data/3_corpus/*.txt` | [02 §③](docs/02_digitization.md) · [06 AI 고지](docs/06_ai_disclosure.md) | — |
+| **잡지** | `data/3_corpus/MA_*` | [02b 잡지](docs/02b_digitization_magazines.md) | `scripts/06_magazines/` |
 | **④⑤ 교정·문장 태깅** | `data/3_corpus/revisions/` | [02 §④⑤](docs/02_digitization.md) | `n8n_code_node.txt` (명세) |
 | **⑥ 문장 분리·ID** | `data/3_corpus/*_v1.0/v1.1.xlsx` | [03 DB 구조](docs/03_db_structure.md) | `scripts/04_build_db/` |
 | **도식** | [`data/figures/`](data/figures/) (15개 · 색인) | [03 §5-3](docs/03_db_structure.md) | `scripts/05_unify_figures/` |
