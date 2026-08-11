@@ -92,6 +92,48 @@ def find_columns(prof, min_gap=6, min_width=14, ink_ratio=0.12):
     return [(a, b) for a, b in merged if b - a >= min_width]
 
 
+def photo_rows(w, h, nch, data, x0, x1, thr, cover=0.55):
+    """구간 [x0,x1)에서 가로로 거의 꽉 찬 행 = 삽화·사진의 행."""
+    stride = w * nch
+    span = x1 - x0
+    bad = []
+    for y in range(0, h, 2):
+        row = data[y * stride:(y + 1) * stride]
+        c = 0
+        for x in range(x0, x1, 2):
+            o = x * nch
+            g = row[o] if nch < 3 else (row[o] * 299 + row[o + 1] * 587 + row[o + 2] * 114) // 1000
+            if g < thr:
+                c += 1
+        if c * 2 > span * cover:
+            bad.append(y)
+    return set(bad)
+
+
+def refine_wide(w, h, nch, data, a, b, thr, min_gap, med_w):
+    """삽화가 삼킨 구간을, 삽화 행을 뺀 나머지 행만으로 다시 갈라 낸다."""
+    bad = photo_rows(w, h, nch, data, a, b, thr)
+    stride = w * nch
+    prof = [0] * (b - a)
+    used = 0
+    for y in range(0, h, 2):
+        if y in bad or (y - 1) in bad or (y + 1) in bad:
+            continue
+        used += 1
+        row = data[y * stride:(y + 1) * stride]
+        for x in range(a, b):
+            o = x * nch
+            g = row[o] if nch < 3 else (row[o] * 299 + row[o + 1] * 587 + row[o + 2] * 114) // 1000
+            if g < thr:
+                prof[x - a] += 1
+    if used < 10:
+        return None
+    sub = find_columns(smooth(prof), min_gap=min_gap, min_width=max(10, med_w // 3))
+    if not sub or len(sub) < 2:
+        return None
+    return [(a + s, a + e) for s, e in sub]
+
+
 def row_profile(w, h, nch, data, x0, x1, thr, step=1):
     """컬럼 안에서 y별 잉크 화소 수."""
     stride = w * nch
@@ -106,6 +148,28 @@ def row_profile(w, h, nch, data, x0, x1, thr, step=1):
                 c += 1
         prof[y] = c
     return prof
+
+
+def split_merged(boxes, factor=1.6):
+    """붙어 잡힌 상자를 중앙값 기준으로 쪼갠다.
+
+    세로쓰기 활자는 글자마다 칸 높이가 거의 같다. 그래서 중앙값의 factor배를 넘는
+    상자는 두 글자 이상이 붙은 것으로 보고 균등 분할한다. 이것을 안 하면 글자
+    순번이 뒤로 갈수록 밀려 마커 자리를 놓친다.
+    """
+    if len(boxes) < 3:
+        return boxes
+    med = sorted(b - a for a, b in boxes)[len(boxes) // 2]
+    out = []
+    for a, b in boxes:
+        n = round((b - a) / med) if med else 1
+        if (b - a) > med * factor and n >= 2:
+            step = (b - a) / n
+            for i in range(n):
+                out.append((int(a + i * step), int(a + (i + 1) * step)))
+        else:
+            out.append((a, b))
+    return out
 
 
 def find_chars(prof, min_gap=3, min_h=10, ink_ratio=0.06):
@@ -126,7 +190,7 @@ def find_chars(prof, min_gap=3, min_h=10, ink_ratio=0.06):
             merged[-1] = (merged[-1][0], b)
         else:
             merged.append((a, b))
-    return [(a, b) for a, b in merged if b - a >= min_h]
+    return split_merged([(a, b) for a, b in merged if b - a >= min_h])
 
 
 def crop_scale(w, h, nch, data, x, y, cw, ch, scale):
@@ -145,6 +209,22 @@ def crop_scale(w, h, nch, data, x, y, cw, ch, scale):
             big += nr * scale
         return big, cw * scale, ch * scale
     return out, cw, ch
+
+
+def refine_all(w, h, nch, data, cols, thr, min_gap=6, factor=1.8):
+    """폭이 유별난 구간만 골라 삽화 행을 빼고 다시 검출한다."""
+    if len(cols) < 3:
+        return cols
+    med = sorted(b - a for a, b in cols)[len(cols) // 2]
+    out = []
+    for a, b in cols:
+        if (b - a) > med * factor:
+            sub = refine_wide(w, h, nch, data, a, b, thr, min_gap, med)
+            if sub:
+                out += sub
+                continue
+        out.append((a, b))
+    return out
 
 
 def main():
@@ -166,6 +246,7 @@ def main():
     prof, bg, thr = gray_profile(w, h, nch, data, step=int(opt['--step']))
     prof = smooth(prof)
     cols = find_columns(prof, min_gap=int(opt['--min-gap']))
+    cols = refine_all(w, h, nch, data, cols, thr, int(opt['--min-gap']))
     med = sorted(b - a for a, b in cols)[len(cols) // 2] if cols else 0
     ordered = list(reversed(cols))          # 세로쓰기 = 오른쪽부터
 
