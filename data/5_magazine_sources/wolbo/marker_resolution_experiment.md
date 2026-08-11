@@ -129,12 +129,27 @@ python scripts/06_magazines/mine_marker_decisions.py 4   # 앵커 4자
 **⚠️ 확대 배율에는 최적점이 있다.** 6배로 키우자 오히려 나빠졌다. 최근접 이웃 확대는 정보를
 더하지 않고 흐림만 키운다. **3~4배가 적정**이다.
 
-자르기 도구는 `scripts/06_magazines/png_crop.py`다. 의존성 없이(zlib + struct) PNG를 자르고
-확대한다.
+### 컬럼 좌표는 자동으로 잡힌다
+
+`scripts/06_magazines/detect_columns.py`가 세로쓰기 지면에서 **글줄과 글자의 좌표를 스스로
+잡는다.** x축 잉크 밀도의 골짜기로 글줄을, 글줄 안 y축 프로파일로 글자를 가른다.
 
 ```bash
-python3 scripts/06_magazines/png_crop.py units/unit_5_p3u.png out.png 1185 330 110 200 4
+python3 detect_columns.py unit_5_p3u.png                              # 글줄 목록
+python3 detect_columns.py unit_5_p3u.png --chars 1                    # 1번 글줄의 글자 목록
+python3 detect_columns.py unit_5_p3u.png --crop 1 out.png --chars 4-8 # 4~8번 글자를 4배로
 ```
+
+C30 3면 상단에서 글줄 10개를 잡았고 **폭이 46~49px로 고르다.** 초상 사진 구간(509px)은
+「⚠️ 넓다(삽화?)」로 표시된다. 1번 글줄의 글자 상자는 47~53px인데, **받침이 있는 글자만
+53px로 크다** — 상자 높이 자체가 종성의 방증이 된다.
+
+⚠️ **컬럼 전체를 넣으면 안 된다.** 4배로 키우면 높이가 4,700px이 되어 모델 입력에서 다시
+축소되고 받침이 도로 사라진다. `--chars`로 **5~8글자씩** 토막내 한 변 200~900px 안에 넣는다.
+위 표의 확인은 이 방식으로 한 것이다.
+
+바탕 도구는 `png_crop.py`(zlib + struct만으로 PNG 자르기·확대)다. 이 환경에 PIL도
+ImageMagick도 없어 순수 파이썬으로 썼다.
 
 ---
 
@@ -291,4 +306,5 @@ C76·C77·C78인데 뒤의 셋도 1912~1913년 글이므로, **실질 경계는 
 - [`screening_1922.md`](screening_1922.md) — 1922년 이전 선별
 - [`wolbo54_status/`](wolbo54_status/) — 지면 무결성과 v2 차단 기록
 - `scripts/06_magazines/mine_marker_decisions.py` — 결정 대장 추출
+- `scripts/06_magazines/detect_columns.py` — 세로쓰기 글줄·글자 좌표 자동 검출
 - `scripts/06_magazines/png_crop.py` — 의존성 없는 PNG 자르기·확대

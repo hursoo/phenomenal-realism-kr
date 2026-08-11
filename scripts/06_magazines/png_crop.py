@@ -102,4 +102,5 @@ def main():
     print(f'{src} ({w}x{h}) → {dst} ({cw}x{ch})  crop=({x},{y}) scale={scale}')
 
 
-main()
+if __name__ == '__main__':
+    main()
