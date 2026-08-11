@@ -1,0 +1,82 @@
+{
+  "cnts_id": "CNTS-00048075155",
+  "fetched_at": "2026-05-08T18:44:54+09:00",
+  "manifest": {
+    "cnts_id": "CNTS-00048075155",
+    "kolis_no": "KSE000001443",
+    "title": "靈通力이事實됨을 해명홈-緖言",
+    "author_hangul": "李敦化",
+    "author_hanja": "京城+:+天道敎會月報社,+19120101",
+    "publisher": "京城 : 天道敎會月報社, 19120101",
+    "pub_date": "19120101",
+    "holding": "디지털도서관 디지털자료실",
+    "page_count_meta": "",
+    "format": "온라인자료",
+    "data_class_cd": "CH4B",
+    "has_origin_link": "1",
+    "refworks_sp": "이미지 파일 8개",
+    "list_idx": "36",
+    "page_num": "1",
+    "source_url": "https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048075155&viewType=C&category=기사"
+  },
+  "viewer_vars": {
+    "cno": "CNTS-00048075155",
+    "srcpath": "/raid5/imagedb/NCL_DB_K/2004/14441904",
+    "ext": "JPG",
+    "vol_maxpage": "8",
+    "LicenseType": "0",
+    "DataClassCd": "CH4B",
+    "CopyrightType": "N",
+    "organId": "",
+    "kolis_no": "KSE000001443",
+    "saveYn": "Y",
+    "printYn": "Y"
+  },
+  "download": {
+    "vol_maxpage": 8,
+    "cur_vol": 0,
+    "pages": [
+      {
+        "page": 1,
+        "path": "page_001.jpg",
+        "bytes": 258172
+      },
+      {
+        "page": 2,
+        "path": "page_002.jpg",
+        "bytes": 243998
+      },
+      {
+        "page": 3,
+        "path": "page_003.jpg",
+        "bytes": 246905
+      },
+      {
+        "page": 4,
+        "path": "page_004.jpg",
+        "bytes": 246945
+      },
+      {
+        "page": 5,
+        "path": "page_005.jpg",
+        "bytes": 259350
+      },
+      {
+        "page": 6,
+        "path": "page_006.jpg",
+        "bytes": 251665
+      },
+      {
+        "page": 7,
+        "path": "page_007.jpg",
+        "bytes": 264625
+      },
+      {
+        "page": 8,
+        "path": "page_008.jpg",
+        "bytes": 243679
+      }
+    ],
+    "total_bytes": 2015339
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "cnts_id": "CNTS-00048065377",
+  "fetched_at": "2026-05-08T18:53:50+09:00",
+  "manifest": {
+    "cnts_id": "CNTS-00048065377",
+    "kolis_no": "KSE000001443",
+    "title": "天道敎會月報第壹百拾八號 : 自己解放과人乃天主義",
+    "author_hangul": "李敦化",
+    "author_hanja": "천도교회월보사",
+    "publisher": "천도교회월보사",
+    "pub_date": "19200115",
+    "holding": "디지털도서관 디지털자료실",
+    "page_count_meta": "",
+    "format": "온라인자료",
+    "data_class_cd": "CH4B",
+    "has_origin_link": "1",
+    "refworks_sp": "이미지 파일 8개 (4 MB)",
+    "list_idx": "129",
+    "page_num": "2",
+    "source_url": "https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048065377&viewType=C&category=기사"
+  },
+  "viewer_vars": {
+    "cno": "CNTS-00048065377",
+    "srcpath": "/raid5/Imagedb/NCL_DB_K/2004/14455199",
+    "ext": "JPG",
+    "vol_maxpage": "8",
+    "LicenseType": "0",
+    "DataClassCd": "CH4B",
+    "CopyrightType": "N",
+    "organId": "",
+    "kolis_no": "KSE000001443",
+    "saveYn": "Y",
+    "printYn": "Y"
+  },
+  "download": {
+    "vol_maxpage": 8,
+    "cur_vol": 0,
+    "pages": [
+      {
+        "page": 1,
+        "path": "page_001.jpg",
+        "bytes": 192515
+      },
+      {
+        "page": 2,
+        "path": "page_002.jpg",
+        "bytes": 235159
+      },
+      {
+        "page": 3,
+        "path": "page_003.jpg",
+        "bytes": 198996
+      },
+      {
+        "page": 4,
+        "path": "page_004.jpg",
+        "bytes": 206444
+      },
+      {
+        "page": 5,
+        "path": "page_005.jpg",
+        "bytes": 211530
+      },
+      {
+        "page": 6,
+        "path": "page_006.jpg",
+        "bytes": 226871
+      },
+      {
+        "page": 7,
+        "path": "page_007.jpg",
+        "bytes": 211176
+      },
+      {
+        "page": 8,
+        "path": "page_008.jpg",
+        "bytes": 197623
+      }
+    ],
+    "total_bytes": 1680314
+  }
+}

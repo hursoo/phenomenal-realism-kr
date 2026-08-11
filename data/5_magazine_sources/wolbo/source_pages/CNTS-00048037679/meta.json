@@ -1,0 +1,67 @@
+{
+  "cnts_id": "CNTS-00048037679",
+  "fetched_at": "2026-05-08T18:50:15+09:00",
+  "manifest": {
+    "cnts_id": "CNTS-00048037679",
+    "kolis_no": "KSE000001443",
+    "title": "[天道敎會月報 第九十三號] 敎理部 : 偉大ᄒᆞᆫ心의世界",
+    "author_hangul": "李敦化",
+    "author_hanja": "천도교회월보발행소",
+    "publisher": "천도교회월보발행소",
+    "pub_date": "19180115",
+    "holding": "디지털도서관 디지털자료실",
+    "page_count_meta": "",
+    "format": "온라인자료",
+    "data_class_cd": "CH4B",
+    "has_origin_link": "1",
+    "refworks_sp": "이미지 파일 5개 (3 MB)",
+    "list_idx": "86",
+    "page_num": "1",
+    "source_url": "https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048037679&viewType=C&category=기사"
+  },
+  "viewer_vars": {
+    "cno": "CNTS-00048037679",
+    "srcpath": "/raid5/Imagedb/NCL_DB_K/2004/14451714",
+    "ext": "JPG",
+    "vol_maxpage": "5",
+    "LicenseType": "0",
+    "DataClassCd": "CH4B",
+    "CopyrightType": "N",
+    "organId": "",
+    "kolis_no": "KSE000001443",
+    "saveYn": "Y",
+    "printYn": "Y"
+  },
+  "download": {
+    "vol_maxpage": 5,
+    "cur_vol": 0,
+    "pages": [
+      {
+        "page": 1,
+        "path": "page_001.jpg",
+        "bytes": 277909
+      },
+      {
+        "page": 2,
+        "path": "page_002.jpg",
+        "bytes": 287257
+      },
+      {
+        "page": 3,
+        "path": "page_003.jpg",
+        "bytes": 261994
+      },
+      {
+        "page": 4,
+        "path": "page_004.jpg",
+        "bytes": 241670
+      },
+      {
+        "page": 5,
+        "path": "page_005.jpg",
+        "bytes": 254837
+      }
+    ],
+    "total_bytes": 1323667
+  }
+}

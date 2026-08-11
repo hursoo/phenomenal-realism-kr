@@ -1,0 +1,13 @@
+{
+  "cnts_id": "CNTS-00048065337",
+  "partial": true,
+  "note": "page 7+ returned empty (text/html size=0); 6 pages received",
+  "pages": [
+    "page_001.jpg",
+    "page_002.jpg",
+    "page_003.jpg",
+    "page_004.jpg",
+    "page_005.jpg",
+    "page_006.jpg"
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "cnts_id": "CNTS-00048051447",
+  "fetched_at": "2026-05-08T18:49:42+09:00",
+  "manifest": {
+    "cnts_id": "CNTS-00048051447",
+    "kolis_no": "KSE000001443",
+    "title": "[天道敎會月報 第八十九號] 敎門訂議 : 吾敎의大宗",
+    "author_hangul": "李敦化",
+    "author_hanja": "천도교회월보발행소",
+    "publisher": "천도교회월보발행소",
+    "pub_date": "19170115",
+    "holding": "디지털도서관 디지털자료실",
+    "page_count_meta": "",
+    "format": "온라인자료",
+    "data_class_cd": "CH4B",
+    "has_origin_link": "1",
+    "refworks_sp": "이미지 파일 7개 (5 MB)",
+    "list_idx": "80",
+    "page_num": "1",
+    "source_url": "https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048051447&viewType=C&category=기사"
+  },
+  "viewer_vars": {
+    "cno": "CNTS-00048051447",
+    "srcpath": "/raid5/Imagedb/NCL_DB_K/2004/14450969",
+    "ext": "JPG",
+    "vol_maxpage": "7",
+    "LicenseType": "0",
+    "DataClassCd": "CH4B",
+    "CopyrightType": "N",
+    "organId": "",
+    "kolis_no": "KSE000001443",
+    "saveYn": "Y",
+    "printYn": "Y"
+  },
+  "download": {
+    "vol_maxpage": 7,
+    "cur_vol": 0,
+    "pages": [
+      {
+        "page": 1,
+        "path": "page_001.jpg",
+        "bytes": 265961
+      },
+      {
+        "page": 2,
+        "path": "page_002.jpg",
+        "bytes": 246794
+      },
+      {
+        "page": 3,
+        "path": "page_003.jpg",
+        "bytes": 278303
+      },
+      {
+        "page": 4,
+        "path": "page_004.jpg",
+        "bytes": 254149
+      },
+      {
+        "page": 5,
+        "path": "page_005.jpg",
+        "bytes": 275966
+      },
+      {
+        "page": 6,
+        "path": "page_006.jpg",
+        "bytes": 253381
+      },
+      {
+        "page": 7,
+        "path": "page_007.jpg",
+        "bytes": 270762
+      }
+    ],
+    "total_bytes": 1845316
+  }
+}
