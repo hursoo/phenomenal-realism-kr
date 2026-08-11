@@ -1,132 +1,91 @@
-# cheondogyo_wolbo_series
+# 『천도교회월보』 이돈화 86편
 
-천도교회월보 이돈화 75편 전사 파이프라인의 본격 작업 영역. Phase 1·2·3.A·B2 완료 (2026-05-09).
+1911년 1월부터 1922년 5월까지 『천도교회월보(天道敎會月報)』에 실린 이돈화의 글 86편이다.
+국립중앙도서관이 제공하는 지면 스캔을 받아 **세로쓰기 옛한글 지면을 판독**해 텍스트로
+만들었다. 판독 절차는 [`../../../docs/02b_digitization_magazines.md`](../../../docs/02b_digitization_magazines.md)
+§2에 있다.
 
-## 폴더 구조
+**이 자료는 미완이다.** 아홉 편만 사람이 전문을 원본과 대조했고, 일흔여섯 편은 두 엔진이
+갈린 자리를 안은 초벌이며, 한 편(C10)은 아직 전사하지 않았다. 그런데도 전부 내놓는다.
+**대신 어디가 어느 등급인지를 글자마다 표시했다.**
 
-```
-cheondogyo_wolbo_series/
-├── README.md                     ← 본 파일
-├── articles/                     ★ 본 시리즈 75편의 정착 산출물
-│   └── 01_kwonyu_1911-01/        본 1편: 「勸牖天下失樂者」 (1911-01-15)
-│       ├── meta.yaml             메타데이터·자르기 좌표·검증 사실
-│       ├── units/                5단 이미지 (단 분리 산출, *.png는 .gitignore)
-│       ├── ocr/                  도구별 raw OCR 결과 + review·decisions
-│       │   ├── claude_opus_4_7/
-│       │   ├── gemini/
-│       │   ├── gpt5/             (참고용, 시리즈에서 제외 결정)
-│       │   ├── paddle/
-│       │   ├── review_*.md       단별 차이 영역 review 보고서
-│       │   └── decisions_*.md    인간 중재 결정 보고서
-│       └── transcripts/          ★ 최종 권위 텍스트
-│           ├── article_01.high_fidelity.md     (2) 고충실 전사본 v1.1 (Soo 권위)
-│           └── article_01.modern_reading.md    (3) 현대 독해본 v1.0 (Claude 띄어쓰기, Soo 검수 대기)
-│
-├── samples/                      옛한글·정책 측정용 부 표본
-│   └── oldhangul_sample_wolbo18/  부 표본: 「新年에 對ᄒᆞᆫ 新感想으로 新發明을 公告ᄒᆞᆷ」 (1912-01-15)
-│       ├── meta.yaml
-│       ├── units/                정정된 자르기 (좌상·좌하 2단)
-│       ├── ocr/                  3엔진 결과 + decisions
-│       └── transcripts/
-│
-├── scripts/                      ★ 재사용 가능 스크립트
-│   ├── consensus.py              ★ B2 v1: 합의 파이프라인 (analyze/all/review/draft, article-agnostic)
-│   ├── add_spacing.py            ★ B2 v1: Claude API 띄어쓰기 부여 (정책 §20.b)
-│   ├── article_pipeline.py       ★ B2 v1: stage 오케스트레이터 (status/next/run)
-│   ├── build_series_index.py     ★ C1: 75편 시간순 정렬 + series_index 부여
-│   ├── bootstrap_article.py      ★ C2.0: article 폴더 skeleton 생성 (한자 2자 slug + meta.yaml)
-│   ├── transform_old_to_modern.py  (2)→(3) 변환 + 옛한글 자모 매핑 v1.0
-│   ├── phase2_5_consensus.py     [legacy] article_01 전용 합의 스크립트 (consensus.py로 대체)
-│   ├── phase2_1_detect_band.py   단 경계 검출 (Phase 2 시기 산출)
-│   ├── phase2_3_api_probe.py     API 활성화 점검 (Phase 2 시기 산출)
-│   ├── cut_article_01_units.py   본 1편 자르기 좌표 (편당 1개 스크립트)
-│   ├── run_gemini_ocr.py         Gemini 2.5 Pro vision OCR (v1.1 article-agnostic)
-│   ├── run_paddle_ocr.py         PaddleOCR PP-OCRv5_server (v1.1 article-agnostic)
-│   └── run_gpt5_ocr.py           GPT-5 vision OCR (시리즈 제외 결정)
-│
-└── _archive/                     일회성·시행착오 (보존용)
-    ├── probes/                   본 1편 단 분리 시 일회성 시각·column probe (.py 9개)
-    ├── visual_probe/             본 1편 시각 검증 png (16개)
-    └── samples_oldhangul_probes/  부 표본 시각 검증 자료 (.py 5개 + visual_probe/)
-```
+> 📌 **먼저 읽을 것 — [`TRUST.md`](TRUST.md).** 이 자료로 무엇을 말할 수 있고 무엇을 말할
+> 수 없는지가 거기 있다. 특히 **빈도를 수치로 말하거나 「없다」고 단정하거나 인용하려는**
+> 경우에는 반드시 읽어야 한다.
 
-## 권위 기준 (2026-05-09 시점)
+---
 
-- **시리즈 정책 v0.3 (20 규칙)**: `../../../_design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md`
-- **옛한글 자모 매핑 규칙표 v1.0 (18 매핑)**: `scripts/transform_old_to_modern.py` 안 dict
-- **도구 조합**: Claude Opus 4.7(주) + Gemini 2.5 Pro(보강) + PaddleOCR chinese_cht(검증). GPT-5 제외.
-- **본 1편 (2)v1.1 + (3)v1.0**: `articles/01_kwonyu_1911-01/transcripts/`
+## 어디부터 볼까
 
-## 사용법
-
-### B2 v1 도구 (article-agnostic)
-
-```bash
-# 1. 파이프라인 상태 확인
-python scripts/article_pipeline.py status --article 01_kwonyu_1911-01
-
-# 2. 다음 자동 단계 실행 (consensus / transform / spacing 중)
-python scripts/article_pipeline.py next --article 01_kwonyu_1911-01
-
-# 3. 특정 단계만 실행
-python scripts/article_pipeline.py run --article 01_kwonyu_1911-01 --stage consensus
-```
-
-### 개별 도구 직접 호출
-
-```bash
-# 합의 분석 (단별 review_*.md + (2) draft_v0 자동 초안)
-python scripts/consensus.py review --article 01_kwonyu_1911-01
-python scripts/consensus.py draft  --article 01_kwonyu_1911-01
-python scripts/consensus.py all    --article 01_kwonyu_1911-01    # 전체 unit 요약 표
-python scripts/consensus.py analyze --article 01_kwonyu_1911-01 --unit unit_3_p2u
-
-# (2) → (3) 변환 (옛한글 자모 → 현대 자모, 한자 보존, 띄어쓰기 미부여)
-python scripts/transform_old_to_modern.py \
-  articles/01_kwonyu_1911-01/transcripts/article_01.high_fidelity.md \
-  articles/01_kwonyu_1911-01/transcripts/article_01.modern_reading.md
-
-# (3)에 Claude API 의미 단위 띄어쓰기 부여 (정책 §20.b 7규칙)
-python scripts/add_spacing.py articles/01_kwonyu_1911-01/transcripts/article_01.modern_reading.md
-
-# OCR 도구별 실행 (article-agnostic v1.1)
-python scripts/run_gemini_ocr.py --article 01_kwonyu_1911-01
-python scripts/run_gemini_ocr.py --article 01_kwonyu_1911-01 --unit unit_3_p2u --force
-python scripts/run_paddle_ocr.py --article 01_kwonyu_1911-01
-
-# 시리즈 인덱스 산출 (1회성)
-python scripts/build_series_index.py
-
-# C2 article 폴더 skeleton (한자 2자 slug + meta.yaml)
-python scripts/bootstrap_article.py --series 2-9    # 범위
-python scripts/bootstrap_article.py --all           # 73편 일괄 (#1·#10 제외)
-python scripts/bootstrap_article.py --series 2 --dry-run  # 검토만
-```
-
-## 시리즈 인덱스 (C1 산출, 2026-05-09)
-
-`series_index.csv` / `series_index.md`: 75편 발행일 순 1~75. 본 1편 = #1, 부 표본 = #10.
-
-**시기 cutoff 제약**: 1911-01-15 ~ 1922-05-15 (75편). 1922-06 ~ 1924 NL 디지털 미제공으로 5건 ✗.
-
-## 파이프라인 단계 (정책 v0.3 §3)
-
-| 단계 | 종류 | 도구 | 산출 |
-|---|---|---|---|
-| S1. ocr | 외부 | run_*_ocr.py + Claude vision | `<article>/ocr/<engine>/<unit>.txt` |
-| S2. consensus | 자동 | `consensus.py review` + `draft` | `review_*.md` + `<id>.high_fidelity.draft_v0.md` |
-| H3. high_fidelity | **인간** | Soo가 ⚠️ 마커 해소 | `<id>.high_fidelity.md` (마커 없음) |
-| S4. transform | 자동 | `transform_old_to_modern.py` | `<id>.modern_reading.md` (띄어쓰기 미부여) |
-| S5. spacing | 자동 | `add_spacing.py` (Claude API) | (3)에 띄어쓰기·구두점 부여 |
-| H6. final | **인간** | Soo 검수 | frontmatter `status: human_verified` |
-
-## 다음 단계
-
-| 그룹 | 내용 |
+| 하려는 일 | 갈 곳 |
 |---|---|
-| B1 (보류) | snudh GPU에 PaddleOCR 설치 (75편 일괄 시 GPU 가속 필요) |
-| C (75편 일괄) | 시간순 정렬·series_index → 단 분리 → 위 파이프라인 적용 |
+| **그냥 읽고 싶다** | [`reading/`](reading/) — 86편, 마커를 해소한 본문 |
+| **어떤 낱말이 언제 어디에 나오는지 보고 싶다** | [`keyword_index.csv`](keyword_index.csv) — 한 행이 한 출현 |
+| **어느 편이 얼마나 믿을 만한지 보고 싶다** | [`CORPUS_STATUS.csv`](CORPUS_STATUS.csv) — 편별 대시보드 |
+| **인용하려 한다** | [`TRUST.md`](TRUST.md) §4 → [`source_pages/`](source_pages/) → [`verified_passages.md`](verified_passages.md) |
+| **원본 그대로가 필요하다** | `articles/*/transcripts/`(초벌) · `articles/*/ocr/`(엔진 원출력) |
 
-OCR runner의 article-agnostic화는 C 그룹 진입 시 함께 처리.
+---
 
-자세한 사양은 정책 v0.3 §3·§5 참조.
+## 폴더
+
+```
+wolbo/
+├── TRUST.md                  ★ 신뢰 등급 안내 — 먼저 읽는다
+├── reading/                  ★ 읽을 수 있는 본문 86편 (파생물)
+├── keyword_index.csv         ★ 키워드 색인 — 한 행이 한 출현 (파생물)
+├── CORPUS_STATUS.csv         ★ 편별 대시보드 (파생물)
+│
+├── articles/                 85편의 원본 산출 — 손대지 않는다
+│   └── <NN>_<제목2자>_<연월>/
+│       ├── meta.yaml         서지·지면 좌표·단 분리 좌표·해시
+│       ├── units/            단 이미지 (*.png는 저장소에 싣지 않는다)
+│       ├── ocr/              엔진 원출력 — claude_opus_4_7 · gemini · paddle · gpt5
+│       └── transcripts/      초벌(*.draft_v0.md) — ⚠️ 마커가 든 판
+│
+├── verified_transcripts/     ★ 정본 8편 (C30~C37) + _ruleset.md · MAP.csv
+├── source_pages/             ★ 원본 지면 스캔 479장 — 최종 판정의 근거
+├── verified_passages.md      대목별 원문 대조 기록 — 인용의 자격
+├── screening_1922.md         1922년 이전 3분법 어휘 선별·전수 대조
+├── marker_resolution_experiment.md   눈 판단을 기계가 어디까지 줄이는가
+├── marker_decisions.csv      결정 대장 — 정본에서 뽑은 「사람은 이렇게 정했다」
+├── series_index.csv/.md      86편 시간순 목록
+├── wolbo54_status/           54편 검수 트랙의 상태 기록
+└── samples/                  옛한글·정책 측정용 부 표본
+```
+
+정본 1편(C01)은 예외로 `articles/01_kwonyu_1911-01/transcripts/article_01.high_fidelity.md`에
+있다. 곧 **정본은 모두 아홉 편**이다.
+
+---
+
+## 실측 (2026-08-12)
+
+| | |
+|---|---:|
+| 편 | **86** (정본 9 · 초벌 76 · 전사 없음 1) |
+| 기간 | 1911-01-15 ~ 1922-05-15 |
+| 원본 지면 스캔 | 479장 |
+| 판독 단위 | 584단 |
+| 초벌본의 마커(엔진이 갈린 자리) | 14,588 |
+| 그 가운데 **기계가 한쪽을 고른 자리** | 10,071 (69.0%) |
+| 고르지 못한 자리(대분기) | 1,032 (7.1%) |
+| Gemini 빈 출력 단위 | 89 (15.2%) — 그 구간의 「없음」은 「보지 않았음」이다 |
+| 색인이 잡은 출현 | 1,219 (17낱말) |
+
+---
+
+## 파생물은 다시 생성한다
+
+`reading/`·`keyword_index.csv`·`CORPUS_STATUS.csv`는 **파생물**이다. 낡거나 틀리면 고치지
+말고 다시 만든다. 고치면 원본과 어긋나고, 어긋난 사실이 아무 데도 남지 않는다.
+
+```bash
+python3 scripts/06_magazines/build_keyword_index.py    # 색인
+python3 scripts/06_magazines/build_reading.py          # 읽기 본문
+python3 scripts/06_magazines/build_corpus_status.py    # 대시보드
+```
+
+세 스크립트 모두 의존성이 없다(표준 라이브러리 + PyYAML). 마커 해소 규약은
+`scripts/06_magazines/wolbo_markers.py`가 `verified_transcripts/_ruleset.md`를 코드로 옮긴
+것이며, **규약이 권위이고 코드가 그것을 따른다.**

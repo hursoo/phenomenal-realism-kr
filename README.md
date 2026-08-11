@@ -89,6 +89,19 @@
 [`verified_passages.md`](data/5_magazine_sources/wolbo/verified_passages.md)에 기록해 두었다.
 아래 「AI를 어디에 썼는가」 참조.
 
+📌 **그래서 86편을 미완인 채로 쓸 수 있게 내놓았다**(2026-08-12). 완성될 때까지 기다리면
+아무도 쓰지 못하므로, **어디가 어느 등급인지를 글자마다 표시**하는 쪽을 택했다.
+
+| | |
+|---|---|
+| [`reading/`](data/5_magazine_sources/wolbo/reading/) | **읽을 수 있는 본문 86편** — 마커를 해소하되 〔규칙〕〔대장〕〔C〕〔G〕〔?…〕〔확인〕으로 해소 방식을 표시 |
+| [`keyword_index.csv`](data/5_magazine_sources/wolbo/keyword_index.csv) | **키워드 색인** — 한 행이 한 출현. 편·쪽·단·문맥·엔진 합의 여부 |
+| [`CORPUS_STATUS.csv`](data/5_magazine_sources/wolbo/CORPUS_STATUS.csv) | **편별 대시보드** — 어느 편이 얼마나 무른가 |
+| [`TRUST.md`](data/5_magazine_sources/wolbo/TRUST.md) | ★ **신뢰 등급 안내** — 이 자료로 무엇을 말할 수 있고 무엇을 말할 수 없는가 |
+
+**초벌본의 마커 14,588 가운데 69.0%가 기계가 한쪽을 고른 자리**이며 7.1%는 아무도 고르지
+못한 대분기다. 그 비율을 감추지 않는 것이 이 공개의 요건이다.
+
 ⚠️ **『천도교회월보』 86편 가운데 한 편(통권 18, 1912년 1월)은 본문이 없다.** 옛한글 전사
 실험의 표본 헤더만 들어 있어 **전수가 실제로 훑은 것은 85편**이다. 빠진 한 편은 원본 스캔을
 직접 판독해 확인했으며 그 이미지가 `data/1_raw_data/wolbo_18/`에 있다.

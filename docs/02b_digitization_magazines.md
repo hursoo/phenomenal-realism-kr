@@ -133,6 +133,25 @@ YID_AUTHORS = ('李敦化', '夜雷', '야뢰', '白頭山人', '백두산인',
 [`../data/5_magazine_sources/wolbo/verified_passages.md`](../data/5_magazine_sources/wolbo/verified_passages.md)에
 있다. 대조를 마친 대목만 그 파일에 들어가며, **거기에 없는 대목은 대조하지 않은 것이다.**
 
+### 미완인 채로 내놓는다 (2026-08-12)
+
+검수가 끝나기를 기다리면 이 자료는 아무도 쓰지 못한다. 그래서 **86편 전부를 쓸 수 있는
+형태로 내놓되, 어디가 어느 등급인지를 글자마다 표시**했다. 셋을 새로 만들었다.
+
+| | 무엇 | 어떻게 |
+|---|---|---|
+| [`reading/`](../data/5_magazine_sources/wolbo/reading/) | 읽을 수 있는 본문 86편 | 마커를 해소하고 〔규칙〕〔대장〕〔C〕〔G〕〔?…〕〔확인〕으로 해소 방식을 표시 |
+| [`keyword_index.csv`](../data/5_magazine_sources/wolbo/keyword_index.csv) | 키워드 색인 (17낱말·1,219출현) | **합의본이 아니라 엔진 원출력**을 세어 마커의 과소 계수를 피한다 |
+| [`CORPUS_STATUS.csv`](../data/5_magazine_sources/wolbo/CORPUS_STATUS.csv) | 편별 대시보드 | 마커·대분기·자동해소율·엔진 공백률·대조 자리 |
+
+읽는 법은 [`TRUST.md`](../data/5_magazine_sources/wolbo/TRUST.md)에 모았다. 실측은 이렇다 —
+초벌 76편의 마커 **14,588** 가운데 규칙·대장으로 판단이 필요 없던 것이 21.7%, **기계가
+한쪽을 고른 것이 69.0%**, 아무도 고르지 못한 대분기가 7.1%다. 마커 해소 규약은
+`scripts/06_magazines/wolbo_markers.py`가 `verified_transcripts/_ruleset.md`를 코드로 옮긴
+것이며, **규약이 권위이고 코드가 그것을 따른다.**
+
+이 셋은 **파생물**이다. 낡으면 고치지 말고 다시 생성한다.
+
 ### 검수한 아홉 편은 어디에 있나
 
 | | 어디 |
