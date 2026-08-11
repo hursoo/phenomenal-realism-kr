@@ -83,8 +83,9 @@
 `data/5_magazine_sources/wolbo/source_pages/`. 국립중앙도서관 스캔이며, 판독이 갈린 자리에서
 어느 쪽이 맞는지 남이 판정할 수 있다.
 
-⚠️ **다만 월보 전사는 대부분 미검수 초벌이다** — 86편 중 전문 대조를 마친 것은 아홉 편이다.
-인용하려면 지면과 대조해야 하며, 이미 대조를 마친 대목은
+⚠️ **다만 월보 전사는 대부분 미검수 초벌이다** — 86편 중 전문 대조를 마친 것은 아홉 편이고,
+그 정본은 [`verified_transcripts/`](data/5_magazine_sources/wolbo/verified_transcripts/)에
+검수 규약·대응표와 함께 있다. 인용하려면 지면과 대조해야 하며, 이미 대조를 마친 대목은
 [`verified_passages.md`](data/5_magazine_sources/wolbo/verified_passages.md)에 기록해 두었다.
 아래 「AI를 어디에 썼는가」 참조.
 
@@ -303,7 +304,8 @@ Investigate · 해석 Signify · 발표 Present.** 물질성 → 구조 → 관�
 엔진이 서로를 견제했으나 그 차이의 대부분이 사람 손을 거치지 않았다.** 위험의 형태가 셋 다 다르다.
 
 🔴 **월보 코퍼스는 초벌 위에 서 있다.** 77편은 엔진이 갈린 자리가 편당 수백 곳 남은 채로 들어가
-있고, 그 자리에는 한 엔진의 판독이 그대로 실려 있다. **월보로 빈도를 세거나 「없다」고 단정하는
+있고, 그 자리에는 한 엔진의 판독이 그대로 실려 있다. **검수를 마친 아홉 편 가운데 여덟 편도
+아직 DB에 반영되지 않았다**(정본이 `articles/` 밖에 있어 변환이 집지 못한다). **월보로 빈도를 세거나 「없다」고 단정하는
 데는 이 사실이 걸린다.** 그래서 **인용하는 대목은 대목마다 지면과 대조하고 그 사실을 기록한다** —
 [`data/5_magazine_sources/wolbo/verified_passages.md`](data/5_magazine_sources/wolbo/verified_passages.md).
 자세한 것은 [`docs/02b_digitization_magazines.md`](docs/02b_digitization_magazines.md) §2 「검수 현황」.

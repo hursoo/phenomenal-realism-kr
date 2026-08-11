@@ -79,7 +79,7 @@ YID_AUTHORS = ('李敦化', '夜雷', '야뢰', '白頭山人', '백두산인',
 ③ 3엔진 판독       Claude Opus(주) · Gemini 2.5 Pro(보강) · PaddleOCR(검증)
                    → ocr/<도구>/ 에 각각의 결과
 ④ 합의            consensus.py — 도구 간 차이 영역을 검출해 review 보고서 생성
-⑤ 사람 중재        decisions_*.md — 차이를 사람이 판정
+⑤ 사람 중재        ⚠️ 마커를 이미지와 대조해 해소 (9편만 완료 — 아래 「검수 현황」)
 ⑥ 고충실 전사본     transcripts/*.high_fidelity.md      ← 권위 텍스트
 ⑦ 현대 독해본       transform_old_to_modern.py + add_spacing.py
                    → transcripts/*.modern_reading.md
@@ -128,12 +128,38 @@ YID_AUTHORS = ('李敦化', '夜雷', '야뢰', '白頭山人', '백두산인',
 [`../data/5_magazine_sources/wolbo/verified_passages.md`](../data/5_magazine_sources/wolbo/verified_passages.md)에
 있다. 대조를 마친 대목만 그 파일에 들어가며, **거기에 없는 대목은 대조하지 않은 것이다.**
 
+### 검수한 아홉 편은 어디에 있나
+
+| | 어디 |
+|---|---|
+| **정본 8편** (C30~C37, 1915~1917) | [`../data/5_magazine_sources/wolbo/verified_transcripts/`](../data/5_magazine_sources/wolbo/verified_transcripts/) |
+| 정본 1편 (C01) | `articles/01_kwonyu_1911-01/transcripts/article_01.high_fidelity.md` |
+| 초벌 77편 | `articles/*/transcripts/*.high_fidelity.draft_v0.md` |
+
+정본의 조건은 **잔여 `⚠️`·`@`·`draft_v0`가 없고 프론트매터가 `status: human_verified`인 것**이다.
+그 조건과 검수 파이프라인 4단(구조 선분리 → 자동채움 → 눈 판단 → 정본화)을 정한 문서가
+`verified_transcripts/_ruleset.md`이며, **자동화는 그 규약의 확정 규칙에만 적용하고 규칙 밖은
+전부 사람 눈으로 넘긴다**는 것이 요점이다. 정본과 초벌·지면의 대응은 같은 폴더의 `MAP.csv`에
+있다.
+
+🔴 **다만 이 정본 여덟 편은 아직 코퍼스에 들어가 있지 않다.** 아래 「변환」이 `high_fidelity.md`를
+우선하는데 그 파일이 `articles/` 밖에 있어, **`MA_YD_10-20_WB.xlsx`는 이 여덟 편에 대해서도
+초벌 위에 서 있다.** 정본이 실제로 DB에 반영된 것은 C01 한 편뿐이다. 곧 **「9편 검수 완료」는
+검수의 사실이지 코퍼스의 상태가 아니다.** 정합을 맞추려면 정본을 `articles/`로 옮기고 변환을
+다시 돌려야 하며, 그러면 DB 위에서 낸 수치가 달라진다.
+
+**여덟 편에는 唯物·唯心·實在·物心·三派가 0회다.** 그 구간(1915~1917)에 관해서만은 「없다」는
+판정이 초벌이 아니라 정본 위에 선다. 다만 검수 대상이 그 어휘를 기준으로 골라진 것이 아니므로
+(시리즈 순서와 우선순위 `core` 5편) 우연한 겹침이다.
+
 ### 변환
 
 `scripts/convert_wolbo_to_unified.py`
 
 1. `series_index.csv`를 발행일 순으로 정렬해 `C` 번호를 매긴다
-2. `articles/` 폴더를 훑는다 — **`draft_v1`(검수본)을 우선하고 없으면 `draft_v0`를 쓴다**
+2. `articles/` 폴더를 훑는다 — **정본 `*.high_fidelity.md`를 우선하고 없으면 초벌
+   `*.high_fidelity.draft_v0.md`를 쓴다.** 초벌에서는 `⚠️[C:…|G:…]` 마커 안의 **Claude 판독**을
+   집는다. ⚠️ 현재 정본이 `articles/` 안에 있는 것은 C01 한 편뿐이다(위 참조)
 3. 본문을 추출한다(프론트매터와 `[body]` 분리, `draft_v0`는 `⚠️` 마커 처리)
 4. 문장 분리 + 다섯 문장 묶음
 5. `local_id = C##-S00-I00-P00-S##`. **단락 정보가 없어 `P00`으로 일관한다**
@@ -164,9 +190,9 @@ YID_AUTHORS = ('李敦化', '夜雷', '야뢰', '白頭山人', '백두산인',
 비교에는 **28토큰 윈도우로 재분할**한 판(`tokens_월보_win.csv`)을 쓴다.
 
 **④ 판독 위험이 자료마다 다르다.** 『개벽』은 판독 단계가 없어
-[`06_ai_disclosure.md`](06_ai_disclosure.md)의 ③④⑤가 적용되지 않는다. 월보는 3엔진이 서로를
-견제하고 차이를 사람이 판정했으므로, 단일 엔진에 여러 판 교정을 얹은 두 단행본과 위험의 형태가
-다르다.
+[`06_ai_disclosure.md`](06_ai_disclosure.md)의 ③④⑤가 적용되지 않는다. 두 단행본은 단일 엔진에
+여러 판 교정을 얹었다. 월보는 3엔진이 서로를 견제했으나 **그 차이의 대부분이 아직 사람 손을
+거치지 않았다**(86편 중 9편). 위험의 형태가 셋 다 다르며, **월보 쪽이 가장 무르다.**
 
 ---
 
@@ -193,6 +219,7 @@ YID_AUTHORS = ('李敦化', '夜雷', '야뢰', '白頭山人', '백두산인',
 | 엔진별 판독 결과 (`articles/*/ocr/{claude_opus_4_7,gemini,paddle,gpt5}/*.txt`) | **1,231** |
 | 차이 검토 보고서 · 전사본 (`review_*.md` · `transcripts/*.md`) | **676** |
 | 편별 메타 (`articles/*/meta.yaml` — 자르기 좌표·쪽별 SHA-256·픽셀) | **85** |
+| **사람이 전문을 대조한 정본** (`verified_transcripts/` + 검수 규약 · 대응표) | **8편** |
 | **원문 대조를 마친 대목의 기록** (`verified_passages.md`) | **2대목** |
 | `series_index.csv` · 배치 요약 · 키워드 감사 | |
 
