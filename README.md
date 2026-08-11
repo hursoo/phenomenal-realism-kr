@@ -76,26 +76,92 @@
 └── IMAGES.md                  1915년 원본 PDF의 소재와 재현 방법
 ```
 
+각 폴더가 어느 단계의 산출물인지는 아래 「가공 절차」의 표에 있다.
+
 ---
 
-## 가공 절차
+## 가공 절차 — 한눈에
 
-```
-① 저본        NDL PID 952938 (1915) / 영인본 소장본 촬영 (1924)
-② 페이지 분할  01_make_one_sheet → 02_split_two_side → 03_cut_extra_space
-              → 832장 / 290장
-③ 판독        Google Gemini 3.0 — 국한문 혼용체·일본어 고어 판독,
-              장·절·항 위계와 문단 구분 인식
-④ 교정        1915 여덟 판 · 1924 다섯 판
-⑤ 문장 태깅   1924만 — 여섯 판
-⑥ 문장분리·ID → DB v1.0 / v1.1
-⑦ 정리        v1.2 장번호 재배열 → v1.3 빈 행 삭제
-⑧ 묶음 부여   v1.4 — n_chunk_id, local_id 5단 통일
-⑨ 정규화      reading-space 토큰
-⑩ 유사도      자카드 — 다섯 문장 묶음, 문턱 0.08
+```mermaid
+flowchart TD
+    subgraph C["<b>수집</b> Collect — 물질성"]
+        A1["<b>『哲學と宗敎』</b> 1915<br/>NDL PID 952938"]:::src
+        A2["<b>『人乃天-要義-』</b> 1924<br/>편자 소장 영인본"]:::src
+    end
+
+    subgraph R["<b>정제</b> Refine — 구조"]
+        B["<b>② 페이지 분할 · 재넘버링</b><br/>펼침면 → 낱쪽 → A/C/Z<br/>832장 · 290장"]:::rule
+        Cc["<b>③ 판독</b><br/>Google Gemini 3.0<br/>위계 · 문단 · 페이지 태그"]:::ai
+        D["<b>④ 교정 · ⑤ 문장 태깅</b><br/>21판 (1915년 9 · 1924년 12)"]:::ai
+        E["<b>⑥ 문장 분리 · ID 부여</b><br/>DB v1.0 / v1.1"]:::rule
+        F["<b>⑦ 정리</b><br/>v1.2 → v1.3 · 문단 633 → 626"]:::rule
+        G["<b>⑧ 묶음 단위</b><br/>v1.4 · 2,195묶음 · 424묶음"]:::rule
+        H["<b>⑨ 정규화</b><br/>reading-space 토큰"]:::rule
+    end
+
+    subgraph I["<b>분석</b> Investigate — 판단"]
+        J["<b>⑩ 유사도 · 전수 검색</b><br/>자카드 930,680쌍<br/>항목명 대조 · 밀도"]:::rule
+    end
+
+    subgraph S["<b>해석</b> Signify — 맥락"]
+        K["논법의 이식<br/>순서는 물려받되<br/>바닥을 갈아 끼웠다"]:::interp
+    end
+
+    subgraph P["<b>발표</b> Present — 효용"]
+        L["발표문 · 논문<br/>2026. 2 / 6 / 8"]:::interp
+    end
+
+    A1 --> B
+    A2 --> B
+    B --> Cc --> D --> E --> F --> G --> H --> J --> K --> L
+
+    classDef src    fill:#f5f0e6,stroke:#8a7a5c,stroke-width:2px,color:#000
+    classDef ai     fill:#fde2e2,stroke:#c0504d,stroke-width:2px,color:#000
+    classDef rule   fill:#e4eef7,stroke:#3d6f9e,stroke-width:2px,color:#000
+    classDef interp fill:#eae6f2,stroke:#6b5b95,stroke-width:2px,color:#000
 ```
 
-상세는 [`docs/02_digitization.md`](docs/02_digitization.md).
+<sub>■ 붉은 칸은 **언어모델이 개입한 단계**로 결정론적이지 않다. 그래서 산출물을 판별로 모두
+실었다. ■ 푸른 칸은 **규칙 기반**이며 코드로 재현된다. ■ 보라 칸은 사람의 판단이다.</sub>
+
+바깥의 다섯 묶음은 편자가 쓰는 연구 단계 틀이다 — **수집 Collect · 정제 Refine · 분석
+Investigate · 해석 Signify · 발표 Present.** 물질성 → 구조 → 판단 → 맥락 → 효용으로 올라간다.
+
+### 이 저장소가 덮는 자리
+
+| 단계 | 이 저장소 | 어디에 |
+|---|---|---|
+| **수집** | ✅ 저본의 출처와 서지 | `docs/01` · `IMAGES.md` |
+| **정제** | ✅ **거의 전부가 여기다** — ②~⑨ 여덟 단계 | `docs/02·03·04` · `data/` · `scripts/` |
+| **분석** | ✅ 산출물과 절차 | `docs/05` · `data/analysis/` · `images/` |
+| **해석** | ✖ 발표문·논문의 몫 | — |
+| **발표** | ✖ 발표문·논문의 몫 | 아래 「인용」 |
+
+**열 단계 가운데 여덟이 정제다.** 원본에서 분석 가능한 텍스트를 만드는 일이 이 연구에서
+차지하는 몫이 그만큼 크고, 그런데도 논문에는 각주 한 줄로 줄어든다. **이 저장소는 그 여덟을
+펴 놓은 것이다.**
+
+해석과 발표는 여기 없다. 두 책을 맞대 무엇을 읽어 냈는지는 인용 절의 발표문들에 있다.
+
+### 단계별 — 자료 · 문서 · 코드
+
+| 단계 | 산출물 | 문서 | 코드 |
+|---|---|---|---|
+| ① 저본 | `data/1_raw_data/` · [`IMAGES.md`](IMAGES.md) | [01 원사료](docs/01_sources.md) | — |
+| ② 분할·재넘버링 | `data/2_cut_renumbering/` | [02 §②](docs/02_digitization.md) · [03 §5-2](docs/03_db_structure.md) | `scripts/01_page_split/` |
+| ③ 판독 | `data/3_corpus/*.txt` | [02 §③](docs/02_digitization.md) · [06 AI 고지](docs/06_ai_disclosure.md) | — |
+| ④⑤ 교정·태깅 | `data/3_corpus/revisions/` | [02 §④⑤](docs/02_digitization.md) | `n8n_code_node.txt`(명세) |
+| ⑥ 문장분리·ID | `data/3_corpus/*_v1.0/v1.1.xlsx` | [03 DB 구조](docs/03_db_structure.md) | `scripts/04_build_db/` |
+| ⑦ 정리 | `*_v1.2/v1.3.xlsx` | [03 §2 버전 이력](docs/03_db_structure.md) | — |
+| ⑧ 묶음 단위 | `*_v1.4.xlsx` | [03 §6 묶음 ID](docs/03_db_structure.md) | — |
+| ⑨ 정규화 | `data/4_tokens/` | [04 정규화](docs/04_normalization.md) · `docs/normalization_spec_2026-05-21.md` | `scripts/02_normalize/` |
+| ⑩ 유사도 | `data/analysis/` · `images/` | [05 유사도](docs/05_similarity.md) | `scripts/03_similarity/` · `scripts/figures/` |
+
+### 어디부터 읽을 것인가
+
+- **자료를 쓰려는 사람** → [01 원사료](docs/01_sources.md) → [03 DB 구조](docs/03_db_structure.md)
+- **수치를 재현하려는 사람** → [04 정규화](docs/04_normalization.md) → [05 유사도](docs/05_similarity.md)
+- **판독의 신뢰도가 궁금한 사람** → [06 AI 사용 고지](docs/06_ai_disclosure.md) → [02 디지털화](docs/02_digitization.md)
 
 ### 중간 판을 남기는 이유
 
