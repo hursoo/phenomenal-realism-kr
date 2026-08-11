@@ -176,6 +176,75 @@ def _increment_page(self, page_str):
 
 ---
 
+## 5-3. 도식(圖)의 처리
+
+두 책에는 본문이 가리키는 **도식**이 있다. 1915년 66쪽과 1924년 96쪽의 현상즉실재론 도식이
+대표적이며, 선행연구가 두 책의 관계를 처음 밝힐 때 맞댄 것이 바로 이 둘이다.
+
+**이미지 자체는 DB에 들어가지 않는다.** 대신 **자리표시자와 그 안의 글자**를 두 행으로 적었다.
+
+```
+C02-P31-S01  p.66  [TEXT]        {{FIG:Inoue_Metaphysics_01 | TYPE:Trialism | LOC:p66}}
+ANNO         p.66  [ANNOTATION]  精神
+```
+
+형식은 `{{FIG:<이름> | TYPE:<유형> | LOC:p<쪽>}}`이고, 바로 다음 행에 도식 안에 적힌 글자가
+온다. 본문의 「上圖와 가티」·「簡單に圖に書けば斯うなる」가 이 행을 가리킨다.
+
+**실물 이미지는 `data/2_cut_renumbering/`에 있다.** `LOC`의 쪽 번호가 곧 파일명이므로,
+`LOC:p66`은 `PR_cut_renumber/C066.jpg`다(§5-2).
+
+### 전수 — 15개
+
+| 책 | 쪽 | 이름 | 유형 | 도식 안의 글자 |
+|---|---:|---|---|---|
+| 1915 | 31 | `Inoue_Relation_01` | Triangle | |
+| 1915 | 37 | `Inoue_Dualism_List` | Opposite_Pairs | |
+| **1915** | **66** | **`Inoue_Metaphysics_01`** | **Trialism** | **精神 …** |
+| 1915 | 74 | `Inoue_Phenomenon_Reality_01` | Binary_Opposition | 差別 |
+| 1915 | 120 | `Inoue_Will_Flow` | Flow_Chart | 活動 - 欲動(衝動) - 意志 |
+| 1915 | 132 | `Inoue_Vision_Circle` | Geometric_Diagram | 視點 |
+| 1915 | 136 | `Inoue_Consciousness_Halo` | Consciousness_Map | 不可知界 - 意識界 - 暈彩 |
+| 1915 | 162 | `Inoue_Path_Choice` | Bifurcation_Chart | A - 左 - B |
+| 1915 | 183 | `Inoue_Linear_Progress` | Linear_Vector | A ----> B |
+| 1915 | 567 | `Inoue_Consciousness_Comparison` | Contrast_Diagram | [甲] 明 不明 |
+| 1915 | 660 | `Inoue_Mandala_Synthesis` | Convergence_Diagram | 兩部 — 金剛界 / 胎藏界 — 毗盧遮那佛 |
+| **1924** | **96** | **`Yi_Relation_01`** | **Triangle** | **物質 — 原理即實在 — 精神** |
+| 1924 | 99 | `Yi_Time_Circle_01` | Circle | 甲, 乙, 丙, 丁, 戊, 己 |
+| 1924 | 122 | `Yi_Knowledge_Realm_01` | Circle_Boundary | 可知界(내부), 不可知界(외부) |
+| 1924 | 123 | `Yi_Consciousness_Evolution_01` | Concentric_Circles | 無機物·植物性·動物性·社會的·사람性 無窮 意識界 |
+
+굵게 표시한 둘이 두 책을 잇는 그 도식이다.
+
+### ⚠️ 두 책의 `line_class`가 다르다
+
+| | 자리표시자의 `line_class` | 개수 |
+|---|---|---|
+| 1915 | **`TEXT`** | 11 |
+| 1924 | **`ANNOTATION`** | 4 |
+
+같은 성격의 행인데 분류가 갈린다. 결과가 둘로 나온다.
+
+1. **1915년 자리표시자 11행은 본문 행으로 세어진다.** `TEXT` 10,976 안에 들어 있고
+   **묶음(`n_chunk_id`)에도 배정된다.** 곧 다섯 문장 묶음 가운데 열한 자리에서 문장 하나가
+   실제 문장이 아니라 도식 표시다.
+2. **1924년 자리표시자 4행은 제외된다.** `ANNOTATION`은 빈도 카운트에서 빠진다(§4).
+
+**토큰에는 영향이 없다.** `{{FIG:...}}`와 `TYPE:Trialism`은 한자가 아니어서 토큰화 정규식에
+걸리지 않으며, 실제로 `data/4_tokens/`의 두 파일에 라틴 문자를 포함한 토큰이 하나도 없다.
+도식 안의 글자(`物質` 등)도 `ANNOTATION`이라 정규화 대상에서 빠진다.
+
+곧 **어긋남은 문장·묶음 수에만 걸리고 어휘 통계에는 걸리지 않는다.** 그래도 같은 성격의 행이
+두 책에서 다르게 분류된 것은 사실이며, 여기 적어 둔다.
+
+### 남은 일
+
+- `line_class`를 한쪽으로 통일할 것인가 — 통일하면 1915년의 문장 수와 묶음 배정이 바뀐다.
+- 자리표시자와 `data/2_cut_renumbering/`의 이미지를 **파일 경로로 잇는 것** — 지금은 `LOC`의
+  쪽 번호를 사람이 읽어 찾아가야 한다.
+
+---
+
 ## 6. ID 체계
 
 ### 1915
