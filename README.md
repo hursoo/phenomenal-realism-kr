@@ -69,7 +69,7 @@
 │   ├── 1_raw_data/            원본 PDF (1915년 것은 용량 초과로 미포함 — IMAGES.md)
 │   ├── 2_cut_renumbering/     페이지 이미지 1,122장 (832 + 290)
 │   ├── 3_corpus/              판독 텍스트와 DB — 판별 보존
-│   ├── figures/               도식 15개의 지면 이미지
+│   ├── figures/               도식 15개의 지면 이미지 + 색인(README)
 │   ├── 4_tokens/              정규화 토큰
 │   └── analysis/              유사도 산출물
 ├── scripts/                   재현 코드
@@ -178,7 +178,7 @@ Investigate · 해석 Signify · 발표 Present.** 물질성 → 구조 → 관�
 | **③ 판독** | `data/3_corpus/*.txt` | [02 §③](docs/02_digitization.md) · [06 AI 고지](docs/06_ai_disclosure.md) | — |
 | **④⑤ 교정·문장 태깅** | `data/3_corpus/revisions/` | [02 §④⑤](docs/02_digitization.md) | `n8n_code_node.txt` (명세) |
 | **⑥ 문장 분리·ID** | `data/3_corpus/*_v1.0/v1.1.xlsx` | [03 DB 구조](docs/03_db_structure.md) | `scripts/04_build_db/` |
-| **도식** | `data/figures/` (15개) | [03 §5-3](docs/03_db_structure.md) | `scripts/05_unify_figures/` |
+| **도식** | [`data/figures/`](data/figures/) (15개 · 색인) | [03 §5-3](docs/03_db_structure.md) | `scripts/05_unify_figures/` |
 | **⑦ 정리** | `*_v1.2/v1.3.xlsx` | [03 §2 버전 이력](docs/03_db_structure.md) | — |
 | **⑧ 묶음 단위** | `*_v1.4.xlsx` · **최신 `*_v1.5/v1.4.xlsx`** | [03 §6 묶음 ID](docs/03_db_structure.md) | — |
 | **⑨ 정규화** | `data/4_tokens/` | [04 정규화](docs/04_normalization.md) · `docs/normalization_spec_2026-05-21.md` | `scripts/02_normalize/` |
