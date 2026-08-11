@@ -24,6 +24,7 @@
 | **어느 편이 얼마나 믿을 만한지 보고 싶다** | [`CORPUS_STATUS.csv`](CORPUS_STATUS.csv) — 편별 대시보드 |
 | **인용하려 한다** | [`TRUST.md`](TRUST.md) §4 → [`source_pages/`](source_pages/) → [`verified_passages.md`](verified_passages.md) |
 | **원본 그대로가 필요하다** | `articles/*/transcripts/`(초벌) · `articles/*/ocr/`(엔진 원출력) |
+| **지면 폴더가 무엇인지 알고 싶다** | [`source_pages_audit.md`](source_pages_audit.md) · [`source_pages_MAP.csv`](source_pages_MAP.csv) |
 
 ---
 
@@ -45,6 +46,8 @@ wolbo/
 │
 ├── verified_transcripts/     ★ 정본 8편 (C30~C37) + _ruleset.md · MAP.csv
 ├── source_pages/             ★ 원본 지면 스캔 479장 — 최종 판정의 근거
+├── source_pages_audit.md     ★ 그 100폴더가 각각 무엇인가 (편 86·중복 10·별판 1·편외 3)
+├── source_pages_MAP.csv      위 감사의 기계 판독본
 ├── verified_passages.md      대목별 원문 대조 기록 — 인용의 자격
 ├── screening_1922.md         1922년 이전 3분법 어휘 선별·전수 대조
 ├── marker_resolution_experiment.md   눈 판단을 기계가 어디까지 줄이는가
@@ -57,6 +60,12 @@ wolbo/
 정본 1편(C01)은 예외로 `articles/01_kwonyu_1911-01/transcripts/article_01.high_fidelity.md`에
 있다. 곧 **정본은 모두 아홉 편**이다.
 
+🔴 **86편은 이돈화의 월보 글 전부가 아니다.** 총목록 기준 138편(1922년 2월 이전 124편)
+가운데 국립중앙도서관이 디지털로 제공한 것을 받아 정착시킨 것이 86편이다. 게다가
+**지면이 이미 여기 있는데도 코퍼스에 없는 이돈화 글이 둘 있다**(「我觀苦樂論」 1913-07 ·
+「偉大ᄒᆞᆫ 心의 世界」 1918-04). 근거와 남은 판단은
+[`source_pages_audit.md`](source_pages_audit.md).
+
 ---
 
 ## 실측 (2026-08-12)
@@ -65,7 +74,7 @@ wolbo/
 |---|---:|
 | 편 | **86** (정본 9 · 초벌 76 · 전사 없음 1) |
 | 기간 | 1911-01-15 ~ 1922-05-15 |
-| 원본 지면 스캔 | 479장 |
+| 원본 지면 스캔 | 479장 (폴더 100 = 편 86 · 중복 10 · 별판 1 · **편외 3**) |
 | 판독 단위 | 584단 |
 | 초벌본의 마커(엔진이 갈린 자리) | 14,588 |
 | 그 가운데 **기계가 한쪽을 고른 자리** | 10,071 (69.0%) |
@@ -84,6 +93,7 @@ wolbo/
 python3 scripts/06_magazines/build_keyword_index.py    # 색인
 python3 scripts/06_magazines/build_reading.py          # 읽기 본문
 python3 scripts/06_magazines/build_corpus_status.py    # 대시보드
+python3 scripts/06_magazines/audit_source_pages.py     # 지면 폴더 감사
 ```
 
 세 스크립트 모두 의존성이 없다(표준 라이브러리 + PyYAML). 마커 해소 규약은
