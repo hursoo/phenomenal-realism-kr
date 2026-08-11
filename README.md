@@ -99,7 +99,7 @@ flowchart TD
         H["⑨ 정규화<br/>reading-space 토큰"]
     end
 
-    subgraph IN["분석 Investigate — 판단"]
+    subgraph IN["분석 Investigate — 관찰"]
         J["⑩ 유사도 · 전수 검색<br/>자카드 930,680쌍<br/>항목명 대조 · 밀도"]
     end
 
@@ -139,7 +139,7 @@ flowchart TD
 실었다. ■ 푸른 칸은 **규칙 기반**이며 코드로 재현된다. ■ 보라 칸은 사람의 판단이다.</sub>
 
 바깥의 다섯 묶음은 편자가 쓰는 연구 단계 틀이다 — **수집 Collect · 정제 Refine · 분석
-Investigate · 해석 Signify · 발표 Present.** 물질성 → 구조 → 판단 → 맥락 → 효용으로 올라간다.
+Investigate · 해석 Signify · 발표 Present.** 물질성 → 구조 → 관찰 → 맥락 → 효용으로 올라간다.
 
 ### 이 저장소가 덮는 자리
 
