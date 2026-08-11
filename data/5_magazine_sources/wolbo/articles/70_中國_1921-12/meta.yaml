@@ -1,0 +1,153 @@
+article:
+  series_index: 70
+  slug: 中國_1921-12
+  cnts_id: CNTS-00048079251
+  title: 中國 北京의 傳敎室 問題를 둣고 吾敎의 對外 發展을 賀함
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 136
+  publication_date: 1921-12-15
+  section: null
+  page_in_journal: 12
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048079251&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: 67a9d7820e70509dcdfd299dfc14198d48215f3e2157d2fda7c3dc714cf71c4e
+  bytes: 313494
+  pixels: 1500x2427
+- file: page_002.jpg
+  sha256: 2bfcee55a68eb12599689a54fd6713b9b6dd5cf80f3dbec754e9ccb044e1b16d
+  bytes: 227929
+  pixels: 1500x2425
+- file: page_003.jpg
+  sha256: 29897219f60381541632c7c207e2e87f31bc5d5e48fe0a6a67e742ede8e5e8be
+  bytes: 212848
+  pixels: 1500x2389
+- file: page_004.jpg
+  sha256: 54ec3d7ee90a965884dc308fd6af31a7973117c59c94eb8a9027ec7e58c23229
+  bytes: 211150
+  pixels: 1500x2408
+- file: page_005.jpg
+  sha256: 3524ff9b06b5c58959d02becd299f1deb4e4012cb86fdf73e2e0181a93b6e3f7
+  bytes: 230970
+  pixels: 1500x2397
+- file: page_006.jpg
+  sha256: 236b7a6594ffbfda6df043d4df28c9974f07af86afc69dd62c3e17fea7e1ee9b
+  bytes: 196744
+  pixels: 1500x2382
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048079251/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2427
+  pixels: 1420x2427
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2425
+  pixels: 1420x2425
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2389
+  pixels: 1420x2389
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2408
+  pixels: 1420x2408
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2397
+  pixels: 1420x2397
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p6
+  file: units/unit_6_p6.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2382
+  pixels: 1420x2382
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: null
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 12
+  - page: page_002.jpg
+    value: '?'
+    hanja: 13
+  - page: page_003.jpg
+    value: '?'
+    hanja: 14
+  - page: page_004.jpg
+    value: '?'
+    hanja: 15
+  - page: page_005.jpg
+    value: '?'
+    hanja: 16
+  - page: page_006.jpg
+    value: '?'
+    hanja: 17
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=161, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

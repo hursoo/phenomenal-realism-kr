@@ -1,0 +1,12 @@
+# Gemini gemini-2.5-pro vision OCR
+# Source: unit_5_p3u.png
+# Usage: prompt_tokens=565 candidates_tokens=79 total=1816
+
+[col 01]
+이爲之斷腸이로다此生極樂도一念之做次에
+
+[col 02]
+오後生極樂도一念之造次니早早히吾敎에
+
+[col 03]
+歸依ᄒᆞ야五萬年極樂의準備를開始ᄒᆞ지어다

@@ -1,0 +1,166 @@
+# Skeleton meta — series_index #40, generated 2026-05-09 by bootstrap_article.py
+# layout·units는 시각 검증 후 채울 것 (TODO 표시 영역)
+
+article:
+  series_index: 40
+  slug: 信仰_1918-03
+  cnts_id: CNTS-00048078891
+  title: 信仰上으로 觀ᄒᆞᆯ 吾人의 努力
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 92
+  publication_date: 1918-03-15
+  section: 講演
+  page_in_journal: 18
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048078891&viewType=C&category=기사
+
+source_pages:
+  - file: page_001.jpg
+    sha256: b128535ccfabcd4b6e128462d9fadf7417866687ec4d4cc001c82ed439f3adaf
+    bytes: 236078
+    pixels: 1500x2474
+  - file: page_002.jpg
+    sha256: 2c67dfc58b8b2b03741721931126e01d59fce7a73a51e4212353651aed1d55bf
+    bytes: 245785
+    pixels: 1500x2385
+  - file: page_003.jpg
+    sha256: bd1890d7025be5fd8fcd89d30243c3b9be7789a77270a7de012295aa7c6c323d
+    bytes: 257117
+    pixels: 1500x2474
+  - file: page_004.jpg
+    sha256: d3a92c0c22cd1b575bd41676a9162ab449fa79e44d968231b76ac567d3cddc21
+    bytes: 237534
+    pixels: 1500x2385
+  - file: page_005.jpg
+    sha256: 001e81dbf03405ca7ee15fddddd9b618e2dca86cb4e5a7f785189f37e8d50577
+    bytes: 265904
+    pixels: 1500x2474
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048078891/
+
+# ========== Phase 2.1 단 분리 (Claude 시각 검증, 2026-05-09) ==========
+# 단순화 자르기: 모든 band x=80~1500 (전체 폭). 표제 우측·본 기사 영역 OCR 후 검증.
+
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 2
+  divider_kind: thin_wavy_line
+  divider_y: 1180  # 통일값 (페이지별 ±20 변동 가능)
+  layout_type: horizontal_only  # L1 — 본 1편 가족
+  reading_order: snake  # 上→下→다음 페이지 上→下
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.80  # 시기 평균 (OCR 후 갱신)
+  oldhangul_density: low_to_mid
+
+units:
+  - id: unit_1_p1u
+    file: units/unit_1_p1u.png
+    page: page_001.jpg
+    crop: [80, 0, 1500, 1180]
+    pixels: 1420x1180
+    role: start
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_2_p1l
+    file: units/unit_2_p1l.png
+    page: page_001.jpg
+    crop: [80, 1180, 1500, 2474]
+    pixels: 1420x1294
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_3_p2u
+    file: units/unit_3_p2u.png
+    page: page_002.jpg
+    crop: [80, 0, 1500, 1180]
+    pixels: 1420x1180
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_4_p2l
+    file: units/unit_4_p2l.png
+    page: page_002.jpg
+    crop: [80, 1180, 1500, 2385]
+    pixels: 1420x1205
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_5_p3u
+    file: units/unit_5_p3u.png
+    page: page_003.jpg
+    crop: [80, 0, 1500, 1180]
+    pixels: 1420x1180
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_6_p3l
+    file: units/unit_6_p3l.png
+    page: page_003.jpg
+    crop: [80, 1180, 1500, 2474]
+    pixels: 1420x1294
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_7_p4u
+    file: units/unit_7_p4u.png
+    page: page_004.jpg
+    crop: [80, 0, 1500, 1180]
+    pixels: 1420x1180
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_8_p4l
+    file: units/unit_8_p4l.png
+    page: page_004.jpg
+    crop: [80, 1180, 1500, 2385]
+    pixels: 1420x1205
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_9_p5u
+    file: units/unit_9_p5u.png
+    page: page_005.jpg
+    crop: [80, 0, 1500, 1180]
+    pixels: 1420x1180
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_10_p5l
+    file: units/unit_10_p5l.png
+    page: page_005.jpg
+    crop: [80, 1180, 1500, 2474]
+    pixels: 1420x1294
+    role: tail
+    contains: TODO (OCR 후 자동 판단)
+
+excluded:
+  - region: p1 上段 우측 (표제 우측 영역, x>?)
+    reason: 본 1편 패턴 가정 — 上段 이전 기사가 표제 우측까지 흘러옴 (OCR 후 검증 갱신)
+  - region: 마지막 p 下段 (다음 기사 시작 영역 가능)
+    reason: 본 기사 결말 후 다음 기사 시작 가능. OCR 결과로 검증 후 자르기 갱신.
+  - region: 모든 페이지 좌측 가장자리 (x<80)
+    reason: 부속 — 섹션 라벨 + 페이지번호
+
+ancillary:
+  section_label: 講演
+  page_numbers:
+    - {page: page_001.jpg, value: 一八, hanja: 18}
+    - {page: page_002.jpg, value: 一九, hanja: 19}
+    - {page: page_003.jpg, value: 二〇, hanja: 20}
+    - {page: page_004.jpg, value: 二一, hanja: 21}
+    - {page: page_005.jpg, value: 二二, hanja: 22}
+
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, Claude 시각 검증, 단순 자르기)
+  phase_3_ocr: completed_with_engine_gaps (2026-05-09, Gemini unit_2/4/6 결손 — Claude+Paddle 2엔진만. avg CG_LCS ~0.46)
+  phase_4_consensus_and_correction: draft_v0_auto (2026-05-09, ⚠️ 마커 259건, 인간 중재 대기)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+
+post_ocr_findings:
+  - 본 기사는 epigraph 구조 — 도입에 「侍」字 다인 해설 (張英謨·鄭遵水·李集鈸·李璿 등) 인용. 천도교 신앙론의 다인 합의 정초 양식.
+  - ★ unit_2 「題의 濃源은 哲學도 오히려 探眞의 承認을 求得지 못ᄒᆞ엿노」 = ★ 본 기사 도입에서 *哲學의 한계* 명시 — 1918년 시점 이돈화의 哲學 자리 잡음. 허수 「哲學의 소거」 논제와 직결.
+  - 「人乃天의 自信 / 人乃天의 進步 / 人乃天의 信仰」 어휘 사용 (unit_8·9·10) — 1918 시점 인내천 어휘 정착.
+  - 「不撓의 信仰」 (unit_7) = 본 기사 핵심 어휘.
+
+engine_gaps:
+  - unit_2_p1l: gemini token=0 (실패)
+  - unit_4_p2l: gemini token=0 (실패)
+  - unit_6_p3l: gemini token=0 (실패)
+  - reason_hypothesis: Gemini API rate limit 또는 image 처리 실패. 재실행 권장.
+
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

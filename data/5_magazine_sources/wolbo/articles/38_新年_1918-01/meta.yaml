@@ -1,0 +1,134 @@
+article:
+  series_index: 38
+  slug: 新年_1918-01
+  cnts_id: CNTS-00048037653
+  title: 新年과 人生
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 90
+  publication_date: 1918-01-15
+  section: 敎門訂議
+  page_in_journal: 5
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048037653&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: b6d09f6da23a8895a9491866a81df0e18a83073ff904b6f10eaafbbd6d9ef8d9
+  bytes: 242540
+  pixels: 1500x2385
+- file: page_002.jpg
+  sha256: 89fc2655ed7d2572052c0127147bd9e6498aadf48d0a20edabb1b14596eb7312
+  bytes: 275141
+  pixels: 1500x2420
+- file: page_003.jpg
+  sha256: 21cf3f43faebfdac8103a02d69b308d4b72556cbedb973e03e72793865df9c33
+  bytes: 241911
+  pixels: 1500x2453
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048037653/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 2
+  divider_kind: thin_wavy_line
+  divider_y: 1180
+  layout_type: horizontal_only
+  reading_order: snake
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.80
+  oldhangul_density: low_to_mid
+units:
+- id: unit_1_p1u
+  file: units/unit_1_p1u.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p1l
+  file: units/unit_2_p1l.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2385
+  pixels: 1420x1205
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p2u
+  file: units/unit_3_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p2l
+  file: units/unit_4_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2420
+  pixels: 1420x1240
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p3u
+  file: units/unit_5_p3u.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p3l
+  file: units/unit_6_p3l.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2453
+  pixels: 1420x1273
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: p1 上段 우측 (표제 우측 영역, x>?)
+  reason: 본 1편 패턴 가정 — 上段 이전 기사가 표제 우측까지 흘러옴 (OCR 후 검증 갱신)
+- region: 마지막 p 下段 (다음 기사 시작 영역 가능)
+  reason: 본 기사 결말 후 다음 기사 시작 가능. OCR 결과로 검증 후 자르기 갱신.
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 섹션 라벨 + 페이지번호
+ancillary:
+  section_label: 敎門訂議
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 5
+  - page: page_002.jpg
+    value: '?'
+    hanja: 6
+  - page: page_003.jpg
+    value: '?'
+    hanja: 7
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default dual-band L1 적용 — OCR
+    결과로 검증 대기)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=79, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

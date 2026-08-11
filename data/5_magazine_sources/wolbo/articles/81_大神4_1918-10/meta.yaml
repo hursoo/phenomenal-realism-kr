@@ -1,0 +1,106 @@
+# Filled by fill_units_default_singleband.py (2026-05-09): default single-band
+article:
+  series_index: 81
+  slug: 大神4_1918-10
+  cnts_id: null
+  title: 大神師性靈出世說(其四)
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 98
+  publication_date: 1918-10-15
+  section: 敎理部
+  page_in_journal: 14
+  partial_download: false
+  source_url: null
+source_pages:
+- file: page_001.jpg
+  sha256: 9271285b34caacd5fc7f9bb2797070e3289ec40f5851d88af194990bd8f1529c
+  bytes: 246784
+  pixels: 1500x2487
+- file: page_002.jpg
+  sha256: fa5a387635448faa4d401319a072505d69a8345b5ebdc0faa3cb3d327c6dc53f
+  bytes: 280890
+  pixels: 1500x2523
+- file: page_003.jpg
+  sha256: a5242c29a8a5e1fb37c9e8daf41fd26348f06c8357dcdf1c1fd12353e06c3532
+  bytes: 265997
+  pixels: 1500x2471
+- file: page_004.jpg
+  sha256: d32e004753c64c22c4b5c079a43ae4d4bcfb842f905c3e981af768e965271d90
+  bytes: 268739
+  pixels: 1500x2503
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/81_大神4_1918-10/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2487
+  pixels: 1420x2487
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2523
+  pixels: 1420x2523
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2471
+  pixels: 1420x2471
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2503
+  pixels: 1420x2503
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: 敎理部
+  page_numbers: []
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: pending
+  phase_4_consensus_and_correction: pending
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

@@ -1,0 +1,153 @@
+article:
+  series_index: 46
+  slug: 將來_1919-02
+  cnts_id: CNTS-00048051596
+  title: 將來의 宗敎
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 102
+  publication_date: 1919-02-15
+  section: 敎門訂議
+  page_in_journal: 1
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048051596&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: bf062e55f7f85119ab4ba7f6897249c48451bb1d9ef411c5028137a8cd543a63
+  bytes: 178181
+  pixels: 1500x2469
+- file: page_002.jpg
+  sha256: ed21f20ca759d113f71f3c84caaf0b5ff3c0b910a566e2f0c45594bfd2ba8337
+  bytes: 225022
+  pixels: 1500x2455
+- file: page_003.jpg
+  sha256: a2c2b9efdc1f7b908616e551ed1ed731bb38382ae71d80de18cbcbc423df05fd
+  bytes: 223446
+  pixels: 1500x2459
+- file: page_004.jpg
+  sha256: 187bf313da9b105248a03c032fbef405456975f9870089452fd708f9d1fa3759
+  bytes: 232459
+  pixels: 1500x2408
+- file: page_005.jpg
+  sha256: ccb94007a85c3a04fb14b2d3549f6b25bef90d7d32b647651e752abce4216272
+  bytes: 224514
+  pixels: 1500x2430
+- file: page_006.jpg
+  sha256: 08f26ba9b8eafdb59feb3c975a0442294655fbd851dcd523741ded6a342fabc9
+  bytes: 219478
+  pixels: 1500x2393
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048051596/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2469
+  pixels: 1420x2469
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2455
+  pixels: 1420x2455
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2459
+  pixels: 1420x2459
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2408
+  pixels: 1420x2408
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2430
+  pixels: 1420x2430
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p6
+  file: units/unit_6_p6.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2393
+  pixels: 1420x2393
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: 敎門訂議
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 1
+  - page: page_002.jpg
+    value: '?'
+    hanja: 2
+  - page: page_003.jpg
+    value: '?'
+    hanja: 3
+  - page: page_004.jpg
+    value: '?'
+    hanja: 4
+  - page: page_005.jpg
+    value: '?'
+    hanja: 5
+  - page: page_006.jpg
+    value: '?'
+    hanja: 6
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=282, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

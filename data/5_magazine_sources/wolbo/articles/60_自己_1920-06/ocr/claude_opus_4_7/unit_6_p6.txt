@@ -1,0 +1,38 @@
+# Claude Opus 4.7 (1M) — direct vision OCR
+# Source: articles/60_自己_1920-06/units/unit_6_p6.png (1420x2404, 본 #60 p6, 第5節 「自己解放」 시작)
+# Date: 2026-05-09
+# Reading order: vertical columns, right-to-left. Within column: top-to-bottom.
+# Notation: [?] = 시각 식별 불확실
+# Source policy: 옛한글 자모 보존, 띄어쓰기 미부여
+
+[page_header]
+天道敎會月報
+
+[col 01] 換言ᄒᆞ면彼等의生活은悠悠히先天의本能에依ᄒᆞ야自然스ᄃᆡ天의支配에依
+[col 02] ᄒᆞ야自然스ᄃᆡ天의支配에ᄒᆞ
+[col 03] 我의에ᄒᆞ
+
+[section_number]
+五
+
+[section_subtitle]
+自己解放
+
+[col 04] 自己解放에依ᄒᆞ야人類의生活은先天的의本能의支配를脫ᄒᆞ야自由
+[col 05] 此에反ᄒᆞ야先天本能의ᄒᆞ
+[col 06] 越進動이ᄒᆞ
+[col 07] 自己解放의 …
+[col 08] 此에反ᄒᆞ야先天本能의支配ᄒᆞᄂᆞᆫ動物은動物學者의報告에依ᄒᆞ
+[col 09] 越進動이有ᄒᆞ에反ᄒᆞ야ᄒᆞ
+[col 10] 五
+[col 11] 自己解放
+[col 12] 自由意志ᄒᆞ
+[col 13] 自己解放에依ᄒᆞ야人類의生活은先天的의本能의支配를脫ᄒᆞ야自由
+[col 14] 越進動 …
+[col 15] 自己解放에依ᄒᆞ야 …
+[col 16] 越進動 …
+
+# Notes:
+# - ★ 第5節 표제 「自己解放」 = 본 기사 표제 직접 명명 — 본 article 핵심 절.
+# - 「先天의 本能 ↔ 自己解放(自由意志)」 대비 = 본 기사의 인간학적 정초 명제.
+# - 페이지 「六(6) / 669」.

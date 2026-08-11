@@ -1,0 +1,192 @@
+article:
+  series_index: 29
+  slug: 真理_1914-11
+  cnts_id: CNTS-00048064794
+  title: 真理의 根底를 誤解치 勿하라
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 52
+  publication_date: 1914-11-15
+  section: 敎理部
+  page_in_journal: 7
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048064794&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: 10c27e3f3d60e892f450c27d59474e2cd3b079fbfbc0204541d4cb1ae0214970
+  bytes: 226596
+  pixels: 1500x2465
+- file: page_002.jpg
+  sha256: dd8dc8e2213fc7e9771a3ac213829e49323d558d90fe2d502a2f7beb3699b635
+  bytes: 229325
+  pixels: 1500x2340
+- file: page_003.jpg
+  sha256: 3668087ea18e10abe055e086dcb941ffbfe20daa9064f775732accb774723029
+  bytes: 253509
+  pixels: 1500x2469
+- file: page_004.jpg
+  sha256: 4d1825f0aa9cdaf5b07f601a2815697e3bf8409d79d20c69ac96fd9dbc307cd9
+  bytes: 220503
+  pixels: 1500x2339
+- file: page_005.jpg
+  sha256: d1b156129c57d991fee38fa8d159176ab7b6e63d574cbea608d1a23d282d081a
+  bytes: 237942
+  pixels: 1500x2461
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048064794/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 2
+  divider_kind: thin_wavy_line
+  divider_y: 1180
+  layout_type: horizontal_only
+  reading_order: snake
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.80
+  oldhangul_density: low_to_mid
+units:
+- id: unit_1_p1u
+  file: units/unit_1_p1u.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p1l
+  file: units/unit_2_p1l.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2465
+  pixels: 1420x1285
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p2u
+  file: units/unit_3_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p2l
+  file: units/unit_4_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2340
+  pixels: 1420x1160
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p3u
+  file: units/unit_5_p3u.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p3l
+  file: units/unit_6_p3l.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2469
+  pixels: 1420x1289
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_7_p4u
+  file: units/unit_7_p4u.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_8_p4l
+  file: units/unit_8_p4l.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2339
+  pixels: 1420x1159
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_9_p5u
+  file: units/unit_9_p5u.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_10_p5l
+  file: units/unit_10_p5l.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2461
+  pixels: 1420x1281
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: p1 上段 우측 (표제 우측 영역, x>?)
+  reason: 본 1편 패턴 가정 — 上段 이전 기사가 표제 우측까지 흘러옴 (OCR 후 검증 갱신)
+- region: 마지막 p 下段 (다음 기사 시작 영역 가능)
+  reason: 본 기사 결말 후 다음 기사 시작 가능. OCR 결과로 검증 후 자르기 갱신.
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 섹션 라벨 + 페이지번호
+ancillary:
+  section_label: 敎理部
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 7
+  - page: page_002.jpg
+    value: '?'
+    hanja: 8
+  - page: page_003.jpg
+    value: '?'
+    hanja: 9
+  - page: page_004.jpg
+    value: '?'
+    hanja: 10
+  - page: page_005.jpg
+    value: '?'
+    hanja: 11
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default dual-band L1 적용 — OCR
+    결과로 검증 대기)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=176, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

@@ -1,0 +1,15 @@
+# Gemini gemini-2.5-pro vision OCR
+# Source: unit_2_p1l.png
+# Usage: prompt_tokens=565 candidates_tokens=96 total=3332
+
+[col 01]
+三百六十五日四分度之一의昨年의光陰은
+
+[col 02]
+何等天地에徘徊ᄒᆞ는지不知布德五十三年의歲
+
+[col 03]
+月이當ᄒᆞ얏도다昨年去今年來今年去明年
+
+[col 04]
+來明年去又明年來ᄒᆞ야如斯ᄒᆞㅣ去ᄒᆞ고如

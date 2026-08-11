@@ -105,6 +105,7 @@
 │   ├── 2_cut_renumbering/     페이지 이미지 1,122장 (832 + 290)
 │   ├── 3_corpus/              판독 텍스트와 DB — 판별 보존 (단행본 2 · 잡지 2)
 │   ├── figures/               도식 15개의 지면 이미지 + 색인(README)
+│   ├── 5_magazine_sources/    잡지의 수집 원본과 판독 중간 산출
 │   ├── 4_tokens/              정규화 토큰
 │   └── analysis/              유사도 산출물
 ├── scripts/                   재현 코드
@@ -219,7 +220,7 @@ Investigate · 해석 Signify · 발표 Present.** 물질성 → 구조 → 관�
 | **① 저본** | `data/1_raw_data/` · [`IMAGES.md`](IMAGES.md) | [01 원사료](docs/01_sources.md) | — |
 | **② 페이지 분할·재넘버링** | `data/2_cut_renumbering/` | [02 §②](docs/02_digitization.md) · [03 §5-2](docs/03_db_structure.md) | `scripts/01_page_split/` |
 | **③ 판독** | `data/3_corpus/*.txt` | [02 §③](docs/02_digitization.md) · [06 AI 고지](docs/06_ai_disclosure.md) | — |
-| **잡지** | `data/3_corpus/MA_*` | [02b 잡지](docs/02b_digitization_magazines.md) | `scripts/06_magazines/` |
+| **잡지** | `data/3_corpus/MA_*` · `data/5_magazine_sources/` | [02b 잡지](docs/02b_digitization_magazines.md) | `scripts/06_magazines/` |
 | **④⑤ 교정·문장 태깅** | `data/3_corpus/revisions/` | [02 §④⑤](docs/02_digitization.md) | `n8n_code_node.txt` (명세) |
 | **⑥ 문장 분리·ID** | `data/3_corpus/*_v1.0/v1.1.xlsx` | [03 DB 구조](docs/03_db_structure.md) | `scripts/04_build_db/` |
 | **도식** | [`data/figures/`](data/figures/) (15개 · 색인) | [03 §5-3](docs/03_db_structure.md) | `scripts/05_unify_figures/` |

@@ -1,0 +1,5 @@
+# claude-opus-4-7 via Anthropic API — vision OCR (2026-05-09)
+# Source: 74_信仰_1922-04/units/unit_6_p6.png
+# Tokens: in=5032 out=9 elapsed=4.3s
+
+[no_text]

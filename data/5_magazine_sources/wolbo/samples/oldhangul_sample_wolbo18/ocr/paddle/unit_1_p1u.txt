@@ -1,0 +1,9 @@
+# PaddleOCR (PP-OCR v5, lang=chinese_cht)
+# Source: unit_1_p1u.png
+# Detected lines: 5
+
+新發明#公告
+新年對新感想
+绵
+講
+演

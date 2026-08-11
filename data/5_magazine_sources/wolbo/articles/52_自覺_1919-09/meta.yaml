@@ -1,0 +1,153 @@
+article:
+  series_index: 52
+  slug: 自覺_1919-09
+  cnts_id: CNTS-00048037837
+  title: 自覺ᄒᆞ야써 其根에 歸ᄒᆞ라
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 109
+  publication_date: 1919-09-15
+  section: 敎門訂議
+  page_in_journal: 1
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048037837&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: d2333d97d6adaa338937294173205c0aec3bc73b8604fe918da2124fcd7f9f5f
+  bytes: 179292
+  pixels: 1500x2421
+- file: page_002.jpg
+  sha256: ccd11804a1f134476ba098b7f154dd813e7fb6da108d8e38bd69bf582178e4f3
+  bytes: 198773
+  pixels: 1500x2302
+- file: page_003.jpg
+  sha256: 457080e8851559070e611606409833a42a6df06e60883da6cb45586d08776f52
+  bytes: 182134
+  pixels: 1500x2368
+- file: page_004.jpg
+  sha256: d609cbb8bb84aa894efbbbce73f83b5c973bb8237244f7bfc5bdd7c659166e9b
+  bytes: 200572
+  pixels: 1500x2321
+- file: page_005.jpg
+  sha256: 5ca4e12aba90ac1492bbe6e102d702145fd0a08f17f85684a8ca42cd6f9dece6
+  bytes: 200194
+  pixels: 1500x2367
+- file: page_006.jpg
+  sha256: 7254fb26710cda6bb1e5b1a22da9430e2cc919bee2e87ae876b2fa461a268a76
+  bytes: 177745
+  pixels: 1500x2320
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048037837/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2421
+  pixels: 1420x2421
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2302
+  pixels: 1420x2302
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2368
+  pixels: 1420x2368
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2321
+  pixels: 1420x2321
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2367
+  pixels: 1420x2367
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p6
+  file: units/unit_6_p6.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2320
+  pixels: 1420x2320
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: 敎門訂議
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 1
+  - page: page_002.jpg
+    value: '?'
+    hanja: 2
+  - page: page_003.jpg
+    value: '?'
+    hanja: 3
+  - page: page_004.jpg
+    value: '?'
+    hanja: 4
+  - page: page_005.jpg
+    value: '?'
+    hanja: 5
+  - page: page_006.jpg
+    value: '?'
+    hanja: 6
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=249, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

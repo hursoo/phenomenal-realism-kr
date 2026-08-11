@@ -1,0 +1,165 @@
+# Skeleton meta — series_index #60, generated 2026-05-09 by bootstrap_article.py
+# layout·units는 시각 검증 후 채울 것 (TODO 표시 영역)
+
+article:
+  series_index: 60
+  slug: 自己_1920-06
+  cnts_id: CNTS-00048065377
+  title: 自己解放과 人乃天主義
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 118
+  publication_date: 1920-06-15
+  section: 
+  page_in_journal: 1
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048065377&viewType=C&category=기사
+
+source_pages:
+  - file: page_001.jpg
+    sha256: 3ebb5d634cc02aa512f82bd463e11c753d2ce9915ac6d04584ade382a28e3545
+    bytes: 192515
+    pixels: 1500x2399
+  - file: page_002.jpg
+    sha256: 7a7dcfa3dd99406a0f0e924f40fe7a4d294f28c4c6086c6c22968795905ff09c
+    bytes: 235159
+    pixels: 1500x2323
+  - file: page_003.jpg
+    sha256: 0c4f5042397cd9e712853163d70571f8b4a78e408b8a34ca52f0c239ebe725ee
+    bytes: 198996
+    pixels: 1500x2300
+  - file: page_004.jpg
+    sha256: bf97006a8e69fd75de663bb221f7ced6f9dec2b02919cc51cbe8ad39cdff8b8e
+    bytes: 206444
+    pixels: 1500x2298
+  - file: page_005.jpg
+    sha256: 2167aeb7d6aadae559ca930673c2e0e7af31fab306a7bfb44ab5e61fca56b355
+    bytes: 211530
+    pixels: 1500x2394
+  - file: page_006.jpg
+    sha256: a72935caf856471cefdfc5a5b943d0d5cfc9411dde71230ca8791ae78d5988f6
+    bytes: 226871
+    pixels: 1500x2404
+  - file: page_007.jpg
+    sha256: d577ea3357b766c79fc04031abe1f1a2d87a3724ed02a70f578333c0c57b86e6
+    bytes: 211176
+    pixels: 1500x2385
+  - file: page_008.jpg
+    sha256: b249e7a7730c07d3366ff15b49000bec0f4c269281a7c23413b369a273e3bdbb
+    bytes: 197623
+    pixels: 1500x2388
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048065377/
+
+# ========== Phase 2.1 단 분리 (Claude 시각 검증, 2026-05-09) ==========
+# 단순화 자르기: 모든 band x=80~1500 (전체 폭). 표제 우측·본 기사 영역 OCR 후 검증.
+
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1  # 분리선 없음 — 1920년대 시기 layout 변화
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band  # 새 패턴 — 페이지당 1 unit
+  reading_order: page_then_next  # 페이지 안에서 우→좌, 그 다음 페이지
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70  # 1920년대 한자 비중 감소 추세
+  oldhangul_density: low
+
+units:
+  - id: unit_1_p1
+    file: units/unit_1_p1.png
+    page: page_001.jpg
+    crop: [80, 0, 1500, 2399]
+    pixels: 1420x2399
+    role: start
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_2_p2
+    file: units/unit_2_p2.png
+    page: page_002.jpg
+    crop: [80, 0, 1500, 2323]
+    pixels: 1420x2323
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_3_p3
+    file: units/unit_3_p3.png
+    page: page_003.jpg
+    crop: [80, 0, 1500, 2300]
+    pixels: 1420x2300
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_4_p4
+    file: units/unit_4_p4.png
+    page: page_004.jpg
+    crop: [80, 0, 1500, 2298]
+    pixels: 1420x2298
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_5_p5
+    file: units/unit_5_p5.png
+    page: page_005.jpg
+    crop: [80, 0, 1500, 2394]
+    pixels: 1420x2394
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_6_p6
+    file: units/unit_6_p6.png
+    page: page_006.jpg
+    crop: [80, 0, 1500, 2404]
+    pixels: 1420x2404
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_7_p7
+    file: units/unit_7_p7.png
+    page: page_007.jpg
+    crop: [80, 0, 1500, 2385]
+    pixels: 1420x2385
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_8_p8
+    file: units/unit_8_p8.png
+    page: page_008.jpg
+    crop: [80, 0, 1500, 2388]
+    pixels: 1420x2388
+    role: tail
+    contains: TODO (OCR 후 자동 판단)
+
+excluded:
+  - region: 모든 페이지 좌측 가장자리 (x<80)
+    reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+  - region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+    reason: 본 기사 본문 외 영역. OCR 후 검증.
+
+ancillary:
+  section_label: 
+  page_numbers:
+    - {page: page_001.jpg, value: 一, hanja: 1}
+    - {page: page_002.jpg, value: 二, hanja: 2}
+    - {page: page_003.jpg, value: 三, hanja: 3}
+    - {page: page_004.jpg, value: 四, hanja: 4}
+    - {page: page_005.jpg, value: 五, hanja: 5}
+    - {page: page_006.jpg, value: 六, hanja: 6}
+    - {page: page_007.jpg, value: 七, hanja: 7}
+    - {page: page_008.jpg, value: 八, hanja: 8}
+
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, Claude 시각 검증, 단순 자르기)
+  phase_3_ocr: completed_with_engine_gaps (2026-05-09, Paddle 7/8 결손 — 1920년대 layout/typeface 시스템적 문제. avg CG_LCS ~0.15)
+  phase_4_consensus_and_correction: draft_v0_auto (2026-05-09, ⚠️ 마커 76건, 인간 중재 대기)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+
+post_ocr_findings:
+  - ★ 본 기사는 본 호에서 (未完) 종결 — 다음 호(통권 119)로 이어짐. 본 #60 영역에서는 自己解放 = 自由 = 意志 自主自立의 정초까지 도달.
+  - ★ 「進化論의 元祖」(Darwin 추정) + 「適者生存」 직접 인용 → 적자생존 法則 *시간상대화*로 자기해방 정초.
+  - 「世界大戰 / 改造 / 데모크라시 / 民族 普問題 / 階級鬪爭 / 大恐怖」 = 1920년 WWI 종전·러시아혁명·3.1운동 직후 시점 핵심 어휘군.
+  - 「政治改造 / 經濟改造 / 破壞 / 建設」 = 改造論 4축.
+  - 王陽明 「學問의 道...」 + 孟子 「山中賊 易, 心中賊 難」 인용 — 동양 고전을 자기해방 정초의 자원으로 활용.
+
+engine_gaps:
+  - unit_2_p2 ~ unit_8_p8: paddle token=0 (실패) — 7/8 unit
+  - unit_2_p2 추가: Gemini token=1735 (Claude 대비 ~5배), 환각 가능성 높음
+  - reason_hypothesis: 1920년대 single-band layout + 가는 활자에 PaddleOCR PP-OCRv5_chinese_cht 모델이 적합치 않음. Paddle 한국어 모델 또는 단행본 모델 시험 필요.
+
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

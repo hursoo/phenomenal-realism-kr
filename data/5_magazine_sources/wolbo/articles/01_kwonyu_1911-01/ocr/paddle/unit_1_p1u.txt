@@ -1,0 +1,9 @@
+# PaddleOCR (PP-OCR v5, lang=chinese_cht)
+# Source: unit_1_p1u.png
+# Detected lines: 5
+
+古#萬有點始发此點軌跡
+人呱呱聲量一出言有情空氣量呼吸
+勸天下失樂者
+講演
+李敦化

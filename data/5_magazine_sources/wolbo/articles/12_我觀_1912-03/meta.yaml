@@ -1,0 +1,221 @@
+article:
+  series_index: 12
+  slug: 我觀_1912-03
+  cnts_id: CNTS-00048033855
+  title: 我觀人生
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 20
+  publication_date: 1912-03-15
+  section: 講演
+  page_in_journal: 32
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048033855&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: 211235bf2ea0fa76f6501792da29ac2b78ff25bbff4fbdcf5e7e2fec266e7931
+  bytes: 240615
+  pixels: 1500x2354
+- file: page_002.jpg
+  sha256: bd7de22f2f303adf18723419c3bd9fbc20c3d1aba3092b87dafb729d3c360829
+  bytes: 238171
+  pixels: 1500x2354
+- file: page_003.jpg
+  sha256: 2c2355296bfd26319132fbdb3262368828ff51157a23ec98387c476ff0f13d8c
+  bytes: 249017
+  pixels: 1500x2327
+- file: page_004.jpg
+  sha256: 36a5b03d33d628921499ac0941f26c5844728cff1726e9c78e6894d7f4e97579
+  bytes: 235612
+  pixels: 1500x2374
+- file: page_005.jpg
+  sha256: 55cd5ed3323a2f81d6cb738112a6e9f2f6daac421b53c6ecc3bf81c44b56e4a8
+  bytes: 252569
+  pixels: 1500x2327
+- file: page_006.jpg
+  sha256: 14cf05d43cbbbde9542eed23a2a44cf920ddfe70b531bcdcd6d8b5a8b0de9073
+  bytes: 229708
+  pixels: 1500x2374
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048033855/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 2
+  divider_kind: thin_wavy_line
+  divider_y: 1180
+  layout_type: horizontal_only
+  reading_order: snake
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.80
+  oldhangul_density: low_to_mid
+units:
+- id: unit_1_p1u
+  file: units/unit_1_p1u.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p1l
+  file: units/unit_2_p1l.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2354
+  pixels: 1420x1174
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p2u
+  file: units/unit_3_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p2l
+  file: units/unit_4_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2354
+  pixels: 1420x1174
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p3u
+  file: units/unit_5_p3u.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p3l
+  file: units/unit_6_p3l.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2327
+  pixels: 1420x1147
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_7_p4u
+  file: units/unit_7_p4u.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_8_p4l
+  file: units/unit_8_p4l.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2374
+  pixels: 1420x1194
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_9_p5u
+  file: units/unit_9_p5u.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_10_p5l
+  file: units/unit_10_p5l.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2327
+  pixels: 1420x1147
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_11_p6u
+  file: units/unit_11_p6u.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_12_p6l
+  file: units/unit_12_p6l.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2374
+  pixels: 1420x1194
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: p1 上段 우측 (표제 우측 영역, x>?)
+  reason: 본 1편 패턴 가정 — 上段 이전 기사가 표제 우측까지 흘러옴 (OCR 후 검증 갱신)
+- region: 마지막 p 下段 (다음 기사 시작 영역 가능)
+  reason: 본 기사 결말 후 다음 기사 시작 가능. OCR 결과로 검증 후 자르기 갱신.
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 섹션 라벨 + 페이지번호
+ancillary:
+  section_label: 講演
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 32
+  - page: page_002.jpg
+    value: '?'
+    hanja: 33
+  - page: page_003.jpg
+    value: '?'
+    hanja: 34
+  - page: page_004.jpg
+    value: '?'
+    hanja: 35
+  - page: page_005.jpg
+    value: '?'
+    hanja: 36
+  - page: page_006.jpg
+    value: '?'
+    hanja: 37
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default dual-band L1 적용 — OCR
+    결과로 검증 대기)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=177, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

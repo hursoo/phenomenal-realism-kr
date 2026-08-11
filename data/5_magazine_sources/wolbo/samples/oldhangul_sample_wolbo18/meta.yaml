@@ -1,0 +1,118 @@
+# 옛한글 부 표본 메타데이터
+# 본 표본은 두 역할을 동시에 가짐:
+#   (1) 천도교회월보 이돈화 75편 시리즈의 한 편 — 시간순으로 위치
+#   (2) Phase 2.4 도구 비교에서 옛한글 인식 변수 측정용 부 표본 (oldhangul_sample_wolbo18)
+# Phase 2.1에서 (2) 목적에 맞춰 1단만 분리. 나머지 7단은 시리즈 적용 시점에 추가.
+
+article:
+  slug: oldhangul_sample_wolbo18
+  cnts_id: CNTS-00048061346
+  kolis_no: KSE000001443
+  title: "新年에 對ᄒᆞᆫ 新感想으로 新發明을 公告言"  # 원본 옛한글 표기 보존
+  title_nl_modernized: "新年에對한新感想으로新發明을公告함"  # NL 메타가 부여한 현대화 표기 (참고용)
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 18
+  publication_date: 1912-01-15
+  section: 講演
+  page_in_journal: 19
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048061346&viewType=C&category=기사
+  series_index_when_canonical: pending  # 75편 시간순 정렬 시 부여
+
+role:
+  primary: secondary_sample_for_oldhangul_measurement
+  rationale: |
+    본 1편(article 01, 1911-01)은 한자 약 80% 강세이고 옛한글 자모(ㆍ, ᄒᆞ 등)가 거의
+    없어 도구의 옛한글 인식 정확도를 측정할 수 없다. 본 표본은 표제부터 옛한글이
+    명확하고 본문에도 ᄒᆞ 결합형이 빈출하므로 옛한글 변수 측정에 적합하다.
+    Phase 2.4 도구 비교에서 본 1편(한자 변수)과 본 부 표본(옛한글 변수)을 함께
+    입력하여 두 변수를 별개로 평가한다.
+
+source_pages:
+  - file: page_001.jpg
+    sha256: 71dfe3f7378fd2cc614ad6dbc7bb2e0019dbb0cca7a6dbf905d8841f4fd0917a
+    bytes: 218762
+    pixels: 1500x2393
+  - file: page_002.jpg
+    sha256: 65244d77154e344236a8b9e0101f664378b85093e94c8ed1a6b4923e69f763c4
+    bytes: 243019
+    pixels: 1500x2391
+  - file: page_003.jpg
+    sha256: 10b6a579acc3a7b8f3cc7080a164c60c495ea64ded531ab7123cdcdd38dd5729
+    bytes: 236991
+    pixels: 1500x2393
+  - file: page_004.jpg
+    sha256: 9e90891b8fe043987500f6bc33389fc815506449fe4d2c85886de26c4304a249
+    bytes: 236577
+    pixels: 1500x2366
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048061346/
+
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 2  # 가로 분리선
+  divider_horizontal_kind: thin_wavy_line
+  divider_horizontal_y: 1190
+  divider_vertical_kind: vertical_wavy_line  # *부 표본 특유*: 세로 물결무늬 분리선
+  divider_vertical_x: 563  # 본 기사(좌측)와 이전 기사 꼬리(우측) 분리
+  layout_type: vertical_wavy_split  # 본 1편과 다름 (본 1편은 horizontal_only)
+  page_number_location: bottom_center
+  reading_order: snake_within_left_zone  # 좌측 영역(상+하) 안에서 snake. 우측은 별개 흐름(이전 기사)
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.65
+  oldhangul_density: high  # 옛한글 ᄒᆞ 결합형 빈출 — 측정 표본으로 적합
+
+units_extracted:
+  - id: unit_1_p1u
+    file: units/unit_1_p1u.png
+    page: page_001.jpg
+    crop: [80, 0, 563, 1190]  # 정정: 표제 우측 제외 (사용자 원칙 적용)
+    pixels: 483x1190
+    role: title_author
+    contains: |
+      섹션 「講演」 + 표제 「新年에 對ᄒᆞᆫ 新感想으로 / 新發明을 公告ᄒᆞᆷ」 + 저자명 「李敦化」.
+      본 unit에 본 기사 본문 컬럼 없음 (본문은 unit_2 좌하부터).
+      옛한글 ᄒᆞᆫ·ᄒᆞᆷ 2회.
+
+  - id: unit_2_p1l
+    file: units/unit_2_p1l.png
+    page: page_001.jpg
+    crop: [80, 1190, 563, 2300]
+    pixels: 483x1110
+    role: body_start
+    contains: |
+      본 기사 본문 시작 4컬럼 (작은 활자, 시간·신년 회상).
+      옛한글 ᄒᆞᄂᆞᆫ지·ᄒᆞ얏도다·ᄒᆞ야·ᄒᆞ고 4회.
+      페이지번호 「一九」 좌측 가장자리.
+    human_verified: 2026-05-09 (Soo) — 컬럼 분리(4단)·한자·옛한글 시각 검증
+    correction_history:
+      - claude_initial: 6 컬럼으로 잘못 분리 (작은 활자 컬럼 경계 한계)
+      - gemini_initial: 「不知」 환각 추가
+      - soo_correction: 4 컬럼 확정 + 「不知」 제거 + ᄒᆞᄂᆞᆫ지 정확화
+
+units_deferred:
+  description: |
+    본 표본의 나머지 단(p2 좌상·좌하, p3 좌상·좌하, p4 좌상·좌하 — 6단)은 정식
+    시리즈 작업이 본격화될 때 일괄 처리. 본 표본의 *우측*(p1~p4 우측)은 이전 기사
+    꼬리로 본 시리즈 작업 대상 외.
+
+correction_log:
+  - 2026-05-09: 사용자 원칙(*세로쓰기에서 표제 좌측 = 본문, 우측 = 이전 기사*) 적용으로 자르기 정정 (1500→563). 이전 OCR 결과(우측 영역)는 *이전 기사 꼬리* 자료로 git history에 보존.
+  - 2026-05-09: 부 표본 layout이 *세로 물결무늬 분리선* + 가로 분리선의 복합 layout임을 확인 (본 1편의 가로 단독과 다름). 75편 중 layout 혼재 가능성 시리즈 정책에 반영.
+  - 2026-05-09 (Soo): unit_2_p1l 컬럼 분리·한자·옛한글 시각 검증으로 권위 확정.
+
+ancillary:
+  section_label: 講演
+  page_numbers:
+    - {page: page_001.jpg, value: 一九, hanja: 19}
+    - {page: page_002.jpg, value: 二〇, hanja: 20}
+    - {page: page_003.jpg, value: 二一, hanja: 21}
+    - {page: page_004.jpg, value: 二二, hanja: 22}
+
+processing_state:
+  phase_2_1_unit_extraction_partial: completed (2026-05-09, unit_1_p1u only)
+  phase_2_4_oldhangul_measurement: pending
+  full_unit_extraction: deferred (시리즈 75편 일괄 적용 시)
+
+policy_refs:
+  series_design: _design/2026-05-09_cheondogyo_wolbo_phase1_sample.md
+  primary_article_meta: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/articles/01_kwonyu_1911-01/meta.yaml

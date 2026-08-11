@@ -1,0 +1,22 @@
+# claude-opus-4-7 via Anthropic API — vision OCR (2026-05-09)
+# Source: 35_人生_1917-01/units/unit_6_p3l.png
+# Tokens: in=2788 out=233 elapsed=10.3s
+
+[col 01]
+旣答
+目的에達ᄒᆞ者ㅣ니라余曰天德師恩
+
+[section]
+新新解
+
+[author]
+李 瑾
+
+[col 02]
+天行이已新ᄒᆞ니我德을宜新이로다有問者ㅣ曰貴敎에人皆曰布德布德이라ᄒᆞ니德이是何德이며新之之道ᄂᆞᆫ當奈何오曰
+
+[col 03]
+吾敎所典而尊閣之者ᄂᆞᆫ東經一也오所常而布施之者ᄂᆞᆫ天德也ㅣ니是以로經之開卷第
+
+[footer]
+七

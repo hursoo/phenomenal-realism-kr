@@ -1,0 +1,9 @@
+# PaddleOCR (PP-OCR v5, lang=chinese_cht)
+# Source: unit_2_p1l.png
+# Detected lines: 5
+
+月当昨年去今年来今年去明年
+何等天地徊七对布德五十三年歲
+三百六十五日四分度之一月昨年年光陰
+来明年去又明年来古如斯去去如
+一九

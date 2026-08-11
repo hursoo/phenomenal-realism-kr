@@ -1,0 +1,20 @@
+# Claude Opus 4.7 (1M) — direct vision OCR
+# Source: articles/01_kwonyu_1911-01/units/unit_1_p1u.png  (527x1180, 본 1편 시작부)
+# Date: 2026-05-09
+# Reading order: vertical columns, right-to-left.
+
+[section]
+講演
+
+[title]
+勸誘天下失樂者
+
+[author]
+李敦化
+
+[body]
+[col 01] 人이呵呵의聲을一出ᄒᆞ니有情空氣를呼吸ᄒᆞ야萬有의慾點을始發ᄒᆞ니此點의軌跡은
+
+# Notes:
+# - 본문은 표제 좌측의 작은 활자 컬럼 1개만 보임 (시작부, 페이지 좌측에서 끊김 — 다음 unit_2_p1l로 이어짐)
+# - 「講演」은 섹션 표시 (메타데이터로 별도 기록 가능)

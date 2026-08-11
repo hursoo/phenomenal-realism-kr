@@ -1,0 +1,91 @@
+# Filled by fill_units_default_singleband.py (2026-05-09): default single-band
+article:
+  series_index: 76
+  slug: 東經_1912-08
+  cnts_id: null
+  title: 東經大全要旨講解(續)
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 25
+  publication_date: 1912-08-15
+  section: 敎理部
+  page_in_journal: 12
+  partial_download: false
+  source_url: null
+source_pages:
+- file: page_001.jpg
+  sha256: e38c4a45ba12765123914cad2504f4f6bf44956db81b02ae9956c8742164ff42
+  bytes: 242824
+  pixels: 1500x2456
+- file: page_002.jpg
+  sha256: 30e667dffe34794ff788aca084ddb6d7179235079b789fe7e56d1a0e9b3b8865
+  bytes: 236110
+  pixels: 1500x2415
+- file: page_003.jpg
+  sha256: 72485307b1aa4c809dc034b71d5da237b3e8c1e8bc9a8ceda224e6ca57de921d
+  bytes: 237364
+  pixels: 1500x2456
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/76_東經_1912-08/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2456
+  pixels: 1420x2456
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2415
+  pixels: 1420x2415
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2456
+  pixels: 1420x2456
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: 敎理部
+  page_numbers: []
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: pending
+  phase_4_consensus_and_correction: pending
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

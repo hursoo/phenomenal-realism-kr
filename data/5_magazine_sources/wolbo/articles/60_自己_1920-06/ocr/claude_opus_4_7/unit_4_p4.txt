@@ -1,0 +1,33 @@
+# Claude Opus 4.7 (1M) — direct vision OCR
+# Source: articles/60_自己_1920-06/units/unit_4_p4.png (1420x2298, 본 #60 p4)
+# Date: 2026-05-09
+# Reading order: vertical columns, right-to-left. Within column: top-to-bottom.
+# Notation: [?] = 시각 식별 불확실
+# Source policy: 옛한글 자모 보존, 띄어쓰기 미부여
+
+[page_header]
+天道敎會月報
+
+[col 01] 世界前途
+[col 02] 世界革新의方
+[col 03] 「世界는 …」
+[col 04] 過渡期의初期에있어
+[col 05] 改造의初期에ᄂᆞᆫ
+[col 06] 改造의第一步에서 …
+[col 07] 中에있다
+[col 08] 우리는無論
+[col 09] 우리는無論不平의 …
+[col 10] 우리는破壞의 …
+[col 11] 不可ᄒᆞ도다우리는無論이오從來未來로 …
+[col 12] 過渡期
+[col 13] 改造의初期에있어
+[col 14] 政治改造ᄒᆞᆯ것이라
+[col 15] 經濟改造ᄒᆞᆯ것이라
+[col 16] 「破壞」의辛酸을맛보면必어 …
+[col 17] 「破壞」의辛酸…
+[col 18] 建設의要工이라
+
+# Notes:
+# - ★ 「政治改造 / 經濟改造 / 破壞 / 建設」 = 1920년 改造論 핵심 어휘 4축.
+# - 「過渡期의 初期 / 改造의 初期 / 改造의 第一步」 = 시간 단계 정식.
+# - 페이지 「四(4) / 667」.

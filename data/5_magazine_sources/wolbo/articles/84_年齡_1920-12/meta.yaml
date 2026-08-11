@@ -1,0 +1,151 @@
+# Filled by fill_units_default_singleband.py (2026-05-09): default single-band
+article:
+  series_index: 84
+  slug: 年齡_1920-12
+  cnts_id: null
+  title: 年齡論
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 124
+  publication_date: 1920-12-15
+  section: null
+  page_in_journal: 22
+  partial_download: false
+  source_url: null
+source_pages:
+- file: page_001.jpg
+  sha256: d234ef18ea251b00bc4f53fde09c94f99ecb8aa561f1e07c049f16277d2923b2
+  bytes: 204954
+  pixels: 1500x2429
+- file: page_002.jpg
+  sha256: 456d10ea9393b9edeb79904bfce8032b46f3addd272e3df7f6f1a0fc085561a0
+  bytes: 239580
+  pixels: 1500x2443
+- file: page_003.jpg
+  sha256: 2111ce56f3253dd27b7a1c3ad130c93ba4769dde6fad99913967c92a790df2dd
+  bytes: 217192
+  pixels: 1500x2407
+- file: page_004.jpg
+  sha256: d4cc44c992988fc86720a085d6da4f2d3b340ea41711e4254b4ab735275213c7
+  bytes: 228031
+  pixels: 1500x2452
+- file: page_005.jpg
+  sha256: 0830022d517ac2d2c792108ac35924804119f99ed0652549476489f7376c197b
+  bytes: 219216
+  pixels: 1500x2388
+- file: page_006.jpg
+  sha256: fa2ddcc5f1f9b689521fe77d630df7cd80af61592a4fad9cda01e17cee02478b
+  bytes: 230751
+  pixels: 1500x2455
+- file: page_007.jpg
+  sha256: fcd38ad600f2e3e86c408d3bd6d5c010eeb0d0c200c25f004685f260e491f891
+  bytes: 169500
+  pixels: 1500x2383
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/84_年齡_1920-12/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2429
+  pixels: 1420x2429
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2443
+  pixels: 1420x2443
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2407
+  pixels: 1420x2407
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2452
+  pixels: 1420x2452
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2388
+  pixels: 1420x2388
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p6
+  file: units/unit_6_p6.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2455
+  pixels: 1420x2455
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_7_p7
+  file: units/unit_7_p7.png
+  page: page_007.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2383
+  pixels: 1420x2383
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: null
+  page_numbers: []
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: pending
+  phase_4_consensus_and_correction: pending
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

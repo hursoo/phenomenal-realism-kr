@@ -1,0 +1,207 @@
+article:
+  series_index: 62
+  slug: 十週_1920-08
+  cnts_id: CNTS-00048051778
+  title: 十週年
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 120
+  publication_date: 1920-08-15
+  section: null
+  page_in_journal: 1
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048051778&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: 1700c69caa578779d61e1020a350aceb3ea180c976b563c129310dc21736d9de
+  bytes: 202648
+  pixels: 1500x2379
+- file: page_002.jpg
+  sha256: 9f47fefcd2f050a4e5a52496a8b81eadcef64a0e1b2848397a5960621fa53978
+  bytes: 220993
+  pixels: 1500x2448
+- file: page_003.jpg
+  sha256: b4e8c53d5a8ed319665c4655ac0290effd67e03c1ffdd1dd6c923ababfab278a
+  bytes: 187221
+  pixels: 1500x2374
+- file: page_004.jpg
+  sha256: b108192d75954e2c29a2ed98630e015f5f191ce3615d9d8e9dcbb7d99e955b39
+  bytes: 215304
+  pixels: 1500x2405
+- file: page_005.jpg
+  sha256: 16b362ec8b9eab3448711e9247c4c0e94b1ef87ddebf25d136c3a496054e07b0
+  bytes: 227920
+  pixels: 1500x2419
+- file: page_006.jpg
+  sha256: 915883b0382afa7157ed8f28ad6e757d16047f609f9603f2a7756185d2c8bd9d
+  bytes: 225504
+  pixels: 1500x2419
+- file: page_007.jpg
+  sha256: 3653657ad8bb28bf318884abbf7f35dfd304927355f4f13d162f680604418754
+  bytes: 189599
+  pixels: 1500x2410
+- file: page_008.jpg
+  sha256: bcfd516c35f373a1f516124c7d419bbf809eb409d4f28287fa843ac81fe6cf2f
+  bytes: 168794
+  pixels: 1500x2377
+- file: page_009.jpg
+  sha256: 55b4a06302f3032909c4c45ace96874f1dcc163c13081d2feb8fe2d4dfe8f6e1
+  bytes: 174122
+  pixels: 1500x2392
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048051778/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2379
+  pixels: 1420x2379
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2448
+  pixels: 1420x2448
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2374
+  pixels: 1420x2374
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2405
+  pixels: 1420x2405
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2419
+  pixels: 1420x2419
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p6
+  file: units/unit_6_p6.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2419
+  pixels: 1420x2419
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_7_p7
+  file: units/unit_7_p7.png
+  page: page_007.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2410
+  pixels: 1420x2410
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_8_p8
+  file: units/unit_8_p8.png
+  page: page_008.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2377
+  pixels: 1420x2377
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_9_p9
+  file: units/unit_9_p9.png
+  page: page_009.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2392
+  pixels: 1420x2392
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: null
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 1
+  - page: page_002.jpg
+    value: '?'
+    hanja: 2
+  - page: page_003.jpg
+    value: '?'
+    hanja: 3
+  - page: page_004.jpg
+    value: '?'
+    hanja: 4
+  - page: page_005.jpg
+    value: '?'
+    hanja: 5
+  - page: page_006.jpg
+    value: '?'
+    hanja: 6
+  - page: page_007.jpg
+    value: '?'
+    hanja: 7
+  - page: page_008.jpg
+    value: '?'
+    hanja: 8
+  - page: page_009.jpg
+    value: '?'
+    hanja: 9
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=338, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

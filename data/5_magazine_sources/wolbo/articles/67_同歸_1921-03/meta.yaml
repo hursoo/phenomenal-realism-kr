@@ -1,0 +1,171 @@
+article:
+  series_index: 67
+  slug: 同歸_1921-03
+  cnts_id: CNTS-00048079209
+  title: 同歸一體
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 127
+  publication_date: 1921-03-15
+  section: null
+  page_in_journal: 1
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048079209&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: 1f975553ee6be1d12bbca1f18b7673731545290be17884d285bfc33befcee6a4
+  bytes: 194056
+  pixels: 1500x2497
+- file: page_002.jpg
+  sha256: 6ce366d47aaba91c0181cfa6d576fdfbebbf0fa0cd814b65f517657a2e14a759
+  bytes: 212911
+  pixels: 1500x2513
+- file: page_003.jpg
+  sha256: 0ddb2449ac6c84cb8c4309735ef7e13d1d8596f1da14305fba01788926f5ff41
+  bytes: 218398
+  pixels: 1500x2521
+- file: page_004.jpg
+  sha256: e60fdad2d95e0ecf457fada0888bc190ad1e657506bcba98aac8e5d472670ddf
+  bytes: 230246
+  pixels: 1500x2489
+- file: page_005.jpg
+  sha256: 8a83408d124c6ad2d65c554e0dabd8b87628fe8616867e291ded9e7cfe490b8e
+  bytes: 221179
+  pixels: 1500x2497
+- file: page_006.jpg
+  sha256: a083f2a185417297a711d8e1ce41847d167e75fd56b3ca6bcd76c8f3d16d7a5e
+  bytes: 193915
+  pixels: 1500x2489
+- file: page_007.jpg
+  sha256: 1f91ba418b781817052234e82f2975ecbb0e6e87428d9b06aca5f8f8a873ce9c
+  bytes: 173382
+  pixels: 1500x2493
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048079209/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2497
+  pixels: 1420x2497
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2513
+  pixels: 1420x2513
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2521
+  pixels: 1420x2521
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2489
+  pixels: 1420x2489
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2497
+  pixels: 1420x2497
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p6
+  file: units/unit_6_p6.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2489
+  pixels: 1420x2489
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_7_p7
+  file: units/unit_7_p7.png
+  page: page_007.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2493
+  pixels: 1420x2493
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: null
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 1
+  - page: page_002.jpg
+    value: '?'
+    hanja: 2
+  - page: page_003.jpg
+    value: '?'
+    hanja: 3
+  - page: page_004.jpg
+    value: '?'
+    hanja: 4
+  - page: page_005.jpg
+    value: '?'
+    hanja: 5
+  - page: page_006.jpg
+    value: '?'
+    hanja: 6
+  - page: page_007.jpg
+    value: '?'
+    hanja: 7
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=301, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

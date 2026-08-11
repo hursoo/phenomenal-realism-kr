@@ -1,0 +1,153 @@
+article:
+  series_index: 56
+  slug: 天道_1920-01
+  cnts_id: CNTS-00048065337
+  title: 天道敎六十一歲花甲庚申을 迎喜
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 113
+  publication_date: 1920-01-15
+  section: 敎門訂議
+  page_in_journal: 7
+  partial_download: true
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048065337&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: a9dbef3d1996f7d052a280481e6c90a732d3d22f5c82a0c0d79c5d688429b1f1
+  bytes: 165883
+  pixels: 1500x2432
+- file: page_002.jpg
+  sha256: 699b60df94498031a8d1e795dc2dbd8fca62db430203ff18ab48e052233b0682
+  bytes: 181981
+  pixels: 1500x2336
+- file: page_003.jpg
+  sha256: 9cde893a5ca79435dd814a2ac6a7178feaa069a80ac3e49da9e2b8548717c3ea
+  bytes: 171174
+  pixels: 1500x2296
+- file: page_004.jpg
+  sha256: c28ac1bf04a3bd69b2408a4681a7fbe014c831188eca4a114c4f509a0f03462d
+  bytes: 179408
+  pixels: 1500x2234
+- file: page_005.jpg
+  sha256: ad2f65700c85caab880cb3bb1afefeac8df321962b99656649a8cbafe916947d
+  bytes: 179595
+  pixels: 1500x2337
+- file: page_006.jpg
+  sha256: c36386b4b532259f4977032b9a6c0ac4a5df272ce49d48ad836643312f2c2496
+  bytes: 178897
+  pixels: 1500x2308
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048065337/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2432
+  pixels: 1420x2432
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2336
+  pixels: 1420x2336
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2296
+  pixels: 1420x2296
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2234
+  pixels: 1420x2234
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2337
+  pixels: 1420x2337
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p6
+  file: units/unit_6_p6.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2308
+  pixels: 1420x2308
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: 敎門訂議
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 7
+  - page: page_002.jpg
+    value: '?'
+    hanja: 8
+  - page: page_003.jpg
+    value: '?'
+    hanja: 9
+  - page: page_004.jpg
+    value: '?'
+    hanja: 10
+  - page: page_005.jpg
+    value: '?'
+    hanja: 11
+  - page: page_006.jpg
+    value: '?'
+    hanja: 12
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=297, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

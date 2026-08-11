@@ -1,0 +1,118 @@
+article:
+  series_index: 2
+  slug: 信念_1911-04
+  cnts_id: CNTS-00048060752
+  title: 信念의 神聖
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 9
+  publication_date: 1911-04-15
+  section: 講演
+  page_in_journal: 26
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048060752&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: f686f71c834ec239731efa42cdad14e4bbd8ca275fdf1a6e58a53b2f0f5ba123
+  bytes: 239162
+  pixels: 1500x2384
+- file: page_002.jpg
+  sha256: 8d656d077267d8b30830c4180f849c86a00f517b90f4fda928dd14c6a60befdc
+  bytes: 243392
+  pixels: 1500x2361
+- file: page_003.jpg
+  sha256: 13a2de9dc482a079feef7fd83a06ceea832edbef1ecf5bedc19aa1abc48b8651
+  bytes: 178742
+  pixels: 1500x2384
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048060752/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 2
+  divider_kind: thin_wavy_line
+  divider_y_per_page:
+    page_001.jpg: 1180
+    page_002.jpg: 1160
+    page_003.jpg: 1200
+  layout_type: horizontal_only
+  reading_order: snake_partial
+  page_number_location: left_vertical_margin
+  section_label_location: left_vertical_margin
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.85
+  oldhangul_density: low
+units:
+- id: unit_1_p1l
+  file: units/unit_1_p1l.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 1180
+  - 900
+  - 2384
+  pixels: 820x1204
+  role: start
+  contains: 표제 「信念의 神聖」 + 저자명 「李敦化」 + 표제 좌측 본문 컬럼들
+- id: unit_2_p2u
+  file: units/unit_2_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1160
+  pixels: 1420x1160
+  role: continuation
+  contains: p2 上段 본문 (snake 연속)
+- id: unit_3_p2l
+  file: units/unit_3_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1160
+  - 1500
+  - 2361
+  pixels: 1420x1201
+  role: continuation
+  contains: p2 下段 본문 (snake 연속)
+- id: unit_4_p3u
+  file: units/unit_4_p3u.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1200
+  pixels: 1420x1200
+  role: tail
+  contains: p3 上段 본 기사 마지막
+excluded:
+- region: p1 上段 전체 (y<1180)
+  reason: 이전 기사 (다른 강연). 본
+- region: p1 下段 우측 (x>900)
+  reason: 본 1편 패턴 가정 — 上段 이전 기사가 下段 우측 컬럼까지 흘러와 끝맺음. OCR 후 표제 우측 텍스트 내용으로 검증.
+- region: p3 下段 전체 (y>1200)
+  reason: 빈 영역. 본 기사가 上段에서 끝나고 下段에 다음 기사 시작 없음.
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 정보 — 「講演」 섹션 표시 + 페이지번호 (二六/二七/二八). 본 시리즈 처리 정책 (가).
+ancillary:
+  section_label: 講演
+  page_numbers:
+  - page: page_001.jpg
+    value: 二六
+    hanja: 26
+  - page: page_002.jpg
+    value: 二七
+    hanja: 27
+  - page: page_003.jpg
+    value: 二八
+    hanja: 28
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, Claude 시각 검증)
+  phase_3_ocr: completed_3engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro+Paddle)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=76, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

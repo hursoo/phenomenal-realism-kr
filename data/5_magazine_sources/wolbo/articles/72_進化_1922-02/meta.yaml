@@ -1,0 +1,135 @@
+article:
+  series_index: 72
+  slug: 進化_1922-02
+  cnts_id: CNTS-00133846655
+  title: 進化의 側面으로 본 人乃天
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 138
+  publication_date: 1922-02-15
+  section: null
+  page_in_journal: 8
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00133846655&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: cad230d5483d16550e4c0a4789f861912667ab18539f0869a23f3fe661a69b2d
+  bytes: 304826
+  pixels: 1500x2489
+- file: page_002.jpg
+  sha256: 956327744bdc2cb4ba00de241d14986adddcaf3fc79778fd9df6d79f030e04f8
+  bytes: 327518
+  pixels: 1500x2489
+- file: page_003.jpg
+  sha256: 4e620d5e323a2ff56a67b50e5a39dc86f324641896529501bd5523706cbc6bde
+  bytes: 356063
+  pixels: 1500x2489
+- file: page_004.jpg
+  sha256: e4bf7cd5a3cfdadbb37c73a60ca90fb1b331f6f5f7abfcc4cee6f963f8aea26f
+  bytes: 335071
+  pixels: 1500x2489
+- file: page_005.jpg
+  sha256: 12b2dab3909c2ff91e174dbacf3db0fee8941dfd65fe6cdfb6ca9f7c9f05b4f7
+  bytes: 323852
+  pixels: 1500x2489
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00133846655/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2489
+  pixels: 1420x2489
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2489
+  pixels: 1420x2489
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2489
+  pixels: 1420x2489
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2489
+  pixels: 1420x2489
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2489
+  pixels: 1420x2489
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: null
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 8
+  - page: page_002.jpg
+    value: '?'
+    hanja: 9
+  - page: page_003.jpg
+    value: '?'
+    hanja: 10
+  - page: page_004.jpg
+    value: '?'
+    hanja: 11
+  - page: page_005.jpg
+    value: '?'
+    hanja: 12
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=168, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

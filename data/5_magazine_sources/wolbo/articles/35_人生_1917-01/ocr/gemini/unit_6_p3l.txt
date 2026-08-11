@@ -1,0 +1,9 @@
+# Gemini gemini-2.5-pro vision OCR
+# Source: unit_6_p3l.png
+# Usage: prompt_tokens=565 candidates_tokens=142 total=4053
+
+[title]乃生化
+[author]李罐
+[col 01]와目的에達ᄒᆞ者니라余曰天德師恩答旣新新鮮天行이己新ᄒᆞ니我德을
+[col 02]宜新이로다有問者一日貴教에人皆曰布德布德이라ᄒᆞ니德是何德이며新之道ᄂᆞᆫ當奈何오日
+[col 03]니吾教所典而尊閣之者ᄂᆞᆫ東經一也오所常而布施之者ᄂᆞᆫ天德也ㅣ니是以聖經之開卷第是

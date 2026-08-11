@@ -1,0 +1,166 @@
+{
+    "input_path": "C:\\hp_data\\0_tnt\\hyeonsang\\_ocr_experiments\\cheondogyo_wolbo_series\\articles\\01_kwonyu_1911-01\\units\\unit_5_p3u.png",
+    "page_index": null,
+    "model_settings": {
+        "use_doc_preprocessor": false,
+        "use_textline_orientation": false
+    },
+    "dt_polys": [
+        [
+            [
+                0,
+                201
+            ],
+            [
+                67,
+                201
+            ],
+            [
+                70,
+                1180
+            ],
+            [
+                3,
+                1180
+            ]
+        ],
+        [
+            [
+                74,
+                208
+            ],
+            [
+                142,
+                207
+            ],
+            [
+                147,
+                1180
+            ],
+            [
+                79,
+                1180
+            ]
+        ],
+        [
+            [
+                150,
+                203
+            ],
+            [
+                220,
+                202
+            ],
+            [
+                224,
+                1180
+            ],
+            [
+                154,
+                1180
+            ]
+        ]
+    ],
+    "text_det_params": {
+        "limit_side_len": 64,
+        "limit_type": "min",
+        "thresh": 0.3,
+        "max_side_limit": 4000,
+        "box_thresh": 0.6,
+        "unclip_ratio": 1.5
+    },
+    "text_type": "general",
+    "textline_orientation_angles": [
+        -1,
+        -1,
+        -1
+    ],
+    "text_rec_score_thresh": 0.0,
+    "return_word_box": false,
+    "rec_texts": [
+        "#五萬年極樂備量開始",
+        "皇後生杨樂一之造次早早引吾教叫",
+        "爲之断腸，呈此生極樂丘一念之做"
+    ],
+    "rec_scores": [
+        0.6898977160453796,
+        0.7356418371200562,
+        0.7435066103935242
+    ],
+    "rec_polys": [
+        [
+            [
+                0,
+                201
+            ],
+            [
+                67,
+                201
+            ],
+            [
+                70,
+                1180
+            ],
+            [
+                3,
+                1180
+            ]
+        ],
+        [
+            [
+                74,
+                208
+            ],
+            [
+                142,
+                207
+            ],
+            [
+                147,
+                1180
+            ],
+            [
+                79,
+                1180
+            ]
+        ],
+        [
+            [
+                150,
+                203
+            ],
+            [
+                220,
+                202
+            ],
+            [
+                224,
+                1180
+            ],
+            [
+                154,
+                1180
+            ]
+        ]
+    ],
+    "rec_boxes": [
+        [
+            0,
+            201,
+            70,
+            1180
+        ],
+        [
+            74,
+            207,
+            147,
+            1180
+        ],
+        [
+            150,
+            202,
+            224,
+            1180
+        ]
+    ]
+}

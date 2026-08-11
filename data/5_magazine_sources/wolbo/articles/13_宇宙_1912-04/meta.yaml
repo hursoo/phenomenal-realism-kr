@@ -1,0 +1,163 @@
+article:
+  series_index: 13
+  slug: 宇宙_1912-04
+  cnts_id: CNTS-00048033863
+  title: 宇宙說
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 21
+  publication_date: 1912-04-15
+  section: 敎理部
+  page_in_journal: 9
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048033863&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: 5cb503dacff11b2e4494f0e9cdad5dba02e38b05ad986b84c020c051e950110a
+  bytes: 228885
+  pixels: 1500x2327
+- file: page_002.jpg
+  sha256: 2474fa33611f11afd566de2681cb5819ef3a35137d95b16e7580d2c1d526065f
+  bytes: 235133
+  pixels: 1500x2397
+- file: page_003.jpg
+  sha256: 4a7639d14fae522421c8b0f86481e379e17623b7b916c2e1a255127d8e358b35
+  bytes: 243686
+  pixels: 1500x2327
+- file: page_004.jpg
+  sha256: 0494284d31a97c65b531f7b1e09c96d1d18f8d5ad826321930728e1d5c074064
+  bytes: 215686
+  pixels: 1500x2403
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048033863/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 2
+  divider_kind: thin_wavy_line
+  divider_y: 1180
+  layout_type: horizontal_only
+  reading_order: snake
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.80
+  oldhangul_density: low_to_mid
+units:
+- id: unit_1_p1u
+  file: units/unit_1_p1u.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p1l
+  file: units/unit_2_p1l.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2327
+  pixels: 1420x1147
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p2u
+  file: units/unit_3_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p2l
+  file: units/unit_4_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2397
+  pixels: 1420x1217
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p3u
+  file: units/unit_5_p3u.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p3l
+  file: units/unit_6_p3l.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2327
+  pixels: 1420x1147
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_7_p4u
+  file: units/unit_7_p4u.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_8_p4l
+  file: units/unit_8_p4l.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2403
+  pixels: 1420x1223
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: p1 上段 우측 (표제 우측 영역, x>?)
+  reason: 본 1편 패턴 가정 — 上段 이전 기사가 표제 우측까지 흘러옴 (OCR 후 검증 갱신)
+- region: 마지막 p 下段 (다음 기사 시작 영역 가능)
+  reason: 본 기사 결말 후 다음 기사 시작 가능. OCR 결과로 검증 후 자르기 갱신.
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 섹션 라벨 + 페이지번호
+ancillary:
+  section_label: 敎理部
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 9
+  - page: page_002.jpg
+    value: '?'
+    hanja: 10
+  - page: page_003.jpg
+    value: '?'
+    hanja: 11
+  - page: page_004.jpg
+    value: '?'
+    hanja: 12
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default dual-band L1 적용 — OCR
+    결과로 검증 대기)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=149, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

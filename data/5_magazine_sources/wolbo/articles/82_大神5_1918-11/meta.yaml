@@ -1,0 +1,91 @@
+# Filled by fill_units_default_singleband.py (2026-05-09): default single-band
+article:
+  series_index: 82
+  slug: 大神5_1918-11
+  cnts_id: null
+  title: 大神師性靈出世說(其五)
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 99
+  publication_date: 1918-11-15
+  section: 敎理部
+  page_in_journal: 16
+  partial_download: false
+  source_url: null
+source_pages:
+- file: page_001.jpg
+  sha256: 5d7c851bbdc55b96dad974e3d80c23ca679f955f4d8edc470b6b11f4f81e7230
+  bytes: 188785
+  pixels: 1500x2441
+- file: page_002.jpg
+  sha256: 94f3d62020801bab066ecb627651d9a7b6dad310da546465b89a90b7d71e0c3e
+  bytes: 243084
+  pixels: 1500x2531
+- file: page_003.jpg
+  sha256: ace45e79d4eaf9b01a8ac5b45de3fcd4e37aa58edf9f7a795f5df9fd2feb5324
+  bytes: 212393
+  pixels: 1500x2459
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/82_大神5_1918-11/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2441
+  pixels: 1420x2441
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2531
+  pixels: 1420x2531
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2459
+  pixels: 1420x2459
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: 敎理部
+  page_numbers: []
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: pending
+  phase_4_consensus_and_correction: pending
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

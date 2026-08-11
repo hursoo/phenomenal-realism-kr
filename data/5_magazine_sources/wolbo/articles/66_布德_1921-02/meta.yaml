@@ -1,0 +1,189 @@
+article:
+  series_index: 66
+  slug: 布德_1921-02
+  cnts_id: CNTS-00048065445
+  title: 布德天下
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 126
+  publication_date: 1921-02-15
+  section: null
+  page_in_journal: 1
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048065445&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: 9d1d6b0d59604065e139b7948720168f79c06770e018957c6b8e2eb6201ab439
+  bytes: 239394
+  pixels: 1500x2702
+- file: page_002.jpg
+  sha256: b48a7b68a87c2e9de9234e69091339ed45965fc5f4b975f7fcb9c64bfe4d8be8
+  bytes: 229564
+  pixels: 1500x2590
+- file: page_003.jpg
+  sha256: 140394d47913d0c407968958c690309d8a154b4f6110a96ecd9c99a5e8b969aa
+  bytes: 249951
+  pixels: 1500x2578
+- file: page_004.jpg
+  sha256: c1ea5eda70f87244e24a35d87565a2c477381eea51d224346071b645f8523441
+  bytes: 245169
+  pixels: 1500x2544
+- file: page_005.jpg
+  sha256: e73aafdb1017104f08b9bd470036779f585147602e4bf79f21256808bcf589e0
+  bytes: 250338
+  pixels: 1500x2545
+- file: page_006.jpg
+  sha256: 085095e866911253b25dbef9cd33bad9750a453c99a2feb6fde70f090e1186a1
+  bytes: 215220
+  pixels: 1500x2510
+- file: page_007.jpg
+  sha256: a795ed4cc5f02cc02308e6d589f41e0e1b2a9a4203d0f01cb6243771ea701819
+  bytes: 213370
+  pixels: 1500x2553
+- file: page_008.jpg
+  sha256: 215f7c0a8b233534502475cd7c9edaf973bc7f4254d071ee09ba21b9abca1dbe
+  bytes: 192340
+  pixels: 1500x2605
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048065445/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2702
+  pixels: 1420x2702
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2590
+  pixels: 1420x2590
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2578
+  pixels: 1420x2578
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2544
+  pixels: 1420x2544
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2545
+  pixels: 1420x2545
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p6
+  file: units/unit_6_p6.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2510
+  pixels: 1420x2510
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_7_p7
+  file: units/unit_7_p7.png
+  page: page_007.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2553
+  pixels: 1420x2553
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_8_p8
+  file: units/unit_8_p8.png
+  page: page_008.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2605
+  pixels: 1420x2605
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: null
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 1
+  - page: page_002.jpg
+    value: '?'
+    hanja: 2
+  - page: page_003.jpg
+    value: '?'
+    hanja: 3
+  - page: page_004.jpg
+    value: '?'
+    hanja: 4
+  - page: page_005.jpg
+    value: '?'
+    hanja: 5
+  - page: page_006.jpg
+    value: '?'
+    hanja: 6
+  - page: page_007.jpg
+    value: '?'
+    hanja: 7
+  - page: page_008.jpg
+    value: '?'
+    hanja: 8
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=287, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

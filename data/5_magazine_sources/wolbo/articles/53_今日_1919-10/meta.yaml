@@ -1,0 +1,135 @@
+article:
+  series_index: 53
+  slug: 今日_1919-10
+  cnts_id: CNTS-00048037846
+  title: 今日以後의 宗敎
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 110
+  publication_date: 1919-10-15
+  section: 敎門訂議
+  page_in_journal: 2
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048037846&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: e50cc3175693ade0b3dc4578e5b056669de13c75d71ec607ff9332dd2067a836
+  bytes: 218140
+  pixels: 1500x2400
+- file: page_002.jpg
+  sha256: a6a06fbc3e3d74b602073b1e59d16f540a3594a69cc57eefab3f1fc129615168
+  bytes: 222069
+  pixels: 1500x2450
+- file: page_003.jpg
+  sha256: e1a1de8667faa62e6a3c4c2701b20d13d17d7918bd31670b2f69c5586ef931a2
+  bytes: 212982
+  pixels: 1500x2396
+- file: page_004.jpg
+  sha256: 74817fa4f10f38486ea49dc51ee7cdd7b908a2cb81630a58d11567e5b5056274
+  bytes: 210984
+  pixels: 1500x2430
+- file: page_005.jpg
+  sha256: 9c10d0d9def08de1608ae29e36b4deeca14b9b4244f8fdb9ce0b154c5de8966c
+  bytes: 228412
+  pixels: 1500x2404
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048037846/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2400
+  pixels: 1420x2400
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2450
+  pixels: 1420x2450
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2396
+  pixels: 1420x2396
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2430
+  pixels: 1420x2430
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2404
+  pixels: 1420x2404
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: 敎門訂議
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 2
+  - page: page_002.jpg
+    value: '?'
+    hanja: 3
+  - page: page_003.jpg
+    value: '?'
+    hanja: 4
+  - page: page_004.jpg
+    value: '?'
+    hanja: 5
+  - page: page_005.jpg
+    value: '?'
+    hanja: 6
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=27, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

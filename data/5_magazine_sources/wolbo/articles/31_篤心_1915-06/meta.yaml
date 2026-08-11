@@ -1,0 +1,134 @@
+article:
+  series_index: 31
+  slug: 篤心_1915-06
+  cnts_id: CNTS-00048078602
+  title: 篤心者의 精靈不滅
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 59
+  publication_date: 1915-06-15
+  section: 雜俎
+  page_in_journal: 38
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048078602&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: 70bc99de0bd06a31984fb0907c4077ea57373215f10bafcb7db1ea81e829c46b
+  bytes: 220028
+  pixels: 1500x2356
+- file: page_002.jpg
+  sha256: d4b0e797514eea86c00e50e5af42a562a5f5c4f966e078a505246007888f5862
+  bytes: 257430
+  pixels: 1500x2410
+- file: page_003.jpg
+  sha256: 5ee885547a8a73359b414b8eb44136828a9f989b9869706ffd1e119c360bc719
+  bytes: 225189
+  pixels: 1500x2352
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048078602/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 2
+  divider_kind: thin_wavy_line
+  divider_y: 1180
+  layout_type: horizontal_only
+  reading_order: snake
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.80
+  oldhangul_density: low_to_mid
+units:
+- id: unit_1_p1u
+  file: units/unit_1_p1u.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p1l
+  file: units/unit_2_p1l.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2356
+  pixels: 1420x1176
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p2u
+  file: units/unit_3_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p2l
+  file: units/unit_4_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2410
+  pixels: 1420x1230
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p3u
+  file: units/unit_5_p3u.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p3l
+  file: units/unit_6_p3l.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2352
+  pixels: 1420x1172
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: p1 上段 우측 (표제 우측 영역, x>?)
+  reason: 본 1편 패턴 가정 — 上段 이전 기사가 표제 우측까지 흘러옴 (OCR 후 검증 갱신)
+- region: 마지막 p 下段 (다음 기사 시작 영역 가능)
+  reason: 본 기사 결말 후 다음 기사 시작 가능. OCR 결과로 검증 후 자르기 갱신.
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 섹션 라벨 + 페이지번호
+ancillary:
+  section_label: 雜俎
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 38
+  - page: page_002.jpg
+    value: '?'
+    hanja: 39
+  - page: page_003.jpg
+    value: '?'
+    hanja: 40
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default dual-band L1 적용 — OCR
+    결과로 검증 대기)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=203, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

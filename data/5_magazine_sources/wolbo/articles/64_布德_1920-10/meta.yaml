@@ -1,0 +1,135 @@
+article:
+  series_index: 64
+  slug: 布德_1920-10
+  cnts_id: CNTS-00048037974
+  title: 布德天下는 活誠에 在하니라
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 122
+  publication_date: 1920-10-15
+  section: null
+  page_in_journal: 7
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048037974&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: 97664c999fcf9a947e36f31e42a5d1b905ff260ae31896a8bc75db7713870b4a
+  bytes: 193998
+  pixels: 1500x2487
+- file: page_002.jpg
+  sha256: aef411395685230a76c3d928c47b396845591d96e7e47b9fce91ab219c2e56f9
+  bytes: 209678
+  pixels: 1500x2416
+- file: page_003.jpg
+  sha256: e26eef03a372d49eacdf4bdc4a0dbe51ed0e6d3d077742575c7466a11c1927b3
+  bytes: 218761
+  pixels: 1500x2469
+- file: page_004.jpg
+  sha256: a73ce48e69146493d99f058d7f1f2a0bcca84a1154aa00d3fd84302c64b8d93b
+  bytes: 213930
+  pixels: 1500x2416
+- file: page_005.jpg
+  sha256: 072026e12f54f69742164882432244ef09393b8c89d85bebd6189dafc4ad9f5b
+  bytes: 215966
+  pixels: 1500x2497
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048037974/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2487
+  pixels: 1420x2487
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2416
+  pixels: 1420x2416
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2469
+  pixels: 1420x2469
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2416
+  pixels: 1420x2416
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2497
+  pixels: 1420x2497
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: null
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 7
+  - page: page_002.jpg
+    value: '?'
+    hanja: 8
+  - page: page_003.jpg
+    value: '?'
+    hanja: 9
+  - page: page_004.jpg
+    value: '?'
+    hanja: 10
+  - page: page_005.jpg
+    value: '?'
+    hanja: 11
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=214, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

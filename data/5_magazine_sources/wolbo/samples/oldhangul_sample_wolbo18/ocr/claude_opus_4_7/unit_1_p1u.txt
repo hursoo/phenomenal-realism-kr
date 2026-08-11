@@ -1,0 +1,24 @@
+# Claude Opus 4.7 (1M) — direct vision OCR (corrected: 사용자 원칙 적용)
+# Source: samples/oldhangul_sample_wolbo18/units/unit_1_p1u.png  (483x1190, p1 좌상)
+# Date: 2026-05-09 (correction)
+# Layout: 본 부 표본은 *세로 물결무늬 분리선*이 페이지 상·하단을 관통.
+#         좌측 = 본 기사, 우측 = 이전 기사 꼬리. 본 unit은 좌상(표제+저자).
+# Reading order: vertical columns, right-to-left.
+
+[section]
+講演
+
+[title]
+新年에對ᄒᆞᆫ新感想으로
+新發明을公告ᄒᆞᆷ
+
+[author]
+李敦化
+
+[body]
+(본 unit 영역에 본 기사 본문 컬럼 없음. 표제·저자명만. 본 기사 본문은 unit_2_p1l(좌하)에서 시작.)
+
+# Notes:
+# - 표제: ᄒᆞᆫ (1회) + ᄒᆞᆷ (1회) — 옛한글 자모 보존
+# - 표제 우측의 큰 활자 본문(神師-奧菱時元 회상 일화)은 *이전 기사 꼬리*로 본 unit 자르기에서 제외 (사용자 원칙 적용)
+# - 자르기 우측 끝 x=563 — column-mean 분석에서 가장 큰 흰 띠(x=563..607, w=45)의 좌측

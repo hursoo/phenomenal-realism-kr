@@ -1,0 +1,189 @@
+article:
+  series_index: 63
+  slug: 法門_1920-09
+  cnts_id: CNTS-00048037962
+  title: 오로지 法門에 依信하라
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 121
+  publication_date: 1920-09-15
+  section: null
+  page_in_journal: 1
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048037962&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: bad5a5173c8d99a0ffc25c0e8571a28f834b6488c067446a51ebcbe9d37af1d6
+  bytes: 218567
+  pixels: 1500x2443
+- file: page_002.jpg
+  sha256: 2d1e817ff5c62883f7c03a299aef5f0d6c91a33127401c80ba22247938cfc6d9
+  bytes: 218628
+  pixels: 1500x2463
+- file: page_003.jpg
+  sha256: 363855033b6340cb3c5e4ff48810efad6da6a3aaddc38c38f048f6dc687805cd
+  bytes: 203085
+  pixels: 1500x2347
+- file: page_004.jpg
+  sha256: 60a082c34a5db927197cb3df78617ce693737a9341f34d6ee4c8762738615d74
+  bytes: 213073
+  pixels: 1500x2414
+- file: page_005.jpg
+  sha256: 487ff199dc0ec1528a806f2ad4a455627439228a1c61fca38a1a94f5dfaa1ea3
+  bytes: 192450
+  pixels: 1500x2405
+- file: page_006.jpg
+  sha256: 8fa186f69c3ec727d770be76972daf88f9981b69bda5a311665412f987e46c42
+  bytes: 193736
+  pixels: 1500x2414
+- file: page_007.jpg
+  sha256: e56ca099eef6646a48712b94d94d5244864a9ef360c1473a5eb2d15f331b6ef5
+  bytes: 210311
+  pixels: 1500x2381
+- file: page_008.jpg
+  sha256: f1472d946bc7f497777032cd78d8af1b9c88e5e31cf27b5bf05eb2ecd8e6a676
+  bytes: 191264
+  pixels: 1500x2432
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048037962/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2443
+  pixels: 1420x2443
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2463
+  pixels: 1420x2463
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2347
+  pixels: 1420x2347
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2414
+  pixels: 1420x2414
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2405
+  pixels: 1420x2405
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p6
+  file: units/unit_6_p6.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2414
+  pixels: 1420x2414
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_7_p7
+  file: units/unit_7_p7.png
+  page: page_007.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2381
+  pixels: 1420x2381
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_8_p8
+  file: units/unit_8_p8.png
+  page: page_008.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2432
+  pixels: 1420x2432
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: null
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 1
+  - page: page_002.jpg
+    value: '?'
+    hanja: 2
+  - page: page_003.jpg
+    value: '?'
+    hanja: 3
+  - page: page_004.jpg
+    value: '?'
+    hanja: 4
+  - page: page_005.jpg
+    value: '?'
+    hanja: 5
+  - page: page_006.jpg
+    value: '?'
+    hanja: 6
+  - page: page_007.jpg
+    value: '?'
+    hanja: 7
+  - page: page_008.jpg
+    value: '?'
+    hanja: 8
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=344, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

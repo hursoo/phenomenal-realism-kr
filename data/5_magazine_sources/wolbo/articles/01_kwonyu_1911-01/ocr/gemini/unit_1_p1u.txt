@@ -1,0 +1,15 @@
+# Gemini gemini-2.5-pro vision OCR
+# Source: unit_1_p1u.png
+# Usage: prompt_tokens=565 candidates_tokens=69 total=1842
+
+[title]
+勸勵天下失樂者
+
+[author]
+李敦化
+
+[col 01]
+人이呱呱의聲을一出홈이有情空氣를呼吸ㆍ
+
+[col 02]
+흐야萬有의慾點을始發흐니此點의軌跡은

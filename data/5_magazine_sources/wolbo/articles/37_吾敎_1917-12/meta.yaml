@@ -1,0 +1,250 @@
+article:
+  series_index: 37
+  slug: 吾敎_1917-12
+  cnts_id: CNTS-00048051447
+  title: 吾敎의 大宗
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 89
+  publication_date: 1917-12-15
+  section: 敎門訂議
+  page_in_journal: 2
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048051447&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: 55a8050c0dff6970a1a8f368be580a2b1913ce18ebea74f2d70535f45ecbf375
+  bytes: 265961
+  pixels: 1500x2400
+- file: page_002.jpg
+  sha256: 45c9cc7f5d4faccf346dfcdd2024d0126cbd3023f3b1108f76788806e8b56d85
+  bytes: 246794
+  pixels: 1500x2377
+- file: page_003.jpg
+  sha256: a72eba9d9bd6d850ccfaaa69a8ed36ae0933a5582a35679594011ed37ea603d4
+  bytes: 278303
+  pixels: 1500x2400
+- file: page_004.jpg
+  sha256: e388275513edb79b94a5668598e080d0d9c0a4866daaf526e361d999d40a3e2a
+  bytes: 254149
+  pixels: 1500x2372
+- file: page_005.jpg
+  sha256: 629c9776d7a2cb2c364708c678eac5d7552fe5114ec0927e0a89864dea39e176
+  bytes: 275966
+  pixels: 1500x2405
+- file: page_006.jpg
+  sha256: 92755384c0e9ce9dca442f8f768c273ca823574e6bb22b47449d88fb76176753
+  bytes: 253381
+  pixels: 1500x2372
+- file: page_007.jpg
+  sha256: 790b060a6a384257418feb0d76ae9090496b6307ef18ab2fc46ddf6b805b8618
+  bytes: 270762
+  pixels: 1500x2405
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048051447/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 2
+  divider_kind: thin_wavy_line
+  divider_y: 1180
+  layout_type: horizontal_only
+  reading_order: snake
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.80
+  oldhangul_density: low_to_mid
+units:
+- id: unit_1_p1u
+  file: units/unit_1_p1u.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p1l
+  file: units/unit_2_p1l.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2400
+  pixels: 1420x1220
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p2u
+  file: units/unit_3_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p2l
+  file: units/unit_4_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2377
+  pixels: 1420x1197
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p3u
+  file: units/unit_5_p3u.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p3l
+  file: units/unit_6_p3l.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2400
+  pixels: 1420x1220
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_7_p4u
+  file: units/unit_7_p4u.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_8_p4l
+  file: units/unit_8_p4l.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2372
+  pixels: 1420x1192
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_9_p5u
+  file: units/unit_9_p5u.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_10_p5l
+  file: units/unit_10_p5l.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2405
+  pixels: 1420x1225
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_11_p6u
+  file: units/unit_11_p6u.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_12_p6l
+  file: units/unit_12_p6l.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2372
+  pixels: 1420x1192
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_13_p7u
+  file: units/unit_13_p7u.png
+  page: page_007.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_14_p7l
+  file: units/unit_14_p7l.png
+  page: page_007.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2405
+  pixels: 1420x1225
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: p1 上段 우측 (표제 우측 영역, x>?)
+  reason: 본 1편 패턴 가정 — 上段 이전 기사가 표제 우측까지 흘러옴 (OCR 후 검증 갱신)
+- region: 마지막 p 下段 (다음 기사 시작 영역 가능)
+  reason: 본 기사 결말 후 다음 기사 시작 가능. OCR 결과로 검증 후 자르기 갱신.
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 섹션 라벨 + 페이지번호
+ancillary:
+  section_label: 敎門訂議
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 2
+  - page: page_002.jpg
+    value: '?'
+    hanja: 3
+  - page: page_003.jpg
+    value: '?'
+    hanja: 4
+  - page: page_004.jpg
+    value: '?'
+    hanja: 5
+  - page: page_005.jpg
+    value: '?'
+    hanja: 6
+  - page: page_006.jpg
+    value: '?'
+    hanja: 7
+  - page: page_007.jpg
+    value: '?'
+    hanja: 8
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default dual-band L1 적용 — OCR
+    결과로 검증 대기)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=242, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

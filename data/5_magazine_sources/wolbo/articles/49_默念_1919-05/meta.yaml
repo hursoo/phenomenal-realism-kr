@@ -1,0 +1,171 @@
+article:
+  series_index: 49
+  slug: 默念_1919-05
+  cnts_id: CNTS-00048079021
+  title: 默念論(續)
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 105
+  publication_date: 1919-05-15
+  section: 敎理部
+  page_in_journal: 11
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048079021&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: 8f2ff5b4dbafaefce35b2459fbb058636ad6e023f84ab0e6641659a83f5e88cf
+  bytes: 209833
+  pixels: 1500x2547
+- file: page_002.jpg
+  sha256: 9616bfe58855e5ef639f7841985ba859d442bf1c6545428ffe1a4b890939f549
+  bytes: 236084
+  pixels: 1500x2493
+- file: page_003.jpg
+  sha256: e56d6411aed9e0ce4a1130dbfd2f6010ab58f0856cfde410a28ab00e53bd681f
+  bytes: 226806
+  pixels: 1500x2527
+- file: page_004.jpg
+  sha256: 684635d0f8a8c83387eb987371e53855d5e684b68f6db0a0d907a2e73b129a5b
+  bytes: 259402
+  pixels: 1500x2458
+- file: page_005.jpg
+  sha256: 7f8e5eb02a03b24fd7e5634fb506218fa63adc1fe306e981f360d4613fef4348
+  bytes: 230589
+  pixels: 1500x2519
+- file: page_006.jpg
+  sha256: 26a2ba6f57ec89ef4129b75945258ea1de4be0b0e8fdaae9b75b3d59508512a5
+  bytes: 241964
+  pixels: 1500x2483
+- file: page_007.jpg
+  sha256: aaf89811088888af386eb464812c9889dd998c894a42536ed87a26be6169ba1f
+  bytes: 171355
+  pixels: 1500x2545
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048079021/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2547
+  pixels: 1420x2547
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2493
+  pixels: 1420x2493
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2527
+  pixels: 1420x2527
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2458
+  pixels: 1420x2458
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2519
+  pixels: 1420x2519
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p6
+  file: units/unit_6_p6.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2483
+  pixels: 1420x2483
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_7_p7
+  file: units/unit_7_p7.png
+  page: page_007.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2545
+  pixels: 1420x2545
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: 敎理部
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 11
+  - page: page_002.jpg
+    value: '?'
+    hanja: 12
+  - page: page_003.jpg
+    value: '?'
+    hanja: 13
+  - page: page_004.jpg
+    value: '?'
+    hanja: 14
+  - page: page_005.jpg
+    value: '?'
+    hanja: 15
+  - page: page_006.jpg
+    value: '?'
+    hanja: 16
+  - page: page_007.jpg
+    value: '?'
+    hanja: 17
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=340, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

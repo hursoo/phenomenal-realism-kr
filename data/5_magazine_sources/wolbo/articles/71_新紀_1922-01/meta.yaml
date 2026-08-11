@@ -1,0 +1,153 @@
+article:
+  series_index: 71
+  slug: 新紀_1922-01
+  cnts_id: CNTS-00048051863
+  title: 新紀元을 劃한 우리敎의 新面目
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 137
+  publication_date: 1922-01-15
+  section: null
+  page_in_journal: 10
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048051863&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: d2395ab4f5671a32936bb49344ce61ade39db1a3f4a00748de9c0511a039b652
+  bytes: 218717
+  pixels: 1500x2433
+- file: page_002.jpg
+  sha256: 7adcc0e1648b215c5daebe37e3823ef9d5781c416084a3e465d43756261e828c
+  bytes: 252445
+  pixels: 1500x2385
+- file: page_003.jpg
+  sha256: 4db6bc040f98cfa0f239cc8333536359638d890839e9ea934037774ec040c0aa
+  bytes: 244022
+  pixels: 1500x2404
+- file: page_004.jpg
+  sha256: 5dd27feae12594ea8a20c5c3d50c60b3c5bf1a948543d923ced7c2610b4f8e35
+  bytes: 252327
+  pixels: 1500x2403
+- file: page_005.jpg
+  sha256: 15cee99ce13aca4382ab755fb5c9d3d16b4b309a142581aa0bcebf83706ffda9
+  bytes: 245016
+  pixels: 1500x2451
+- file: page_006.jpg
+  sha256: 28fe45c3caea5a0493f1c9d4b681ae8accfc331eafd96da21288c2c0044a0ff0
+  bytes: 212670
+  pixels: 1500x2403
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048051863/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2433
+  pixels: 1420x2433
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2385
+  pixels: 1420x2385
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2404
+  pixels: 1420x2404
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2403
+  pixels: 1420x2403
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2451
+  pixels: 1420x2451
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p6
+  file: units/unit_6_p6.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2403
+  pixels: 1420x2403
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: null
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 10
+  - page: page_002.jpg
+    value: '?'
+    hanja: 11
+  - page: page_003.jpg
+    value: '?'
+    hanja: 12
+  - page: page_004.jpg
+    value: '?'
+    hanja: 13
+  - page: page_005.jpg
+    value: '?'
+    hanja: 14
+  - page: page_006.jpg
+    value: '?'
+    hanja: 15
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=275, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

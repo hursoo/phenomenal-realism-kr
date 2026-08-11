@@ -1,0 +1,159 @@
+# Skeleton meta — series_index #20, generated 2026-05-09 by bootstrap_article.py
+# layout·units는 시각 검증 후 채울 것 (TODO 표시 영역)
+
+article:
+  series_index: 20
+  slug: 光說_1913-02
+  cnts_id: CNTS-00048061495
+  title: 光의 說
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 31
+  publication_date: 1913-02-15
+  section: 雜俎
+  page_in_journal: 34
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048061495&viewType=C&category=기사
+
+source_pages:
+  - file: page_001.jpg
+    sha256: a471dc220af413b860384311aa8d120db762f2b19334f9f54fa973b8a1848bcc
+    bytes: 245460
+    pixels: 1500x2388
+  - file: page_002.jpg
+    sha256: d4be8fafb112632d1664544a3767917b0bff1713472ddf269d982cb4a3a03b50
+    bytes: 267872
+    pixels: 1500x2448
+  - file: page_003.jpg
+    sha256: 9736fca5a553fd64eaaae9c7853f2ad2c012899fc8a003fb8bfe73e67ef335af
+    bytes: 243499
+    pixels: 1500x2415
+  - file: page_004.jpg
+    sha256: 41c2ca2c1f2046bf64d6611a0ce31386b746b390d14c120ebd74ff2e171e07aa
+    bytes: 247743
+    pixels: 1500x2473
+  - file: page_005.jpg
+    sha256: ef31593ffc2098ef64c22ae652535d54cc1d605a691457b3ac52b3d8a077e9e5
+    bytes: 269449
+    pixels: 1500x2447
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048061495/
+
+# ========== Phase 2.1 단 분리 (Claude 시각 검증, 2026-05-09) ==========
+# 단순화 자르기: 모든 band x=80~1500 (전체 폭). 표제 우측·본 기사 영역 OCR 후 검증.
+
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 2
+  divider_kind: thin_wavy_line
+  divider_y: 1180  # 통일값 (페이지별 ±20 변동 가능)
+  layout_type: horizontal_only  # L1 — 본 1편 가족
+  reading_order: snake  # 上→下→다음 페이지 上→下
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.80  # 시기 평균 (OCR 후 갱신)
+  oldhangul_density: low_to_mid
+
+units:
+  - id: unit_1_p1u
+    file: units/unit_1_p1u.png
+    page: page_001.jpg
+    crop: [80, 0, 1500, 1180]
+    pixels: 1420x1180
+    role: start
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_2_p1l
+    file: units/unit_2_p1l.png
+    page: page_001.jpg
+    crop: [80, 1180, 1500, 2388]
+    pixels: 1420x1208
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_3_p2u
+    file: units/unit_3_p2u.png
+    page: page_002.jpg
+    crop: [80, 0, 1500, 1180]
+    pixels: 1420x1180
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_4_p2l
+    file: units/unit_4_p2l.png
+    page: page_002.jpg
+    crop: [80, 1180, 1500, 2448]
+    pixels: 1420x1268
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_5_p3u
+    file: units/unit_5_p3u.png
+    page: page_003.jpg
+    crop: [80, 0, 1500, 1180]
+    pixels: 1420x1180
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_6_p3l
+    file: units/unit_6_p3l.png
+    page: page_003.jpg
+    crop: [80, 1180, 1500, 2415]
+    pixels: 1420x1235
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_7_p4u
+    file: units/unit_7_p4u.png
+    page: page_004.jpg
+    crop: [80, 0, 1500, 1180]
+    pixels: 1420x1180
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_8_p4l
+    file: units/unit_8_p4l.png
+    page: page_004.jpg
+    crop: [80, 1180, 1500, 2473]
+    pixels: 1420x1293
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_9_p5u
+    file: units/unit_9_p5u.png
+    page: page_005.jpg
+    crop: [80, 0, 1500, 1180]
+    pixels: 1420x1180
+    role: continuation
+    contains: TODO (OCR 후 자동 판단)
+  - id: unit_10_p5l
+    file: units/unit_10_p5l.png
+    page: page_005.jpg
+    crop: [80, 1180, 1500, 2447]
+    pixels: 1420x1267
+    role: tail
+    contains: TODO (OCR 후 자동 판단)
+
+excluded:
+  - region: p1 上段 우측 (표제 우측 영역, x>?)
+    reason: 본 1편 패턴 가정 — 上段 이전 기사가 표제 우측까지 흘러옴 (OCR 후 검증 갱신)
+  - region: 마지막 p 下段 (다음 기사 시작 영역 가능)
+    reason: 본 기사 결말 후 다음 기사 시작 가능. OCR 결과로 검증 후 자르기 갱신.
+  - region: 모든 페이지 좌측 가장자리 (x<80)
+    reason: 부속 — 섹션 라벨 + 페이지번호
+
+ancillary:
+  section_label: 雜俎
+  page_numbers:
+    - {page: page_001.jpg, value: 三四, hanja: 34}
+    - {page: page_002.jpg, value: 三五, hanja: 35}
+    - {page: page_003.jpg, value: 三六, hanja: 36}
+    - {page: page_004.jpg, value: 三七, hanja: 37}
+    - {page: page_005.jpg, value: 三八, hanja: 38}
+
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, Claude 시각 검증, 단순 자르기)
+  phase_3_ocr: "completed (2026-05-09, 3엔진 Claude+Gemini+Paddle. avg CG_LCS ~0.79)"
+  phase_4_consensus_and_correction: draft_v0_auto (2026-05-09, ⚠️ 마커 297건, 인간 중재 대기)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+
+post_ocr_findings:
+  - ★ unit_9 col 01-02 「現象即絶對, 絶對即現象」 발견 — 이노우에 「現象即實在」 시그니처와 정확 평행. 1913.02 시점 이미 이돈화 어휘에 진입. 본 hyeonsang 핵심 비교 텍스트 후보로 격상 가능.
+  - 결구 절 표제: 「朝陽 / 夕陽 / 月의光 / 螢의光(電燈) / 默念」 = 광설 5절 구조. 「肉眼의光 ↔ 心眼의光」 대비.
+  - unit_10 전체는 다음 기사 「食蟲之植物」 본문 — meta.yaml role=tail → role=excluded 권장.
+
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

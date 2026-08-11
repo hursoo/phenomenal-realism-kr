@@ -1,0 +1,118 @@
+# 「心告의 要義」 (1910-11-15, 林明洙) — 별건 표본
+# - cheondogyo_wolbo_series 75편 코퍼스 외(저자 ≠ 이돈화, cutoff 이전).
+# - 본 폴더는 0_srh/magazine/cheondo-weolbo의 임명수 본문 OCR을 위한 처리 영역.
+# - 원본 JPG는 0_srh 측에 영구 보관. 본 폴더는 단 자르기·OCR·전사·합의 산물만 보유.
+
+article:
+  slug: simgo_1910-11
+  doc_id: cheondo-weolbo_004_007        # 0_srh OpenSearch 인입 ID
+  cnts_id: null                          # 국도 단건 CNTS 미확보 (영인본 + 국도 혼합)
+  title: "心告의 要義"
+  author: 林明洙
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 4                         # 통권 4
+  publication_date: 1910-11-15
+  monthly_label: 11月號
+  section_per_articles_tsv: 講演
+  section_visible_on_facsimile: 敎理部   # 좌측 가장자리 라벨이 「敎理部」로 보임 — OCR 후 재확인
+  page_in_journal: 16
+  page_span_facsimile: "16~17"
+  source_url: null                       # 국도 NL 단건 URL 미확보
+  series_index: null                     # 75편 시리즈 외
+
+role:
+  primary: oneoff_external_article_for_srh_ingest
+  rationale: |
+    이 기사는 hyeonsang의 이돈화 75편 시리즈와 별개. 0_srh의 천도교회월보 인입 파이프라인에
+    body 텍스트를 채우기 위해 OCR이 필요해, 본 시리즈가 갖춘 합의·전사·자모 매핑 인프라를
+    재활용한다. 결과물(high_fidelity·modern_reading)은 0_srh/magazine/cheondo-weolbo/raw/articles_ocr/
+    cheondo-weolbo_004_007/ 로 ship된다.
+
+source_pages:
+  - file: page_001.jpg
+    sha256: d5d8ec18a73cc1e7debcdffe9b48ef98bf57fdf0162a0502afff8ec48900385d
+    bytes: 221623
+    pixels: 1500x2456
+    facsimile_page: 16
+  - file: page_002.jpg
+    sha256: 02c4c0128362edec350d1353f263ad2812246b4080ce9d5be174fa7df0f341e9
+    bytes: 239956
+    pixels: 1500x2414
+    facsimile_page: 17
+source_dir: C:/hp_data/0_srh/magazine/cheondo-weolbo/raw/articles/cheondo-weolbo_004_007/
+
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 2
+  divider_kind: thin_horizontal_line
+  divider_y_p1: 1430                     # 기사 경계로 사용. probe 1472 → 표제 「心」 상단 클리핑 회피 위해 1430으로 올림
+  divider_y_p2_visual_only: 1447         # p2의 horizontal line은 시각적 장식. 다음 기사 「身無小病」 표제 컬럼이 이 line을 가로지름 → 기사 경계 아님 → p2는 단일 unit
+  reading_order: snake
+  page_number_location: bottom_outer_margin
+  section_label_location: left_vertical_margin
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.85            # 임시 — OCR 후 갱신
+  oldhangul_density: low                 # 임시 — OCR 후 갱신
+
+article_boundaries:
+  start: page_001.jpg, lower band, right edge (표제 「心告의 要義」 + 저자 「林明洙」)
+  end: page_002.jpg, lower band, 「身無小病은 我一人」 표제 직전 (정확한 x 좌표는 OCR 후 재단)
+  excluded_in_p1_upper: 전체 (이전 기사 「神聖의 關係 / 朴思稷」의 꼬리, 講演)
+  excluded_in_p2_lower: 다음 기사 「身無小病은 我一人 / 卓祖嵒」 표제·저자·본문 (좌측 부분 — OCR 결과로 분리)
+  trim_rationale: |
+    OCR 텍스트 trim 근거(세로쓰기 관례): 표제 우측 컬럼 = 이전 기사 꼬리(제외), 표제 좌측 = 본 기사 본문. p2에서 「身無小病」 표제 뒤 14컬럼은 텍스트 내용상 「至誠으로心告ᄒᆞ시오」로 끝나는 「心告」 결론부이므로 본 기사로 간주, 표제·저자·next_article 마커 라인만 제거(Gemini OCR 동일 영역으로 교차 확인). 원래 _tmp_trim_simgo_for_consensus.py에 기록돼 있던 내용 — 스크립트 삭제하며 이리로 옮김.
+
+units:
+  - id: unit_1_p1
+    file: units/unit_1_p1.png
+    page: page_001.jpg
+    crop: [0, 0, 1500, 2456]              # 전체 페이지 (잘림 방지)
+    role: start_with_excluded_predecessor
+    contains: |
+      p1 전체. 상단 band: 이전 기사 「神聖의 關係 / 朴思稷」 꼬리 (제외 대상).
+      하단 band: 표제 「心告의 要義」 + 저자명 「林明洙」 + 본 기사 본문 시작.
+      페이지번호 「一六」 좌측 가장자리.
+      이전 기사 영역은 OCR 결과에서 본 기사 표제 「心告의 要義」 컬럼 위치를 보고 사후 분리.
+
+  - id: unit_2_p2
+    file: units/unit_2_p2.png
+    page: page_002.jpg
+    crop: [0, 0, 1500, 2414]              # 전체 페이지 (잘림 방지)
+    role: continuation_with_excluded_neighbor
+    contains: |
+      p2 전체. 본 기사 본문 + 다음 기사 「身無小病은 我一人 / 卓祖嵒」 표제·본문(부분).
+      다음 기사 영역은 OCR 결과에서 표제 「身無小病」 컬럼 위치를 보고 사후 분리.
+      페이지번호 「一七」 좌측 가장자리.
+
+excluded:
+  - region: page_001.jpg upper band (y < 1472), 전체
+    reason: 이전 기사 「神聖의 關係 / 朴思稷」(講演, p14~) 꼬리. 상단 band 전체가 前 기사.
+  - region: page_002.jpg lower band 좌측 영역 (y >= 1447, x boundary TBD)
+    reason: 다음 기사 「身無小病은 我一人 / 卓祖嵒」 표제 + 저자 + 본문 시작.
+    note: 정확한 x 절단 좌표는 unit_3_p2l OCR 결과에서 표제 「身無小病」 출현 위치를 보고 재단.
+  - region: 모든 페이지 좌측 가장자리 x<80
+    reason: 섹션 라벨 + 페이지번호. 본 시리즈 처리 정책 (가) — 메타로 별도 기록.
+
+ancillary:
+  section_label_visible: 敎理部           # 라벨이 본문 섹션과 일치하지 않음 (articles.tsv: 講演)
+  section_label_anomaly_note: |
+    좌측 가장자리에 「敎理部」가 보이는데 articles.tsv·issue_004.json에는 「講演」으로 등록.
+    해석 후보: (1) 동일 호 내 앞선 기사 본 敎歷史(續, 敎理部, p12)의 running header가 잔존,
+    (2) 영인본 metadata 오류, (3) facsimile에 잘못된 라벨이 인쇄되어 있음.
+    OCR 검증 후 사용자에게 판정 의뢰.
+  page_numbers:
+    - {page: page_001.jpg, value: 一六, hanja: 16}
+    - {page: page_002.jpg, value: 一七, hanja: 17}
+
+processing_state:
+  phase_2_1_unit_extraction: pending
+  phase_3_ocr: pending
+  phase_4_consensus: pending
+  phase_5_high_fidelity: pending
+  phase_6_modern_reading: pending
+  ship_to_0_srh: pending
+
+policy_refs:
+  series_design: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  primary_article_meta: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/articles/01_kwonyu_1911-01/meta.yaml
+  cumulative_safeguards: CLAUDE.md '누적 보호 장치' 3

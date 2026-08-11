@@ -1,0 +1,136 @@
+# Filled by fill_units_default_singleband.py (2026-05-09): default single-band
+article:
+  series_index: 86
+  slug: 우리_1921-11
+  cnts_id: null
+  title: 우리時代의 創造事業, 目下의 急先務를 提案함
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 135
+  publication_date: 1921-11-15
+  section: null
+  page_in_journal: 9
+  partial_download: false
+  source_url: null
+source_pages:
+- file: page_001.jpg
+  sha256: 7ecaf8cd1cec4cf8f582c863f8ee4499b6ed06fa2653430c79b5f507e44542f5
+  bytes: 174879
+  pixels: 1500x2563
+- file: page_002.jpg
+  sha256: 300391f4f19d9ce644a67317dd6950c8b5117a4a29f8be8e3d99e4c6ed4150f1
+  bytes: 211961
+  pixels: 1500x2481
+- file: page_003.jpg
+  sha256: 9e7a2d834df186d4454b11f8390bdd0408bec165989e5c4752d2ba668cf5724a
+  bytes: 208345
+  pixels: 1500x2524
+- file: page_004.jpg
+  sha256: b695919aa28edff7321f1f6d33a46943f35b477a9eaf7e7cc7b158e7e7536abf
+  bytes: 202473
+  pixels: 1500x2452
+- file: page_005.jpg
+  sha256: 60e3ca17ec24849ac5c568e3ebd0d2bb89e059552b8f299d38681d811781340c
+  bytes: 209592
+  pixels: 1500x2549
+- file: page_006.jpg
+  sha256: 508f1c579400207cd93fd940753c0506d3de700da8b20effbd2d2e53438a0a1a
+  bytes: 204335
+  pixels: 1500x2443
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/86_우리_1921-11/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2563
+  pixels: 1420x2563
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2481
+  pixels: 1420x2481
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2524
+  pixels: 1420x2524
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2452
+  pixels: 1420x2452
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2549
+  pixels: 1420x2549
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p6
+  file: units/unit_6_p6.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2443
+  pixels: 1420x2443
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: null
+  page_numbers: []
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: pending
+  phase_4_consensus_and_correction: pending
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

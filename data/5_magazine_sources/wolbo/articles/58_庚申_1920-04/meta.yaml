@@ -1,0 +1,153 @@
+article:
+  series_index: 58
+  slug: 庚申_1920-04
+  cnts_id: CNTS-00048065358
+  title: 庚申四月五日
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 116
+  publication_date: 1920-04-15
+  section: null
+  page_in_journal: 3
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048065358&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: e06b99ee34f140b7cb1d7cc582181521052acdb2a77484a5e9978455e2892bc6
+  bytes: 190437
+  pixels: 1500x2474
+- file: page_002.jpg
+  sha256: 2ef478b37ec80a5a505d38e229d61de226ea5a09b3c45f3e02106235cd7463c7
+  bytes: 200918
+  pixels: 1500x2397
+- file: page_003.jpg
+  sha256: 3a49eb5e1ddd59990700b58d218f3aa6c52279feee83eb77344e809c0d949e5b
+  bytes: 197694
+  pixels: 1500x2441
+- file: page_004.jpg
+  sha256: c4fe321a0a7c0c432f481349d5fb15de64527a20a5f276611d30dd425882bb2c
+  bytes: 207270
+  pixels: 1500x2390
+- file: page_005.jpg
+  sha256: 5f65d29cddaa3c1da3cd2891d4d167ed6f161e7eb62ae0f5d3a97f74fe3aee3c
+  bytes: 371588
+  pixels: 1500x2409
+- file: page_006.jpg
+  sha256: 042aa8c80bfe4336bcdf608b484a72d79101e69985bf1b8185ef76ee3b877941
+  bytes: 359585
+  pixels: 1500x2441
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048065358/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2474
+  pixels: 1420x2474
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2397
+  pixels: 1420x2397
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2441
+  pixels: 1420x2441
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2390
+  pixels: 1420x2390
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2409
+  pixels: 1420x2409
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p6
+  file: units/unit_6_p6.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2441
+  pixels: 1420x2441
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: null
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 3
+  - page: page_002.jpg
+    value: '?'
+    hanja: 4
+  - page: page_003.jpg
+    value: '?'
+    hanja: 5
+  - page: page_004.jpg
+    value: '?'
+    hanja: 6
+  - page: page_005.jpg
+    value: '?'
+    hanja: 7
+  - page: page_006.jpg
+    value: '?'
+    hanja: 8
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=264, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

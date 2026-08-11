@@ -1,0 +1,153 @@
+article:
+  series_index: 74
+  slug: 信仰_1922-04
+  cnts_id: CNTS-00048051884
+  title: 信仰 觀念의 本體(續)
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 140
+  publication_date: 1922-04-15
+  section: null
+  page_in_journal: 15
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048051884&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: 3d53385e0d94a3bc8cd41c24330d1313df560c9c0208b34d8a5fac1aa95c539e
+  bytes: 230637
+  pixels: 1500x2482
+- file: page_002.jpg
+  sha256: bfff7abb783ad19fbb4915c27af0e52f7faff879e4b591db14662d6728c5b863
+  bytes: 255871
+  pixels: 1500x2458
+- file: page_003.jpg
+  sha256: bfa509290979fe06cc207ddfef7ae34af9230e375d023e1957b3896ce3c0c32c
+  bytes: 245263
+  pixels: 1500x2452
+- file: page_004.jpg
+  sha256: 5073de8fca58592ce298233f95cdd557bc4ad4c7fe22c8b7d657d93225181e67
+  bytes: 265903
+  pixels: 1500x2438
+- file: page_005.jpg
+  sha256: 2390f6c74c597ec0517c087db651826708f18b40db12b204a33fa8cccea6208d
+  bytes: 255063
+  pixels: 1500x2467
+- file: page_006.jpg
+  sha256: 48723380d7e6ab200a68ae92eabd418106b0ed44a8dc83f6fc0ed7a7ded829ae
+  bytes: 25595
+  pixels: 1500x2417
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048051884/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2482
+  pixels: 1420x2482
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2458
+  pixels: 1420x2458
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2452
+  pixels: 1420x2452
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2438
+  pixels: 1420x2438
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2467
+  pixels: 1420x2467
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p6
+  file: units/unit_6_p6.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2417
+  pixels: 1420x2417
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: null
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 15
+  - page: page_002.jpg
+    value: '?'
+    hanja: 16
+  - page: page_003.jpg
+    value: '?'
+    hanja: 17
+  - page: page_004.jpg
+    value: '?'
+    hanja: 18
+  - page: page_005.jpg
+    value: '?'
+    hanja: 19
+  - page: page_006.jpg
+    value: '?'
+    hanja: 20
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=254, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

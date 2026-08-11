@@ -1,0 +1,18 @@
+# OpenAI gpt-5-chat-latest vision OCR
+# Source: unit_1_p1u.png
+# Usage: prompt_tokens=967 completion_tokens=193 total=1160
+
+[title]  
+新年에對ᄒᆞᆫ新感想으로  
+新發明을公告ᄒᆞᆷ  
+
+[author]  
+講演 蘇巖  
+
+[col 01]  
+神師一與衆跨元을王至苓于松늬大講師忌日이陰敎日이라道人  
+咸曰沈晝眞이告神師曰大講師忌日이敬迎일쎄路具祭品而來  
+호고且連日에無靜潔行現之過  
+將其女輿駕ᄒᆞ니翌日에卽大講師忌辰이라  
+乃以沈晝眞所備祭品으로行享配于嬌  
+호고翌日에還家ᄒᆞ다

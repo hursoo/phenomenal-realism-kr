@@ -1,0 +1,7 @@
+# PaddleOCR (PP-OCR v5, lang=chinese_cht)
+# Source: unit_5_p3u.png
+# Detected lines: 3
+
+#五萬年極樂備量開始
+皇後生杨樂一之造次早早引吾教叫
+爲之断腸，呈此生極樂丘一念之做

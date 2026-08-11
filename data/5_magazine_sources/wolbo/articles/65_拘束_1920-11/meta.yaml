@@ -1,0 +1,189 @@
+article:
+  series_index: 65
+  slug: 拘束_1920-11
+  cnts_id: CNTS-00048079183
+  title: 拘束의 宗敎로부터 自由의 宗敎
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 123
+  publication_date: 1920-11-15
+  section: null
+  page_in_journal: 1
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048079183&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: 1cd57f37fee0b3389dec2d6183d9d71235d4d84fe122393f475e7d7db567cf7e
+  bytes: 215822
+  pixels: 1500x2467
+- file: page_002.jpg
+  sha256: a3b9c4db8c35f96eaf664772e1ebbbe03fce2929b4a79b155aed7887557ddf4d
+  bytes: 216864
+  pixels: 1500x2454
+- file: page_003.jpg
+  sha256: 7f201bec39a92072a5888d8adede8f629799777a1b614033ea57e5834794ab5e
+  bytes: 230372
+  pixels: 1500x2418
+- file: page_004.jpg
+  sha256: a402269abb88cb07b7808cb79f0815198a78b742fd0d54a2ac1a61530ae188b7
+  bytes: 221113
+  pixels: 1500x2463
+- file: page_005.jpg
+  sha256: e189554169eca5a927a0f7e15843c153533ee6600a68e472075627bca910df00
+  bytes: 231843
+  pixels: 1500x2416
+- file: page_006.jpg
+  sha256: 34d9d36e9137b96b47bac8c098ff0f63c32ed96f163b2d716db24b8a65c42537
+  bytes: 227276
+  pixels: 1500x2482
+- file: page_007.jpg
+  sha256: 95fbd47d0bd8537cf2c80459795cacb6c4b82c74086e3778aec8855f2a088bd2
+  bytes: 225359
+  pixels: 1500x2459
+- file: page_008.jpg
+  sha256: 5d19152864c6a34c0a885efa407685ab7a9b4e2f9846d327658c9c8fc0273e84
+  bytes: 179328
+  pixels: 1500x2468
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048079183/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 1
+  divider_kind: none
+  divider_y: null
+  layout_type: single_band
+  reading_order: page_then_next
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.70
+  oldhangul_density: low
+units:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2467
+  pixels: 1420x2467
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2454
+  pixels: 1420x2454
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2418
+  pixels: 1420x2418
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2463
+  pixels: 1420x2463
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2416
+  pixels: 1420x2416
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p6
+  file: units/unit_6_p6.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2482
+  pixels: 1420x2482
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_7_p7
+  file: units/unit_7_p7.png
+  page: page_007.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2459
+  pixels: 1420x2459
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_8_p8
+  file: units/unit_8_p8.png
+  page: page_008.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 2468
+  pixels: 1420x2468
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+excluded:
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 페이지 헤더(잡지명·기사명 running title) + 페이지번호
+- region: 마지막 p 본문 끝 이후 (장식 그림·「未完」 등)
+  reason: 본 기사 본문 외 영역. OCR 후 검증.
+ancillary:
+  section_label: null
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 1
+  - page: page_002.jpg
+    value: '?'
+    hanja: 2
+  - page: page_003.jpg
+    value: '?'
+    hanja: 3
+  - page: page_004.jpg
+    value: '?'
+    hanja: 4
+  - page: page_005.jpg
+    value: '?'
+    hanja: 5
+  - page: page_006.jpg
+    value: '?'
+    hanja: 6
+  - page: page_007.jpg
+    value: '?'
+    hanja: 7
+  - page: page_008.jpg
+    value: '?'
+    hanja: 8
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default single-band 적용 — 1919-1922
+    layout 검증 후)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=336, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv
