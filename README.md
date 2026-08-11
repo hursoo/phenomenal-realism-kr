@@ -84,42 +84,56 @@
 
 ```mermaid
 flowchart TD
-    subgraph C["<b>수집</b> Collect — 물질성"]
-        A1["<b>『哲學と宗敎』</b> 1915<br/>NDL PID 952938"]:::src
-        A2["<b>『人乃天-要義-』</b> 1924<br/>편자 소장 영인본"]:::src
+    subgraph CO["수집 Collect — 물질성"]
+        A1["『哲學と宗敎』 1915<br/>NDL PID 952938"]
+        A2["『人乃天-要義-』 1924<br/>편자 소장 영인본"]
     end
 
-    subgraph R["<b>정제</b> Refine — 구조"]
-        B["<b>② 페이지 분할 · 재넘버링</b><br/>펼침면 → 낱쪽 → A/C/Z<br/>832장 · 290장"]:::rule
-        Cc["<b>③ 판독</b><br/>Google Gemini 3.0<br/>위계 · 문단 · 페이지 태그"]:::ai
-        D["<b>④ 교정 · ⑤ 문장 태깅</b><br/>21판 (1915년 9 · 1924년 12)"]:::ai
-        E["<b>⑥ 문장 분리 · ID 부여</b><br/>DB v1.0 / v1.1"]:::rule
-        F["<b>⑦ 정리</b><br/>v1.2 → v1.3 · 문단 633 → 626"]:::rule
-        G["<b>⑧ 묶음 단위</b><br/>v1.4 · 2,195묶음 · 424묶음"]:::rule
-        H["<b>⑨ 정규화</b><br/>reading-space 토큰"]:::rule
+    subgraph RE["정제 Refine — 구조"]
+        B["② 페이지 분할 · 재넘버링<br/>펼침면 → 낱쪽 → A/C/Z<br/>832장 · 290장"]
+        C["③ 판독<br/>Google Gemini 3.0<br/>위계 · 문단 · 페이지 태그"]
+        D["④ 교정 · ⑤ 문장 태깅<br/>21판"]
+        E["⑥ 문장 분리 · ID 부여<br/>DB v1.0 / v1.1"]
+        F["⑦ 정리<br/>v1.2 → v1.3 · 문단 633 → 626"]
+        G["⑧ 묶음 단위<br/>v1.4 · 2,195 · 424"]
+        H["⑨ 정규화<br/>reading-space 토큰"]
     end
 
-    subgraph I["<b>분석</b> Investigate — 판단"]
-        J["<b>⑩ 유사도 · 전수 검색</b><br/>자카드 930,680쌍<br/>항목명 대조 · 밀도"]:::rule
+    subgraph IN["분석 Investigate — 판단"]
+        J["⑩ 유사도 · 전수 검색<br/>자카드 930,680쌍<br/>항목명 대조 · 밀도"]
     end
 
-    subgraph S["<b>해석</b> Signify — 맥락"]
-        K["논법의 이식<br/>순서는 물려받되<br/>바닥을 갈아 끼웠다"]:::interp
+    subgraph SI["해석 Signify — 맥락"]
+        K["논법의 이식<br/>순서는 물려받되<br/>바닥을 갈아 끼웠다"]
     end
 
-    subgraph P["<b>발표</b> Present — 효용"]
-        L["발표문 · 논문<br/>2026. 2 / 6 / 8"]:::interp
+    subgraph PR["발표 Present — 효용"]
+        L["발표문 · 논문<br/>2026. 2 / 6 / 8"]
     end
 
     A1 --> B
     A2 --> B
-    B --> Cc --> D --> E --> F --> G --> H --> J --> K --> L
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+    H --> J
+    J --> K
+    K --> L
 
-    classDef src    fill:#f5f0e6,stroke:#8a7a5c,stroke-width:2px,color:#000
-    classDef ai     fill:#fde2e2,stroke:#c0504d,stroke-width:2px,color:#000
-    classDef rule   fill:#e4eef7,stroke:#3d6f9e,stroke-width:2px,color:#000
-    classDef interp fill:#eae6f2,stroke:#6b5b95,stroke-width:2px,color:#000
+    classDef src fill:#f5f0e6,stroke:#8a7a5c,color:#000
+    classDef ai fill:#fde2e2,stroke:#c0504d,color:#000
+    classDef rule fill:#e4eef7,stroke:#3d6f9e,color:#000
+    classDef interp fill:#eae6f2,stroke:#6b5b95,color:#000
+
+    class A1,A2 src
+    class C,D ai
+    class B,E,F,G,H,J rule
+    class K,L interp
 ```
+
 
 <sub>■ 붉은 칸은 **언어모델이 개입한 단계**로 결정론적이지 않다. 그래서 산출물을 판별로 모두
 실었다. ■ 푸른 칸은 **규칙 기반**이며 코드로 재현된다. ■ 보라 칸은 사람의 판단이다.</sub>
