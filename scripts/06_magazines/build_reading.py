@@ -59,33 +59,49 @@ def _trim_body(body, adir, n, tabs):
                 cat.get(n, {}).get('author', ''), ae.get(n, {}).get('next_title', ''))
     if s == 0 and e == len(items):
         return body, 0
-    head = _N(''.join(x[1] for x in items[s:] if x[0] == 'col'))[:40]
-    tail = _N(''.join(x[1] for x in items[:e] if x[0] == 'col'))[-40:]
+    head_full = _N(''.join(x[1] for x in items[s:] if x[0] == 'col'))
+    tail_full = _N(''.join(x[1] for x in items[:e] if x[0] == 'col'))
 
     # C쪽 평문 + 위치표.
     # ⚠️ 마커에서 나온 글자는 원문에서 **구간**을 차지한다. 시작만 들고 있으면
     #    꼬리를 되돌릴 때 그 마커가 통째로 잘려 나간다(2026-08-13에 겪음 —
     #    판독 층보다 6~36%p 더 잘렸다). 시작과 끝을 **둘 다** 들고 간다.
+    # 🔴 닻은 `_N()`으로 만든다(공백 + 쉼표·마침표를 지운다). 평문을 공백만 지워
+    #    만들면 구두점이 낀 자리에서 닻이 안 잡힌다 — #11이 그래서 앞 기사 꼬리를
+    #    그대로 달고 있었다(2026-08-13). **같은 규칙으로 지운다.**
+    SKIP = set(' \t\n\r、,。．.')
     plain, span, i = [], [], 0
     for m in MARKER.finditer(body):
         for k, ch in enumerate(body[i:m.start()]):
-            if not ch.isspace():
+            if ch not in SKIP:
                 plain.append(ch); span.append((i + k, i + k + 1))
         for ch in m.group(1):
-            if not ch.isspace():
+            if ch not in SKIP:
                 plain.append(ch); span.append((m.start(), m.end()))
         i = m.end()
     for k, ch in enumerate(body[i:]):
-        if not ch.isspace():
+        if ch not in SKIP:
             plain.append(ch); span.append((i + k, i + k + 1))
     P = ''.join(plain)
 
-    a = P.find(head) if head else -1
-    b = P.rfind(tail) if tail else -1
+    # 🔴 닻을 길게 잡으면 못 찾는다. 합의본은 원 판독과 몇 글자 다른 자리가 있어
+    #    40자 안에 그런 자리가 하나만 끼어도 실패한다(#11이 그랬다 — 40자로는 못
+    #    찾고 20자로는 찾았다). **길이를 줄여 가며** 찾되, 너무 짧으면 엉뚱한 데
+    #    걸리므로 12자에서 멈춘다.
+    a = b = -1
+    for k in (40, 32, 24, 20, 16, 12):
+        if a < 0 and len(head_full) >= k:
+            a = P.find(head_full[:k])
+            head = head_full[:k]
+        if b < 0 and len(tail_full) >= k:
+            b = P.rfind(tail_full[-k:])
+            tail = tail_full[-k:]
+        if a >= 0 and b >= 0:
+            break
     if a < 0 and b < 0:
         return body, 0
     lo = span[a][0] if a >= 0 else 0
-    hi = span[b + len(tail) - 1][1] if b >= 0 else len(body)
+    hi = span[b + len(tail) - 1][1] if b >= 0 and b + len(tail) <= len(span) else len(body)
     if hi <= lo:
         return body, 0
     return body[lo:hi], len(body) - (hi - lo)
