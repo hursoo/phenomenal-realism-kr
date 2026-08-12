@@ -161,6 +161,9 @@ def main():
     ap.add_argument('--model', default='claude-opus-4-7')
     ap.add_argument('--dry-run', action='store_true')
     ap.add_argument('--force', action='store_true')
+    ap.add_argument('--workers', type=int, default=8,
+                    help='글줄을 몇 개까지 동시에 던질까 (기본 8). '
+                         '결과는 글줄 번호로 되꽂으므로 차례는 흐트러지지 않는다')
     ap.add_argument('--with-candidates', action='store_true',
                     help='두 엔진의 그 글줄 판독을 후보로 함께 준다(중재 방식). '
                          '어제 실험에서 후보를 주면 음절·한자 판별이 크게 올랐다')
@@ -209,7 +212,17 @@ def main():
         lines = [f'# reread x{args.scale} via Anthropic ({args.model}) — 글줄 단위 재판독',
                  f'# Source: {u.name}  columns={len(cols)}', '']
         cand = engine_cols(adir, u.stem) if args.with_candidates else {}
-        for i, (a, b) in enumerate(cols, 1):
+
+        # 글줄끼리는 서로 기다릴 까닭이 없다. 2026-08-12에 재어 보니 편당 83글줄을
+        # 줄줄이 던져 상위 30편에 서너 시간이 들었다. 동시에 던지되 **차례는 지킨다** —
+        # 글줄의 순서가 곧 읽는 순서이므로 결과를 번호로 되꽂는다.
+        from concurrent.futures import ThreadPoolExecutor
+        import threading
+        lock = threading.Lock()
+
+        def one_col(idx_ab):
+            nonlocal tin, tout
+            i, (a, b) = idx_ab
             img = crop_x(u, a, b, args.scale)
             ask = '이 글줄을 판독하라.'
             if cand.get(i):
@@ -218,6 +231,7 @@ def main():
                         '**맞는지 이미지로 확인하고, 틀린 자리는 고쳐라.** '
                         '둘 다 틀렸으면 네 판독을 써라.\n'
                         f"  A: {c.get('A', '(없음)')}\n  B: {c.get('B', '(없음)')}")
+            txt = '[ERROR unset]'
             for attempt in range(6):
                 try:
                     r = client.messages.create(
@@ -227,7 +241,8 @@ def main():
                              'media_type': 'image/png', 'data': base64.b64encode(img).decode()}},
                             {'type': 'text', 'text': ask}]}])
                     txt = (_text_of(r).splitlines() or [''])[0].strip()
-                    tin += r.usage.input_tokens; tout += r.usage.output_tokens
+                    with lock:
+                        tin += r.usage.input_tokens; tout += r.usage.output_tokens
                     break
                 except Exception as e:                       # noqa: BLE001
                     # 잔액이 일시적으로 비는 일이 있다(자동 충전이 따라오기 전).
@@ -239,8 +254,14 @@ def main():
                         txt = f'[ERROR {type(e).__name__}]'
                     else:
                         time.sleep((60 if slow else 3) * (attempt + 1))
-            lines.append(f'[col {i:02d}] {txt}')
             print(f'  {u.stem} col{i:02d}  {txt[:44]}', flush=True)
+            return i, txt
+
+        with ThreadPoolExecutor(max_workers=args.workers) as ex:
+            got = list(ex.map(one_col, list(enumerate(cols, 1))))
+        for i, txt in sorted(got):          # 던진 차례가 아니라 **글줄 차례**로 되꽂는다
+            lines.append(f'[col {i:02d}] {txt}')
+
         # 절반 넘게 실패했으면 **쓰지 않는다.** 빈 자리로 남아야 눈에 띈다.
         bad = sum(1 for x in lines if '[ERROR' in x)
         if cols and bad > len(cols) / 2:
