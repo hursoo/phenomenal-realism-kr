@@ -1,8 +1,8 @@
 # 『천도교회월보』 이돈화 86편
 
 1911년 1월부터 1922년 5월까지 『천도교회월보(天道敎會月報)』에 실린 이돈화의 글 86편이다.
-국립중앙도서관이 제공하는 지면 스캔을 받아 **세로쓰기 옛한글 지면을 판독**해 텍스트로
-만들었다. 판독 절차는 [`../../../docs/02b_digitization_magazines.md`](../../../docs/02b_digitization_magazines.md)
+**국립중앙도서관 디지털 원문**을 받아 **세로쓰기 옛한글 지면을 판독**해 텍스트로
+만들었다(출처와 그 한계는 [`PROVENANCE.md`](PROVENANCE.md)). 판독 절차는 [`../../../docs/02b_digitization_magazines.md`](../../../docs/02b_digitization_magazines.md)
 §2에 있다.
 
 **이 자료는 미완이다.** 아홉 편만 사람이 전문을 원본과 대조했고, 일흔여섯 편은 두 엔진이
@@ -22,6 +22,7 @@
 | **그냥 읽고 싶다** | [`reading/`](reading/) — 86편, 마커를 해소한 본문 |
 | **어떤 낱말이 언제 어디에 나오는지 보고 싶다** | [`keyword_index.csv`](keyword_index.csv) — 한 행이 한 출현 |
 | **어느 편이 얼마나 믿을 만한지 보고 싶다** | [`CORPUS_STATUS.csv`](CORPUS_STATUS.csv) — 편별 대시보드 |
+| **이 지면들은 어디서 왔나** | ★ [`PROVENANCE.md`](PROVENANCE.md) — 국립중앙도서관 디지털 원문. 그 서지의 한계까지 |
 | **이 편이 지금 어떤 상태인가** | ★ [`CATALOG.md`](CATALOG.md) — 한 행이 한 편. 서지 확인·판독·지면까지 |
 | **이 폴더의 지면이 그 글이 맞나** | [`verified_bibliography.md`](verified_bibliography.md) — 사람이 열어 확인한 기록 |
 | **인용하려 한다** | [`TRUST.md`](TRUST.md) §4 → [`source_pages/`](source_pages/) → [`verified_passages.md`](verified_passages.md) |
@@ -57,6 +58,7 @@ wolbo/
 ├── source_pages_audit.md     ★ 그 100폴더가 각각 무엇인가 (편 86·중복 10·별판 1·편외 3)
 ├── source_pages_MAP.csv      위 감사의 기계 판독본
 ├── verified_passages.md      대목별 원문 대조 기록 — 인용의 자격
+├── PROVENANCE.md             ★ 출처 — 국립중앙도서관 디지털 원문과 그 한계
 ├── CATALOG.md/.csv           ★★ 편별 대장 — 편의 모든 것이 한 행에 (파생물)
 ├── bibliography_checks.csv   손으로 유지하는 유일한 파일 — 사람이 지면을 열어 확인한 것
 ├── verified_bibliography.md  편별 서지 대조의 서술 — 어긋났던 내력
