@@ -119,6 +119,14 @@ def main():
             else:
                 skipped.append(f'{d.name}: raw 지면을 못 찾음')
 
+    # 🔴 편 목록 자체를 안 옮기고 있었다. 그래서 저장소의 series_index.csv 가 86편에서
+    #    멈춰 있었고, 그것을 읽는 build_reading.py 가 **읽기용 판을 86편만 만들었다.**
+    #    지면·판독·전사본은 158편이 다 올라가 있는데 읽는 판만 없었다(2026-08-12 발견).
+    for name in ('series_index.csv', 'series_index.md'):
+        src = WB / name
+        if src.exists():
+            copy(src, REPO / name, plan, apply_)
+
     # 정본은 두 곳에 산다 — 작업장의 검수판과 저장소의 공개판.
     # 2026-08-12에 C34·C36 보완분이 저장소에만 들어가 둘이 갈라졌다.
     # **작업장이 master다**(Soo가 거기서 검수한다). 여기서 늘 맞춘다.
