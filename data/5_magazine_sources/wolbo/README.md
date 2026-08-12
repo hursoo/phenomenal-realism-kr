@@ -22,6 +22,7 @@
 | **그냥 읽고 싶다** | [`reading/`](reading/) — 86편, 마커를 해소한 본문 |
 | **어떤 낱말이 언제 어디에 나오는지 보고 싶다** | [`keyword_index.csv`](keyword_index.csv) — 한 행이 한 출현 |
 | **어느 편이 얼마나 믿을 만한지 보고 싶다** | [`CORPUS_STATUS.csv`](CORPUS_STATUS.csv) — 편별 대시보드 |
+| **이 폴더의 지면이 그 글이 맞나** | [`verified_bibliography.md`](verified_bibliography.md) — 사람이 열어 확인한 기록 |
 | **인용하려 한다** | [`TRUST.md`](TRUST.md) §4 → [`source_pages/`](source_pages/) → [`verified_passages.md`](verified_passages.md) |
 | **원본 그대로가 필요하다** | `articles/*/transcripts/`(초벌) · `articles/*/ocr/`(엔진 원출력) |
 | **이돈화가 월보에 쓴 글 전체를 보고 싶다** | [`yidonhwa_articles_index.md`](yidonhwa_articles_index.md) — 창간~1922-05, 168편, 확보 여부까지 |
@@ -55,6 +56,7 @@ wolbo/
 ├── source_pages_audit.md     ★ 그 100폴더가 각각 무엇인가 (편 86·중복 10·별판 1·편외 3)
 ├── source_pages_MAP.csv      위 감사의 기계 판독본
 ├── verified_passages.md      대목별 원문 대조 기록 — 인용의 자격
+├── verified_bibliography.md  ★ 편별 서지 대조 — 파일과 내용이 일치하는가
 ├── screening_1922.md         1922년 이전 3분법 어휘 선별·전수 대조
 ├── marker_resolution_experiment.md   눈 판단을 기계가 어디까지 줄이는가
 ├── marker_decisions.csv      결정 대장 — 정본에서 뽑은 「사람은 이렇게 정했다」
