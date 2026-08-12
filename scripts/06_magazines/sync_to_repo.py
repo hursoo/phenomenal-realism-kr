@@ -10,6 +10,7 @@
 무엇을 옮기고 무엇을 안 옮기나
 
     ✅ meta.yaml · ocr/<engine>/*.txt · transcripts/*.md   — 공개본의 실체
+    ✅ 정본 (wolbo54_review_workbench/*.high_fidelity.md)  — 작업장이 master다
     ✅ 지면 jpg (raw → source_pages/<슬러그>/)              — 판정의 최종 근거
     ❌ units/*.png                                        — 2.2GB. 지면에서 다시 자르면 된다
     ❌ raw 자체                                            — 원본은 tnt에 남는다
@@ -117,6 +118,15 @@ def main():
                     copy(mj, sp / 'meta.json', plan, apply_)
             else:
                 skipped.append(f'{d.name}: raw 지면을 못 찾음')
+
+    # 정본은 두 곳에 산다 — 작업장의 검수판과 저장소의 공개판.
+    # 2026-08-12에 C34·C36 보완분이 저장소에만 들어가 둘이 갈라졌다.
+    # **작업장이 master다**(Soo가 거기서 검수한다). 여기서 늘 맞춘다.
+    vt_wb, vt_repo = WB / 'wolbo54_review_workbench', REPO / 'verified_transcripts'
+    if vt_wb.is_dir() and vt_repo.is_dir():
+        for f in sorted(vt_wb.glob('*.high_fidelity.md')):
+            if copy(f, vt_repo / f.name, plan, apply_):
+                print(f'  정본 갱신: {f.name}')
 
     npage = len(pages)
     print(f'옮길 파일 {len(plan)}개 (그 가운데 지면 {npage}장)')
