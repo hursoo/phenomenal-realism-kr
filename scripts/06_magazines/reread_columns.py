@@ -129,15 +129,32 @@ def columns_of(png, min_width=18, do_split=False):
     return boxes, (w, h)
 
 
+MAX_SIDE = 7800          # Anthropic 이미지 한 변의 한도는 8000px 다. 여유를 둔다
+
+
 def crop_x(png, a, b, scale, pad=6):
+    """글줄을 잘라 키운다. **4배가 늘 4배일 수는 없다.**
+
+    🔴 2026-08-12: 후기 전면 조판 단(1420×2357)의 글줄을 4배로 키우면 **9,428px**가
+    되어 한도를 넘고, 요청이 통째로 `BadRequestError`로 떨어진다. 30편을 걸었다가
+    전부 이 오류로 죽는 것을 보고서야 알았다. 앞서 시험한 `01_kwonyu`는 상·하단으로
+    나뉜 단이라 4,944px여서 통과했고 — **작은 표본으로만 재면 벽이 보이지 않는다.**
+
+    그래서 한도 안에서 **가능한 만큼만** 키운다. 배율이 줄면 그 사실을 돌려주어
+    호출한 쪽이 기록할 수 있게 한다.
+    """
     from PIL import Image
     im = Image.open(png)
     x0, x1 = max(0, a - pad), min(im.width, b + pad)
     c = im.crop((x0, 0, x1, im.height))
-    c = c.resize((c.width * scale, c.height * scale), Image.LANCZOS)
+    eff = scale
+    longest = max(c.width, c.height) * scale
+    if longest > MAX_SIDE:
+        eff = max(1.0, MAX_SIDE / max(c.width, c.height))
+    c = c.resize((max(1, int(c.width * eff)), max(1, int(c.height * eff))), Image.LANCZOS)
     bio = io.BytesIO()
     c.save(bio, format='PNG')
-    return bio.getvalue()
+    return bio.getvalue(), round(eff, 2)
 
 
 def engine_cols(adir, unit):
@@ -223,7 +240,7 @@ def main():
         def one_col(idx_ab):
             nonlocal tin, tout
             i, (a, b) = idx_ab
-            img = crop_x(u, a, b, args.scale)
+            img, eff = crop_x(u, a, b, args.scale)
             ask = '이 글줄을 판독하라.'
             if cand.get(i):
                 c = cand[i]
@@ -255,11 +272,16 @@ def main():
                     else:
                         time.sleep((60 if slow else 3) * (attempt + 1))
             print(f'  {u.stem} col{i:02d}  {txt[:44]}', flush=True)
-            return i, txt
+            return i, txt, eff
 
         with ThreadPoolExecutor(max_workers=args.workers) as ex:
             got = list(ex.map(one_col, list(enumerate(cols, 1))))
-        for i, txt in sorted(got):          # 던진 차례가 아니라 **글줄 차례**로 되꽂는다
+        # 배율이 한도에 걸려 줄었으면 **그 사실을 파일에 남긴다.** 「4배 재판독」이라
+        # 적어 놓고 실제로는 3.31배인 편이 섞이면, 뒤에 수치를 견줄 때 알 길이 없다.
+        effs = sorted({e for _, _, e in got})
+        if effs and effs != [float(args.scale)]:
+            lines.insert(2, f'# ⚠️ 실제 배율 {effs} — 한 변 {MAX_SIDE}px 한도에 걸려 줄었다')
+        for i, txt, _ in sorted(got):       # 던진 차례가 아니라 **글줄 차례**로 되꽂는다
             lines.append(f'[col {i:02d}] {txt}')
 
         # 절반 넘게 실패했으면 **쓰지 않는다.** 빈 자리로 남아야 눈에 띈다.

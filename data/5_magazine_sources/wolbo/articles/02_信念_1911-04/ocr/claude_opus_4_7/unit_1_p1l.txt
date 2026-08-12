@@ -1,27 +1,20 @@
-# Claude Opus 4.7 (1M) — direct vision OCR
-# Source: articles/02_信念_1911-04/units/unit_1_p1l.png (820x1204, 본 #2 시작부 표제+저자+좌측 본문)
-# Date: 2026-05-09
-# Reading order: vertical columns, right-to-left within crop region.
+# claude-opus-4-7 via Anthropic API — vision OCR (2026-05-09)
+# Source: 02_信念_1911-04/units/unit_1_p1l.png
+# Tokens: in=1885 out=255 elapsed=12.7s
 
-[section]
-講演
+[col 01]
+進이라故로曰大道라ᄒᆞ노라
+
+[next_article_start]
 
 [title]
-信念의 神聖
+信念의神聖
 
 [author]
 李敦化
 
-[body]
-[col 01] 世界는活物이라活物이면即有信이니寒暑
-[col 02] 迭代도時序의大活物이오福善禍淫의公理
-[col 03] 然이나信을絶對値로觀ᄒᆞ면即死物이로다
-[col 04] 水火木石도崇拜홈도亦信의一種이며
-[col 05] 虛飾謬禮로儒壇土窟에埋頭ᄒᆞ도亦信의一[?]
+[col 02]
+世界ᄂᆞᆫ活物이라活物이면卽有信이니寒暑迭代ᄂᆞᆫ時序의大活物이오福善禍淫은公理의大活物이니無信이면卽死物이로다
 
-# Notes:
-# - 자른 영역(x=80~900)은 표제+저자+좌측 본문 컬럼만 포함.
-# - 표제 우측 본문(x>900)은 자른 영역 밖 — 본 1편 패턴 가정으로 이전 기사 마지막 (excluded).
-#   OCR 후 검증 가능 (자른 영역 외 텍스트가 본 기사 도입부와 무관하면 가정 확증).
-# - 분리선 위쪽 일부가 unit 상단에 잘려 들어옴: 이전 기사 잔여 — 무시.
-# - 본문 작은 활자라 시각 식별 한계. Gemini cross-check 필요.
+[col 03]
+然이나信을絕對値로觀ᄒᆞ면太古朴素에在ᄒᆞ야水火木石을崇拜ᄒᆞᆷ도亦信의一種이며虛飾謬禮로儒壇士窟에埋頭ᄒᆞᆷ도亦信의一

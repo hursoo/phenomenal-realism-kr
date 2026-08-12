@@ -1,0 +1,8 @@
+# reread x3 via Anthropic (claude-opus-4-7) — 글줄 단위 재판독
+# Source: unit_5_p5.png  columns=5
+
+[col 01] 特殊하엿나니彼等은神과自然의分離를一層完全케爲하야漸次多數한神을合一하야一個의全知全能의神을想像함에至하니印度에在한佛陀敎猶太에在한耶穌敎와如함
+[col 02] 이其의一例니是宗敎가純粹—神의不思議로根據케된所이이엿다
+[col 03] 不思議의源泉되는神과生死問題
+[col 04] [ERROR BadRequestError]
+[col 05] 拘束의宗敎로부터自由의宗敎

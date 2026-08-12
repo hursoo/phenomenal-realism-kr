@@ -1,14 +1,8 @@
-# Claude Opus 4.7 (1M) — direct vision OCR
-# Source: articles/01_kwonyu_1911-01/units/unit_5_p3u.png  (300x1180, 본 1편 꼬리부)
-# Date: 2026-05-09
-# Reading order: vertical columns, right-to-left.
+# claude-opus-4-7 via Anthropic API — vision OCR (2026-05-09)
+# Source: 01_kwonyu_1911-01/units/unit_5_p3u.png
+# Tokens: in=1068 out=92 elapsed=5.3s
 
-[body]
-[col 01] 이爲之斷腸이라ᄒᆞ니此生極樂도一念之做次
-[col 02] 오後生極樂도一念之造次니早早히吾敎에
-[col 03] 歸ᄒᆞ야五萬年極樂의準備를開始ᄒᆞ지어다
-
-# Notes:
-# - 본 1편의 결말. 「五萬年極樂의 準備를 開始ᄒᆞ지어다」가 종결.
-# - 4-5개의 작은 활자 컬럼이 보이지만 「目」「的」 등 표제 잔영(좌측)은 자르기에서 제외됨.
-# - col 01의 「做次」/「造次」 표기 차이 — 본 1편에서 두 번 등장(col 01, col 02). col 01은 「做次」, col 02는 「造次」로 인식. 합의 분석 시 ⚠️ 확인.
+[col 01]
+어爲之斷腸이로다此生極樂도一念之做次
+오後生極樂도一念之造次니早히吾敎에
+歸ᄒᆞ야五萬年極樂의準備를開始ᄒᆞᆯ지어다
