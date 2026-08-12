@@ -126,7 +126,7 @@ def main():
     made, stats = [], []
     for n, row in sorted(index.items()):
         adir = dirs.get(n)
-        slug = adir.name if adir else f'{n:02d}_전사없음_{row["publish_date"][:7]}'
+        slug = adir.name if adir else f'{n:02d}_新年_{row["publish_date"][:7]}'
         vterms = sorted({t for s, t in CROSS_CHECKED if s == n})
 
         base = dict(
@@ -140,8 +140,8 @@ def main():
                       note='원본 지면은 있으나 OCR·전사를 아직 하지 않았다.')
             txt = (frontmatter(fm) + f'\n# {row["title"]} — 전사 없음\n\n'
                    f'> 이 편은 **아직 전사하지 않았다.** 원본 지면만 있다.\n'
-                   f'> 지면은 [`../source_pages/{row["cnts_id"]}/`]'
-                   f'(../source_pages/{row["cnts_id"]}/)에 있다.\n'
+                   f'> 지면은 [`../source_pages/{slug}/`]'
+                   f'(../source_pages/{slug}/)에 있다.\n'
                    f'> **「86편에 없다」고 말할 때 이 한 편은 찾아본 적이 없는 편이다.**\n')
             path = OUT / f'{slug}.reading.전사없음.md'
             path.write_text(txt, encoding='utf-8')
