@@ -192,7 +192,14 @@ def main():
     args = ap.parse_args()
 
     adir = Path(args.article_dir)
-    units = sorted((adir / 'units').glob('*.png'))
+    # 🔴 파일 이름을 사전순으로 정렬하면 **unit_10 이 unit_1 보다 앞**에 온다.
+    #    단이 10개 넘는 편에서 10~14단을 먼저 읽고 1~9단을 나중에 읽게 되어
+    #    글자는 다 있는데 순서가 뒤집힌다. 2026-08-12에 정본 채점이 C32·C37에서
+    #    28%·58%로 무너져서야 드러났다 — **긴 편이 어렵다고 오진할 뻔했다.**
+    #    번호를 숫자로 읽어 정렬한다.
+    units = sorted((adir / 'units').glob('*.png'),
+                   key=lambda p: int(re.match(r'unit_(\d+)', p.stem).group(1))
+                   if re.match(r'unit_(\d+)', p.stem) else 0)
     if args.unit:
         units = [u for u in units if u.stem == args.unit]
     if not units:
