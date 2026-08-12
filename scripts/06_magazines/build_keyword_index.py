@@ -86,6 +86,9 @@ def load_index():
         return {int(r['series_index']): r for r in csv.DictReader(f)}
 
 
+COLLAPSED = []   # 엔진이 무너진 단 — 집계에서 뺀 자리를 남긴다
+
+
 def parse_units(adir, engine):
     """엔진 원출력을 {unit_id: [(col, text), ...]}로 읽는다."""
     d = adir / 'ocr' / engine
@@ -183,6 +186,21 @@ def rows_for_article(n, meta_row, adir, terms, verified_path):
     for unit in sorted(set(cu) | set(gu)):
         page = unit_page.get(unit, '')
         gtext = ''.join(t for _, t in gu.get(unit, []))
+        ctext = ''.join(t for _, t in cu.get(unit, []))
+
+        # 🔴 엔진이 한 단에서 통째로 무너져 같은 말을 되뇌는 일이 있다
+        #    (`_ruleset.md` §8-1 「엔진 실패편」). 2026-08-12에 #119 unit_8 에서
+        #    Gemini가 50,776자를 뱉었고(Claude는 1,870자) 그 안에 靈魂이 994번
+        #    들어 있었다. 그 한 단 때문에 코퍼스 전체의 靈魂이 36→1,059로
+        #    **서른 배** 부풀었다. 색인에는 이것을 막을 장치가 없었다.
+        #    한쪽이 다른 쪽의 세 배를 넘으면 **긴 쪽을 버린다** — 지면은 하나이므로
+        #    분량이 세 배 차이 날 수 없다.
+        if ctext and gtext and len(gtext) > 3 * len(ctext) + 300:
+            COLLAPSED.append((adir.name, unit, 'gemini', len(gtext), len(ctext)))
+            gtext = ''; gu[unit] = []
+        elif ctext and gtext and len(ctext) > 3 * len(gtext) + 300:
+            COLLAPSED.append((adir.name, unit, 'claude', len(ctext), len(gtext)))
+            ctext = ''; cu[unit] = []
         for t in terms:
             # Claude는 글줄(col)을 그대로 뱉고 Gemini는 여러 글줄을 한 덩이로 뱉는다.
             # 따라서 짝짓기는 **단(col)이 아니라 unit 단위**로 한다. 같은 unit에서
@@ -269,5 +287,17 @@ def main():
               f'{cnt("C단독"):>7}{cnt("G단독"):>7}{len({r["series"] for r in rs}):>5}')
 
 
+# ── COLLAPSED 보고 ────────────────────────────────────────────────────────
+def _report_collapsed():
+    if not COLLAPSED:
+        return
+    print(f'\n🔴 엔진이 무너진 단 {len(COLLAPSED)}개 — 집계에서 뺐다 '
+          f'(`_ruleset.md` §8-1 「엔진 실패편」)')
+    for slug, unit, eng, big, small in sorted(COLLAPSED, key=lambda x: -x[3])[:15]:
+        print(f'   {slug[:24]:<26} {unit:<14} {eng:<7} {big:>7,}자 (반대 엔진 {small:,}자)')
+
+
 if __name__ == '__main__':
     main()
+    _report_collapsed()
+
