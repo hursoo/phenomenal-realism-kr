@@ -118,13 +118,15 @@ def _valleys(prof, a, b, k, med):
     return sorted(cuts)
 
 
-def columns_of(png, min_width=18):
+def columns_of(png, min_width=18, do_split=False):
     w, h, nch, ctype, data, plte = read_png(png)
     prof, bg, thr = gray_profile(w, h, nch, data)
     sm = smooth(prof)
     boxes = list(reversed(find_columns(sm)))               # 오른쪽=1번
     boxes = [(a, b) for a, b in boxes if b - a >= min_width]
-    return split_wide(boxes, prof=sm), (w, h)
+    if do_split:
+        boxes = split_wide(boxes, prof=sm)
+    return boxes, (w, h)
 
 
 def crop_x(png, a, b, scale, pad=6):
@@ -162,6 +164,9 @@ def main():
     ap.add_argument('--with-candidates', action='store_true',
                     help='두 엔진의 그 글줄 판독을 후보로 함께 준다(중재 방식). '
                          '어제 실험에서 후보를 주면 음절·한자 판별이 크게 올랐다')
+    ap.add_argument('--split-wide', action='store_true',
+                    help='넓은 상자를 글줄 수만큼 쪼갠다. 기본은 끔 — C30 실측에서 '
+                         '88.7퍼센트가 79.3퍼센트로 떨어졌다')
     ap.add_argument('--tag', default='',
                     help='산출 폴더 이름 꼬리표 (ocr/reread_x4<tag>/)')
     args = ap.parse_args()
@@ -176,7 +181,7 @@ def main():
 
     plan = []
     for u in units:
-        cols, size = columns_of(u)
+        cols, size = columns_of(u, do_split=args.split_wide)
         plan.append((u, cols, size))
     total = sum(len(c) for _, c, _ in plan)
     print(f'{adir.name} · 단 {len(plan)} · 글줄 {total} · ×{args.scale}')
