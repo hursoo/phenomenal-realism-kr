@@ -131,11 +131,25 @@ def ask(client, model, img, info, window):
 
 
 def parse(ans):
-    v = re.search(r'판정=\s*([^\s]+)', ans)
+    """모델 답 → (A/B/C:값/?, 확신, 근거).
+
+    ⚠️ 모델은 `판정=A`라고만 쓰지 않고 `판정=A:ᆷ으`처럼 고른 값을 붙여 쓰는 일이 잦다.
+    앞 글자만 보고 갈라야 한다. 이것을 놓쳐 2026-08-12 첫 채점이 0%로 나왔다 —
+    모델이 틀린 것이 아니라 답을 못 읽은 것이었다.
+    """
+    m = re.search(r'판정=\s*([^\s]+)', ans)
+    v = m.group(1) if m else '?'
+    if v.startswith('A'):
+        v = 'A'
+    elif v.startswith('B'):
+        v = 'B'
+    elif v.startswith('C') and ':' in v:
+        v = 'C:' + v.split(':', 1)[1]
+    elif not v.startswith('?'):
+        v = 'C:' + v            # 라벨 없이 값만 쓴 경우
     conf = re.search(r'확신=\s*([상중하])', ans)
     why = re.search(r'근거=\s*(.+)$', ans)
-    return (v.group(1) if v else '?',
-            conf.group(1) if conf else '',
+    return (v, conf.group(1) if conf else '',
             (why.group(1).strip() if why else '')[:20])
 
 
@@ -169,9 +183,21 @@ def main():
     gold = {}
     if args.gold:
         with open(args.gold, encoding='utf-8-sig') as f:
-            for r in csv.DictReader(f):
-                if r['article'] == adir.name:
-                    gold[int(r['marker_index'])] = r
+            grows = [r for r in csv.DictReader(f) if r['article'] == adir.name]
+        grows.sort(key=lambda r: int(r['marker_index']))
+        # 🔴 번호로 맞추면 안 된다. 정답지는 **워크벤치 사본**의 마커를 센 것이고 여기서
+        # 세는 것은 `articles/` 사본이라 번호가 밀린다(2026-08-12 실측: 채점 4.8%가
+        # 방법의 점수가 아니라 어긋난 대조의 산물이었다). 그래서 (C쪽, G쪽) 값의
+        # **차례를 정렬해** 짝을 짓는다.
+        import difflib
+        mine = [(m.group(1), m.group(2).split('|P:')[0]) for m in ms]
+        theirs = [(r['claude'], r['gemini']) for r in grows]
+        sm = difflib.SequenceMatcher(a=mine, b=theirs, autojunk=False)
+        for i, j, n in sm.get_matching_blocks():
+            for k in range(n):
+                gold[i + k] = grows[j + k]
+        print(f'정답지 {len(grows)}행 중 {len(gold)}행을 내용으로 맞췄다 '
+              f'(번호가 아니라 차례로)')
     todo = sorted(gold) if gold else list(range(len(ms)))
     if args.limit:
         todo = todo[:args.limit]

@@ -105,6 +105,15 @@ def locate(cols, pre, mid, post):
         hits = [m.start() for m in re.finditer(re.escape(pre[-n:]), flat)]
         if hits:
             return at(hits[0] + n), n, len(hits)
+    # 글 첫머리의 마커는 **앞 문맥이 없다.** 뒤로 맞춘다.
+    # (이것이 없어 C30의 앞쪽 마커 넷이 자리를 못 찾았다 — 2026-08-12)
+    for n in (20, 16, 12, 10, 8, 6):
+        if len(post) < n:
+            continue
+        key = mid + post[:n]
+        hits = [m.start() for m in re.finditer(re.escape(key), flat)]
+        if hits:
+            return at(hits[0]), len(key), len(hits)
     return None, 0, 0
 
 
