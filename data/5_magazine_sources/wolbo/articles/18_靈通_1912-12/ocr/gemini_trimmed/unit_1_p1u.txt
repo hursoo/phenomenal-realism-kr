@@ -1,0 +1,7 @@
+# gemini — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_1_p1u.txt
+
+[title] 靈通力의事實됨을鮮明ᄒᆞᆷ
+[author] 〔續〕
+[col 03] 李敦化
+[col 04] 人性의故鄉前述과如히靈通은普通人人

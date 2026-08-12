@@ -1,0 +1,6 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_8_p4l.txt
+
+[col 01] 然이나人生은此絕對苦痛과絕對地獄을打勝ᄒᆞ야此
+[col 02] 로神의最後目的되는極樂과天國을實現ᄒᆞ에셔人生의威
+[col 03] 力이出ᄒᆞᄂᆞ도다

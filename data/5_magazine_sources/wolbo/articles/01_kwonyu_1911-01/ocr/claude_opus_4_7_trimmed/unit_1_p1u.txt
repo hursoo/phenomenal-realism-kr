@@ -1,0 +1,8 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_1_p1u.txt
+
+[title] 勸牖天下失樂者
+[author] 李敦化
+[section] 講演
+[col 04] 人이呱呱의聲을一出ᄒᆞᆷ이有情空氣를呼吸
+[col 05] ᄒᆞ야萬有의慾點을始發ᄒᆞ니此點의軌跡은

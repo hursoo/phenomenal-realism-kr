@@ -1,0 +1,6 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_4_p2l.txt
+
+[col 01] 第四學年
+[col 02] 林毅植
+[caption] (普成學校第四學年生林毅植畵)

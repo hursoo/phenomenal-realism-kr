@@ -1,0 +1,11 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_5_p3u.txt
+
+[section_running] 天道敎會月報
+[title] 道의本旨가안이로다
+[author] 八
+[col 04] 열셕字至極하면萬卷詩書무엇하리心學이라하엿
+[col 05] 밋출가이갓치쉬은道를自暴自棄한단말가
+[col 06] 대개修道의要는決코空文空論에不在하고오
+[col 07] 라도十三字의効力에不及할지라故로十三字로
+[next] 

@@ -1,0 +1,9 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_9_p5u.txt
+
+[section_running] 雜俎
+[col 02] 語를여러知己의게告ᄒᆞ야두고京城에도라오기는九月
+[col 03] 二十二日下午七時이엿ᄂᆞ이다、其間聖師主、萬康ᄒᆞ시
+[col 04] 고中央總部一同도淸穆ᄒᆞ옵ᄂᆞ이다
+[col 05] 天德師恩이올시다
+[next] 

@@ -1,0 +1,11 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_10_p5l.txt
+
+[col 01] 一、見性何處見　性亦我性
+[col 02] 守心何處守　心亦我心
+[col 03] 　故
+[col 04] 覺我者能見性　亦能守心
+[col 05] 二、我心正則失地之心亦正
+[col 06] 我心亂則萬物之源亦亂
+[col 07] 　故
+[col 08] 我心能造天堂　亦能自造地獄

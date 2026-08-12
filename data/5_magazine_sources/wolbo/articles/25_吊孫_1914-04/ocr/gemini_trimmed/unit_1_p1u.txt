@@ -1,0 +1,7 @@
+# gemini — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_1_p1u.txt
+
+[title] 吊孫鳳奎文 幷小引
+[author] 李敦化
+[col 03] [?]友孫鳳奎는陽德人也라氏는先天의樂
+[col 04] 知[?]時의安否를唱和ᄒᆞ며幾年의離合을

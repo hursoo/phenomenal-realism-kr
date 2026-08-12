@@ -1,0 +1,4 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_3_p2u.txt
+
+[title] 朝鮮에特有한宗敎思想을論함

@@ -1,0 +1,5 @@
+# gemini — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_1_p1.txt
+
+[title] 靈通力이事實됨을觧明홈
+[author] 諸言

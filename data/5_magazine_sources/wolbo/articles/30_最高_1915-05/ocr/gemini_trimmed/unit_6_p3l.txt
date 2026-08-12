@@ -1,0 +1,4 @@
+# gemini — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_6_p3l.txt
+
+[col 01] 宗教와神識에暗호衆生을指導ᄒᆞ는遺法이라ᄒᆞ노라

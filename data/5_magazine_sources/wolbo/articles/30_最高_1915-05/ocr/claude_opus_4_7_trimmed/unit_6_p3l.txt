@@ -1,0 +1,7 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_6_p3l.txt
+
+[col 01] 宗敎ᄂᆞᆫ神識에暗ᄒᆞ衆生을指導ᄒᆞᄂᆞᆫ
+[col 02] 道法이라ᄒᆞ노라
+[next] 
+[section] (奉訓○李正模氏)

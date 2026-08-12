@@ -1,0 +1,17 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_2_p1l.txt
+
+[title] 人生과新年
+[author] 李敦化
+[section] 年
+[col 04] 法輪이無情
+[col 05] ᄒᆞ야過去一
+[col 06] 年의三百六
+[col 07] 十五의金烏
+[col 08] 가翩翩然消
+[col 09] 過ᄒᆞ고此窮
+[col 10] 蟄의身으로
+[col 11] 更히新年의
+[col 12] 新生活에入
+[col 13] 悔│코져ᄒᆞ다間ᄒᆞ노라新年아君은將次何等의
+[page] 五

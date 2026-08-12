@@ -1,0 +1,6 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_1_p1.txt
+
+[title] 靈通力이事實됨을鮮明홈
+[section] 緖言
+[col 03] 一旣飽以德이오賫齎普生이니旣醉以 [?]

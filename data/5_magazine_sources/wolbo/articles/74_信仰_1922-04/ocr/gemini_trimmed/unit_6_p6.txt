@@ -1,0 +1,4 @@
+# gemini — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_6_p6.txt
+
+[col 01] I am sorry, but the image provided is completely gray and contains no text or discernible content. Therefore, I cannot perform the requested text extraction. Please provide an image with the actual magazine page.

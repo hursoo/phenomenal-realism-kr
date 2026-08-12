@@ -1,0 +1,9 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_12_p6l.txt
+
+[col 01] 와余의寄贈할바눈有形의物이안니오無形
+[col 02] 의物이며有限의物이안니오無限의物이니
+[col 03] 余눈月을逐ᄒᆞ야無形無限ᄒᆞ고無形으로君의
+[col 04] 靈案下에呈코져
+[col 05] ᄒᆞ노라
+[next] 

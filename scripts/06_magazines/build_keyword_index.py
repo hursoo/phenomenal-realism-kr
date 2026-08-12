@@ -165,8 +165,15 @@ def rows_for_article(n, meta_row, adir, terms, verified_path):
                 ))
         return rows
 
-    cu = parse_units(adir, 'claude_opus_4_7')
-    gu = parse_units(adir, 'gemini')
+    # 🔴 기사 경계 밖(앞 기사 꼬리·다음 기사 머리·사진 캡션·란 이름)을 걷어낸 판이
+    #    있으면 그것을 센다. 걷어내기 전 텍스트에는 남의 글 4만 자가 섞여 있어
+    #    「이돈화의 글에 이 말이 몇 번」을 물으면 그만큼 더 세어진다.
+    #    (2026-08-12 trim_article_bounds.py — 정본 8편에서 분량 +21.9% → −0.1%)
+    def pick(name):
+        tr = adir / 'ocr' / f'{name}_trimmed'
+        return f'{name}_trimmed' if tr.is_dir() and any(tr.glob('*.txt')) else name
+    cu = parse_units(adir, pick('claude_opus_4_7'))
+    gu = parse_units(adir, pick('gemini'))
     meta = yaml.safe_load((adir / 'meta.yaml').read_text(encoding='utf-8'))
     unit_page = {u['id']: u.get('page', '') for u in meta.get('units', [])}
     jp = {}

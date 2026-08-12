@@ -1,0 +1,7 @@
+# gemini — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_2_p1l.txt
+
+[title] 聰明에빗겨섯다
+[author] 滄海居士
+[col 03] 헤섹터
+[col 04] 默々히無盡蒼空에白雲이힛허지고、萬里山河에찬긔운이셔도

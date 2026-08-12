@@ -1,0 +1,7 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_1_p1.txt
+
+[title] 大神性性靈出世說 其四
+[author] 李敦化
+[col 03] 二、死生問題解決 吾人은前号에셔吾敎의死生問題도
+[col 04] 論이說ᄒᆞ아스나之天堂海樂說之[?][?][?]向盡[?][?][?]

@@ -1,0 +1,6 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_7_p4u.txt
+
+[col 01] 幸福을受ᄒᆞᆯ者ㅣ非吾敎而其孰有之乎아
+[col 02] 來々어다䎡々雨々中沒覺者諸氏여
+[section] 二

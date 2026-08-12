@@ -1,0 +1,12 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_1_p1u.txt
+
+[title] 最高消遣法
+[author] 李敦化
+[col 03] 消遣法이라ᄒᆞ면聖嘆의
+[col 04] 糟粕을反嚼ᄒᆞᆷ과如ᄒᆞ도
+[col 05] 다然ᄒᆞ나如何ᄒᆞᆫ糟粕일
+[col 06] 지라도眞理ᄂᆞᆫ眞理니라永劫을通ᄒᆞ야不變
+[col 07] 이라實로度키難ᄒᆞᆷ은衆生이오解키難ᄒᆞᆷ도
+[col 08] 亦衆生이로다何故로生ᄒᆞ며何故로死ᄒᆞᄂᆞ
+[section_running] 講義

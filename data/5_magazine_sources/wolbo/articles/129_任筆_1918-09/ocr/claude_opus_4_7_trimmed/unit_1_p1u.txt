@@ -1,0 +1,6 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_1_p1u.txt
+
+[title] 任筆錄 (其五)
+[col 02] 今朝에庭梧一葉이一陣淸風에날니, 나의舊聽압ᄒᆡ
+[col 03] 것다, 나눈이可憐ᄒᆞᆷ입서ᄯᅳᆯ저어들고, 아모말업시默然

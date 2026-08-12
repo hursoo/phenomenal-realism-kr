@@ -1,0 +1,7 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_2_p1l.txt
+
+[title] 死僧과活僧
+[author] 滄海居士
+[col 03] 年月日에滄海居士下金剛山에遊ᄒᆞ다가一
+[col 04] 日에楡店寺에投宿ᄒᆞ니라一僧이名刺를獻

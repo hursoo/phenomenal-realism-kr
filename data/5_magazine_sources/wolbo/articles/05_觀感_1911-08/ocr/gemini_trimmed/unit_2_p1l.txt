@@ -1,0 +1,5 @@
+# gemini — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_2_p1l.txt
+
+[title] 觀感說
+[author] 李敎化

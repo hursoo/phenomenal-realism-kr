@@ -1,0 +1,8 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_8_p4l.txt
+
+[col 01] 大神師ㅣ第一章에셔天主의靈跡을言ᄒ
+[col 02] 시고本章에셔愚民이不知에自處ᄒ야偉
+[col 03] 大ᄒᆫ恩澤을忘却ᄒᆷ을自嘆ᄒ시며兼ᄒ야
+[col 04] 敎喩ᄒ시니라
+[next] 

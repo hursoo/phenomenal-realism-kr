@@ -1,0 +1,5 @@
+# gemini — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_9_p5u.txt
+
+[col 01] 眼이塵寰고安宅이曠蕩이며主性이溺焉者ᄂᆞᆫ
+[col 02] 吾敎를向ᄒᆞ야智仁勇을一問치지어다

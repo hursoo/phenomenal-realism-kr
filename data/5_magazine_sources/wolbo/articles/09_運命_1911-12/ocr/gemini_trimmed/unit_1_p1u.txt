@@ -1,0 +1,7 @@
+# gemini — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_1_p1u.txt
+
+[title] 運命說
+[author] 李敦化
+[col 03] 人의將來運命은總히自身의로作爲됨이니
+[col 04] 昨日에作用ㅎ行爲ㄴ今日에運命을成ㅎ며

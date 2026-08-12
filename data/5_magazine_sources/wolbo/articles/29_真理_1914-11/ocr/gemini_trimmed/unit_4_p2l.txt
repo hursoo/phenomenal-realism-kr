@@ -1,0 +1,6 @@
+# gemini — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_4_p2l.txt
+
+[col 01] 第四學年
+[col 02] 林毅植
+[col 03] (畵植毅林生年學四第校學普)

@@ -1,0 +1,7 @@
+# gemini — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_1_p1.txt
+
+[title] 大神性性靈出世說其四
+[col 02] 二、死生問題解決 吾人은前号에셔吾敎의死生問題及
+[col 03] 倫理觀에對ᄒᆞ야之天室樓說과三戰論을略說ᄒᆞ얏거니와
+[author] 李敎化

@@ -1,0 +1,8 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_2_p1l.txt
+
+[title] 世說 其一
+[author] 李 敦 化
+[next] 
+[col 04] 聖師의法言이一出에天下의徒弟ㅣ積歲의疑雲이一掃ᄒᆞ
+[col 05] 야雲捲靑天의精神과幻夢回覺의思想으로自覺이日進ᄒᆞ

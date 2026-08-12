@@ -1,0 +1,8 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_1_p1u.txt
+
+[title] 運命說
+[author] 李敦化
+[section] 講演
+[col 04] 人의將來運命은總히自身으로作ᄒᆞᆯᄲᅳᆫ이니
+[col 05] 昨日에作用ᄒᆞᆫ行爲ᄂᆞᆫ今日에運命을成ᄒᆞ며

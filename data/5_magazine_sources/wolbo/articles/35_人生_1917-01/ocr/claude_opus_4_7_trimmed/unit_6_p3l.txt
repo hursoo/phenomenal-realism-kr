@@ -1,0 +1,6 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_6_p3l.txt
+
+[col 01] 와旣答
+[col 02] 目的에達ᄒᆞ者ㅣ니라余曰天德師恩
+[next] 

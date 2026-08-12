@@ -1,0 +1,12 @@
+# gemini — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_2_p1l.txt
+
+[title] 是我修養
+[author] 李敦化
+[col 03] 書生二人이有ᄒᆞ니一人은默坐ᄒᆞ야何를冥
+[col 04] 是면은
+[col 05] 堂에
+[col 06] 獨서
+[col 07] 微三
+[col 08] 覺이
+[col 09] 가

@@ -1,0 +1,6 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_1_p1u.txt
+
+[title] 定州郡敎區室實記
+[author] 李敦化
+[col 03] 人事를修ᄒᆞ고天命을待ᄒᆞ라ᄒᆞ은實로萬古

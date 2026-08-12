@@ -1,0 +1,7 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_7_p4u.txt
+
+[col 01] 曲木은地上에屹立ᄒᆞᆫ家屋을建築ᄒᆞᆷ에不過ᄒᆞ니
+[col 02] 波濤에上下ᄒᆞ며ᄒᆞᆫ艢舶을築造ᄒᆞᆷ에도最妙ᄒᆞᄂᆞ故
+[section_running] 儀式實行되ᄂᆞᆫ날이올시다
+[next] 

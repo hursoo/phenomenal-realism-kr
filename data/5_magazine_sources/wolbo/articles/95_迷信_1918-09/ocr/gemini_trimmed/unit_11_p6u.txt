@@ -1,0 +1,4 @@
+# gemini — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_11_p6u.txt
+
+[author] 敎門訂議

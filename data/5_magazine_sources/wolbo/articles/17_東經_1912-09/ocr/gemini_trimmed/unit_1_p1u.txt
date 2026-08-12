@@ -1,0 +1,9 @@
+# gemini — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_1_p1u.txt
+
+[title] 東經要旨講觧(續)
+[author] 李敦化
+[col 03] 心常悚然莫知所向
+[col 04] 夫道가已廢ᄒᆞ고世路가多岐ᄒᆞ야妖猿怪狐
+[col 05] ㅣ作孽呈然ᄒᆞ니是時에
+[col 06] 大神師ㅣ天眼을騁ᄒᆞ야千塵萬風의野에對

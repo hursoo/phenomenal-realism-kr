@@ -1,0 +1,11 @@
+# claude_opus_4_7 — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_11_p6u.txt
+
+[section_running] 講演
+[col 02] 吾敎人의靈은互相交通ᄒᆞ야不知不識中感
+[col 03] 應力이一靈的大團을成ᄒᆞ者아니리오以此
+[col 04] 觀之ᄒᆞ면
+[col 05] 大神師의長生說은實體靈及肉體的長生이
+[col 06] 라ᄒᆞ야도可ᄒᆞ며吾敎人의死後問題도無窮
+[col 07] ᄒᆞ長生을享ᄒᆞᆯ줄로自信ᄒᆞ노라
+[next] 

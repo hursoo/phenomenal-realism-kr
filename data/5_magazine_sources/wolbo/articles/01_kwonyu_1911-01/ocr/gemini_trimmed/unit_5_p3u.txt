@@ -1,0 +1,6 @@
+# gemini — 기사 경계 밖을 걷어낸 판(trim_article_bounds.py)
+# Source: unit_5_p3u.txt
+
+[col 01] 이爲之斷腸이로다此生極樂도一念之做次
+[col 02] 오後生極樂도一念之造次니早早히吾敎에
+[col 03] 歸ᄒᆞ야五萬年極樂의準備를開始ᄒᆞᆯ지어다
