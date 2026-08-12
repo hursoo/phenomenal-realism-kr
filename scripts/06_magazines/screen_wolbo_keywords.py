@@ -54,11 +54,17 @@ def load_index():
 
 
 def main():
+    global WOLBO
     ap = argparse.ArgumentParser()
     ap.add_argument('--before', default='1922-02',
                     help='이 발행일보다 앞선 편만 본다 (YYYY-MM). 전체는 9999-99')
     ap.add_argument('--kw', nargs='*', default=DEFAULT_KW)
+    ap.add_argument('--root', default=str(WOLBO),
+                    help='articles/·series_index.csv가 있는 폴더. 새로 판독한 편은 '
+                         '저장소가 아니라 작업 폴더(_ocr_experiments/…)에 있으므로 '
+                         '거기를 가리켜 훑을 수 있다')
     args = ap.parse_args()
+    WOLBO = Path(args.root)
 
     index = load_index()
     scope = [n for n, r in index.items() if r['publish_date'] < args.before]
@@ -75,8 +81,11 @@ def main():
         if not meta or meta['publish_date'] >= args.before:
             continue
         scanned += 1
-        raw = ''.join(f.read_text(encoding='utf-8', errors='ignore')
-                      for f in (d / 'transcripts').glob('*.md'))
+        # ⚠️ 초벌만 읽는다. `transcripts/`에 정본·현대독해본이 함께 있는 편이 있어
+        # 통째로 읽으면 같은 글을 두세 번 세게 된다(C01).
+        fs = sorted((d / 'transcripts').glob('*draft_v0.md')) or \
+             sorted((d / 'transcripts').glob('*.high_fidelity.md'))
+        raw = ''.join(f.read_text(encoding='utf-8', errors='ignore') for f in fs)
         c, g = unfold(raw)
         for k in args.kw:
             nc, ng = c.count(k), g.count(k)

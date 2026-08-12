@@ -54,11 +54,67 @@ PROMPT = """이 이미지는 1910~20년대 활판 인쇄 잡지(『천도교회�
 출력은 판독한 글자열 한 줄만. 설명·해석 금지."""
 
 
+def split_wide(boxes, factor=1.6, prof=None):
+    """중앙값보다 훨씬 넓은 상자를 **글줄 수만큼 균등 분할**한다.
+
+    글줄 사이 여백이 좁거나 잉크가 번지면 `find_columns`가 여러 글줄을 한 상자로
+    묶는다. C30 `unit_5_p3u`에서 실측한 폭은
+    `[48, 48, 48, 47, 46, 41, 509, 48, 48, 47]` — **509px 상자 하나가 열 글줄을
+    삼켰다.** 그 상자를 통째로 잘라 넣으면 모델이 여러 글줄을 뒤섞어 읽거나
+    일부를 건너뛴다. 정본 대조에서 「다然ᄒᆞ나如何ᄒᆞᆫ糟粕일」 한 토막이 통째로
+    빠진 것이 이 때문이다(2026-08-12).
+
+    균등 분할은 근사다. 글줄 간격이 고른 활판이라 대체로 맞지만, 어긋나면 조각이
+    옆 글줄을 물게 된다. 그래도 **한 상자에 열 글줄을 넣는 것보다는 낫다.**
+    """
+    if len(boxes) < 3:
+        return boxes
+    widths = sorted(b - a for a, b in boxes)
+    med = widths[len(widths) // 2]
+    if med <= 0:
+        return boxes
+    out = []
+    for a, b in boxes:
+        w = b - a
+        k = int(round(w / med))
+        if w > med * factor and k >= 2:
+            cuts = _valleys(prof, a, b, k, med) if prof else []
+            if len(cuts) == k - 1:
+                edges = [a] + cuts + [b]
+                out += [(edges[i], edges[i + 1]) for i in range(k)]
+            else:                                  # 골을 못 찾으면 균등 분할
+                step = w / k
+                out += [(int(a + i * step), int(a + (i + 1) * step)) for i in range(k)]
+        else:
+            out.append((a, b))
+    return out
+
+
+def _valleys(prof, a, b, k, med):
+    """상자 안에서 **잉크가 가장 옅은 자리** k−1곳을 찾는다.
+
+    균등 분할은 글줄 간격이 고를 때만 맞고, 표제처럼 글자가 큰 상자를 반으로
+    잘라 버릴 수 있다. 상자 안의 실제 여백에서 쪼개는 편이 안전하다.
+    """
+    cuts, banned = [], set()
+    span = list(range(a + int(med * 0.5), b - int(med * 0.5)))
+    for _ in range(k - 1):
+        cand = [x for x in span if x not in banned]
+        if not cand:
+            return []
+        x = min(cand, key=lambda i: prof[i] if i < len(prof) else 1 << 30)
+        cuts.append(x)
+        banned |= set(range(x - int(med * 0.6), x + int(med * 0.6)))
+    return sorted(cuts)
+
+
 def columns_of(png, min_width=18):
     w, h, nch, ctype, data, plte = read_png(png)
     prof, bg, thr = gray_profile(w, h, nch, data)
-    boxes = list(reversed(find_columns(smooth(prof))))     # 오른쪽=1번
-    return [(a, b) for a, b in boxes if b - a >= min_width], (w, h)
+    sm = smooth(prof)
+    boxes = list(reversed(find_columns(sm)))               # 오른쪽=1번
+    boxes = [(a, b) for a, b in boxes if b - a >= min_width]
+    return split_wide(boxes, prof=sm), (w, h)
 
 
 def crop_x(png, a, b, scale, pad=6):
@@ -72,6 +128,19 @@ def crop_x(png, a, b, scale, pad=6):
     return bio.getvalue()
 
 
+def engine_cols(adir, unit):
+    """두 엔진이 그 단에서 읽은 글줄들 — 후보로 줄 때 쓴다."""
+    out = {}
+    for eng, lab in (('claude_opus_4_7', 'A'), ('gemini', 'B')):
+        f = adir / 'ocr' / eng / f'{unit}.txt'
+        if not f.exists():
+            continue
+        for m in re.finditer(r'^\[col\s*(\d+)\]\s*(.*)$',
+                             f.read_text(encoding='utf-8', errors='ignore'), re.M):
+            out.setdefault(int(m.group(1)), {})[lab] = re.sub(r'\s', '', m.group(2))
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('article_dir')
@@ -80,6 +149,11 @@ def main():
     ap.add_argument('--model', default='claude-opus-4-7')
     ap.add_argument('--dry-run', action='store_true')
     ap.add_argument('--force', action='store_true')
+    ap.add_argument('--with-candidates', action='store_true',
+                    help='두 엔진의 그 글줄 판독을 후보로 함께 준다(중재 방식). '
+                         '어제 실험에서 후보를 주면 음절·한자 판별이 크게 올랐다')
+    ap.add_argument('--tag', default='',
+                    help='산출 폴더 이름 꼬리표 (ocr/reread_x4<tag>/)')
     args = ap.parse_args()
 
     adir = Path(args.article_dir)
@@ -88,7 +162,7 @@ def main():
         units = [u for u in units if u.stem == args.unit]
     if not units:
         sys.exit(f'단 이미지가 없다: {adir}/units/')
-    out_dir = adir / 'ocr' / f'reread_x{args.scale}'
+    out_dir = adir / 'ocr' / f'reread_x{args.scale}{args.tag}'
 
     plan = []
     for u in units:
@@ -119,8 +193,16 @@ def main():
             continue
         lines = [f'# reread x{args.scale} via Anthropic ({args.model}) — 글줄 단위 재판독',
                  f'# Source: {u.name}  columns={len(cols)}', '']
+        cand = engine_cols(adir, u.stem) if args.with_candidates else {}
         for i, (a, b) in enumerate(cols, 1):
             img = crop_x(u, a, b, args.scale)
+            ask = '이 글줄을 판독하라.'
+            if cand.get(i):
+                c = cand[i]
+                ask += ('\n\n참고 — 다른 두 판독이 이 글줄을 이렇게 읽었다. '
+                        '**맞는지 이미지로 확인하고, 틀린 자리는 고쳐라.** '
+                        '둘 다 틀렸으면 네 판독을 써라.\n'
+                        f"  A: {c.get('A', '(없음)')}\n  B: {c.get('B', '(없음)')}")
             for attempt in range(3):
                 try:
                     r = client.messages.create(
@@ -128,7 +210,7 @@ def main():
                         messages=[{'role': 'user', 'content': [
                             {'type': 'image', 'source': {'type': 'base64',
                              'media_type': 'image/png', 'data': base64.b64encode(img).decode()}},
-                            {'type': 'text', 'text': '이 글줄을 판독하라.'}]}])
+                            {'type': 'text', 'text': ask}]}])
                     txt = r.content[0].text.strip().splitlines()[0].strip()
                     tin += r.usage.input_tokens; tout += r.usage.output_tokens
                     break

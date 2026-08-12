@@ -99,6 +99,10 @@ python3 scripts/06_magazines/build_corpus_status.py    # 대시보드
 python3 scripts/06_magazines/audit_source_pages.py     # 지면 폴더 감사
 ```
 
+도구 전체가 어떤 순서로 쓰이는지는 **[`scripts/06_magazines/README.md`](../../../scripts/06_magazines/README.md)**
+— 지면을 단으로 가르고(①) 판독하고(②) 무른 데를 찾고(③) 밀어 올리고(④) 재고(⑤)
+내놓는(⑥) 여섯 단계로 적어 두었다.
+
 세 스크립트 모두 의존성이 없다(표준 라이브러리 + PyYAML). 마커 해소 규약은
 `scripts/06_magazines/wolbo_markers.py`가 `verified_transcripts/_ruleset.md`를 코드로 옮긴
 것이며, **규약이 권위이고 코드가 그것을 따른다.**
