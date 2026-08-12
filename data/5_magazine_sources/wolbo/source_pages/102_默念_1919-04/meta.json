@@ -1,0 +1,105 @@
+{
+  "cnts_id": "CNTS-00048065270",
+  "fetched_at": "2026-08-12T08:41:52+09:00",
+  "manifest": {
+    "cnts_id": "CNTS-00048065270",
+    "kolis_no": "",
+    "title": "默念論",
+    "author_hangul": "야뢰",
+    "author_hanja": "夜雷",
+    "publisher": "天道敎會月報社",
+    "pub_date": "19190415",
+    "holding": "디지털도서관 디지털자료실",
+    "page_count_meta": "",
+    "format": "온라인자료",
+    "data_class_cd": "CH4B",
+    "has_origin_link": "1",
+    "refworks_sp": "",
+    "list_idx": "16",
+    "page_num": "1",
+    "source_url": "https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048065270&viewType=C&category=기사",
+    "tonggwon": "104",
+    "section": "敎門訂議",
+    "page_in_journal": "1"
+  },
+  "viewer_vars": {
+    "cno": "CNTS-00048065270",
+    "srcpath": "/raid5/Imagedb/NCL_DB_K/2004/14453390",
+    "ext": "JPG",
+    "vol_maxpage": "12",
+    "LicenseType": "0",
+    "DataClassCd": "CH4B",
+    "CopyrightType": "N",
+    "organId": "",
+    "kolis_no": "KSE000001443",
+    "saveYn": "Y",
+    "printYn": "Y"
+  },
+  "download": {
+    "vol_maxpage": 12,
+    "cur_vol": 0,
+    "pages": [
+      {
+        "page": 1,
+        "path": "page_001.jpg",
+        "bytes": 221102
+      },
+      {
+        "page": 2,
+        "path": "page_002.jpg",
+        "bytes": 257472
+      },
+      {
+        "page": 3,
+        "path": "page_003.jpg",
+        "bytes": 250688
+      },
+      {
+        "page": 4,
+        "path": "page_004.jpg",
+        "bytes": 243160
+      },
+      {
+        "page": 5,
+        "path": "page_005.jpg",
+        "bytes": 238146
+      },
+      {
+        "page": 6,
+        "path": "page_006.jpg",
+        "bytes": 236411
+      },
+      {
+        "page": 7,
+        "path": "page_007.jpg",
+        "bytes": 255966
+      },
+      {
+        "page": 8,
+        "path": "page_008.jpg",
+        "bytes": 255272
+      },
+      {
+        "page": 9,
+        "path": "page_009.jpg",
+        "bytes": 250116
+      },
+      {
+        "page": 10,
+        "path": "page_010.jpg",
+        "bytes": 244591
+      },
+      {
+        "page": 11,
+        "path": "page_011.jpg",
+        "bytes": 240364
+      },
+      {
+        "page": 12,
+        "path": "page_012.jpg",
+        "bytes": 181249
+      }
+    ],
+    "total_bytes": 2874537
+  }
+}

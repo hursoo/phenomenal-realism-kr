@@ -1,6 +1,6 @@
 # Gemini gemini-2.5-pro vision OCR
 # Source: unit_10_p5l.png
-# Usage: prompt_tokens=565 candidates_tokens=162 total=3250
+# Usage: prompt_tokens=565 candidates_tokens=169 total=1365
 
 [col 01]
 金實로人事를盡ᄒᆞ고天命을待ᄒᆞ者ㅣ니라徒히舌로써將軍의位에居ᄒᆞ者는定州敎友에對ᄒᆞ야實로顔이赤ᄒᆞ고背가沾치아니치못ᄒᆞ리로다記
@@ -14,6 +14,8 @@
 [author]
 李鍾麟
 
-[col 03]
-運天
+[col 04]
+天運
+
+[col 05]
 衆生이本來佛이라無量의一切佛이自性에

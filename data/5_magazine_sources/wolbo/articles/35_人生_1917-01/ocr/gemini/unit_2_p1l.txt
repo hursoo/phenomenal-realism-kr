@@ -1,24 +1,19 @@
 # Gemini gemini-2.5-pro vision OCR
 # Source: unit_2_p1l.png
-# Usage: prompt_tokens=565 candidates_tokens=152 total=1781
+# Usage: prompt_tokens=565 candidates_tokens=131 total=1174
+
+[title]
+人生과 新年
+
+[author]
+李敦化 (新任信道師)
 
 [col 01]
-悔恨이오現在는不滿이라ᄂᆞᆫ感想을勿有ᄒᆞ고
-透ㅡ自助自覺을得ᄒᆞ지어다
+홀恨이오現在는不滿이라는感想을勿有하고透ㅡ自助自覺을得ㅎ지어다
 
 [col 02]
-[title] 人生과新秊
-[author] 李敦化
-法輪이無情ᄒᆞ야過去一
-秊의三百六
+道師權東權(氏)
+年의三百六十五의金烏가翩翩然消逝ㅎ고此窮巷의身으로更히新年의新生活에入
 
 [col 03]
-十五의金烏
-가翩翩然消
-過ᄒᆞ고此窮
-巷의身으로
-更히新年의
-新生活에入
-
-[col 04]
-悔ㅡ코져ᄒᆞᆫ다問ᄒᆞ노라新年아君은將次何等의
+悔ㅣ코져ㅎ다問ㅎ노라新年아君은將次何等의五

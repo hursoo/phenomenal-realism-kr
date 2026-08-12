@@ -1,6 +1,3 @@
-# Skeleton meta — series_index #75, generated 2026-05-09 by bootstrap_article.py
-# layout·units는 시각 검증 후 채울 것 (TODO 표시 영역)
-
 article:
   series_index: 75
   slug: 宗教_1922-05
@@ -10,118 +7,215 @@ article:
   journal: 천도교회월보 (天道敎會月報)
   issue_total: 141
   publication_date: 1922-05-15
-  section: 
+  section: null
   page_in_journal: 10
   partial_download: false
   source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048065528&viewType=C&category=기사
-
 source_pages:
-  - file: page_001.jpg
-    sha256: 24d33a561566aa4ac137365506239bbfc0b63ad34e2c81873aeae62188185c21
-    bytes: 229828
-    pixels: 1500x2422
-  - file: page_002.jpg
-    sha256: a2287895a26ca2028bd93412c5f5373c6d18c8c96bc4449f4560dc7c13e6cb90
-    bytes: 242833
-    pixels: 1500x2443
-  - file: page_003.jpg
-    sha256: 9ee2ed73b52bcb0b8cb7d4fafac1bd97fc69e592d5716b283684afeba3878ab5
-    bytes: 245996
-    pixels: 1500x2446
+- file: page_001.jpg
+  sha256: 24d33a561566aa4ac137365506239bbfc0b63ad34e2c81873aeae62188185c21
+  bytes: 229828
+  pixels: 1500x2422
+- file: page_002.jpg
+  sha256: a2287895a26ca2028bd93412c5f5373c6d18c8c96bc4449f4560dc7c13e6cb90
+  bytes: 242833
+  pixels: 1500x2443
+- file: page_003.jpg
+  sha256: 9ee2ed73b52bcb0b8cb7d4fafac1bd97fc69e592d5716b283684afeba3878ab5
+  bytes: 245996
+  pixels: 1500x2446
 source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048065528/
-
-# ========== Phase 2.1 단 분리 (Claude 시각 검증, 2026-05-09) ==========
-# 단순화 자르기: 모든 band x=80~1500 (전체 폭). 표제 우측·본 기사 영역 OCR 후 검증.
-
 layout:
   page_orientation: vertical_writing
   bands_per_page: 2
   divider_kind: thin_wavy_line
-  divider_y: 1180  # 통일값 (페이지별 ±20 변동 가능)
-  layout_type: horizontal_only  # L1 — 본 1편 가족
-  reading_order: snake  # 上→下→다음 페이지 上→下
+  divider_y: 1180
+  layout_type: horizontal_only
+  reading_order: snake
   body_left_margin: 80
-  hanja_ratio_estimate: ~0.80  # 시기 평균 (OCR 후 갱신)
+  hanja_ratio_estimate: ~0.80
   oldhangul_density: low_to_mid
-
+  divider_source: detected per page (detect_divider.py, overlap=40px, 2026-08-12)
 units:
-  - id: unit_1_p1u
-    file: units/unit_1_p1u.png
-    page: page_001.jpg
-    crop: [80, 0, 1500, 1180]
-    pixels: 1420x1180
-    role: start
-    contains: TODO (OCR 후 자동 판단)
-  - id: unit_2_p1l
-    file: units/unit_2_p1l.png
-    page: page_001.jpg
-    crop: [80, 1180, 1500, 2422]
-    pixels: 1420x1242
-    role: continuation
-    contains: TODO (OCR 후 자동 판단)
-  - id: unit_3_p2u
-    file: units/unit_3_p2u.png
-    page: page_002.jpg
-    crop: [80, 0, 1500, 1180]
-    pixels: 1420x1180
-    role: continuation
-    contains: TODO (OCR 후 자동 판단)
-  - id: unit_4_p2l
-    file: units/unit_4_p2l.png
-    page: page_002.jpg
-    crop: [80, 1180, 1500, 2443]
-    pixels: 1420x1263
-    role: continuation
-    contains: TODO (OCR 후 자동 판단)
-  - id: unit_5_p3u
-    file: units/unit_5_p3u.png
-    page: page_003.jpg
-    crop: [80, 0, 1500, 1180]
-    pixels: 1420x1180
-    role: continuation
-    contains: TODO (OCR 후 자동 판단)
-  - id: unit_6_p3l
-    file: units/unit_6_p3l.png
-    page: page_003.jpg
-    crop: [80, 1180, 1500, 2446]
-    pixels: 1420x1266
-    role: tail
-    contains: TODO (OCR 후 자동 판단)
-
+- id: unit_1_p1u
+  file: units/unit_1_p1u.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1334
+  pixels: 1420x1180
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+  divider_detected: true
+- id: unit_2_p1l
+  file: units/unit_2_p1l.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 1254
+  - 1500
+  - 2422
+  pixels: 1420x1242
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+  divider_detected: true
+- id: unit_3_p2u
+  file: units/unit_3_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1487
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+  divider_detected: true
+- id: unit_4_p2l
+  file: units/unit_4_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1407
+  - 1500
+  - 2443
+  pixels: 1420x1263
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+  divider_detected: true
+- id: unit_5_p3u
+  file: units/unit_5_p3u.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1331
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+  divider_detected: true
+- id: unit_6_p3l
+  file: units/unit_6_p3l.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 1251
+  - 1500
+  - 2446
+  pixels: 1420x1266
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+  divider_detected: true
 excluded:
-  - region: p1 上段 우측 (표제 우측 영역, x>?)
-    reason: 본 1편 패턴 가정 — 上段 이전 기사가 표제 우측까지 흘러옴 (OCR 후 검증 갱신)
-  - region: 마지막 p 下段 (다음 기사 시작 영역 가능)
-    reason: 본 기사 결말 후 다음 기사 시작 가능. OCR 결과로 검증 후 자르기 갱신.
-  - region: 모든 페이지 좌측 가장자리 (x<80)
-    reason: 부속 — 섹션 라벨 + 페이지번호
-
+- region: p1 上段 우측 (표제 우측 영역, x>?)
+  reason: 본 1편 패턴 가정 — 上段 이전 기사가 표제 우측까지 흘러옴 (OCR 후 검증 갱신)
+- region: 마지막 p 下段 (다음 기사 시작 영역 가능)
+  reason: 본 기사 결말 후 다음 기사 시작 가능. OCR 결과로 검증 후 자르기 갱신.
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 섹션 라벨 + 페이지번호
 ancillary:
-  section_label: 
+  section_label: null
   page_numbers:
-    - {page: page_001.jpg, value: 一〇, hanja: 10}
-    - {page: page_002.jpg, value: 一一, hanja: 11}
-    - {page: page_003.jpg, value: 一二, hanja: 12}
-
+  - page: page_001.jpg
+    value: 一〇
+    hanja: 10
+  - page: page_002.jpg
+    value: 一一
+    hanja: 11
+  - page: page_003.jpg
+    value: 一二
+    hanja: 12
 processing_state:
   phase_2_1_unit_extraction: completed (2026-05-09, Claude 시각 검증, 단순 자르기)
-  phase_3_ocr: completed_with_engine_gaps (2026-05-09, Paddle 6/6 전체 결손 — 1920년대 layout 시스템적 문제. avg CG_LCS ~0.65)
+  phase_3_ocr: completed_with_engine_gaps (2026-05-09, Paddle 6/6 전체 결손 — 1920년대 layout
+    시스템적 문제. avg CG_LCS ~0.65)
   phase_4_consensus_and_correction: draft_v0_auto (2026-05-09, ⚠️ 마커 152건, 인간 중재 대기)
   phase_5_high_fidelity_transcript: pending
   phase_6_modern_reading_version: pending
-
 post_ocr_findings:
-  - ★★ 본 기사 「宗敎의 六大要素」 = 종교 일반의 6요소 (①超人的勢力의信仰 ②希望 ③敬虔의念 ④救濟의信念 ⑤犧牲의精神 ⑥仁愛)를 정식화하고 *人乃天 新宗敎*와 비교 — 이노우에 1915 C13·C14 「世界三大宗敎의 比較」와 평행하는 비교종교 양식.
-  - ★★ 결정적 정식 (unit_4): 「人乃天의 觀念으로 觀ᄒᆞ면 이는 自己以外의 偶像에 假托ᄒᆞ안이ᄒᆞ고 自己以內의 實在로 觀ᄒᆞ나니, 即 自己의 意識을 大宇宙의 大意識의 系統으로 思ᄒᆞ고 그 偉大ᄒᆞᆫ 超現人의 勢力에 歸依코져 ᄒᆞᆷ이라」 — 이노우에 「現象即實在」 한국 변주의 정식 표현. 「자기-외부 → 자기-내부」 내재화.
-  - 「現象意識의 人」 어휘 = 「現象即實在」에서 「現象」 직접 차용 (unit_4).
-  - 「儒敎의 [仁?] / 佛敎의 慈悲 / 基督의 愛」 3대 종교 仁愛 클러스터 (unit_3) = 이돈화 1924 단행본 C06-S06 「世界三大宗敎의 差異点과 人乃天」의 직접 선행.
-  - 「事人如天」(unit_6) = 천도교 핵심 강령 + 「殺身成仁」 결합.
-
+- ★★ 본 기사 「宗敎의 六大要素」 = 종교 일반의 6요소 (①超人的勢力의信仰 ②希望 ③敬虔의念 ④救濟의信念 ⑤犧牲의精神 ⑥仁愛)를 정식화하고 *人乃天
+  新宗敎*와 비교 — 이노우에 1915 C13·C14 「世界三大宗敎의 比較」와 평행하는 비교종교 양식.
+- ★★ 결정적 정식 (unit_4): 「人乃天의 觀念으로 觀ᄒᆞ면 이는 自己以外의 偶像에 假托ᄒᆞ안이ᄒᆞ고 自己以內의 實在로 觀ᄒᆞ나니, 即 自己의
+    意識을 大宇宙의 大意識의 系統으로 思ᄒᆞ고 그 偉大ᄒᆞᆫ 超現人의 勢力에 歸依코져 ᄒᆞᆷ이라」 — 이노우에 「現象即實在」 한국 변주의 정식
+    표현. 「자기-외부 → 자기-내부」 내재화.
+- 「現象意識의 人」 어휘 = 「現象即實在」에서 「現象」 직접 차용 (unit_4).
+- 「儒敎의 [仁?] / 佛敎의 慈悲 / 基督의 愛」 3대 종교 仁愛 클러스터 (unit_3) = 이돈화 1924 단행본 C06-S06 「世界三大宗敎의
+  差異点과 人乃天」의 직접 선행.
+- 「事人如天」(unit_6) = 천도교 핵심 강령 + 「殺身成仁」 결합.
 engine_gaps:
-  - unit_1 ~ unit_6: paddle token=0 (실패) — 6/6 unit 전수
-  - reason_hypothesis: #60과 동일 — 1920년대 활자에 PaddleOCR chinese_cht 부적합.
-
+- unit_1 ~ unit_6: paddle token=0 (실패) — 6/6 unit 전수
+- reason_hypothesis: null
 policy_refs:
   series_design: _design/2026-05-08_journal_intermediation_v01.md
   consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
   series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv
+units_previous_fixed1180:
+- id: unit_1_p1u
+  file: units/unit_1_p1u.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p1l
+  file: units/unit_2_p1l.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2422
+  pixels: 1420x1242
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p2u
+  file: units/unit_3_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p2l
+  file: units/unit_4_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2443
+  pixels: 1420x1263
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p3u
+  file: units/unit_5_p3u.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p3l
+  file: units/unit_6_p3l.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2446
+  pixels: 1420x1266
+  role: tail
+  contains: TODO (OCR 후 자동 판단)

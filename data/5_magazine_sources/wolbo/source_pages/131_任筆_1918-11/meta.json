@@ -1,0 +1,65 @@
+{
+  "cnts_id": "CNTS-00048051555",
+  "fetched_at": "2026-08-12T09:29:42+09:00",
+  "manifest": {
+    "cnts_id": "CNTS-00048051555",
+    "kolis_no": "",
+    "title": "任筆錄(其六)",
+    "author_hangul": "滄海居士",
+    "author_hanja": "滄海居士",
+    "publisher": "天道敎會月報社",
+    "pub_date": "19181115",
+    "holding": "디지털도서관 디지털자료실",
+    "page_count_meta": "",
+    "format": "온라인자료",
+    "data_class_cd": "CH4B",
+    "has_origin_link": "1",
+    "refworks_sp": "",
+    "list_idx": "23",
+    "page_num": "1",
+    "source_url": "https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048051555&viewType=C&category=기사",
+    "tonggwon": "99",
+    "section": "雜俎",
+    "page_in_journal": "37"
+  },
+  "viewer_vars": {
+    "cno": "CNTS-00048051555",
+    "srcpath": "/raid5/Imagedb/NCL_DB_K/2004/14452545",
+    "ext": "JPG",
+    "vol_maxpage": "4",
+    "LicenseType": "0",
+    "DataClassCd": "CH4B",
+    "CopyrightType": "N",
+    "organId": "",
+    "kolis_no": "KSE000001443",
+    "saveYn": "Y",
+    "printYn": "Y"
+  },
+  "download": {
+    "vol_maxpage": 4,
+    "cur_vol": 0,
+    "pages": [
+      {
+        "page": 1,
+        "path": "page_001.jpg",
+        "bytes": 250335
+      },
+      {
+        "page": 2,
+        "path": "page_002.jpg",
+        "bytes": 229220
+      },
+      {
+        "page": 3,
+        "path": "page_003.jpg",
+        "bytes": 252809
+      },
+      {
+        "page": 4,
+        "path": "page_004.jpg",
+        "bytes": 221299
+      }
+    ],
+    "total_bytes": 953663
+  }
+}

@@ -1,0 +1,106 @@
+article:
+  series_index: 158
+  slug: 我觀_1913-07
+  cnts_id: CNTS-00048064195
+  title: 我觀苦樂論
+  author: 李敦化
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 36
+  publication_date: 1913-07-15
+  section: 講演
+  page_in_journal: 19
+  partial_download: true
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048064195&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: 35583c739304bdf744297aead53d16b88a08a3ec1b155987965cb4a890bb6909
+  bytes: 254695
+  pixels: 1500x2409
+- file: page_002.jpg
+  sha256: f56dd1ff443557a4079dc5daa5c3cdda49d81c170e887a04b590dfad935641b8
+  bytes: 238136
+  pixels: 1500x2427
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048064195/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 2
+  divider_kind: thin_wavy_line
+  divider_y: TODO
+  layout_type: TODO
+  reading_order: snake
+  body_left_margin: 80
+  hanja_ratio_estimate: TODO
+  oldhangul_density: TODO
+  divider_source: detected per page (detect_divider.py, overlap=40px, 2026-08-12)
+units:
+- id: unit_1_p1u
+  file: units/unit_1_p1u.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1271
+  pixels: 1420x1271
+  role: upper
+  divider_detected: 1231
+  overlap: 40
+- id: unit_2_p1l
+  file: units/unit_2_p1l.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 1191
+  - 1500
+  - 2409
+  pixels: 1420x1218
+  role: lower
+  divider_detected: 1231
+  overlap: 40
+- id: unit_3_p2u
+  file: units/unit_3_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1254
+  pixels: 1420x1254
+  role: upper
+  divider_detected: 1214
+  overlap: 40
+- id: unit_4_p2l
+  file: units/unit_4_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1174
+  - 1500
+  - 2427
+  pixels: 1420x1253
+  role: lower
+  divider_detected: 1214
+  overlap: 40
+excluded: []
+ancillary:
+  section_label: 講演
+  page_numbers: []
+processing_state:
+  phase_2_1_unit_extraction: pending
+  phase_3_ocr: pending
+  phase_4_consensus_and_correction: pending
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv
+units_previous_fixed1180: []
+coverage:
+  실제_범위: 통36 19~23쪽 (5면)
+  보유: 19~20쪽 (2면)
+  결락: 21~23쪽
+  근거: 영인본 목차 — 我觀苦樂論 19쪽, 다음 글 兩無相値萬有生 24쪽
+  확인: 2026-08-12 Soo가 지면을 열어 확인. 19쪽은 제목만, 20쪽 하단이 종결되지 않고 이어짐
+bibliography_note: 지면 확인 결과 제목은 「我觀苦樂論」(論), 필자는 李敦化. NL 서지의 「我觀苦樂說」(說)은 오류다. 20쪽 하단에
+  별도 상자로 「今古俚海(第五)」(雜俎, 별도 쪽번호 체계)가 함께 앉아 있다 — 본문이 아니다.

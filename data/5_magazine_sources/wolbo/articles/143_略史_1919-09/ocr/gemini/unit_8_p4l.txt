@@ -1,0 +1,20 @@
+# Gemini gemini-2.5-pro vision OCR
+# Source: unit_8_p4l.png
+# Usage: prompt_tokens=565 candidates_tokens=105 total=1063
+
+[col 01]
+내게잇는寶鏡
+나는죽을때까지寶鏡너를사랑호
+겟다。
+
+[col 02]
+아―寶鏡너는나의게오
+天地宇宙를다―보혀주는구낭
+
+[col 03]
+너의光은古今도업고上下도업나
+니
+
+[col 04]
+나는너를엇다처음으로極樂을세
+다렷다

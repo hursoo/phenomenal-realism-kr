@@ -1,0 +1,12 @@
+# Gemini gemini-2.5-pro vision OCR
+# Source: unit_8_p4l.png
+# Usage: prompt_tokens=565 candidates_tokens=115 total=4498
+
+[col 01]
+조、그리ᄒᆞ야修煉의方式은呪文祈禱律이며修煉的은天人合一인디其主體는心이며心은自力의鍜敬써其를修煉ᄒᆞ야目的卽天人合一에到達코저ᄒᆞᆷ이오이것이大槪大神師의自力的敎化인져
+
+[col 02]
+○○
+
+[col 03]
+?)자지도보여주누나○

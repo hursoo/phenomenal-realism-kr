@@ -1,0 +1,15 @@
+# Gemini gemini-2.5-pro vision OCR
+# Source: unit_10_p5l.png
+# Usage: prompt_tokens=565 candidates_tokens=139 total=3360
+
+[col 01]
+치우리보고休廳室로돌아와담븨ᄒᆞᆫ대를피여물고蒼空을바라보니一點의白雲이光線듯헤흔긔젹々々ᄒᆞ는데가온대셔金鱗魚一尾노는쇼태출렁々々一聲의울음을겨우々々ᄒᆞᆯ뿐이다
+
+[col 02]
+치ᄒᆞᆯ율?
+가장進化ᄒᆞᆫ고?
+層가장進化ᄒᆞᆫ
+層가장進化ᄒᆞᆫ
+
+[col 03]
+가장사탐일뿐ㅣ-?

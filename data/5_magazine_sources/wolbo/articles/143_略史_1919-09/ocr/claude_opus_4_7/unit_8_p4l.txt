@@ -1,0 +1,30 @@
+# claude-opus-4-7 via Anthropic API — vision OCR (2026-05-09)
+# Source: 143_略史_1919-09/units/unit_8_p4l.png
+# Tokens: in=2635 out=161 elapsed=9.1s
+
+[col 01]
+내게잇는寶鏡
+
+[col 02]
+나는죽을때까지寶鏡너를사랑을
+
+[col 03]
+겟당
+
+[col 04]
+아—寶鏡너는나의게
+
+[col 05]
+天地宇宙를다—보혀주는구나
+
+[col 06]
+너의光은古今도업고上下도업나
+
+[col 07]
+니
+
+[col 08]
+나는너를엇다처음으로極樂를세
+
+[col 09]
+다렛다

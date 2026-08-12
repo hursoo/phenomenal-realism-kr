@@ -1,0 +1,9 @@
+# claude-opus-4-7 via Anthropic API — vision OCR (2026-05-09)
+# Source: 108_新信_1919-11/units/unit_6_p3l.png
+# Tokens: in=3247 out=147 elapsed=5.7s
+
+이미지가 너무 어둡고 대비가 낮아 텍스트를 판독할 수 없습니다. 컬럼 구조, 개별 문자, 자모 형태 모두 식별 불가능한 상태입니다.
+
+[col 01] [?]
+
+판독 가능한 밝기/대비로 보정된 이미지를 제공해 주시면 규칙에 따라 OCR을 수행하겠습니다.

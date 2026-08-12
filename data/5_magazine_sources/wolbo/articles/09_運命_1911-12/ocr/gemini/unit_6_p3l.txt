@@ -1,5 +1,14 @@
 # Gemini gemini-2.5-pro vision OCR
 # Source: unit_6_p3l.png
-# Usage: prompt_tokens=565 candidates_tokens=None total=8562
+# Usage: prompt_tokens=565 candidates_tokens=244 total=1363
 
+[col 01]
+一二神秘的隱惠를蒙ᄒᆞ야天然의樂을自取ᄒᆞ며人乃天의定理를覺破ᄒᆞ야勇進邁往의質이多ᄒᆞ도다故로人은天然的運命의拘束을勿受ᄒᆞ고自手로運命의鐵鎖를裁斷ᄒᆞ고浩然活舞臺에登ᄒᆞ야汲汲히將來好運命의原因을造營뿐이니特히吾敎의大旨는人乃天이라天이運命을自造치아니ᄒᆞ면何等魔鬼가造ᄒᆞ리오自愛自重ᄒᆞᆯ지어다此說을聞ᄒᆞᆫ者여如何히粗野라도吾敎의新運命을固守ᄒᆞ면欲立의地에皆立ᄒᆞ리라
 
+[title]
+大運歸道說
+[author]
+金健植
+
+[col 02]
+天地開闢과世界治亂이無一非道之晦明也라故로混沌之初에稱之以草昧時代而至于

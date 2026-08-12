@@ -1,6 +1,6 @@
 # claude-opus-4-7 via Anthropic API — vision OCR (2026-05-09)
 # Source: 29_真理_1914-11/units/unit_4_p2l.png
-# Tokens: in=2737 out=50 elapsed=5.8s
+# Tokens: in=2737 out=42 elapsed=5.4s
 
 [col 01]
 第四學年
@@ -8,6 +8,3 @@
 
 [caption]
 (普成學校第四學年生林毅植畵)
-
-[col 02]
-八

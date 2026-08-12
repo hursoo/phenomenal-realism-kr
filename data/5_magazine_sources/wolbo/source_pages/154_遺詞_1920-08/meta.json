@@ -1,0 +1,60 @@
+{
+  "cnts_id": "CNTS-00048079157",
+  "fetched_at": "2026-08-12T09:27:48+09:00",
+  "manifest": {
+    "cnts_id": "CNTS-00048079157",
+    "kolis_no": "",
+    "title": "遺詞中으로 觀한 大神師의 法訓",
+    "author_hangul": "白頭山人",
+    "author_hanja": "白頭山人",
+    "publisher": "天道敎會月報社",
+    "pub_date": "19200815",
+    "holding": "디지털도서관 디지털자료실",
+    "page_count_meta": "",
+    "format": "온라인자료",
+    "data_class_cd": "CH4B",
+    "has_origin_link": "1",
+    "refworks_sp": "",
+    "list_idx": "11",
+    "page_num": "1",
+    "source_url": "https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048079157&viewType=C&category=기사",
+    "tonggwon": "120",
+    "section": "",
+    "page_in_journal": "56"
+  },
+  "viewer_vars": {
+    "cno": "CNTS-00048079157",
+    "srcpath": "/raid5/imagedb/NCL_DB_K/2004/14455786",
+    "ext": "JPG",
+    "vol_maxpage": "3",
+    "LicenseType": "0",
+    "DataClassCd": "CH4B",
+    "CopyrightType": "N",
+    "organId": "",
+    "kolis_no": "KSE000001443",
+    "saveYn": "Y",
+    "printYn": "Y"
+  },
+  "download": {
+    "vol_maxpage": 3,
+    "cur_vol": 0,
+    "pages": [
+      {
+        "page": 1,
+        "path": "page_001.jpg",
+        "bytes": 178991
+      },
+      {
+        "page": 2,
+        "path": "page_002.jpg",
+        "bytes": 212835
+      },
+      {
+        "page": 3,
+        "path": "page_003.jpg",
+        "bytes": 292002
+      }
+    ],
+    "total_bytes": 683828
+  }
+}

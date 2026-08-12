@@ -1,0 +1,60 @@
+{
+  "cnts_id": "CNTS-00048051448",
+  "fetched_at": "2026-08-12T09:28:18+09:00",
+  "manifest": {
+    "cnts_id": "CNTS-00048051448",
+    "kolis_no": "",
+    "title": "野花千萬枝遊客忘歸家",
+    "author_hangul": "滄海居士",
+    "author_hanja": "滄海居士",
+    "publisher": "天道敎會月報社",
+    "pub_date": "19171215",
+    "holding": "디지털도서관 디지털자료실",
+    "page_count_meta": "",
+    "format": "온라인자료",
+    "data_class_cd": "CH4B",
+    "has_origin_link": "1",
+    "refworks_sp": "",
+    "list_idx": "14",
+    "page_num": "1",
+    "source_url": "https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048051448&viewType=C&category=기사",
+    "tonggwon": "89",
+    "section": "敎理部",
+    "page_in_journal": "11"
+  },
+  "viewer_vars": {
+    "cno": "CNTS-00048051448",
+    "srcpath": "/raid5/Imagedb/NCL_DB_K/2004/14450975",
+    "ext": "JPG",
+    "vol_maxpage": "3",
+    "LicenseType": "0",
+    "DataClassCd": "CH4B",
+    "CopyrightType": "N",
+    "organId": "",
+    "kolis_no": "KSE000001443",
+    "saveYn": "Y",
+    "printYn": "Y"
+  },
+  "download": {
+    "vol_maxpage": 3,
+    "cur_vol": 0,
+    "pages": [
+      {
+        "page": 1,
+        "path": "page_001.jpg",
+        "bytes": 242733
+      },
+      {
+        "page": 2,
+        "path": "page_002.jpg",
+        "bytes": 287677
+      },
+      {
+        "page": 3,
+        "path": "page_003.jpg",
+        "bytes": 263767
+      }
+    ],
+    "total_bytes": 794177
+  }
+}

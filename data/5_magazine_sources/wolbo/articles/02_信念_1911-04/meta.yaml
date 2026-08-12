@@ -40,11 +40,12 @@ layout:
   body_left_margin: 80
   hanja_ratio_estimate: ~0.85
   oldhangul_density: low
+  divider_source: detected per page (detect_divider.py, overlap=40px, 2026-08-12)
 units:
 - id: unit_1_p1l
   file: units/unit_1_p1l.png
   page: page_001.jpg
-  crop:
+  crop: &id001
   - 80
   - 1180
   - 900
@@ -59,25 +60,27 @@ units:
   - 80
   - 0
   - 1500
-  - 1160
+  - 1237
   pixels: 1420x1160
   role: continuation
   contains: p2 上段 본문 (snake 연속)
+  divider_detected: true
 - id: unit_3_p2l
   file: units/unit_3_p2l.png
   page: page_002.jpg
   crop:
   - 80
-  - 1160
+  - 1157
   - 1500
   - 2361
   pixels: 1420x1201
   role: continuation
   contains: p2 下段 본문 (snake 연속)
+  divider_detected: true
 - id: unit_4_p3u
   file: units/unit_4_p3u.png
   page: page_003.jpg
-  crop:
+  crop: &id002
   - 80
   - 0
   - 1500
@@ -116,3 +119,40 @@ policy_refs:
   series_design: _design/2026-05-08_journal_intermediation_v01.md
   consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
   series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv
+units_previous_fixed1180:
+- id: unit_1_p1l
+  file: units/unit_1_p1l.png
+  page: page_001.jpg
+  crop: *id001
+  pixels: 820x1204
+  role: start
+  contains: 표제 「信念의 神聖」 + 저자명 「李敦化」 + 표제 좌측 본문 컬럼들
+- id: unit_2_p2u
+  file: units/unit_2_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1160
+  pixels: 1420x1160
+  role: continuation
+  contains: p2 上段 본문 (snake 연속)
+- id: unit_3_p2l
+  file: units/unit_3_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1160
+  - 1500
+  - 2361
+  pixels: 1420x1201
+  role: continuation
+  contains: p2 下段 본문 (snake 연속)
+- id: unit_4_p3u
+  file: units/unit_4_p3u.png
+  page: page_003.jpg
+  crop: *id002
+  pixels: 1420x1200
+  role: tail
+  contains: p3 上段 본 기사 마지막

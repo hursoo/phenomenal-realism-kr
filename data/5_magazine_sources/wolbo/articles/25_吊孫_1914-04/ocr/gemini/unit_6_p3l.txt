@@ -1,5 +1,12 @@
 # Gemini gemini-2.5-pro vision OCR
 # Source: unit_6_p3l.png
-# Usage: prompt_tokens=565 candidates_tokens=None total=8562
+# Usage: prompt_tokens=565 candidates_tokens=105 total=1083
 
+[col 01]
+何故로大聖孔子와同히今日의崇拜를受치
+못뇨顔淵은貧賤호者니라又曰成業이無한
+者니라然하나後世萬古에其名이不朽홈은
+一團樂道의志操一片殉敎의心腸故로今日
+에君으되써敢히世에紹介ㅎ는바는亦其의
+志이며亦其의心인뎌
 

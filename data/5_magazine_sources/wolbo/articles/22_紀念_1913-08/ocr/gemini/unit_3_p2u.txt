@@ -1,5 +1,20 @@
 # Gemini gemini-2.5-pro vision OCR
 # Source: unit_3_p2u.png
-# Usage: prompt_tokens=565 candidates_tokens=None total=8562
+# Usage: prompt_tokens=565 candidates_tokens=224 total=1229
 
+[col 01]
+余ᄂ原來光陰의矢催를悲觀ᄒᆞᄂ者아니오寧히光陰의意義를解釋ᄒᆞ야過去에對ᄒᆞ얀鑑賞을作ᄒᆞ며未來에對ᄒᆞ얀良果를收코져ᄒᆞᄂ者니라故로
 
+[col 02]
+余ᄂ吾敎報三芽의立脚地에서過去호鑑賞材料를赤裸裸히攬出코져ᄒᆞᄂ同時에未來의預期的良果도亦赤裸裸히現露코져ᄒᆞ니蓋
+
+[col 03]
+事實은歷史를背에負ᄒᆞ고刹那를踏ᄒᆞ고無限의將來에奔馳ᄒᆞᄂ者라故로歷史ᄂ刹那의變體며刹那ᄂ未來의換名이라金枝玉葉의燦爛ᄒᆞᆫ歷史의
+
+[title]
+正大願篇
+無黨光明
+天下報也
+
+[section]
+敎門訂義

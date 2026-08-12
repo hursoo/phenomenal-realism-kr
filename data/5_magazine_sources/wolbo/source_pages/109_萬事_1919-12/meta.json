@@ -1,0 +1,65 @@
+{
+  "cnts_id": "CNTS-00048079075",
+  "fetched_at": "2026-08-12T08:42:51+09:00",
+  "manifest": {
+    "cnts_id": "CNTS-00048079075",
+    "kolis_no": "",
+    "title": "萬事知",
+    "author_hangul": "야뢰",
+    "author_hanja": "夜雷",
+    "publisher": "天道敎會月報社",
+    "pub_date": "19191215",
+    "holding": "디지털도서관 디지털자료실",
+    "page_count_meta": "",
+    "format": "온라인자료",
+    "data_class_cd": "CH4B",
+    "has_origin_link": "1",
+    "refworks_sp": "",
+    "list_idx": "23",
+    "page_num": "1",
+    "source_url": "https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048079075&viewType=C&category=기사",
+    "tonggwon": "112",
+    "section": "敎理部",
+    "page_in_journal": "20"
+  },
+  "viewer_vars": {
+    "cno": "CNTS-00048079075",
+    "srcpath": "/raid5/Imagedb/NCL_DB_K/2004/14454247",
+    "ext": "JPG",
+    "vol_maxpage": "4",
+    "LicenseType": "0",
+    "DataClassCd": "CH4B",
+    "CopyrightType": "N",
+    "organId": "",
+    "kolis_no": "KSE000001443",
+    "saveYn": "Y",
+    "printYn": "Y"
+  },
+  "download": {
+    "vol_maxpage": 4,
+    "cur_vol": 0,
+    "pages": [
+      {
+        "page": 1,
+        "path": "page_001.jpg",
+        "bytes": 201481
+      },
+      {
+        "page": 2,
+        "path": "page_002.jpg",
+        "bytes": 213244
+      },
+      {
+        "page": 3,
+        "path": "page_003.jpg",
+        "bytes": 222869
+      },
+      {
+        "page": 4,
+        "path": "page_004.jpg",
+        "bytes": 197217
+      }
+    ],
+    "total_bytes": 834811
+  }
+}

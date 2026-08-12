@@ -1,0 +1,314 @@
+article:
+  series_index: 139
+  slug: 最後_1919-06
+  cnts_id: CNTS-00048065284
+  title: 最後宗敎의 大性無量光
+  author: 白頭山人
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 106
+  publication_date: 1919-06-15
+  section: 講演
+  page_in_journal: 24
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048065284&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: 8b2e0fd885051447770053d935f74b50fd794c4f30d26d4aad0495daf4004cff
+  bytes: 198240
+  pixels: 1500x2381
+- file: page_002.jpg
+  sha256: 87b401e995df8c2bff2b51f13235627cee9c876d6abd61f568ecb95b7bc98188
+  bytes: 221480
+  pixels: 1500x2473
+- file: page_003.jpg
+  sha256: fde82b0737bf725fc2c9349105748158b01942dd2fd3d27ff4e59328990c540a
+  bytes: 229379
+  pixels: 1500x2409
+- file: page_004.jpg
+  sha256: 651368a994c1408cf690b6b57089de0e3738d7ceba84c850eba6246b726927c8
+  bytes: 227192
+  pixels: 1500x2483
+- file: page_005.jpg
+  sha256: 8b529919728ae89fc25af32232ff7a7ebaf2bc9a7631cf0a7da0df93d7037660
+  bytes: 219280
+  pixels: 1500x2373
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048065284/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 2
+  divider_kind: thin_wavy_line
+  divider_y: 1180
+  layout_type: horizontal_only
+  reading_order: snake
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.80
+  oldhangul_density: low_to_mid
+  divider_source: detected per page (detect_divider.py, overlap=40px, 2026-08-12)
+units:
+- id: unit_1_p1u
+  file: units/unit_1_p1u.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1220
+  pixels: 1420x1220
+  role: upper
+  divider_detected: 1180
+  overlap: 40
+- id: unit_2_p1l
+  file: units/unit_2_p1l.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 1140
+  - 1500
+  - 2381
+  pixels: 1420x1241
+  role: lower
+  divider_detected: 1180
+  overlap: 40
+- id: unit_3_p2u
+  file: units/unit_3_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1304
+  pixels: 1420x1304
+  role: upper
+  divider_detected: 1264
+  overlap: 40
+- id: unit_4_p2l
+  file: units/unit_4_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1224
+  - 1500
+  - 2473
+  pixels: 1420x1249
+  role: lower
+  divider_detected: 1264
+  overlap: 40
+- id: unit_5_p3u
+  file: units/unit_5_p3u.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1278
+  pixels: 1420x1278
+  role: upper
+  divider_detected: 1238
+  overlap: 40
+- id: unit_6_p3l
+  file: units/unit_6_p3l.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 1198
+  - 1500
+  - 2409
+  pixels: 1420x1211
+  role: lower
+  divider_detected: 1238
+  overlap: 40
+- id: unit_7_p4u
+  file: units/unit_7_p4u.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1310
+  pixels: 1420x1310
+  role: upper
+  divider_detected: 1270
+  overlap: 40
+- id: unit_8_p4l
+  file: units/unit_8_p4l.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 1230
+  - 1500
+  - 2483
+  pixels: 1420x1253
+  role: lower
+  divider_detected: 1270
+  overlap: 40
+- id: unit_9_p5u
+  file: units/unit_9_p5u.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1241
+  pixels: 1420x1241
+  role: upper
+  divider_detected: 1201
+  overlap: 40
+- id: unit_10_p5l
+  file: units/unit_10_p5l.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 1161
+  - 1500
+  - 2373
+  pixels: 1420x1212
+  role: lower
+  divider_detected: 1201
+  overlap: 40
+excluded:
+- region: p1 上段 우측 (표제 우측 영역, x>?)
+  reason: 본 1편 패턴 가정 — 上段 이전 기사가 표제 우측까지 흘러옴 (OCR 후 검증 갱신)
+- region: 마지막 p 下段 (다음 기사 시작 영역 가능)
+  reason: 본 기사 결말 후 다음 기사 시작 가능. OCR 결과로 검증 후 자르기 갱신.
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 섹션 라벨 + 페이지번호
+ancillary:
+  section_label: 講演
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 24
+  - page: page_002.jpg
+    value: '?'
+    hanja: 25
+  - page: page_003.jpg
+    value: '?'
+    hanja: 26
+  - page: page_004.jpg
+    value: '?'
+    hanja: 27
+  - page: page_005.jpg
+    value: '?'
+    hanja: 28
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default dual-band L1 적용 — OCR
+    결과로 검증 대기)
+  phase_3_ocr: pending
+  phase_4_consensus_and_correction: pending
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv
+units_previous_fixed1180:
+- id: unit_1_p1u
+  file: units/unit_1_p1u.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p1l
+  file: units/unit_2_p1l.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2381
+  pixels: 1420x1201
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p2u
+  file: units/unit_3_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p2l
+  file: units/unit_4_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2473
+  pixels: 1420x1293
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p3u
+  file: units/unit_5_p3u.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p3l
+  file: units/unit_6_p3l.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2409
+  pixels: 1420x1229
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_7_p4u
+  file: units/unit_7_p4u.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_8_p4l
+  file: units/unit_8_p4l.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2483
+  pixels: 1420x1303
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_9_p5u
+  file: units/unit_9_p5u.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_10_p5l
+  file: units/unit_10_p5l.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2373
+  pixels: 1420x1193
+  role: tail
+  contains: TODO (OCR 후 자동 판단)

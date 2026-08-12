@@ -1,0 +1,17 @@
+# claude-opus-4-7 via Anthropic API — vision OCR (2026-05-09)
+# Source: 104_默念_1919-06/units/unit_10_p5l.png
+# Tokens: in=2788 out=113 elapsed=7.6s
+
+[col 01]
+一、見性何處見　性亦我性
+守心何處守　心亦我心
+　故
+
+[col 02]
+覺我者能見性　亦能守心
+二、我心正則失地之心亦正
+我心亂則萬物之源亦亂
+　故
+
+[col 03]
+我心能造天堂　亦能自造地獄

@@ -39,7 +39,138 @@ layout:
   body_left_margin: 80
   hanja_ratio_estimate: ~0.80
   oldhangul_density: low_to_mid
+  divider_source: detected per page (detect_divider.py, overlap=40px, 2026-08-12)
 units:
+- id: unit_1_p1u
+  file: units/unit_1_p1u.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1201
+  pixels: 1420x1180
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+  divider_detected: true
+- id: unit_2_p1l
+  file: units/unit_2_p1l.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 1121
+  - 1500
+  - 2327
+  pixels: 1420x1147
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+  divider_detected: true
+- id: unit_3_p2u
+  file: units/unit_3_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1217
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+  divider_detected: true
+- id: unit_4_p2l
+  file: units/unit_4_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1137
+  - 1500
+  - 2397
+  pixels: 1420x1217
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+  divider_detected: true
+- id: unit_5_p3u
+  file: units/unit_5_p3u.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1187
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+  divider_detected: true
+- id: unit_6_p3l
+  file: units/unit_6_p3l.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 1107
+  - 1500
+  - 2327
+  pixels: 1420x1147
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+  divider_detected: true
+- id: unit_7_p4u
+  file: units/unit_7_p4u.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1242
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+  divider_detected: true
+- id: unit_8_p4l
+  file: units/unit_8_p4l.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 1162
+  - 1500
+  - 2403
+  pixels: 1420x1223
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
+  divider_detected: true
+excluded:
+- region: p1 上段 우측 (표제 우측 영역, x>?)
+  reason: 본 1편 패턴 가정 — 上段 이전 기사가 표제 우측까지 흘러옴 (OCR 후 검증 갱신)
+- region: 마지막 p 下段 (다음 기사 시작 영역 가능)
+  reason: 본 기사 결말 후 다음 기사 시작 가능. OCR 결과로 검증 후 자르기 갱신.
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 섹션 라벨 + 페이지번호
+ancillary:
+  section_label: 敎理部
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 9
+  - page: page_002.jpg
+    value: '?'
+    hanja: 10
+  - page: page_003.jpg
+    value: '?'
+    hanja: 11
+  - page: page_004.jpg
+    value: '?'
+    hanja: 12
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default dual-band L1 적용 — OCR
+    결과로 검증 대기)
+  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=149, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv
+units_previous_fixed1180:
 - id: unit_1_p1u
   file: units/unit_1_p1u.png
   page: page_001.jpg
@@ -128,36 +259,3 @@ units:
   pixels: 1420x1223
   role: tail
   contains: TODO (OCR 후 자동 판단)
-excluded:
-- region: p1 上段 우측 (표제 우측 영역, x>?)
-  reason: 본 1편 패턴 가정 — 上段 이전 기사가 표제 우측까지 흘러옴 (OCR 후 검증 갱신)
-- region: 마지막 p 下段 (다음 기사 시작 영역 가능)
-  reason: 본 기사 결말 후 다음 기사 시작 가능. OCR 결과로 검증 후 자르기 갱신.
-- region: 모든 페이지 좌측 가장자리 (x<80)
-  reason: 부속 — 섹션 라벨 + 페이지번호
-ancillary:
-  section_label: 敎理部
-  page_numbers:
-  - page: page_001.jpg
-    value: '?'
-    hanja: 9
-  - page: page_002.jpg
-    value: '?'
-    hanja: 10
-  - page: page_003.jpg
-    value: '?'
-    hanja: 11
-  - page: page_004.jpg
-    value: '?'
-    hanja: 12
-processing_state:
-  phase_2_1_unit_extraction: completed (2026-05-09, default dual-band L1 적용 — OCR
-    결과로 검증 대기)
-  phase_3_ocr: completed_2engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro)
-  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=149, human_mediation_pending)
-  phase_5_high_fidelity_transcript: pending
-  phase_6_modern_reading_version: pending
-policy_refs:
-  series_design: _design/2026-05-08_journal_intermediation_v01.md
-  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
-  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv

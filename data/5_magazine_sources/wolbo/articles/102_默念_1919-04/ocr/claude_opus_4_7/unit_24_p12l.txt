@@ -1,0 +1,5 @@
+# claude-opus-4-7 via Anthropic API — vision OCR (2026-05-09)
+# Source: 102_默念_1919-04/units/unit_24_p12l.png
+# Tokens: in=2584 out=9 elapsed=2.1s
+
+[illustration]

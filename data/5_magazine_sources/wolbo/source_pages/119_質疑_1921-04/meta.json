@@ -1,0 +1,85 @@
+{
+  "cnts_id": "CNTS-00048051824",
+  "fetched_at": "2026-08-12T08:44:26+09:00",
+  "manifest": {
+    "cnts_id": "CNTS-00048051824",
+    "kolis_no": "",
+    "title": "質疑者에게 答함",
+    "author_hangul": "야뢰",
+    "author_hanja": "夜雷",
+    "publisher": "天道敎會月報社",
+    "pub_date": "19210415",
+    "holding": "디지털도서관 디지털자료실",
+    "page_count_meta": "",
+    "format": "온라인자료",
+    "data_class_cd": "CH4B",
+    "has_origin_link": "1",
+    "refworks_sp": "",
+    "list_idx": "33",
+    "page_num": "1",
+    "source_url": "https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048051824&viewType=C&category=기사",
+    "tonggwon": "128",
+    "section": "",
+    "page_in_journal": "53"
+  },
+  "viewer_vars": {
+    "cno": "CNTS-00048051824",
+    "srcpath": "/raid5/Imagedb/NCL_DB_K/2004/14457273",
+    "ext": "JPG",
+    "vol_maxpage": "8",
+    "LicenseType": "0",
+    "DataClassCd": "CH4B",
+    "CopyrightType": "N",
+    "organId": "",
+    "kolis_no": "KSE000001443",
+    "saveYn": "Y",
+    "printYn": "Y"
+  },
+  "download": {
+    "vol_maxpage": 8,
+    "cur_vol": 0,
+    "pages": [
+      {
+        "page": 1,
+        "path": "page_001.jpg",
+        "bytes": 226684
+      },
+      {
+        "page": 2,
+        "path": "page_002.jpg",
+        "bytes": 245516
+      },
+      {
+        "page": 3,
+        "path": "page_003.jpg",
+        "bytes": 246952
+      },
+      {
+        "page": 4,
+        "path": "page_004.jpg",
+        "bytes": 239256
+      },
+      {
+        "page": 5,
+        "path": "page_005.jpg",
+        "bytes": 220979
+      },
+      {
+        "page": 6,
+        "path": "page_006.jpg",
+        "bytes": 236516
+      },
+      {
+        "page": 7,
+        "path": "page_007.jpg",
+        "bytes": 251796
+      },
+      {
+        "page": 8,
+        "path": "page_008.jpg",
+        "bytes": 209412
+      }
+    ],
+    "total_bytes": 1877111
+  }
+}

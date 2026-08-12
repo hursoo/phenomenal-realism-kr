@@ -36,7 +36,106 @@ layout:
   body_left_margin: 80
   hanja_ratio_estimate: ~0.80
   oldhangul_density: very_low
+  divider_source: detected per page (detect_divider.py, overlap=40px, 2026-08-12)
 units:
+- id: unit_1_p1u
+  file: units/unit_1_p1u.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 607
+  - 1236
+  pixels: 527x1180
+  role: start
+  contains: 표제 「勸誘天下失樂者」 + 저자명 「李敦化」 + 좌측 본문 1컬럼
+  divider_detected: true
+- id: unit_2_p1l
+  file: units/unit_2_p1l.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 1156
+  - 1500
+  - 2300
+  pixels: 1420x1120
+  role: continuation
+  contains: p1 하단 본문 (snake 흐름)
+  divider_detected: true
+- id: unit_3_p2u
+  file: units/unit_3_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1269
+  pixels: 1420x1180
+  role: continuation
+  contains: p2 상단 본문
+  divider_detected: true
+- id: unit_4_p2l
+  file: units/unit_4_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1189
+  - 1500
+  - 2300
+  pixels: 1420x1120
+  role: continuation
+  contains: p2 하단 본문
+  divider_detected: true
+- id: unit_5_p3u
+  file: units/unit_5_p3u.png
+  page: page_003.jpg
+  crop: &id001
+  - 1200
+  - 0
+  - 1500
+  - 1180
+  pixels: 300x1180
+  role: tail
+  contains: p3 상단 우측 본 기사 꼬리 (5컬럼 분량)
+excluded:
+- region: p1 upper, x>607
+  reason: 이전 기사의 마지막 컬럼 (「깃다云ᄒᆞ노라」 등). 표제 우측에 위치.
+- region: p3 upper, x<1200
+  reason: 다음 기사 「吾敎와 人族大活의 目的」(崔安國) 표제(~x=1150) + 저자명(~x=1185) + 그 좌측 본문
+- region: p3 lower (전체)
+  reason: 다음 기사 본문의 snake 연속
+- region: 모든 페이지 좌측 가장자리 x<80
+  reason: 부속 정보 — 「講演」 섹션 표시 + 페이지번호 (二五/二六/二七). 본 시리즈 처리 정책 (가) — 본문에 포함된 채 OCR하고
+    후처리에서 분리, 메타로 별도 기록 (현 yaml).
+ancillary:
+  section_label: 講演
+  page_numbers:
+  - page: page_001.jpg
+    value: 二五
+    hanja: 25
+  - page: page_002.jpg
+    value: 二六
+    hanja: 26
+  - page: page_003.jpg
+    value: 二七
+    hanja: 27
+processing_state:
+  phase_1_measurement: completed (2026-05-09, _design/2026-05-09_cheondogyo_wolbo_phase1_sample.md)
+  phase_2_1_unit_extraction: completed (2026-05-09)
+  phase_2_2_secondary_sample_extraction: pending
+  phase_2_3_tool_availability: pending
+  phase_2_4_tool_comparison: pending
+  phase_2_5_tool_selection: pending
+  phase_3_ocr: completed_3engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro+Paddle)
+  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=87, human_mediation_pending)
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-09_cheondogyo_wolbo_phase1_sample.md
+  cumulative_safeguards: CLAUDE.md '누적 보호 장치' 3 (.versions, log.jsonl, .provenance)
+  series_index: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/out/yid_99_with_downloads.md
+    (1910-1924, 75편 다운로드 보유)
+units_previous_fixed1180:
 - id: unit_1_p1u
   file: units/unit_1_p1u.png
   page: page_001.jpg
@@ -84,49 +183,7 @@ units:
 - id: unit_5_p3u
   file: units/unit_5_p3u.png
   page: page_003.jpg
-  crop:
-  - 1200
-  - 0
-  - 1500
-  - 1180
+  crop: *id001
   pixels: 300x1180
   role: tail
   contains: p3 상단 우측 본 기사 꼬리 (5컬럼 분량)
-excluded:
-- region: p1 upper, x>607
-  reason: 이전 기사의 마지막 컬럼 (「깃다云ᄒᆞ노라」 등). 표제 우측에 위치.
-- region: p3 upper, x<1200
-  reason: 다음 기사 「吾敎와 人族大活의 目的」(崔安國) 표제(~x=1150) + 저자명(~x=1185) + 그 좌측 본문
-- region: p3 lower (전체)
-  reason: 다음 기사 본문의 snake 연속
-- region: 모든 페이지 좌측 가장자리 x<80
-  reason: 부속 정보 — 「講演」 섹션 표시 + 페이지번호 (二五/二六/二七). 본 시리즈 처리 정책 (가) — 본문에 포함된 채 OCR하고
-    후처리에서 분리, 메타로 별도 기록 (현 yaml).
-ancillary:
-  section_label: 講演
-  page_numbers:
-  - page: page_001.jpg
-    value: 二五
-    hanja: 25
-  - page: page_002.jpg
-    value: 二六
-    hanja: 26
-  - page: page_003.jpg
-    value: 二七
-    hanja: 27
-processing_state:
-  phase_1_measurement: completed (2026-05-09, _design/2026-05-09_cheondogyo_wolbo_phase1_sample.md)
-  phase_2_1_unit_extraction: completed (2026-05-09)
-  phase_2_2_secondary_sample_extraction: pending
-  phase_2_3_tool_availability: pending
-  phase_2_4_tool_comparison: pending
-  phase_2_5_tool_selection: pending
-  phase_3_ocr: completed_3engine_2026-05-10 (Claude_Opus_4.7+Gemini_2.5_Pro+Paddle)
-  phase_4_consensus_and_correction: draft_v0_auto_2026-05-10 (warnings=87, human_mediation_pending)
-  phase_5_high_fidelity_transcript: pending
-  phase_6_modern_reading_version: pending
-policy_refs:
-  series_design: _design/2026-05-09_cheondogyo_wolbo_phase1_sample.md
-  cumulative_safeguards: CLAUDE.md '누적 보호 장치' 3 (.versions, log.jsonl, .provenance)
-  series_index: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/out/yid_99_with_downloads.md
-    (1910-1924, 75편 다운로드 보유)

@@ -1,0 +1,17 @@
+# Gemini gemini-2.5-pro vision OCR
+# Source: unit_10_p5l.png
+# Usage: prompt_tokens=565 candidates_tokens=101 total=1685
+
+[col 01]
+無物이是有物、無我가是有我
+無是가是有是、無非가是有非
+故
+大人은無言、無言이是多言
+大物은無動、無動이是大動
+圓觀이면天地萬物이是我一身
+偏觀이면四肢百體가皆吾仇敵
+故
+
+[col 02]
+無觀이是大觀
+有觀이是小觀

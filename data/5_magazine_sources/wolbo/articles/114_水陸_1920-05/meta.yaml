@@ -1,0 +1,473 @@
+article:
+  series_index: 114
+  slug: 水陸_1920-05
+  cnts_id: CNTS-00048037937
+  title: 水陸三千里
+  author: 夜雷
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 117
+  publication_date: 1920-05-15
+  section: 講演
+  page_in_journal: 80
+  partial_download: false
+  source_url: https://www.nl.go.kr/NL/contents/search.do?viewKey=CNTS-00048037937&viewType=C&category=기사
+source_pages:
+- file: page_001.jpg
+  sha256: 6b35db881b351354c83df2d06231cfbadefda9a46f2de4a7b91b67a8ef178e06
+  bytes: 200069
+  pixels: 1500x2342
+- file: page_002.jpg
+  sha256: 8f91942bc192df1fc2e89225e7b274ed37e1e60950dc9bcdcfd4cabd168b1c94
+  bytes: 208649
+  pixels: 1500x2309
+- file: page_003.jpg
+  sha256: c6d843e66b47e86b066ff164a8d6cd1fb731492550288c4e09e04117d6652754
+  bytes: 222887
+  pixels: 1500x2349
+- file: page_004.jpg
+  sha256: 283b07bf9a7993805b9c17259af2d0eb80d6f2cbe17ab4e4ed2fefea9d063d21
+  bytes: 207905
+  pixels: 1500x2325
+- file: page_005.jpg
+  sha256: d0e5ea663cf3700967f85036d10ea2d69a572339a4b4cdccb872ca5c05ef4d64
+  bytes: 221345
+  pixels: 1500x2415
+- file: page_006.jpg
+  sha256: 4af676b8b095ece9d14502c4148517b9357476f31fdd2274f6268c87f2afe25d
+  bytes: 349945
+  pixels: 1500x2382
+- file: page_007.jpg
+  sha256: 7e6a5a68202e30c8085fc381ec3e69a51f79226d5de502f6a0ce4adeb45df4d3
+  bytes: 204328
+  pixels: 1500x2331
+- file: page_008.jpg
+  sha256: 64d8521a2f11873761282e06c8b220889632fe025a3c8c21d68d4b39637508de
+  bytes: 181929
+  pixels: 1500x2292
+source_dir: hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048037937/
+layout:
+  page_orientation: vertical_writing
+  bands_per_page: 2
+  divider_kind: thin_wavy_line
+  divider_y: 1180
+  layout_type: horizontal_only
+  reading_order: snake
+  body_left_margin: 80
+  hanja_ratio_estimate: ~0.80
+  oldhangul_density: low_to_mid
+  divider_source: detected per page (detect_divider.py, overlap=40px, 2026-08-12)
+units:
+- id: unit_1_p1u
+  file: units/unit_1_p1u.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1220
+  pixels: 1420x1220
+  role: upper
+  divider_detected: 1180
+  overlap: 40
+- id: unit_2_p1l
+  file: units/unit_2_p1l.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 1140
+  - 1500
+  - 2342
+  pixels: 1420x1202
+  role: lower
+  divider_detected: 1180
+  overlap: 40
+- id: unit_3_p2u
+  file: units/unit_3_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1220
+  pixels: 1420x1220
+  role: upper
+  divider_detected: 1180
+  overlap: 40
+- id: unit_4_p2l
+  file: units/unit_4_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1140
+  - 1500
+  - 2309
+  pixels: 1420x1169
+  role: lower
+  divider_detected: 1180
+  overlap: 40
+- id: unit_5_p3u
+  file: units/unit_5_p3u.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1220
+  pixels: 1420x1220
+  role: upper
+  divider_detected: 1180
+  overlap: 40
+- id: unit_6_p3l
+  file: units/unit_6_p3l.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 1140
+  - 1500
+  - 2349
+  pixels: 1420x1209
+  role: lower
+  divider_detected: 1180
+  overlap: 40
+- id: unit_7_p4u
+  file: units/unit_7_p4u.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1220
+  pixels: 1420x1220
+  role: upper
+  divider_detected: 1180
+  overlap: 40
+- id: unit_8_p4l
+  file: units/unit_8_p4l.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 1140
+  - 1500
+  - 2325
+  pixels: 1420x1185
+  role: lower
+  divider_detected: 1180
+  overlap: 40
+- id: unit_9_p5u
+  file: units/unit_9_p5u.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1220
+  pixels: 1420x1220
+  role: upper
+  divider_detected: 1180
+  overlap: 40
+- id: unit_10_p5l
+  file: units/unit_10_p5l.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 1140
+  - 1500
+  - 2415
+  pixels: 1420x1275
+  role: lower
+  divider_detected: 1180
+  overlap: 40
+- id: unit_11_p6u
+  file: units/unit_11_p6u.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1220
+  pixels: 1420x1220
+  role: upper
+  divider_detected: 1180
+  overlap: 40
+- id: unit_12_p6l
+  file: units/unit_12_p6l.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 1140
+  - 1500
+  - 2382
+  pixels: 1420x1242
+  role: lower
+  divider_detected: 1180
+  overlap: 40
+- id: unit_13_p7u
+  file: units/unit_13_p7u.png
+  page: page_007.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1220
+  pixels: 1420x1220
+  role: upper
+  divider_detected: 1180
+  overlap: 40
+- id: unit_14_p7l
+  file: units/unit_14_p7l.png
+  page: page_007.jpg
+  crop:
+  - 80
+  - 1140
+  - 1500
+  - 2331
+  pixels: 1420x1191
+  role: lower
+  divider_detected: 1180
+  overlap: 40
+- id: unit_15_p8u
+  file: units/unit_15_p8u.png
+  page: page_008.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1220
+  pixels: 1420x1220
+  role: upper
+  divider_detected: 1180
+  overlap: 40
+- id: unit_16_p8l
+  file: units/unit_16_p8l.png
+  page: page_008.jpg
+  crop:
+  - 80
+  - 1140
+  - 1500
+  - 2292
+  pixels: 1420x1152
+  role: lower
+  divider_detected: 1180
+  overlap: 40
+excluded:
+- region: p1 上段 우측 (표제 우측 영역, x>?)
+  reason: 본 1편 패턴 가정 — 上段 이전 기사가 표제 우측까지 흘러옴 (OCR 후 검증 갱신)
+- region: 마지막 p 下段 (다음 기사 시작 영역 가능)
+  reason: 본 기사 결말 후 다음 기사 시작 가능. OCR 결과로 검증 후 자르기 갱신.
+- region: 모든 페이지 좌측 가장자리 (x<80)
+  reason: 부속 — 섹션 라벨 + 페이지번호
+ancillary:
+  section_label: 講演
+  page_numbers:
+  - page: page_001.jpg
+    value: '?'
+    hanja: 80
+  - page: page_002.jpg
+    value: '?'
+    hanja: 81
+  - page: page_003.jpg
+    value: '?'
+    hanja: 82
+  - page: page_004.jpg
+    value: '?'
+    hanja: 83
+  - page: page_005.jpg
+    value: '?'
+    hanja: 84
+  - page: page_006.jpg
+    value: '?'
+    hanja: 85
+  - page: page_007.jpg
+    value: '?'
+    hanja: 86
+  - page: page_008.jpg
+    value: '?'
+    hanja: 87
+processing_state:
+  phase_2_1_unit_extraction: completed (2026-05-09, default dual-band L1 적용 — OCR
+    결과로 검증 대기)
+  phase_3_ocr: pending
+  phase_4_consensus_and_correction: pending
+  phase_5_high_fidelity_transcript: pending
+  phase_6_modern_reading_version: pending
+policy_refs:
+  series_design: _design/2026-05-08_journal_intermediation_v01.md
+  consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
+  series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv
+units_previous_fixed1180:
+- id: unit_1_p1u
+  file: units/unit_1_p1u.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p1l
+  file: units/unit_2_p1l.png
+  page: page_001.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2342
+  pixels: 1420x1162
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p2u
+  file: units/unit_3_p2u.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p2l
+  file: units/unit_4_p2l.png
+  page: page_002.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2309
+  pixels: 1420x1129
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p3u
+  file: units/unit_5_p3u.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_6_p3l
+  file: units/unit_6_p3l.png
+  page: page_003.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2349
+  pixels: 1420x1169
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_7_p4u
+  file: units/unit_7_p4u.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_8_p4l
+  file: units/unit_8_p4l.png
+  page: page_004.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2325
+  pixels: 1420x1145
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_9_p5u
+  file: units/unit_9_p5u.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_10_p5l
+  file: units/unit_10_p5l.png
+  page: page_005.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2415
+  pixels: 1420x1235
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_11_p6u
+  file: units/unit_11_p6u.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_12_p6l
+  file: units/unit_12_p6l.png
+  page: page_006.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2382
+  pixels: 1420x1202
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_13_p7u
+  file: units/unit_13_p7u.png
+  page: page_007.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_14_p7l
+  file: units/unit_14_p7l.png
+  page: page_007.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2331
+  pixels: 1420x1151
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_15_p8u
+  file: units/unit_15_p8u.png
+  page: page_008.jpg
+  crop:
+  - 80
+  - 0
+  - 1500
+  - 1180
+  pixels: 1420x1180
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_16_p8l
+  file: units/unit_16_p8l.png
+  page: page_008.jpg
+  crop:
+  - 80
+  - 1180
+  - 1500
+  - 2292
+  pixels: 1420x1112
+  role: tail
+  contains: TODO (OCR 후 자동 판단)

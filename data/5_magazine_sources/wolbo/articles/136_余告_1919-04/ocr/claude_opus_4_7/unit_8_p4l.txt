@@ -1,0 +1,12 @@
+# claude-opus-4-7 via Anthropic API — vision OCR (2026-05-09)
+# Source: 136_余告_1919-04/units/unit_8_p4l.png
+# Tokens: in=2890 out=111 elapsed=7.6s
+
+[col 01]
+然이나人生은此絕對苦痛과絕對地獄을打勝ᄒᆞ야此
+
+[col 02]
+로神의最後目的되는極樂과天國을實現ᄒᆞ에셔人生의威
+
+[col 03]
+力이出ᄒᆞᄂᆞ도다

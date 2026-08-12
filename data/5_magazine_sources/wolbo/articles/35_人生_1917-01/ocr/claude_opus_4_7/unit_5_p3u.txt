@@ -1,12 +1,12 @@
 # claude-opus-4-7 via Anthropic API — vision OCR (2026-05-09)
 # Source: 35_人生_1917-01/units/unit_5_p3u.png
-# Tokens: in=2788 out=372 elapsed=11.3s
+# Tokens: in=2788 out=379 elapsed=14.2s
 
 [section_running] 敎門訂議
 
-[col 01] 논天道敎의眞意를忘却ᄒᆞ얏나냐天道敎
+[col 01] 는天道敎의眞意를忘却ᄒᆞ얏나냐天道敎
 
-[col 02] 大神師ㅣ汝等愚蠢에게飭ᄒᆞ此問題의解
+[col 02] 大神師ㅣ汝等愚衆에게飢ᄒᆞ此問題의解
 
 [col 03] 을與치안이ᄒᆞ얏나냐曰人乃天이니人이
 
@@ -34,4 +34,4 @@
 
 [col 15] 天이天에逆치안이ᄒᆞ며天이天에悖치아
 
-[col 16] 홈에在ᄒᆞ니唯世에在ᄒᆞ야大過가無ᄒᆞ면
+[col 16] ᄒᆞᆷ에在ᄒᆞ니唯世에在ᄒᆞ야大過가無ᄒᆞ면

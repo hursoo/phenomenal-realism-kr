@@ -43,11 +43,12 @@ layout:
   body_left_margin: 80
   hanja_ratio_estimate: ~0.70
   oldhangul_density: low
+  divider_source: detected per page (detect_divider.py, overlap=40px, 2026-08-12)
 units:
 - id: unit_1_p1
   file: units/unit_1_p1.png
   page: page_001.jpg
-  crop:
+  crop: &id001
   - 80
   - 0
   - 1500
@@ -58,7 +59,7 @@ units:
 - id: unit_2_p2
   file: units/unit_2_p2.png
   page: page_002.jpg
-  crop:
+  crop: &id002
   - 80
   - 0
   - 1500
@@ -69,7 +70,7 @@ units:
 - id: unit_3_p3
   file: units/unit_3_p3.png
   page: page_003.jpg
-  crop:
+  crop: &id003
   - 80
   - 0
   - 1500
@@ -80,7 +81,7 @@ units:
 - id: unit_4_p4
   file: units/unit_4_p4.png
   page: page_004.jpg
-  crop:
+  crop: &id004
   - 80
   - 0
   - 1500
@@ -91,7 +92,7 @@ units:
 - id: unit_5_p5
   file: units/unit_5_p5.png
   page: page_005.jpg
-  crop:
+  crop: &id005
   - 80
   - 0
   - 1500
@@ -133,3 +134,39 @@ policy_refs:
   series_design: _design/2026-05-08_journal_intermediation_v01.md
   consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_3.md
   series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv
+units_previous_fixed1180:
+- id: unit_1_p1
+  file: units/unit_1_p1.png
+  page: page_001.jpg
+  crop: *id001
+  pixels: 1420x2437
+  role: start
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_2_p2
+  file: units/unit_2_p2.png
+  page: page_002.jpg
+  crop: *id002
+  pixels: 1420x2493
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_3_p3
+  file: units/unit_3_p3.png
+  page: page_003.jpg
+  crop: *id003
+  pixels: 1420x2454
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_4_p4
+  file: units/unit_4_p4.png
+  page: page_004.jpg
+  crop: *id004
+  pixels: 1420x2494
+  role: continuation
+  contains: TODO (OCR 후 자동 판단)
+- id: unit_5_p5
+  file: units/unit_5_p5.png
+  page: page_005.jpg
+  crop: *id005
+  pixels: 1420x2446
+  role: tail
+  contains: TODO (OCR 후 자동 판단)
