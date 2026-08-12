@@ -113,7 +113,9 @@ python3 scripts/06_magazines/build_corpus_status.py     # CORPUS_STATUS.csv
   없다.** 『개벽』 74편이 본명 41 + 필명 33으로 잡힌 것과 정반대의 기준이다. 빠진 39편에는
   「默念論」(1919-04, **「現象即實在論」 어구의 출처**)과 「實在論으로 觀한 人乃天主義」(1920-11)가
   들어 있다. 곧 「82편에 없다」는 **「전산화한, 李敦化 본명 명의의 82편에 없다」**이다.
-  경위와 근거는 [`source_pages_audit.md`](source_pages_audit.md) §3.
+  경위와 근거는 [`source_pages_audit.md`](source_pages_audit.md) §3, 편별 목록은
+  [`yidonhwa_articles_index.md`](yidonhwa_articles_index.md)(창간~1922-05 · 168편 ·
+  확보 여부 표시).
 
 「없다」에 가장 가까운 진술은 **두 엔진의 원출력 어디에도 없다**이다. 「三派」가 그런
 경우다 — 두 판 전부에서 0회이며, 그래서 `keyword_index.csv`에 한 행도 없다.

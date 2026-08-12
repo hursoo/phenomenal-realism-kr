@@ -24,6 +24,7 @@
 | **어느 편이 얼마나 믿을 만한지 보고 싶다** | [`CORPUS_STATUS.csv`](CORPUS_STATUS.csv) — 편별 대시보드 |
 | **인용하려 한다** | [`TRUST.md`](TRUST.md) §4 → [`source_pages/`](source_pages/) → [`verified_passages.md`](verified_passages.md) |
 | **원본 그대로가 필요하다** | `articles/*/transcripts/`(초벌) · `articles/*/ocr/`(엔진 원출력) |
+| **이돈화가 월보에 쓴 글 전체를 보고 싶다** | [`yidonhwa_articles_index.md`](yidonhwa_articles_index.md) — 창간~1922-05, 168편, 확보 여부까지 |
 | **새 71편 편입 때 무엇을 다시 세나** | [`RECOUNT.md`](RECOUNT.md) |
 | **지면 폴더가 무엇인지 알고 싶다** | [`source_pages_audit.md`](source_pages_audit.md) · [`source_pages_MAP.csv`](source_pages_MAP.csv) |
 
@@ -50,6 +51,7 @@ wolbo/
 │   ├── NN_슬러그_YYYY-MM/     편 86 (전사 작업 폴더와 같은 이름)
 │   ├── _중복/                지면이 바이트 단위로 같은 폴더 10
 │   └── _편외/                코퍼스에 없는 글 3 + 별판 1
+├── yidonhwa_articles_index.md/.tsv  ★ 이돈화 명의 전체 목록 (창간~1922-05, 168편)
 ├── source_pages_audit.md     ★ 그 100폴더가 각각 무엇인가 (편 86·중복 10·별판 1·편외 3)
 ├── source_pages_MAP.csv      위 감사의 기계 판독본
 ├── verified_passages.md      대목별 원문 대조 기록 — 인용의 자격
