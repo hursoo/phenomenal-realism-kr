@@ -44,7 +44,8 @@ def find_divider(png, lo=0.38, hi=0.62):
     thr = int(bg * 0.72)
     y0, y1 = int(h * lo), int(h * hi)
     ink = [sum(1 for x in range(0, w, 3) if px[x, y] < thr) for y in range(y0, y1)]
-    # 잉크가 거의 없는 가장 긴 구간
+
+    # ① 잉크가 거의 없는 가장 긴 구간
     best = (0, None)
     run = None
     for i, v in enumerate(ink + [999]):
@@ -54,10 +55,21 @@ def find_divider(png, lo=0.38, hi=0.62):
             if i - run > best[0]:
                 best = (i - run, (run, i))
             run = None
-    if best[1] is None:
-        return None, h, bg
-    a, b = best[1]
-    return y0 + (a + b) // 2, h, bg
+    if best[0] >= 12:                       # 넉넉한 흰 띠를 찾았다
+        a, b = best[1]
+        return y0 + (a + b) // 2, h, bg
+
+    # ② 못 찾으면 **골짜기**를 찾는다. 구분선(물결선) 자체가 잉크여서 흰 띠가
+    #    선 위아래로 갈리면 ①이 실패한다. 이때는 매끄럽게 편 잉크 곡선의
+    #    가장 깊은 골이 곧 이음매다. (2026-08-12 — C30 3면 중 2면이 ①에서 걸렸다)
+    win = 15
+    sm = [sum(ink[max(0, i - win):i + win + 1]) / len(ink[max(0, i - win):i + win + 1])
+          for i in range(len(ink))]
+    med = sorted(sm)[len(sm) // 2]
+    lowest = min(range(len(sm)), key=lambda i: sm[i])
+    if med > 0 and sm[lowest] < med * 0.45:
+        return y0 + lowest, h, bg
+    return None, h, bg
 
 
 def main():
