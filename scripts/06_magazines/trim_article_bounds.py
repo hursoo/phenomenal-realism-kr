@@ -174,6 +174,8 @@ def gold_text(p):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--engine', default='claude_opus_4_7')
+    ap.add_argument('--other', default='',
+                    help='붕괴 판별에 쓸 반대 엔진. 한쪽이 3배를 넘으면 그 단을 뺀다')
     ap.add_argument('--apply', action='store_true')
     ap.add_argument('--report', action='store_true')
     ap.add_argument('--score', action='store_true')
@@ -205,6 +207,7 @@ def main():
         return
 
     made = cut = 0
+    collapsed_units = []
     for d in sorted((WB / 'articles').iterdir()):
         m = re.match(r'(\d+)_', d.name)
         eng = d / 'ocr' / args.engine
@@ -224,6 +227,23 @@ def main():
             if s or e < len(items):
                 print(f'  #{n:<4} {d.name[:24]:<26} 앞{s:>3} 뒤{len(items)-e:>3} '
                       f'글줄 · {dropped:>5}자 ({dropped/max(total,1)*100:4.1f}%) 걷어냄')
+        # 🔴 엔진이 한 단에서 무너져 같은 말을 되뇌는 일이 있다(`_ruleset.md` §8-1).
+        #    2026-08-12에 #119 unit_8 에서 Gemini가 50,776자를 뱉었고(Claude 1,870자)
+        #    그 한 단이 코퍼스 전체 靈魂 수치를 서른 배로 만들었다. 같은 지면이니
+        #    분량이 3배 차이 날 수 없다 — 긴 쪽을 통째로 뺀다.
+        bad = set()
+        if args.other:
+            od = d / 'ocr' / args.other
+            if od.is_dir():
+                for f in files:
+                    of = od / f.name
+                    if not of.exists():
+                        continue
+                    a = len(N(f.read_text(encoding='utf-8')))
+                    b = len(N(of.read_text(encoding='utf-8')))
+                    if b and a > 3 * b + 300:
+                        bad.add(f.stem); collapsed_units.append((d.name, f.stem, a, b))
+
         if args.apply:
             out = d / 'ocr' / f'{args.engine}_trimmed'
             out.mkdir(parents=True, exist_ok=True)
@@ -232,6 +252,11 @@ def main():
             for k, t, u in keep:
                 by_unit.setdefault(u, []).append((k, t))
             for f in files:
+                if f.stem in bad:      # 무너진 단 — 빈 파일로 둔다. 없는 것이 낫다
+                    (out / f.name).write_text(
+                        f'# {args.engine} — 🔴 이 단은 엔진이 무너져(반대 엔진의 3배 초과) 뺐다\n',
+                        encoding='utf-8')
+                    continue
                 lines = [f'# {args.engine} — 기사 경계 밖을 걷어낸 판({Path(__file__).name})',
                          f'# Source: {f.name}', '']
                 for i, (k, t) in enumerate(by_unit.get(f.stem, []), 1):
@@ -239,6 +264,10 @@ def main():
                 (out / f.name).write_text('\n'.join(lines) + '\n', encoding='utf-8')
             made += 1
         cut += dropped
+    if collapsed_units:
+        print(f'🔴 엔진이 무너져 뺀 단 {len(collapsed_units)}개')
+        for slug, u, a, b in sorted(collapsed_units, key=lambda x: -x[2])[:6]:
+            print(f'   {slug[:24]:<26} {u:<14} {a:>7,}자 (반대 {b:,}자)')
     if args.apply:
         print(f'{made}편 → ocr/{args.engine}_trimmed/ · 걷어낸 글자 {cut:,}')
     elif args.report:

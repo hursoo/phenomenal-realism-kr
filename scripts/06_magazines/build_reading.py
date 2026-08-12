@@ -36,6 +36,59 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_keyword_index import CROSS_CHECKED, CROSS_CHECKED_DATE, VERIFIED_FULL  # noqa: E402
 from wolbo_markers import GRADES, MARKER, counts, load_ledger, resolve, tag  # noqa: E402
+from trim_article_bounds import (  # noqa: E402
+    N as _N, cut_points as _cut, load_tables as _tables, seq as _seq, units_of as _units)
+
+
+def _trim_body(body, adir, n, tabs):
+    """초벌본 본문에서 **기사 경계 밖**을 걷어낸다.
+
+    경계는 이미 `trim_article_bounds.py`가 엔진 판독(글줄 단위)에서 찾아 두었다.
+    문제는 초벌본이 글줄로 나뉘어 있지 않고 **마커가 박힌 연속된 문자열**이라는 것.
+
+    그래서 이렇게 한다 — 본문을 한 글자씩 훑으며 **C쪽 평문**을 만들되 각 글자가
+    원문의 몇 번째에서 왔는지 **표를 함께 만든다.** 그러면 평문에서 찾은 자리를
+    원문 자리로 **표 조회**로 바꿀 수 있다. 되짚기가 아니다.
+    """
+    idx, ae, cat = tabs
+    eng = adir / 'ocr' / 'claude_opus_4_7'
+    if not eng.is_dir():
+        return body, 0
+    items = _seq(_units(eng))
+    s, e = _cut(items, idx.get(n, {}).get('title', ''),
+                cat.get(n, {}).get('author', ''), ae.get(n, {}).get('next_title', ''))
+    if s == 0 and e == len(items):
+        return body, 0
+    head = _N(''.join(x[1] for x in items[s:] if x[0] == 'col'))[:40]
+    tail = _N(''.join(x[1] for x in items[:e] if x[0] == 'col'))[-40:]
+
+    # C쪽 평문 + 위치표.
+    # ⚠️ 마커에서 나온 글자는 원문에서 **구간**을 차지한다. 시작만 들고 있으면
+    #    꼬리를 되돌릴 때 그 마커가 통째로 잘려 나간다(2026-08-13에 겪음 —
+    #    판독 층보다 6~36%p 더 잘렸다). 시작과 끝을 **둘 다** 들고 간다.
+    plain, span, i = [], [], 0
+    for m in MARKER.finditer(body):
+        for k, ch in enumerate(body[i:m.start()]):
+            if not ch.isspace():
+                plain.append(ch); span.append((i + k, i + k + 1))
+        for ch in m.group(1):
+            if not ch.isspace():
+                plain.append(ch); span.append((m.start(), m.end()))
+        i = m.end()
+    for k, ch in enumerate(body[i:]):
+        if not ch.isspace():
+            plain.append(ch); span.append((i + k, i + k + 1))
+    P = ''.join(plain)
+
+    a = P.find(head) if head else -1
+    b = P.rfind(tail) if tail else -1
+    if a < 0 and b < 0:
+        return body, 0
+    lo = span[a][0] if a >= 0 else 0
+    hi = span[b + len(tail) - 1][1] if b >= 0 else len(body)
+    if hi <= lo:
+        return body, 0
+    return body[lo:hi], len(body) - (hi - lo)
 
 ROOT = Path(__file__).resolve().parents[2]
 WOLBO = ROOT / 'data' / '5_magazine_sources' / 'wolbo'
@@ -108,7 +161,13 @@ def render_draft(raw, section, pagemap, vterms, ledger):
     return body
 
 
+TRIM_LOG = []
+TABS = None
+
+
 def main():
+    global TABS
+    TABS = _tables()
     ledger = load_ledger(WOLBO / 'marker_decisions.csv')
     print(f'결정 대장 {len(ledger)}쌍 (marker_decisions.csv에서 사람의 결정이 하나로 모이는 것만)')
     OUT.mkdir(exist_ok=True)
@@ -175,8 +234,11 @@ def main():
                 print(f'⚠️ 초벌 없음: C{n}', file=sys.stderr)
                 continue
             raw = draft.read_text(encoding='utf-8')
-            c = counts(body_of(raw), section, pagemap, ledger)
-            body = render_draft(body_of(raw), section, pagemap, vterms, ledger)
+            # 기사 경계 밖(앞 기사 꼬리·다음 기사 머리·사진 캡션)을 걷어낸다
+            trimmed, dropped = _trim_body(body_of(raw), adir, n, TABS)
+            TRIM_LOG.append((n, slug, dropped))
+            c = counts(trimmed, section, pagemap, ledger)
+            body = render_draft(trimmed, section, pagemap, vterms, ledger)
             fm = dict(
                 base, author=author, status='미검수',
                 source=str(draft.relative_to(WOLBO)),

@@ -61,10 +61,18 @@ def side(v):
 def resolve(c, g, section=None, pagemap=None, ledger=None):
     """마커 한 건 → (본문에 넣을 문자열, 등급).
 
-    등급: 규칙 · 대장 · C · G · 미해소 · 면주
+    등급: 규칙 · 대장 · C · G · 미해소 · 면주 · 붕괴
     """
     raw_c, raw_g = c, g
     c, g = side(c), side(g)
+
+    # 🔴 엔진 붕괴 — 한쪽이 같은 말을 무한히 되뇐 것(`_ruleset.md` §8-1).
+    #    2026-08-13에 초벌본 전체에서 이런 마커 70개에 **299,884자**가 들어 있었다.
+    #    한 마커에 19,361자가 든 것도 있다(반대쪽은 2자). 같은 자리를 읽은 것이므로
+    #    분량이 세 배 넘게 벌어질 수 없다 — **짧은 쪽을 택한다.**
+    lo, hi = sorted((len(c), len(g)))
+    if hi >= 3 * lo + 300:
+        return (c if len(c) < len(g) else g), '붕괴'
 
     # 면번호 — 본문이 아니라 쪽 경계다. `<n>`으로 돌린다(§1의 보존 대상).
     for v in (c, g):
@@ -97,7 +105,7 @@ def resolve(c, g, section=None, pagemap=None, ledger=None):
     return '', '규칙'          # 양쪽 다 ∅ — 뺄 것도 없다
 
 
-GRADES = ('규칙', '대장', 'C', 'G', '미해소', '면주')
+GRADES = ('규칙', '대장', 'C', 'G', '미해소', '면주', '붕괴')
 
 
 def tag(text, grade):
