@@ -218,7 +218,7 @@ def main():
                         '**맞는지 이미지로 확인하고, 틀린 자리는 고쳐라.** '
                         '둘 다 틀렸으면 네 판독을 써라.\n'
                         f"  A: {c.get('A', '(없음)')}\n  B: {c.get('B', '(없음)')}")
-            for attempt in range(3):
+            for attempt in range(6):
                 try:
                     r = client.messages.create(
                         model=args.model, max_tokens=700, system=PROMPT,
@@ -230,12 +230,22 @@ def main():
                     tin += r.usage.input_tokens; tout += r.usage.output_tokens
                     break
                 except Exception as e:                       # noqa: BLE001
-                    if attempt == 2:
+                    # 잔액이 일시적으로 비는 일이 있다(자동 충전이 따라오기 전).
+                    # 그때는 **오래 기다렸다 다시 건다.** 짧게 세 번 재고 포기하면
+                    # 파일에 [ERROR]가 박히고, 채점은 그것을 「모델이 못 읽은 자리」로
+                    # 세어 그럴듯한 나쁜 점수를 만든다(2026-08-12에 두 번 겪었다).
+                    slow = 'credit balance' in str(e).lower()
+                    if attempt == 5:
                         txt = f'[ERROR {type(e).__name__}]'
                     else:
-                        time.sleep(3 * (attempt + 1))
+                        time.sleep((60 if slow else 3) * (attempt + 1))
             lines.append(f'[col {i:02d}] {txt}')
             print(f'  {u.stem} col{i:02d}  {txt[:44]}', flush=True)
+        # 절반 넘게 실패했으면 **쓰지 않는다.** 빈 자리로 남아야 눈에 띈다.
+        bad = sum(1 for x in lines if '[ERROR' in x)
+        if cols and bad > len(cols) / 2:
+            print(f'  ⚠️ {u.stem}: {bad}/{len(cols)} 실패 — 파일을 쓰지 않는다', flush=True)
+            continue
         dst.write_text('\n'.join(lines) + '\n', encoding='utf-8')
     print(f'\n{out_dir} · 토큰 in={tin} out={tout} '
           f'(대략 ${tin / 1e6 * 15 + tout / 1e6 * 75:.2f})')

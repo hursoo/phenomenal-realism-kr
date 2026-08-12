@@ -152,7 +152,7 @@ def main():
             continue
         img, box = strip_image(f, y, args.delta, args.scale)
         txt = ''
-        for attempt in range(3):
+        for attempt in range(6):
             try:
                 r = client.messages.create(
                     model=args.model, max_tokens=1600, system=PROMPT,
@@ -165,13 +165,17 @@ def main():
                 tin += r.usage.input_tokens; tout += r.usage.output_tokens
                 break
             except Exception as e:                        # noqa: BLE001
-                if attempt == 2:
+                slow = 'credit balance' in str(e).lower()   # 잔액 일시 소진 — 길게 기다린다
+                if attempt == 5:
                     txt = f'[ERROR {type(e).__name__}]'
                 else:
-                    time.sleep(3 * (attempt + 1))
+                    time.sleep((60 if slow else 3) * (attempt + 1))
         head = (f'# seam read via Anthropic ({args.model})\n'
                 f'# Source: {pg}  divider={y}  used={used}  offset={used - y:+}\n'
                 f'# crop={box}  scale={args.scale}\n\n')
+        if '[ERROR' in txt:
+            print(f'  ⚠️ {pg}: 실패 — 파일을 쓰지 않는다', flush=True)
+            continue
         dst.write_text(head + txt + '\n', encoding='utf-8')
         n = len(re.findall(r'^\[col', txt, re.M))
         print(f'  {pg} → 글줄 {n}줄', flush=True)
