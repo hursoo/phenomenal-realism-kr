@@ -45,6 +45,7 @@ import re
 import subprocess
 import sys
 import time
+import unicodedata
 import urllib.parse
 from pathlib import Path
 
@@ -80,41 +81,64 @@ def nl_search(kwd, pause=1.0):
     return out, r.stdout
 
 
+def nfkc(s):
+    """🔴 **NL 데이터에는 호환 한자가 섞여 있다.**
+
+    2026-08-12에 「第壹百拾二號」의 拾이 `U+F973`(CJK 호환 이체자)이고 보통 쓰는
+    `U+62FE`가 아니어서 호수를 못 읽었다. **눈으로는 같은 글자다.** 그래서 30건이
+    「호가 다름」으로 잘못 걸렸다. 문자열을 견주기 전에는 반드시 NFKC로 편다.
+    """
+    return unicodedata.normalize('NFKC', s or '')
+
+
 def norm(s):
-    return re.sub(r'[\s·,.()（）\[\]「」『』]', '', s or '')
+    return re.sub(r'[\s·,.()（）\[\]「」『』]', '', nfkc(s))
 
 
-HANJA_NUM = '零一二三四五六七八九'
+# 🔴 호수를 **만들어서 맞추면 안 된다.** NL의 표기가 한 가지가 아니다 —
+#   통63은 「第六十三號」인데 통105는 「第壹百五號」, 통116은 「第壹百拾六號」다.
+#   백 미만은 보통 자(十)를, 백 이상은 갖은자(壹·拾)를 쓴다. 게다가 「苐」·
+#   「天主敎會月報」 같은 오식도 섞인다. 그러니 **만들지 말고 읽는다.**
+DIGIT = {'零': 0, '一': 1, '壹': 1, '二': 2, '貳': 2, '兩': 2, '三': 3, '參': 3, '叁': 3,
+         '四': 4, '肆': 4, '五': 5, '伍': 5, '六': 6, '陸': 6, '七': 7, '柒': 7,
+         '八': 8, '捌': 8, '九': 9, '玖': 9}
+UNIT = {'十': 10, '拾': 10, '百': 100, '佰': 100}
+HO_RE = re.compile(r'[第苐弟]\s*([零一壹二貳兩三參叁四肆五伍六陸七柒八捌九玖十拾百佰]+)\s*[號号]')
 
 
-def hanja_ho(n):
-    """126 → 「第百二十六號」. 목록에 찍히는 호수 표기를 만든다."""
-    n = int(n)
-    if n <= 0:
-        return ''
-    out = ''
-    if n >= 100:
-        h = n // 100
-        out += ('' if h == 1 else HANJA_NUM[h]) + '百'
-        n %= 100
-    if n >= 10:
-        t_ = n // 10
-        out += ('' if t_ == 1 else HANJA_NUM[t_]) + '十'
-        n %= 10
-    if n:
-        out += HANJA_NUM[n]
-    return '第' + out + '號'
+def read_hanja(s):
+    """「壹百拾六」 → 116. 십·백 단위를 앞자리 없이 쓰는 옛 표기도 받는다."""
+    total, cur = 0, 0
+    for ch in s:
+        if ch in DIGIT:
+            cur = DIGIT[ch]
+        elif ch in UNIT:
+            u = UNIT[ch]
+            if u == 100:
+                total += (cur or 1) * 100
+            else:
+                total += (cur or 1) * 10
+            cur = 0
+        else:
+            return None
+    return total + cur
+
+
+def ho_of(listing_title):
+    """목록 제목에서 호수를 읽는다. 못 읽으면 None."""
+    m = HO_RE.search(nfkc(listing_title))
+    return read_hanja(m.group(1)) if m else None
 
 
 def pick(hits, title, tonggwon):
     """**호수**가 맞는 것을 고른다. 제목만으로는 연재·동명이 섞인다."""
-    ho = hanja_ho(tonggwon)
+    tg = int(tonggwon)
     cands = []
     for k, t in hits.items():
         score = 0
-        if ho and ho in t:                      # 「[天道敎會月報 第六十三號] 講演 : …」
+        if ho_of(t) == tg:                      # 「[天道敎會月報 第六十三號] 講演 : …」
             score += 10
-        if '天道敎會月報' in t or '천도교회월보' in t:
+        if re.search(r'天[道主]敎會月報|천도교회월보', nfkc(t)):  # 「天主敎會月報」 오식도 받는다
             score += 3
         body = t.split(':', 1)[-1]              # 「란 : 제목」에서 제목만
         n1, n2 = norm(body), norm(title)
@@ -131,8 +155,8 @@ def pick(hits, title, tonggwon):
         return top[1], top[2], '호수일치'
     if top[0] >= 10:
         return top[1], top[2], '⚠️호수만일치'
-    if top[0] >= 5:
-        return top[1], top[2], '⚠️제목만일치'
+    if top[0] >= 8:
+        return top[1], top[2], '⚠️월보이나 호가 다름'
     return None, None, '못찾음'
 
 
@@ -142,7 +166,39 @@ def main():
     ap.add_argument('--apply', action='store_true')
     ap.add_argument('--dry-run', action='store_true')
     ap.add_argument('--pause', type=float, default=1.0)
+    ap.add_argument('--rescore', action='store_true',
+                    help='이미 받아 둔 대응표의 판정만 다시 매긴다 (통신 없음). '
+                         '호가 어긋난 줄은 next_cnts를 비워 다음 실행이 다시 찾게 한다')
     args = ap.parse_args()
+
+    if args.rescore:
+        mp = REPO / 'next_article_map.csv'
+        rows_ = list(csv.DictReader(mp.open(encoding='utf-8-sig')))
+        bad = 0
+        for r in rows_:
+            nl = r.get('next_title_nl') or ''
+            if not nl:
+                continue
+            ho = ho_of(nl)
+            wolbo = bool(re.search(r'天[道主]敎會月報|천도교회월보', nfkc(nl)))
+            if ho == int(r['tonggwon']) and wolbo:
+                r['how'] = '호수일치'
+            elif ho == int(r['tonggwon']):
+                r['how'] = '⚠️호수만일치'
+            else:
+                r['how'] = f'🔴호가다름(읽은호={ho})' if wolbo else '🔴월보아님'
+                r['next_cnts'] = ''
+                bad += 1
+        with mp.open('w', encoding='utf-8-sig', newline='') as f:
+            w = csv.DictWriter(f, fieldnames=list(rows_[0].keys()))
+            w.writeheader(); w.writerows(rows_)
+        ok = sum(1 for r in rows_ if r['how'] == '호수일치')
+        print(f'{len(rows_)}줄 · 호수일치 {ok} · 물린 것 {bad} (next_cnts를 비웠다)')
+        for r in rows_:
+            if r['how'].startswith('🔴'):
+                print(f"  #{r['series']:<4} 통{r['tonggwon']:<4} {r['next_title'][:16]:<18} "
+                      f"{r['how']}  ← {r['next_title_nl'][:46]}")
+        return
     apply_ = args.apply and not args.dry_run
 
     src = REPO / 'article_end_audit.csv'
