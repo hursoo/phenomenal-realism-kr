@@ -64,6 +64,16 @@ PROMPT = """너는 1910~20년대 활판 인쇄 잡지(『천도교회월보』)�
     판정=<A|B|C:값|?> 확신=<상|중|하> 근거=<열 자 이내>"""
 
 
+
+def _text_of(resp):
+    """응답에서 **글자 블록**을 꺼낸다.
+
+    `content[0].text`로 꺼내면 최신 모델에서 깨진다 — 첫 블록이 thinking이라
+    `.text`가 없다(2026-08-12, claude-opus-5에서 실측). 블록을 훑어 text만 잇는다.
+    """
+    return ''.join(b.text for b in resp.content if getattr(b, 'type', '') == 'text'
+                   or hasattr(b, 'text')).strip()
+
 def crop_marker(adir, cols, draft, m, window, scale, pad=4):
     """마커 하나 → (PNG bytes, 자리 설명 dict). 실패하면 (None, dict)."""
     c = m.group(1)
@@ -127,7 +137,7 @@ def ask(client, model, img, info, window):
                                          'data': base64.b64encode(img).decode()}},
             {'type': 'text', 'text': q},
         ]}])
-    return r.content[0].text.strip(), r.usage.input_tokens, r.usage.output_tokens
+    return _text_of(r), r.usage.input_tokens, r.usage.output_tokens
 
 
 def parse(ans):

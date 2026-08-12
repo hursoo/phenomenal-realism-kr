@@ -65,6 +65,16 @@ PROMPT = """이 이미지는 1910~20년대 활판 인쇄 잡지(『천도교회�
 출력은 `[col NN] …` 줄들만. 설명 금지."""
 
 
+
+def _text_of(resp):
+    """응답에서 **글자 블록**을 꺼낸다.
+
+    `content[0].text`로 꺼내면 최신 모델에서 깨진다 — 첫 블록이 thinking이라
+    `.text`가 없다(2026-08-12, claude-opus-5에서 실측). 블록을 훑어 text만 잇는다.
+    """
+    return ''.join(b.text for b in resp.content if getattr(b, 'type', '') == 'text'
+                   or hasattr(b, 'text')).strip()
+
 def strip_image(page, y, delta, scale, x0=60, x1=None):
     from PIL import Image
     im = Image.open(page)
@@ -151,7 +161,7 @@ def main():
                          'media_type': 'image/png',
                          'data': base64.b64encode(img).decode()}},
                         {'type': 'text', 'text': '이 띠의 글줄들을 위·아래로 갈라 적어라.'}]}])
-                txt = r.content[0].text.strip()
+                txt = _text_of(r)
                 tin += r.usage.input_tokens; tout += r.usage.output_tokens
                 break
             except Exception as e:                        # noqa: BLE001

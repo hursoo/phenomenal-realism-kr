@@ -54,6 +54,16 @@ PROMPT = """이 이미지는 1910~20년대 활판 인쇄 잡지(『천도교회�
 출력은 판독한 글자열 한 줄만. 설명·해석 금지."""
 
 
+
+def _text_of(resp):
+    """응답에서 **글자 블록**을 꺼낸다.
+
+    `content[0].text`로 꺼내면 최신 모델에서 깨진다 — 첫 블록이 thinking이라
+    `.text`가 없다(2026-08-12, claude-opus-5에서 실측). 블록을 훑어 text만 잇는다.
+    """
+    return ''.join(b.text for b in resp.content if getattr(b, 'type', '') == 'text'
+                   or hasattr(b, 'text')).strip()
+
 def split_wide(boxes, factor=1.6, prof=None):
     """중앙값보다 훨씬 넓은 상자를 **글줄 수만큼 균등 분할**한다.
 
@@ -211,7 +221,7 @@ def main():
                             {'type': 'image', 'source': {'type': 'base64',
                              'media_type': 'image/png', 'data': base64.b64encode(img).decode()}},
                             {'type': 'text', 'text': ask}]}])
-                    txt = r.content[0].text.strip().splitlines()[0].strip()
+                    txt = (_text_of(r).splitlines() or [''])[0].strip()
                     tin += r.usage.input_tokens; tout += r.usage.output_tokens
                     break
                 except Exception as e:                       # noqa: BLE001
