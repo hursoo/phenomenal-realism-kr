@@ -100,7 +100,8 @@ def main():
         for eng in sorted((d / 'ocr').iterdir()) if (d / 'ocr').is_dir() else []:
             if not eng.is_dir() or eng.name in SKIP_ENGINES:
                 continue
-            for f in sorted(eng.glob('*.txt')):
+            # .txt = 단위별 엔진 원출력 · .md = 영인·단일 판독본(단 단위 보고)
+            for f in sorted(list(eng.glob('*.txt')) + list(eng.glob('*.md'))):
                 copy(f, rd / 'ocr' / eng.name / f.name, plan, apply_)
 
         # 지면 — raw에서 저장소의 source_pages/<같은 이름>/으로

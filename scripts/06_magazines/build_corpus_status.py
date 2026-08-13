@@ -38,7 +38,7 @@ WOLBO = ROOT / 'data' / '5_magazine_sources' / 'wolbo'
 
 FIELDS = ['series', 'slug', 'publish_date', 'tonggwon', 'section', 'title', 'author',
           'page_in_journal', 'scan_pages', 'units', 'transcript', 'markers',
-          '규칙', '대장', 'C', 'G', '미해소', '면주', 'auto_ratio', 'big_diff_ratio',
+          '규칙', '대장', 'C', 'G', '미해소', '면주', '붕괴', 'auto_ratio', 'big_diff_ratio',
           'gemini_empty_units', 'claude_empty_units', 'cross_checked', 'keyword_hits',
           'reading_file']
 

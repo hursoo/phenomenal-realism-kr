@@ -61,6 +61,18 @@ def main():
     mapped = {int(r['series']): r for r in csv.DictReader(
         (REPO / 'next_article_map.csv').open(encoding='utf-8-sig'))}
 
+    # 📌 이 문서 스스로 「확인한 것은 bibliography_checks.csv에 적는다」고 말한다.
+    #    그런데 정작 그 파일을 읽지 않아, 사람이 영인본을 펴서 닫은 편이 계속 목록에
+    #    남았다. 2026-08-13 `158_我觀`이 그랬다 — 영인본 촬영으로 21~24쪽을 채우고도
+    #    「지면결락3면」으로 걸려 있었다. 여기서 그 연결을 잇는다.
+    RESOLVED = {'완결확인', '보완', '일치', '고침', '확정'}
+    closed = {}
+    cp = REPO / 'bibliography_checks.csv'
+    if cp.exists():
+        for r in csv.DictReader(cp.open(encoding='utf-8-sig')):
+            if r.get('series') and r.get('status') in RESOLVED:
+                closed[int(r['series'])] = r      # 뒷줄이 이긴다 — 최신 확인
+
     missed = [r for r in mapped.values() if not r['next_cnts']]
     missed.sort(key=lambda r: int(r['series']))
 
@@ -95,7 +107,7 @@ def main():
     (REPO / 'pending_nl.md').write_text('\n'.join(md) + '\n', encoding='utf-8')
 
     # ② 영인본 실물이 있어야 닫히는 편
-    rows = []
+    rows, skipped = [], []
     for s, r in sorted(audit.items()):
         v = r['verdict']
         reason = None
@@ -113,6 +125,9 @@ def main():
         elif v in ('목차없음', '목차에서못찾음', '다음쪽불명'):
             reason = f'{v} — 목차 쪽 문제'
         if not reason:
+            continue
+        if s in closed:
+            skipped.append((s, r['title'], closed[s]['checked'], closed[s]['status']))
             continue
         rows.append({'series': s, 'tonggwon': r['tonggwon'], 'book': book_of(r['tonggwon']),
                      'publish': r['publish_date'][:7], 'title': r['title'],
@@ -147,6 +162,12 @@ def main():
             spot = (f"{r['next_page']}쪽 언저리" if r['next_page'] else '—')
             md.append(f"| {r['series']} | {r['tonggwon']} | {r['publish']} | {r['title'][:20]} | "
                       f"{r['page_start']} | {r['last_held'] or '—'} | {spot} | {r['reason']} |")
+    if skipped:
+        md += ['', '## 닫힌 편 — 사람이 영인본을 펴서 해소했다', '',
+               '| 편 | 제목 | 확인 | 상태 |', '|---:|---|---|---|']
+        for s_, t_, d_, st_ in sorted(skipped):
+            md.append(f'| {s_} | {t_[:24]} | {d_} | **{st_}** |')
+        md += ['', '자세한 것은 [`bibliography_checks.csv`](bibliography_checks.csv)에 있다.']
     md += ['', '## 보는 법', '',
            '📌 **끝 쪽은 다음 글 시작 쪽 −1이 아니다.** 한 지면에 앞 글의 꼬리와 다음 글의',
            '머리가 함께 앉는다. 그러니 **다음 글이 시작하는 쪽의 위쪽**을 본다. 거기 앞 글의',

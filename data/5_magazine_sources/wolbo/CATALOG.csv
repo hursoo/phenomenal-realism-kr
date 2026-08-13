@@ -15,7 +15,7 @@
 14,14_自修_1912-05,22,1912-05-15,講演,自修喻人의 解,李敦化,25,,3,N,,,,,,draft,94,3,6,검출,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,,0,1
 15,15_東經_1912-06,23,1912-06-15,敎理部,東經大全要旨講解,李敦化,9,,4,N,,,,,,draft,138,3,8,검출,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8,,0,6
 16,16_東經_1912-07,24,1912-07-15,敎理部,東經大全要旨講解(續),李敦化,7,,4,N,,,,,,draft,134,4,8,검출,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8,gemini_trimmed,0,2
-17,17_東經_1912-09,26,1912-09-15,敎理部,東經要旨講解(續),李敦化,14,,4,N,,,,,,draft,158,4,8,검출,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8,,0,1
+17,17_東經_1912-09,26,1912-09-15,敎理部,東經要旨講解(續),李敦化,14,,4,N,,,,,,draft,158,4,8,검출,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8,gemini_trimmed,0,1
 18,18_靈通_1912-12,29,1912-12-15,敎理部,靈通力의 事實됨을 解明言(續),李敦化,12,,5,N,,,,,,draft,161,3,10,검출,claude_opus_4_7:10 claude_opus_4_7_trimmed:10 gemini:10 gemini_trimmed:10,,0,21
 19,19_理想_1913-01,30,1913-01-15,雜俎,理想中新光陰,李敦化,37,,3,N,,,,,,draft,110,13,6,검출,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,"claude_opus_4_7_trimmed,gemini_trimmed",2,7
 20,20_光說_1913-02,31,1913-02-15,雜俎,光의 說,李敦化,34,,5,N,,,,,,draft,208,5,10,검출,claude_opus_4_7:10 claude_opus_4_7_trimmed:10 gemini:10 gemini_trimmed:10,"claude_opus_4_7_trimmed,gemini_trimmed",0,10
@@ -40,14 +40,14 @@
 39,39_宗敎_1918-02,91,1918-02-15,敎理部,宗敎의 兩側面,李敦化,9,,3,N,,,,,,draft,318,15,6,검출,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6 reread_x3:6,,1,13
 40,40_信仰_1918-03,92,1918-03-15,講演,信仰上으로 觀ᄒᆞᆯ 吾人의 努力,李敦化,18,,5,N,,,,,,draft,403,9,10,검출,claude_opus_4_7:10 claude_opus_4_7_trimmed:10 gemini:10 gemini_trimmed:10,gemini_trimmed,0,5
 41,41_兩道_1918-05,94,1918-05-15,敎門訂議,兩道師巡回와 關北敎友,李敦化,8,,5,N,,,,,,draft,322,11,10,검출,claude_opus_4_7:10 claude_opus_4_7_trimmed:10 gemini:10 gemini_trimmed:10,"claude_opus_4_7_trimmed,gemini_trimmed",0,16
-42,42_大神_1918-07,95,1918-07-15,敎理部,大神師性靈出世說(其一),李敦化,10,,5,N,,,,,,draft,315,13,10,검출,claude_opus_4_7:10 claude_opus_4_7_trimmed:10 gemini:10 gemini_trimmed:10,claude_opus_4_7_trimmed,0,12
+42,42_大神_1918-07,95,1918-07-15,敎理部,大神師性靈出世說(其一),李敦化,10,,5,N,,,,,,draft,315,13,10,검출,claude_opus_4_7:10 claude_opus_4_7_trimmed:10 gemini:10 gemini_trimmed:10,"claude_opus_4_7_trimmed,gemini_trimmed",0,12
 43,43_追悼_1918-09,97,1918-09-15,雜俎,追悼香山文,李敦化,37,,3,N,,,,,,draft,163,12,6,검출,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,,0,1
 44,44_百號_1918-12,100,1918-12-18,敎門訂議,百號紀念에 對ᄒᆞᆫ 余의 感想,李敦化,9,,5,N,,,,,,draft,325,17,10,검출,claude_opus_4_7:10 claude_opus_4_7_trimmed:10 gemini:10 gemini_trimmed:10,,0,13
-45,45_新年_1919-01,101,1919-01-15,敎門訂議,新年元旦,李敦化,8,,5,N,,,,,,draft,268,55,5,고정값,claude_opus_4_7:5 claude_opus_4_7_trimmed:5 gemini:5 gemini_trimmed:5 reread_x3:5,,5,8
+45,45_新年_1919-01,101,1919-01-15,敎門訂議,新年元旦,李敦化,8,,5,N,,,,,,draft,268,55,5,고정값,claude_opus_4_7:5 claude_opus_4_7_trimmed:5 gemini:5 gemini_trimmed:5 reread_x3:5,gemini_trimmed,5,8
 46,46_將來_1919-02,102,1919-02-15,敎門訂議,將來의 宗敎,李敦化,1,,6,N,,,,,,draft,387,83,6,고정값,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6 reread_x3:6,,0,69
 47,47_我觀_1919-03,103,1919-03-15,敎理部,我觀東經,李敦化,14,,5,N,,,,,,draft,277,35,5,고정값,claude_opus_4_7:5 claude_opus_4_7_trimmed:5 gemini:5 gemini_trimmed:5 reread_x3:5,gemini_trimmed,0,19
 48,48_靈通_1919-04,104,1919-04-15,敎理部,靈通說,李敦化,24,,5,N,,,,,,draft,257,22,5,고정값,claude_opus_4_7:5 claude_opus_4_7_trimmed:5 gemini:5 gemini_trimmed:5 reread_x3:5,,0,35
-49,49_默念_1919-05,105,1919-05-15,敎理部,默念論(續),李敦化,11,,7,N,,,,,,draft,370,56,7,고정값,claude_opus_4_7:7 claude_opus_4_7_trimmed:7 gemini:7 gemini_trimmed:7 reread_x3:7,,0,2
+49,49_默念_1919-05,105,1919-05-15,敎理部,默念論(續),李敦化,11,,7,N,,,,,,draft,370,56,7,고정값,claude_opus_4_7:7 claude_opus_4_7_trimmed:7 gemini:7 gemini_trimmed:7 reread_x3:7,gemini_trimmed,0,2
 50,50_眞實_1919-06,106,1919-06-15,敎門訂議,眞實된 信仰生活,李敦化,1,,8,N,,,,,,draft,298,40,8,고정값,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8 reread_x3:8,,0,12
 51,51_愛開_1919-07,107,1919-07-15,敎門訂議,愛의 開放,李敦化,6,,5,N,,,,,,draft,250,50,5,고정값,claude_opus_4_7:5 claude_opus_4_7_trimmed:5 gemini:5 gemini_trimmed:5 reread_x3:5,,0,10
 52,52_自覺_1919-09,109,1919-09-15,敎門訂議,自覺ᄒᆞ야써 其根에 歸ᄒᆞ라,李敦化,1,,6,N,,,,,,draft,53,2,6,고정값,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,,0,2
@@ -56,16 +56,16 @@
 55,55_改造_1919-12,112,1919-12-15,敎門訂議,改造와 宗敎,李敦化,4,,5,N,,,,,,draft,1,0,5,고정값,claude_opus_4_7:5 claude_opus_4_7_trimmed:5 gemini:5 gemini_trimmed:5 reread_x4:1,,0,82
 56,56_天道_1920-01,113,1920-01-15,敎門訂議,天道敎六十一歲花甲庚申을 迎喜,李敦化,7,,6,Y,,,,,,draft,1,0,6,고정값,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,,1,13
 57,57_天道_1920-02,114,1920-02-15,敎門訂議,天道敎靑年臨時敎理講習會에 就하야,李敦化,1,,6,N,,,,,,draft,1,0,6,고정값,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,,0,33
-58,58_庚申_1920-04,116,1920-04-15,,庚申四月五日,李敦化,3,,6,N,,,,,,draft,327,38,6,고정값,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6 reread_x3:5,,0,67
-59,59_哲人_1920-05,117,1920-05-15,敎門訂議,哲人主義의 將來와 新宗敎의 價値,李敦化,8,,5,N,,,,,,draft,171,53,5,고정값,claude_opus_4_7:5 claude_opus_4_7_trimmed:5 gemini:5 gemini_trimmed:5 reread_x3:5,,0,29
-60,60_自己_1920-06,118,1920-06-15,,自己解放과 人乃天主義,李敦化,1,,8,N,,,,,,draft,331,1,8,고정값,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8,,0,17
+58,58_庚申_1920-04,116,1920-04-15,,庚申四月五日,李敦化,3,,6,N,,,,,,draft,327,38,6,고정값,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6 reread_x3:5,gemini_trimmed,0,67
+59,59_哲人_1920-05,117,1920-05-15,敎門訂議,哲人主義의 將來와 新宗敎의 價値,李敦化,8,,5,N,,,,,,draft,171,53,5,고정값,claude_opus_4_7:5 claude_opus_4_7_trimmed:5 gemini:5 gemini_trimmed:5 reread_x3:5,gemini_trimmed,0,29
+60,60_自己_1920-06,118,1920-06-15,,自己解放과 人乃天主義,李敦化,1,,8,N,,,,,,draft,331,1,8,고정값,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8,gemini_trimmed,0,17
 61,61_自己_1920-07,119,1920-07-15,,自己解放과 人乃天主義(續),李敦化,1,,5,N,,,,,,draft,376,19,5,고정값,claude_opus_4_7:5 claude_opus_4_7_trimmed:5 gemini:5 gemini_trimmed:5 reread_x3:5,,1,16
-62,62_十週_1920-08,120,1920-08-15,,十週年,李敦化,1,,9,N,,,,,,draft,377,25,9,고정값,claude_opus_4_7:9 claude_opus_4_7_trimmed:9 gemini:9 gemini_trimmed:9 reread_x3:7,,0,18
+62,62_十週_1920-08,120,1920-08-15,,十週年,李敦化,1,,9,N,,,,,,draft,377,25,9,고정값,claude_opus_4_7:9 claude_opus_4_7_trimmed:9 gemini:9 gemini_trimmed:9 reread_x3:7,gemini_trimmed,0,18
 63,63_法門_1920-09,121,1920-09-15,,오로지 法門에 依信하라,李敦化,1,,8,N,,,,,,draft,371,14,8,고정값,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8 reread_x3:6,,0,4
-64,64_布德_1920-10,122,1920-10-15,,布德天下는 活誠에 在하니라,李敦化,7,,5,N,,,,,,draft,234,29,5,고정값,claude_opus_4_7:5 claude_opus_4_7_trimmed:5 gemini:5 gemini_trimmed:5 reread_x3:3,,0,10
+64,64_布德_1920-10,122,1920-10-15,,布德天下는 活誠에 在하니라,李敦化,7,,5,N,,,,,,draft,234,29,5,고정값,claude_opus_4_7:5 claude_opus_4_7_trimmed:5 gemini:5 gemini_trimmed:5 reread_x3:3,gemini_trimmed,0,10
 65,65_拘束_1920-11,123,1920-11-15,,拘束의 宗敎로부터 自由의 宗敎,李敦化,1,,8,N,,,,,,draft,345,16,8,고정값,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8 reread_x3:8,,0,79
 66,66_布德_1921-02,126,1921-02-15,,布德天下,李敦化,1,,8,N,,,,,,draft,232,13,8,고정값,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8,,0,2
-67,67_同歸_1921-03,127,1921-03-15,,同歸一體,李敦化,1,,7,N,,,,,,draft,329,24,7,고정값,claude_opus_4_7:7 claude_opus_4_7_trimmed:7 gemini:7 gemini_trimmed:7 reread_x3:5,,0,53
+67,67_同歸_1921-03,127,1921-03-15,,同歸一體,李敦化,1,,7,N,,,,,,draft,329,24,7,고정값,claude_opus_4_7:7 claude_opus_4_7_trimmed:7 gemini:7 gemini_trimmed:7 reread_x3:5,gemini_trimmed,0,53
 68,68_性無_1921-06,130,1921-06-15,,사람性의 無窮을 論하노라(續),李敦化,1,,5,N,,,,,,draft,1,0,5,고정값,claude_opus_4_7:5 claude_opus_4_7_trimmed:5 gemini:5 gemini_trimmed:5,,0,15
 69,69_新文_1921-07,131,1921-07-15,,新文化는 무엇에 依하야 建設되랴,李敦化,1,,5,N,,,,,,draft,1,0,5,고정값,claude_opus_4_7:5 claude_opus_4_7_trimmed:5 gemini:5 gemini_trimmed:5,,0,37
 70,70_中國_1921-12,136,1921-12-15,,中國 北京의 傳敎室 問題를 둣고 吾敎의 對外 發展을 賀함,李敦化,12,,6,N,,,,,,draft,1,0,6,고정값,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,,0,13
@@ -76,11 +76,11 @@
 75,75_宗教_1922-05,141,1922-05-15,,宗教의 六大 要素,李敦化,10,,3,N,,,,,,draft,110,11,6,검출,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,,0,53
 76,76_東經_1912-08,25,1912-08-15,敎理部,東經大全要旨講解(續),李敦化,12,,3,N,,,,,,draft,72,7,3,고정값,claude_opus_4_7:3 claude_opus_4_7_trimmed:3 gemini:3 gemini_trimmed:3,gemini_trimmed,0,0
 77,77_靈通1_1912-10,27,1912-10-15,敎理部,靈通力이 事實됨을 解明言,李敦化,11,,8,N,,,,,,draft,234,35,8,고정값,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8,gemini_trimmed,0,33
-78,78_靈性_1913-04,33,1913-04-15,敎理部,靈性的 生活,李敦化,8,,4,N,,,,,,draft,99,14,4,고정값,claude_opus_4_7:4 claude_opus_4_7_trimmed:4 gemini:4 gemini_trimmed:4,,0,3
+78,78_靈性_1913-04,33,1913-04-15,敎理部,靈性的 生活,李敦化,8,8~11,4,N,,2026-08-13,Soo+기계,일치,"지면 표제는 「靈性**的** 生活」이다. 영인본 목차집 OCR이 「靈性의 生活」로 적은 것은 오독이며, 코퍼스 표제(靈性的)가 옳다. 영인본 촬영분(20260813_115648~115822, 4장·단 6개)으로 확인. 부수 관찰 — 9쪽에 「西哲 부라도」와 「(이뎨아)」가 나오고 곧바로",draft,99,14,4,고정값,claude_opus_4_7:4 claude_opus_4_7_trimmed:4 gemini:4 gemini_trimmed:4,gemini_trimmed,0,3
 79,79_大神2_1918-08,96,1918-08-15,敎理部,大神師性靈出世說(其二),李敦化,14,,4,N,,,,,,draft,175,26,4,고정값,claude_opus_4_7:4 claude_opus_4_7_trimmed:4 gemini:4 gemini_trimmed:4 reread_x3:4,gemini_trimmed,0,3
 80,80_大神3_1918-09,97,1918-09-15,敎理部,大神師性靈出世說(其三),李敦化,16,,3,N,,,,,,draft,249,21,3,고정값,claude_opus_4_7:3 claude_opus_4_7_trimmed:3 gemini:3 gemini_trimmed:3 reread_x3:1,,0,16
 81,81_大神4_1918-10,98,1918-10-15,敎理部,大神師性靈出世說(其四),李敦化,14,,4,N,,,,,,draft,241,32,4,고정값,claude_opus_4_7:4 claude_opus_4_7_trimmed:4 gemini:4 gemini_trimmed:4 reread_x3:3,,8,14
-82,82_大神5_1918-11,99,1918-11-15,敎理部,大神師性靈出世說(其五),李敦化,16,,3,N,,,,,,draft,160,19,3,고정값,claude_opus_4_7:3 claude_opus_4_7_trimmed:3 gemini:3 gemini_trimmed:3 reread_x3:2,,0,12
+82,82_大神5_1918-11,99,1918-11-15,敎理部,大神師性靈出世說(其五),李敦化,16,,3,N,,,,,,draft,160,19,3,고정값,claude_opus_4_7:3 claude_opus_4_7_trimmed:3 gemini:3 gemini_trimmed:3 reread_x3:2,gemini_trimmed,0,12
 83,83_現代_1920-03,115,1920-03-15,敎門訂議,現代思潮와 事人如天主義,李敦化,1,,7,N,,,,,,draft,153,9,7,고정값,claude_opus_4_7:7 claude_opus_4_7_trimmed:7 gemini:7 gemini_trimmed:7,,0,11
 84,84_年齡_1920-12,124,1920-12-15,,年齡論,李敦化,22,,7,N,,,,,,draft,1,0,7,고정값,claude_opus_4_7:7 claude_opus_4_7_trimmed:7 gemini:7 gemini_trimmed:7,,0,2
 85,85_사람性_1921-04,128,1921-04-15,,사람性의 無窮을 論하노라,李敦化,1,,6,N,,,,,,draft,1,0,6,고정값,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,,0,36
@@ -100,13 +100,13 @@
 99,99_信仰_1919-01,101,1919-01-15,敎理部,信仰性과 社會性(續),夜雷,13,,4,N,,,,,,draft,333,8,8,검출,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8,,0,2
 100,100_信仰_1919-02,102,1919-02-15,敎理部,信仰性과 社會性(其四),夜雷,11,,5,N,,,,,,draft,363,14,10,검출,claude_opus_4_7:10 claude_opus_4_7_trimmed:10 gemini:10 gemini_trimmed:10,"claude_opus_4_7_trimmed,gemini_trimmed",0,4
 101,101_將來_1919-03,103,1919-03-15,敎門訂議,將來의 宗敎(續),夜雷,1,,8,N,,,,,,draft,381,14,16,검출,claude_opus_4_7:16 claude_opus_4_7_trimmed:16 gemini:16 gemini_trimmed:16,"claude_opus_4_7_trimmed,gemini_trimmed",0,31
-102,102_默念_1919-04,104,1919-04-15,敎門訂議,默念論,夜雷,1,,12,N,,,,,,draft,496,21,24,검출,claude_opus_4_7:24 claude_opus_4_7_trimmed:24 gemini:24 gemini_trimmed:24,"claude_opus_4_7,claude_opus_4_7_trimmed",0,31
+102,102_默念_1919-04,104,1919-04-15,敎門訂議,默念論,夜雷,1,,12,N,,,,,,draft,496,21,24,검출,claude_opus_4_7:24 claude_opus_4_7_trimmed:24 gemini:24 gemini_trimmed:24,"claude_opus_4_7,claude_opus_4_7_trimmed,gemini_trimmed",0,31
 103,103_將來_1919-05,105,1919-05-15,敎門訂議,將來의 宗敎(其三),夜雷,6,,5,N,,,,,,draft,303,13,10,검출,claude_opus_4_7:10 claude_opus_4_7_trimmed:10 gemini:10 gemini_trimmed:10,gemini_trimmed,0,49
 104,104_默念_1919-06,106,1919-06-15,敎理部,默念論(續),夜雷,15,,5,N,,,,,,draft,236,10,10,검출,claude_opus_4_7:10 claude_opus_4_7_trimmed:10 gemini:10 gemini_trimmed:10,,0,1
 105,105_處世_1919-07,107,1919-07-15,講演,處世神言,夜雷,23,,6,N,,,,,,draft,409,6,12,검출,claude_opus_4_7:12 claude_opus_4_7_trimmed:12 gemini:12 gemini_trimmed:12,,0,6
 106,106_自力_1919-09,109,1919-09-15,敎理部,自力的敎化,夜雷,17,,4,N,,,,,,draft,272,13,8,검출,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8,,0,19
 107,107_動物_1919-10,110,1919-10-15,讀者文壇,動物園訪問記,夜雷,37,,5,N,,,,,,draft,373,15,10,검출,claude_opus_4_7:10 claude_opus_4_7_trimmed:10 gemini:10 gemini_trimmed:10,,0,8
-108,108_新信_1919-11,111,1919-11-15,敎理部,新信仰,夜雷,19,,3,N,,,,,,draft,127,18,6,검출,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,,0,23
+108,108_新信_1919-11,111,1919-11-15,敎理部,新信仰,夜雷,19,,3,N,,,,,,draft,127,18,6,검출,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,gemini_trimmed,0,23
 109,109_萬事_1919-12,112,1919-12-15,敎理部,萬事知,夜雷,20,,4,N,,,,,,draft,232,10,8,검출,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8,,0,49
 110,110_宇宙_1920-01,113,1920-01-15,敎理部,宇宙의 中心,夜雷,27,,5,N,,,,,,draft,294,10,10,검출,claude_opus_4_7:10 claude_opus_4_7_trimmed:10 gemini:10 gemini_trimmed:10,"claude_opus_4_7_trimmed,gemini_trimmed",0,7
 111,111_眞人_1920-02,114,1920-02-15,敎理部,眞의 人生,夜雷,15,,4,N,,,,,,draft,251,45,8,검출,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8,,0,8
@@ -139,10 +139,10 @@
 138,138_處世_1919-05,105,1919-05-15,講演,處世神言,白頭山人,23,,4,N,,,,,,draft,329,8,8,검출,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8,,0,6
 139,139_最後_1919-06,106,1919-06-15,講演,最後宗敎의 大性無量光,白頭山人,24,,5,N,,,,,,draft,407,19,10,검출,claude_opus_4_7:10 claude_opus_4_7_trimmed:10 gemini:10 gemini_trimmed:10,,0,5
 140,140_月尾_1919-06,106,1919-06-15,雜俎,月尾島의 春色,滄海居士,39,,5,N,,,,,,draft,543,24,10,검출,claude_opus_4_7:10 claude_opus_4_7_trimmed:10 gemini:10 gemini_trimmed:10 reread_x3:10 reread_x4:10,,0,3
-141,141_神人_1919-07,107,1919-07-15,敎理部,神人의 跡,白頭山人,16,,7,N,,,,,,draft,673,38,14,검출,claude_opus_4_7:14 claude_opus_4_7_trimmed:14 gemini:14 gemini_trimmed:14 reread_x3:14,,0,0
+141,141_神人_1919-07,107,1919-07-15,敎理部,神人의 跡,白頭山人,16,,7,N,,,,,,draft,673,38,14,검출,claude_opus_4_7:14 claude_opus_4_7_trimmed:14 gemini:14 gemini_trimmed:14 reread_x3:14,gemini_trimmed,0,0
 142,142_體的_1919-07,107,1919-07-15,講演,體的倫理,滄海居士,27,,4,N,,,,,,draft,292,3,8,검출,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8,,0,23
 143,143_略史_1919-09,109,1919-09-15,敎理部,略史及敎理,白頭山人,13,,4,N,,,,,,draft,343,0,8,검출,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8,,0,0
-144,144_北遊_1919-09,109,1919-09-15,雜俎,北遊半個月,滄海居士,41,,3,N,,,,,,draft,290,17,6,검출,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6 reread_x3:6,,0,1
+144,144_北遊_1919-09,109,1919-09-15,雜俎,北遊半個月,滄海居士,41,,3,N,,,,,,draft,290,17,6,검출,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6 reread_x3:6,gemini_trimmed,0,1
 145,145_略史_1919-10,110,1919-10-15,敎理部,略史及敎理(其三),白頭山人,12,,4,N,,,,,,draft,402,9,8,검출,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8 reread_x3:8,,0,0
 146,146_略史_1919-11,111,1919-11-15,敎理部,略史及敎理,白頭山人,12,,3,N,,,,,,draft,154,10,6,검출,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,,0,0
 147,147_活動_1919-11,111,1919-11-15,敎理部,活動主義의 道德,滄海居士,15,,4,N,,,,,,draft,253,15,8,검출,claude_opus_4_7:8 claude_opus_4_7_trimmed:8 gemini:8 gemini_trimmed:8,,0,7
@@ -153,7 +153,15 @@
 152,152_大神_1920-02,114,1920-02-15,敎理部,大神師이 法言이 時代의 預言的으로 되야음,滄海居士,27,,3,N,,,,,,draft,191,9,6,검출,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,"claude_opus_4_7_trimmed,gemini_trimmed",0,2
 153,153_略史_1920-03,115,1920-03-15,敎理部,略史及敎理,白頭山人,20,,3,N,,,,,,draft,252,8,6,검출,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,,0,1
 154,154_遺詞_1920-08,120,1920-08-15,,遺詞中으로 觀한 大神師의 法訓,白頭山人,56,,3,N,,,,,,draft,143,8,6,검출,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,"claude_opus_4_7_trimmed,gemini_trimmed",0,1
-155,155_問者_1920-09,121,1920-09-15,,問者의게 答함,滄海居士,36,,2,N,,,,,,draft,141,8,4,검출,claude_opus_4_7:4 claude_opus_4_7_trimmed:4 gemini:4 gemini_trimmed:4,,0,0
+155,155_問者_1920-09,121,1920-09-15,,問者의게 答함,滄海居士,36,,2,N,,,,,,draft,141,8,4,검출,claude_opus_4_7:4 claude_opus_4_7_trimmed:4 gemini:4 gemini_trimmed:4,gemini_trimmed,0,0
 156,156_年齡_1921-12,136,1921-12-15,,年齡上 問題,白頭山人,73,,8,N,,,,,,draft,651,22,16,검출,claude_opus_4_7:16 claude_opus_4_7_trimmed:16 gemini:16 gemini_trimmed:16,,0,6
 157,157_蓬萊_1919-05,105,1919-05-15,雜俎,蓬萊山,滄海居士,38,,3,N,,,,,,draft,266,10,6,검출,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6 reread_x3:6,,0,0
-158,158_我觀_1913-07,36,1913-07-15,講演,我觀苦樂論,李敦化,19,통36 19~23쪽 (5면),2,Y,보유 19~20쪽 (2면) · 결락 21~23쪽,2026-08-12,Soo,지면부족,제목은 論이다(NL 서지의 「說」은 오류). 필자 李敦化는 20쪽 상단에서 확인. 19쪽은 제목과 쪽번호뿐이고 20쪽 하단이 종결되지 않는다. 실제 5면인데 19~20쪽 두 장만 보유 — 21~23쪽 결락. 20쪽 하단의 「今古俚海(第五)」는 다른 란의 글,draft,78,2,4,검출,claude_opus_4_7:4 claude_opus_4_7_trimmed:4 gemini:4 gemini_trimmed:4,"claude_opus_4_7_trimmed,gemini_trimmed",0,1
+158,158_我觀_1913-07,36,1913-07-15,講演,我觀苦樂論,李敦化,19,통36 19~24쪽 (6면),6,N,보유 19~24쪽 (6면) — 국중 스캔 19~20쪽 + 영인본 촬영 19~24쪽 · 결락 없음,2026-08-13,Soo,보완,"🔴 2026-08-12의 「지면부족」이 해소되었다. 소장 영인본을 촬영해(20260813_115957~120036, 5장) 단 10개로 잘라 전문을 판독했다. ⚠️ 끝 쪽도 정정한다 — 08-12에 19~23쪽(5면)으로 적었으나 실제는 19~24쪽 6면이다. 24쪽에 이 글의 꼬리와 ",draft,78,2,4,검출,claude_opus_4_7:4 claude_opus_4_7_trimmed:4 gemini:4 gemini_trimmed:4,"claude_opus_4_7_trimmed,gemini_trimmed",0,7
+159,159_幸福_1914-07,48,1914-07-15,講演,幸福이 何處在오 究竟是精神內觀,李敦化,18,18~21쪽,4,N,보유 4면 · 결락 없음,,,,,영인·단일,,,8,고정값,,,0,1
+160,160_人生_1916-12,77,1916-12-15,講演,人生,李敦化,19,19~23쪽,5,N,보유 5면 · 결락 없음,,,,,영인·단일,,,10,고정값,,,0,24
+161,161_任筆_1918-08,96,1918-08-15,雜俎,任筆錄(其四),滄海居士,39,39~43쪽,5,N,보유 5면 · 결락 없음,,,,,영인·단일,,,11,고정값,,,0,0
+162,162_事人_1919-08,108,1919-08-15,敎門訂議,事人如天主義,李敦化,1,1~6쪽,6,N,보유 6면 · 결락 없음,,,,,영인·단일,,,13,고정값,,,0,7
+163,163_三世_1919-08,108,1919-08-15,敎理部,三世一貫心法,夜雷,13,13~16쪽,4,N,보유 4면 · 결락 없음,,,,,영인·단일,,,9,고정값,,,0,26
+164,164_略史_1919-08,108,1919-08-15,敎理部,略史及敎理,白頭山人,19,19~22쪽,4,N,보유 4면 · 결락 없음,,,,,영인·단일,,,9,고정값,,,0,1
+165,165_師訓_1919-08,108,1919-08-15,講演,師訓,滄海居士,35,35~37쪽,3,N,보유 3면 · 결락 없음,,,,,영인·단일,,,7,고정값,,,0,3
+166,166_萬事_1921-08,132,1921-08-15,,萬事知는 即實行,李敦化,1,1~7쪽,7,N,보유 7면 · 결락 없음,,,,,영인·단일,,,7,고정값,,,0,29

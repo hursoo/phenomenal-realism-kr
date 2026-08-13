@@ -47,8 +47,13 @@ FIELDS = ['series', 'slug', 'tonggwon', 'publish_date', 'section', 'title', 'aut
 
 
 def marker_stats(adir):
-    fs = sorted((adir / 'transcripts').glob('*draft_v0.md')) if (adir / 'transcripts').is_dir() else []
+    td = adir / 'transcripts'
+    fs = sorted(td.glob('*draft_v0.md')) if td.is_dir() else []
     if not fs:
+        # 영인·단일 — 영인본 촬영을 한 엔진이 판독한 판. 마커가 없되 그것은
+        # 「두 엔진이 같이 읽었다」가 아니라 「대조하지 않았다」는 뜻이다.
+        if td.is_dir() and any(td.glob('*.영인단일.md')):
+            return '영인·단일', '', ''
         return '', '', ''
     t = fs[0].read_text(encoding='utf-8', errors='ignore')
     i = t.find('[body]')

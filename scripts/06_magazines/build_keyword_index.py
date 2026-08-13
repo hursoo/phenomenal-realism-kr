@@ -125,6 +125,27 @@ def verified_body(path):
     return re.sub(r'\s', '', t)
 
 
+def facsimile_body(adir):
+    """영인·단일 전사본에서 본문만 돌려준다. 없으면 None.
+
+    영인본 촬영을 **한 엔진**이 판독한 판이다. 대조 엔진이 없으므로 마커가 없고,
+    따라서 정본과 같은 「단일 본문」 경로로 센다. 다만 **등급은 정본이 아니다** —
+    마커의 부재가 일치의 증거가 아니라는 것을 grade 열이 밝힌다.
+    """
+    td = adir / 'transcripts'
+    fs = sorted(td.glob('*.영인단일.md')) if td.is_dir() else []
+    if not fs:
+        return None
+    t = fs[0].read_text(encoding='utf-8')
+    t = re.sub(r'^---\n.*?\n---\n', '', t, flags=re.S)
+    t = re.sub(r'^#.*$', '', t, flags=re.M)
+    t = re.sub(r'^>.*$', '', t, flags=re.M)          # 등급 고지 인용문
+    t = re.sub(r'^〔.*?〕\s*$', '', t, flags=re.M)     # 〔unit_NN · …〕 단 표시
+    t = TAG.sub('', t)
+    t = re.sub(r'^\[(section|title|author|body)\].*$', '', t, flags=re.M)
+    return re.sub(r'\s', '', t)
+
+
 def page_of(body, pos, start_page):
     """정본 본문에서 pos가 놓인 원문 쪽. <n>은 「여기까지가 n쪽」."""
     m = PAGE_MARK.search(body, pos)
@@ -165,6 +186,22 @@ def rows_for_article(n, meta_row, adir, terms, verified_path):
                     context_left=left, match=t, context_right=right,
                     grade='정본',
                     verified=f'Y 정본',
+                ))
+        return rows
+
+    fb = facsimile_body(adir)
+    if fb is not None:
+        for t in terms:
+            for h in re.finditer(re.escape(t), fb):
+                left, right = ctx(fb, h.start(), h.end())
+                rows.append(dict(
+                    term=t, series=n, date=date, title=title,
+                    journal_page=meta_row.get('page_in_journal', ''),
+                    unit='', col='', char_pos=h.start(),
+                    engine_agreement='single',
+                    context_left=left, match=t, context_right=right,
+                    grade='영인·단일',
+                    verified='N 단일엔진',
                 ))
         return rows
 
@@ -279,12 +316,14 @@ def main():
         print(f'전사 없는 편: {", ".join(f"C{n}" for n in missing)} '
               f'(원본 지면은 있으나 OCR 미착수)')
     print()
-    print(f'{"낱말":<12}{"행":>6}{"정본":>6}{"대조":>6}{"합의":>6}{"C단독":>7}{"G단독":>7}{"편":>5}')
+    print(f'{"낱말":<12}{"행":>6}{"정본":>6}{"영인단일":>8}{"대조":>6}{"합의":>6}'
+          f'{"C단독":>7}{"G단독":>7}{"편":>5}')
     for t in args.terms:
         rs = [r for r in rows if r['term'] == t]
         cnt = lambda g: sum(1 for r in rs if r['grade'] == g)
-        print(f'{t:<12}{len(rs):>6}{cnt("정본"):>6}{cnt("대조"):>6}{cnt("합의"):>6}'
-              f'{cnt("C단독"):>7}{cnt("G단독"):>7}{len({r["series"] for r in rs}):>5}')
+        print(f'{t:<12}{len(rs):>6}{cnt("정본"):>6}{cnt("영인·단일"):>8}{cnt("대조"):>6}'
+              f'{cnt("합의"):>6}{cnt("C단독"):>7}{cnt("G단독"):>7}'
+              f'{len({r["series"] for r in rs}):>5}')
 
 
 # ── COLLAPSED 보고 ────────────────────────────────────────────────────────

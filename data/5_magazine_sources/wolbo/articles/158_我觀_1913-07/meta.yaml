@@ -97,10 +97,42 @@ policy_refs:
   series_index: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/series_index.csv
 units_previous_fixed1180: []
 coverage:
-  실제_범위: 통36 19~23쪽 (5면)
-  보유: 19~20쪽 (2면)
-  결락: 21~23쪽
+  실제_범위: 통36 19~24쪽 (6면)
+  보유: 19~24쪽 (6면) — 국중 스캔 19~20쪽 + 영인본 촬영 19~24쪽
+  결락: 없음
+  이력: >-
+    2026-08-12까지 「19~23쪽(5면) 중 19~20쪽 2면만 보유, 21~23쪽 결락」이었다.
+    2026-08-13 영인본 촬영으로 전면을 확보했고, 같은 날 끝 쪽도 24쪽으로 정정했다
+    (24쪽에 이 글의 꼬리와 다음 글 「兩無相値萬有生」(趙炳燁)의 머리가 함께 앉는다).
   근거: 영인본 목차 — 我觀苦樂論 19쪽, 다음 글 兩無相値萬有生 24쪽
   확인: 2026-08-12 Soo가 지면을 열어 확인. 19쪽은 제목만, 20쪽 하단이 종결되지 않고 이어짐
 bibliography_note: 지면 확인 결과 제목은 「我觀苦樂論」(論), 필자는 李敦化. NL 서지의 「我觀苦樂說」(說)은 오류다. 20쪽 하단에
   별도 상자로 「今古俚海(第五)」(雜俎, 별도 쪽번호 체계)가 함께 앉아 있다 — 본문이 아니다.
+
+facsimile:
+  kind: facsimile_photo
+  edition: 『天道敎會月報 影印本』(天道敎中央總部, 1980)
+  photographed: '2026-08-13'
+  photographer: Soo
+  raw_dir: hyeonsang/raw/dropped_catch_10gisa/월보_이돈화_10편/
+  raw_files: [20260813_115957.jpg, 20260813_120012.jpg, 20260813_120019.jpg, 20260813_120031.jpg, 20260813_120036.jpg]
+  segmented_by: Soo — 단(段) 수동 절단, 2026-08-13
+  units_dir: units_facs/
+  units: 10
+  ocr:
+    engines: [claude-opus-5]
+    grade: 영인·단일
+    output: ocr/opus5/
+    note: 단일 엔진 판독. 대조 엔진이 없어 갈린 자리가 마커로 표시되지 않는다.
+  purpose: >-
+    국중 스캔이 19~20쪽 2면뿐이던 부분 확보를 영인본 촬영으로 메웠다.
+    bibliography_checks.csv의 「지면부족」(2026-08-12)이 이것으로 해소된다.
+  page_range_resolved: >-
+    ⚠️→✅ 끝 쪽 충돌 해소(2026-08-13, Soo 확정). bibliography_checks.csv가 19~23쪽(5면)으로
+    적었으나 실제는 **19~24쪽 6면**이다. 24쪽에 이 글의 꼬리와 다음 글 「兩無相値萬有生」(趙炳燁)의
+    머리가 함께 앉는다 — 이 코퍼스의 📌 규칙(끝 쪽은 다음 글 시작 쪽 −1이 아니다)이 적용되는 사례다.
+  coverage_after_facsimile:
+    실제_범위: 19~24쪽
+    보유: 6면
+    결락: 없음
+    note: 국중 스캔 19~20쪽 2면 + 영인본 촬영 19~24쪽. partial_download 상태가 해소되었다.

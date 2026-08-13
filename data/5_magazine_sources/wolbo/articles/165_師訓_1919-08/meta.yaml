@@ -1,0 +1,71 @@
+article:
+  series_index: 165
+  slug: 師訓_1919-08
+  cnts_id: null
+  title: 師訓
+  author: 滄海居士
+  journal: 천도교회월보 (天道敎會月報)
+  issue_total: 108
+  publication_date: '1919-08-15'
+  section: 講演
+  page_in_journal: 35
+  partial_download: false
+  source_url: null
+source:
+  kind: facsimile_photo
+  edition: 『天道敎會月報 影印本』(天道敎中央總部, 1980)
+  photographed: '2026-08-13'
+  photographer: Soo
+  raw_dir: hyeonsang/raw/dropped_catch_10gisa/월보_이돈화_10편/
+  raw_files:
+  - 20260813_121605.jpg
+  - 20260813_121625.jpg
+  - 20260813_121633.jpg
+  segmented_by: Soo — 단(段) 수동 절단, 2026-08-13
+  note: 국립중앙도서관 스캔이 없는 편이다. 소장 영인본을 촬영해 확보했다.
+coverage:
+  실제_범위: 35~37쪽
+  보유: 3면
+  결락: 없음
+layout:
+  page_orientation: vertical_writing
+  reading_order: snake
+  divider_source: 수동 절단 (Soo, 2026-08-13) — 자동 검출 아님
+units:
+- id: unit_01
+  file: units/unit_01.png
+  role: start
+  divider_detected: false
+- id: unit_02
+  file: units/unit_02.png
+  role: continuation
+  divider_detected: false
+- id: unit_03
+  file: units/unit_03.png
+  role: continuation
+  divider_detected: false
+- id: unit_04
+  file: units/unit_04.png
+  role: continuation
+  divider_detected: false
+- id: unit_05
+  file: units/unit_05.png
+  role: continuation
+  divider_detected: false
+- id: unit_06
+  file: units/unit_06.png
+  role: continuation
+  divider_detected: false
+- id: unit_07
+  file: units/unit_07.png
+  role: continuation
+  divider_detected: false
+ocr:
+  engines:
+  - claude-opus-5
+  grade: 영인·단일
+  note: 단일 엔진 판독이다. 대조 엔진이 없어 갈린 자리가 마커로 표시되지 않는다. 마커의 부재는 일치의 증거가 아니다.
+processing_state:
+  phase_ocr: completed_1engine_2026-08-13 (claude-opus-5)
+  phase_consensus: n/a — 단일 엔진
+  phase_high_fidelity: pending
