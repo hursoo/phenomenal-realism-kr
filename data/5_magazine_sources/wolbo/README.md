@@ -78,7 +78,7 @@ wolbo/
 └── samples/                  옛한글·정책 측정용 부 표본
 ```
 
-정본 1편(C01)은 예외로 `articles/01_kwonyu_1911-01/transcripts/article_01.high_fidelity.md`에
+정본 1편(C01)은 예외로 `articles/01_勸誘_1911-01/transcripts/article_01.high_fidelity.md`에
 있다. 곧 **정본은 모두 아홉 편**이다.
 
 🔴 **86편은 이돈화의 월보 글 전부가 아니다.** 총목록 기준 138편(1922년 2월 이전 124편)

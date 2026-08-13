@@ -101,7 +101,7 @@ def main() -> int:
     if art01:
         print(f"\n본 1편 정합: series_index={art01['series_index']}, 발행일={art01['publish_date']}, 통권={art01['tonggwon']}")
         if art01['series_index'] == 1:
-            print('  ✓ 기존 articles/01_kwonyu_1911-01/ 와 series_index=1 일치')
+            print('  ✓ 기존 articles/01_勸誘_1911-01/ 와 series_index=1 일치')
         else:
             print(f"  ⚠ 기존 articles/01_… 와 다름 — 기존 폴더 series_index를 {art01['series_index']}로 갱신 필요 여부 확인")
 

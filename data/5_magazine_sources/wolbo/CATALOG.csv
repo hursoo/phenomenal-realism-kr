@@ -1,5 +1,5 @@
 ﻿series,slug,tonggwon,publish_date,section,title,author,page_start,page_range,pages_held,partial,coverage_note,bib_checked,bib_checker,bib_status,bib_note,transcript,markers,big_diff,units,divider,engines,empty_engines,cross_checked,keyword_hits
-1,001_kwonyu_1911-01,6,1911-01-15,講演,勸誘天下失樂者,李敦化,25,,3,N,,,,,,정본,50,0,5,검출,claude_opus_4_7:5 claude_opus_4_7_trimmed:5 gemini:5 gemini_trimmed:5,,0,0
+1,001_勸誘_1911-01,6,1911-01-15,講演,勸誘天下失樂者,李敦化,25,,3,N,,,,,,정본,50,0,5,검출,claude_opus_4_7:5 claude_opus_4_7_trimmed:5 gemini:5 gemini_trimmed:5,,0,0
 2,002_信念_1911-04,9,1911-04-15,講演,信念의 神聖,李敦化,26,,3,N,,,,,,draft,39,1,4,검출,claude_opus_4_7:4 claude_opus_4_7_trimmed:4 gemini:4 gemini_trimmed:4,,0,4
 3,003_宗敎_1911-06,11,1911-06-15,講演,宗敎統一은 自然의 勢,李敦化,27,,3,N,,,,,,draft,85,7,6,검출,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,gemini_trimmed,0,13
 4,004_人乃_1911-07,12,1911-07-15,敎理部,人乃天,李敦化,10,,3,N,,,,,,draft,81,3,6,검출,claude_opus_4_7:6 claude_opus_4_7_trimmed:6 gemini:6 gemini_trimmed:6,"claude_opus_4_7_trimmed,gemini_trimmed",0,0

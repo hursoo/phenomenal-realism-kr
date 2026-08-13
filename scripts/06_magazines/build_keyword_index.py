@@ -55,7 +55,7 @@ CTX = 16  # 문맥 좌우 글자 수
 
 # 정본 — 사람이 전문을 지면과 대조한 편. verified_transcripts/README.md §1.
 VERIFIED_FULL = {
-    1: 'articles/001_kwonyu_1911-01/transcripts/article_01.high_fidelity.md',
+    1: 'articles/001_勸誘_1911-01/transcripts/article_01.high_fidelity.md',
     30: 'verified_transcripts/030_最高_1915-05.high_fidelity.md',
     31: 'verified_transcripts/031_篤心_1915-06.high_fidelity.md',
     32: 'verified_transcripts/032_人生_1915-08.high_fidelity.md',

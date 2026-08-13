@@ -157,7 +157,7 @@ YID_AUTHORS = ('李敦化', '夜雷', '야뢰', '白頭山人', '백두산인',
 | | 어디 |
 |---|---|
 | **정본 8편** (C30~C37, 1915~1917) | [`../data/5_magazine_sources/wolbo/verified_transcripts/`](../data/5_magazine_sources/wolbo/verified_transcripts/) |
-| 정본 1편 (C01) | `articles/01_kwonyu_1911-01/transcripts/article_01.high_fidelity.md` |
+| 정본 1편 (C01) | `articles/01_勸誘_1911-01/transcripts/article_01.high_fidelity.md` |
 | 초벌 148편 | `articles/*/transcripts/*.high_fidelity.draft_v0.md` |
 | 영인·단일 9편 | `articles/*/transcripts/*.영인단일.md` — 대조 엔진 없음 |
 | 본문 없음 1편 | C10(통18) — 원본 스캔을 직접 판독해 확인 |

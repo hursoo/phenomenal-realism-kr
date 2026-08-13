@@ -1,23 +1,42 @@
 ---
-type: reading
-series_index: 1
-publish_date: '1911-01-15'
-tonggwon: '6'
-section: 講演
-title: 勸誘天下失樂者
-page_in_journal: '25'
-cnts_id: CNTS-00048033199
+type: transcript
+fidelity: high  # 층위 (2)
+units: [unit_1_p1u, unit_2_p1l, unit_3_p2u, unit_4_p2l, unit_5_p3u]
+article_slug: 01_勸誘_1911-01
+article_title: 勸牖天下失樂者  # v0의 「勸誘」는 시각 유사 한자 오인 → 「勸牖」로 정정 (Soo)
 author: 李敦化
-status: 정본
-source: articles/001_kwonyu_1911-01/transcripts/article_01.high_fidelity.md
-grade_note: 사람이 전문을 지면과 대조했다. 마커 없음.
+journal_issue: 천도교회월보 통권 6 (1911-01-15)
+section: 講演
+created: 2026-05-09
+updated: 2026-05-09 (v1.1 — Soo 시각 대조 41건 + 4건 명확화 해소)
+sources:
+  - hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048033199/page_001.jpg
+  - hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048033199/page_002.jpg
+  - hyeonsang/raw/journals/cheondogyo_wolbo/nl_bibliography/articles/CNTS-00048033199/page_003.jpg
+ocr_engines: [claude_opus_4_7, gemini-2.5-pro, paddleocr_chinese_cht]
+consensus_policy: _design/2026-05-09_cheondogyo_wolbo_consensus_policy_v0_1.md
+human_verified_by: Soo (2026-05-09, 41건 시각 대조 정정 + 4건 명확화 답변)
+status: draft_v1.1
+clarifications_resolved:
+  - araea_i_glyph: ᄋᆞㅣ는 한 character (사용자 표기 그대로 보존)
+  - amibogun_scope: 명시된 곳만 정정 (원 자료가 그렇게 되어 있는 곳만). 다른 ᄒᆞ니/ᄒᆞ야는 그대로 유지
+  - paragraph_break: 엔터(빈 줄)로 단락 구분
+  - emi_pattern_generalization: 미적용 — 명시된 곳만
 ---
 
-# 勸誘天下失樂者 — 읽기용 (정본)
+# 勸牖天下失樂者 — (2) 고충실 전사본 (draft v1.1)
 
-> ✅ **정본.** 사람이 전문을 원본 지면과 대조해 확정한 판이다([`../verified_transcripts/README.md`](../verified_transcripts/README.md)). 이 파일은 그 정본의 사본이며 판본의 권위는 원본 쪽에 있다.
+본 1편 5단 통합. Soo 직접 시각 대조 정정 41건 + 4건 명확화 답변 반영. unit 경계는 시각 분할(snake 흐름이라 한 문장 연속). Soo 명시 단락 분리 1곳(度過ᄒᆞᄂᆞᆫ도다 / 大聲으로 사이).
 
 ## 본문
+
+[section] 講演
+
+[title] 勸牖天下失樂者
+
+[author] 李敦化
+
+[body]
 
 人이呱呱의聲을一出ᄒᆞᆷᄋᆞㅣ有情空氣를呼吸ᄒᆞ야萬有의慾點을始發ᄒᆞ니此點의軌跡은循環曲線이라極端에達ᄒᆞᆯ一日이無ᄒᆞᆫ故로趦趄奔忙ᄒᆞᆷᄋᆞㅣ自身을自失ᄒᆞ고苦海萬頃에沉ᄒᆞ야東風焉西飄ᄒᆞ며南風焉北飄ᄒᆞ야好鳥烟花에春興을吟ᄒᆞ다가寒蛩夜雨에秋情을悲ᄒᆞ며倫敦伯林에人工을玩ᄒᆞ다가蓬萊方丈에天仙을慕ᄒᆞ야其所以然所以然의惟物을主ᄒᆞ던者ㅣ反히惟物의奴隸를成ᄒᆞ야不滿百의此生으로盈千古의憂愁를懷ᄒᆞ고極樂世界를變ᄒᆞ야悲觀生涯로度過ᄒᆞᄂᆞᆫ도다
 

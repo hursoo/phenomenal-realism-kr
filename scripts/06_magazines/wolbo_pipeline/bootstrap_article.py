@@ -7,7 +7,7 @@
 
 slug 규칙: title의 첫 2자 한자 (충돌은 YYYY-MM 차이로 폴더명 단위에서 해소).
 
-기존 #1(01_kwonyu_1911-01) 및 #10(samples/oldhangul_sample_wolbo18)은 건너뜀.
+기존 #1(01_勸誘_1911-01) 및 #10(samples/oldhangul_sample_wolbo18)은 건너뜀.
 
 Usage:
     python bootstrap_article.py --series 2          # 단일 series_index

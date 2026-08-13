@@ -1,5 +1,5 @@
 # claude-opus-4-7 via Anthropic API — vision OCR (2026-05-09)
-# Source: 01_kwonyu_1911-01/units/unit_5_p3u.png
+# Source: 01_勸誘_1911-01/units/unit_5_p3u.png
 # Tokens: in=1068 out=92 elapsed=5.3s
 
 [col 01]

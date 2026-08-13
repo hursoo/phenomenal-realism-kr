@@ -1,5 +1,5 @@
 # claude-opus-4-7 via Anthropic API — vision OCR (2026-05-09)
-# Source: 01_kwonyu_1911-01/units/unit_2_p1l.png
+# Source: 01_勸誘_1911-01/units/unit_2_p1l.png
 # Tokens: in=2686 out=664 elapsed=22.3s
 
 [col 01] 循環曲線이라極端에達ᄒᆞᆫ日이無ᄒᆞᆫ故로

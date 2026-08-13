@@ -1,5 +1,5 @@
 # claude-opus-4-7 via Anthropic API — vision OCR (2026-05-09)
-# Source: 01_kwonyu_1911-01/units/unit_1_p1u.png
+# Source: 01_勸誘_1911-01/units/unit_1_p1u.png
 # Tokens: in=1450 out=117 elapsed=7.9s
 
 [title] 勸牖天下失樂者

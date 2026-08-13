@@ -6,9 +6,9 @@ units/<unit_id>.png 입력 → ocr/paddle/<unit_id>.txt 산출.
 PaddleOCR 3.5+ 필요. 첫 실행 시 모델 자동 다운로드.
 
 Usage:
-    python run_paddle_ocr.py --article 01_kwonyu_1911-01
-    python run_paddle_ocr.py --article 01_kwonyu_1911-01 --unit unit_3_p2u
-    python run_paddle_ocr.py --article 01_kwonyu_1911-01 --lang chinese_cht
+    python run_paddle_ocr.py --article 01_勸誘_1911-01
+    python run_paddle_ocr.py --article 01_勸誘_1911-01 --unit unit_3_p2u
+    python run_paddle_ocr.py --article 01_勸誘_1911-01 --lang chinese_cht
 """
 from __future__ import annotations
 import argparse

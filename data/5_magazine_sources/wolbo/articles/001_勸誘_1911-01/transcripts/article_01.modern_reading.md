@@ -1,7 +1,7 @@
 ---
 type: transcript
 fidelity: modern_reading  # 층위 (3) — 옛한글 자모 → 현대 자모 기계적 변환
-article_slug: 01_kwonyu_1911-01
+article_slug: 01_勸誘_1911-01
 article_title: 勸牖天下失樂者
 author: 李敦化
 journal_issue: 천도교회월보 통권 6 (1911-01-15)

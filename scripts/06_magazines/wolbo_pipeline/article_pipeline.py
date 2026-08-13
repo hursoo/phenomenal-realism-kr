@@ -11,9 +11,9 @@ Stages (S=auto, H=human):
   H6. final         Soo 검수 → 본 article 권위 텍스트 확정 (인간만)
 
 Usage:
-    python article_pipeline.py status --article 01_kwonyu_1911-01
-    python article_pipeline.py next   --article 01_kwonyu_1911-01    # 다음 auto 단계 실행
-    python article_pipeline.py run    --article 01_kwonyu_1911-01 --stage consensus
+    python article_pipeline.py status --article 01_勸誘_1911-01
+    python article_pipeline.py next   --article 01_勸誘_1911-01    # 다음 auto 단계 실행
+    python article_pipeline.py run    --article 01_勸誘_1911-01 --stage consensus
 """
 from __future__ import annotations
 import argparse

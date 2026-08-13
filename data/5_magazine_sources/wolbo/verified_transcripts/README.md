@@ -6,7 +6,7 @@
 | | |
 |---|---|
 | **정본 8편** | 여기 (`*.high_fidelity.md`) |
-| 정본 1편 | `../articles/01_kwonyu_1911-01/transcripts/article_01.high_fidelity.md` |
+| 정본 1편 | `../articles/01_勸誘_1911-01/transcripts/article_01.high_fidelity.md` |
 | **합계** | **86편 중 9편** |
 | 나머지 77편 | `../articles/*/transcripts/*.high_fidelity.draft_v0.md` — **초벌** |
 

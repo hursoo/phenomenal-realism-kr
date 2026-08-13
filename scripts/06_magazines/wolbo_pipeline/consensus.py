@@ -18,10 +18,10 @@ Modes:
   draft     — (2) 고충실본 draft v0 자동 초안 생성 (인라인 ⚠️ 마커)
 
 Usage:
-  python consensus.py review  --article 01_kwonyu_1911-01
-  python consensus.py all     --article 01_kwonyu_1911-01
-  python consensus.py analyze --article 01_kwonyu_1911-01 --unit unit_3_p2u
-  python consensus.py draft   --article 01_kwonyu_1911-01
+  python consensus.py review  --article 01_勸誘_1911-01
+  python consensus.py all     --article 01_勸誘_1911-01
+  python consensus.py analyze --article 01_勸誘_1911-01 --unit unit_3_p2u
+  python consensus.py draft   --article 01_勸誘_1911-01
 
   --article는 slug, BASE 상대경로, 또는 절대경로 모두 허용.
 """
@@ -448,7 +448,7 @@ def main() -> int:
     )
     ap.add_argument('mode', choices=['analyze', 'all', 'review', 'draft'])
     ap.add_argument('--article', '-a', required=True,
-                    help='article path or slug (e.g. 01_kwonyu_1911-01)')
+                    help='article path or slug (e.g. 01_勸誘_1911-01)')
     ap.add_argument('--unit', '-u',
                     help='unit id (required for analyze mode, e.g. unit_3_p2u)')
     ap.add_argument('--engines', '-e',

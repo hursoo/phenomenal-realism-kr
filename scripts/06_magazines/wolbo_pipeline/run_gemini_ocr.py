@@ -4,9 +4,9 @@ article 폴더(`articles/<slug>/` 또는 `samples/<slug>/`)의 meta.yaml을 읽�
 units/<unit_id>.png 입력 → ocr/gemini/<unit_id>.txt 산출.
 
 Usage:
-    python run_gemini_ocr.py --article 01_kwonyu_1911-01
-    python run_gemini_ocr.py --article 01_kwonyu_1911-01 --unit unit_3_p2u
-    python run_gemini_ocr.py --article 01_kwonyu_1911-01 --model gemini-2.5-pro
+    python run_gemini_ocr.py --article 01_勸誘_1911-01
+    python run_gemini_ocr.py --article 01_勸誘_1911-01 --unit unit_3_p2u
+    python run_gemini_ocr.py --article 01_勸誘_1911-01 --model gemini-2.5-pro
 """
 from __future__ import annotations
 import argparse

@@ -1,5 +1,5 @@
 # claude-opus-4-7 via Anthropic API — vision OCR (2026-05-09)
-# Source: 01_kwonyu_1911-01/units/unit_3_p2u.png
+# Source: 01_勸誘_1911-01/units/unit_3_p2u.png
 # Tokens: in=2941 out=661 elapsed=23.4s
 
 [section] 講演

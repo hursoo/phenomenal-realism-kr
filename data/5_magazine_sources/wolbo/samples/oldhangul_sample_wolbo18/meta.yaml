@@ -115,4 +115,4 @@ processing_state:
 
 policy_refs:
   series_design: _design/2026-05-09_cheondogyo_wolbo_phase1_sample.md
-  primary_article_meta: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/articles/01_kwonyu_1911-01/meta.yaml
+  primary_article_meta: hyeonsang/_ocr_experiments/cheondogyo_wolbo_series/articles/01_勸誘_1911-01/meta.yaml
