@@ -6,7 +6,7 @@
 수치로 적어 두지 않으면 「미검수 코퍼스」라는 한 마디로 뭉뚱그려진다.**
 
 열
-    transcript          정본 · 초벌 · 없음
+    transcript          정본 · 초벌 · 영인·단일 · 없음
     markers             초벌본의 마커 수 (엔진이 갈린 자리)
     규칙·대장·C·G·미해소·면주   `wolbo_markers.py`의 등급별 자리 수
     auto_ratio          판단이 필요 없던 비율 = (규칙+대장)/markers
@@ -108,6 +108,10 @@ def main():
                 rec['transcript'] = '정본'
             else:
                 draft = next(iter(sorted((adir / 'transcripts').glob('*.draft_v0.md'))), None)
+                if not draft and any((adir / 'transcripts').glob('*.영인단일.md')):
+                    # 영인·단일 — 대조 엔진이 없어 마커가 서지 않는다. 전사본은 있다.
+                    # 이것을 「없음」으로 두면 판독 전인 편과 구별되지 않는다.
+                    rec['transcript'] = '영인·단일'
                 if draft:
                     section = ((meta.get('ancillary') or {}).get('section_label')
                                or row['section'])

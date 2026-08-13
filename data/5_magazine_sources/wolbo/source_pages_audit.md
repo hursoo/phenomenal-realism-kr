@@ -1,5 +1,9 @@
 # 원본 지면 감사 — 폴더 100개가 각각 무엇인가
 
+> ⚠️ **이 문서의 편수는 작성 시점의 것이다.** 월보 코퍼스는 2026-08-12에 86 → 156편(夜雷 39편 누락 발견), 2026-08-13에 156 → **166편**(영인본 9편)으로 늘었다.
+> 현재 수치는 [`../wolbo/CATALOG.md`](CATALOG.md)·[`TRUST.md`](TRUST.md)를 본다.
+
+
 2026-08-12. 도구: `scripts/06_magazines/audit_source_pages.py` → [`source_pages_MAP.csv`](source_pages_MAP.csv)
 
 `source_pages/`에는 폴더가 **100개**인데 코퍼스는 **86편**이다. 열넷이 무엇인지 아무 데도
