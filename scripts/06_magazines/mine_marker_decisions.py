@@ -114,9 +114,9 @@ def main():
         slug = p.name.split('.')[0]
         d = list((WOLBO / 'articles' / slug / 'transcripts').glob('*draft_v0.md'))
         if d: jobs.append((slug, d[0], p))
-    c01d = list((WOLBO / 'articles' / '01_kwonyu_1911-01' / 'transcripts').glob('*draft_v0.md'))
-    c01g = WOLBO / 'articles/01_kwonyu_1911-01/transcripts/article_01.high_fidelity.md'
-    if c01d and c01g.exists(): jobs.append(('01_kwonyu_1911-01', c01d[0], c01g))
+    c01d = list((WOLBO / 'articles' / '001_kwonyu_1911-01' / 'transcripts').glob('*draft_v0.md'))
+    c01g = WOLBO / 'articles/001_kwonyu_1911-01/transcripts/article_01.high_fidelity.md'
+    if c01d and c01g.exists(): jobs.append(('001_kwonyu_1911-01', c01d[0], c01g))
 
     for slug, dp, gp in jobs:
         rows, miss = mine(slug, dp, gp)

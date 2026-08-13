@@ -215,6 +215,39 @@ def main():
         slug = adir.name if adir else f'{n:02d}_新年_{row["publish_date"][:7]}'
         vterms = sorted({t for s, t in CROSS_CHECKED if s == n})
 
+        # 영인·단일 — 국중 스캔이 없어 영인본을 촬영하고 **한 엔진**으로만 읽은 편.
+        # 대조 엔진이 없어 마커가 서지 않는데, 그것을 「두 엔진이 같이 읽었다」와 같이
+        # 보이게 두면 안 되므로 등급을 따로 둔다(TRUST.md 「영인·단일」).
+        # 📌 초벌·정본과 **함께** 낸다. 158_我觀처럼 국중 2면과 영인본 6면이 둘 다 있는
+        #    편이 있고, 그런 편은 구간마다 나은 판이 다르다.
+        fac = (next(iter(sorted((adir / 'transcripts').glob('*.영인단일.md'))), None)
+               if adir else None)
+        if fac is not None:
+            t = fac.read_text(encoding='utf-8')
+            ffm = yaml.safe_load(t.split('---')[1]) or {}
+            fbody = t[t.index('\n[body]\n') + 8:].lstrip('\n')
+            fm = dict(base, author=ffm.get('author', ''), status='영인단일',
+                      source=str(fac.relative_to(WOLBO)), pages=ffm.get('pages', ''),
+                      ocr_engines=['claude-opus-5'],
+                      note=('영인본 촬영을 한 엔진이 판독한 판. 대조 엔진이 없어 '
+                            '갈린 자리가 표시되지 않는다.'))
+            head = (f'\n# {row["title"]} — 영인본 단일 엔진 판독\n\n'
+                    f'> **등급 · 영인·단일** — 『天道敎會月報 影印本』(天道敎中央總部, 1980)을\n'
+                    f'> Soo가 촬영하고 단(段)으로 잘라, 언어모델 **한 엔진**(claude-opus-5)이\n'
+                    f'> 판독한 판이다. **대조 엔진이 없어 갈린 자리가 마커로 표시되지 않는다.\n'
+                    f'> 마커의 부재는 일치의 증거가 아니다.** 정본이 아니다.\n')
+            other = OUT / f'{pad(slug)}.reading.미검수.md'
+            if (adir / 'transcripts').glob('*.draft_v0.md') and any(
+                    (adir / 'transcripts').glob('*.draft_v0.md')):
+                head += (f'>\n> ⚠️ **이 편에는 국립중앙도서관 스캔에서 온 다른 판도 있다** — '
+                         f'[`{other.name}`]({other.name}).\n'
+                         f'> 그쪽은 두 엔진이 대조된 판이라 **겹치는 지면에서는 그쪽이 낫다.** '
+                         f'이 판의 값은 그쪽에 **없는 지면**에 있다.\n')
+            head += '\n---\n\n'
+            fpath = OUT / f'{pad(slug)}.reading.영인단일.md'
+            fpath.write_text(frontmatter(fm) + head + fbody.rstrip() + '\n', encoding='utf-8')
+            made.append(fpath.name)
+
         base = dict(
             type='reading', series_index=n, publish_date=row['publish_date'],
             tonggwon=row['tonggwon'], section=row['section'], title=row['title'],
