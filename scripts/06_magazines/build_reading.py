@@ -110,6 +110,17 @@ ROOT = Path(__file__).resolve().parents[2]
 WOLBO = ROOT / 'data' / '5_magazine_sources' / 'wolbo'
 OUT = WOLBO / 'reading'
 
+
+def pad(slug):
+    """앞 번호를 세 자리로 채운다 — `10_` → `010_`.
+
+    GitHub 웹은 파일을 사전순으로 늘어놓는다. 1~9만 두 자리로 채워져 있으면
+    09 → 100 → 101 → 10 → 11 순이 되어 편 순서가 무너진다. 세 자리로 채우면
+    사전순이 곧 번호순이다. `reading/`은 파생물이므로 여기서만 채운다 —
+    `articles/`·`source_pages/`의 이름은 건드리지 않는다(하드코딩 참조가 많다).
+    """
+    return re.sub(r'^(\d+)_', lambda m: f'{int(m.group(1)):03d}_', slug)
+
 WARN = (
     '> ⚠️ **미검수.** 이 본문은 두 엔진(Claude·Gemini)의 판독을 기계가 해소한 것이며 '
     '사람이 지면과 대조하지 않았다.\n'
@@ -218,7 +229,7 @@ def main():
                    f'> 지면은 [`../source_pages/{slug}/`]'
                    f'(../source_pages/{slug}/)에 있다.\n'
                    f'> **「86편에 없다」고 말할 때 이 한 편은 찾아본 적이 없는 편이다.**\n')
-            path = OUT / f'{slug}.reading.전사없음.md'
+            path = OUT / f'{pad(slug)}.reading.전사없음.md'
             path.write_text(txt, encoding='utf-8')
             stats.append(dict(series=n, status='전사없음', 마커=0,
                               **{g: 0 for g in GRADES}))
@@ -241,7 +252,7 @@ def main():
                       grade_note='사람이 전문을 지면과 대조했다. 마커 없음.')
             txt = (frontmatter(fm) + f'\n# {row["title"]} — 읽기용 (정본)\n\n'
                    + WARN_VERIFIED + '\n\n## 본문\n\n' + body + '\n')
-            path = OUT / f'{slug}.reading.정본.md'
+            path = OUT / f'{pad(slug)}.reading.정본.md'
             stats.append(dict(series=n, status='정본', 마커=0,
                               **{g: 0 for g in GRADES}))
         else:                                  # 초벌 — 해소하고 등급을 남긴다
@@ -266,7 +277,7 @@ def main():
             )
             txt = (frontmatter(fm) + f'\n# {row["title"]} — 읽기용 (미검수)\n\n'
                    + WARN + '\n\n' + grade_table(c) + '\n## 본문\n\n' + body + '\n')
-            path = OUT / f'{slug}.reading.미검수.md'
+            path = OUT / f'{pad(slug)}.reading.미검수.md'
             stats.append(dict(series=n, status='미검수', 마커=c['마커'],
                               **{g: c[g] for g in GRADES}))
 
