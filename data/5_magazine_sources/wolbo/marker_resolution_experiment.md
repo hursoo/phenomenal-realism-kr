@@ -50,7 +50,7 @@ python scripts/06_magazines/mine_marker_decisions.py 4   # 앵커 4자
 
 | | |
 |---|---|
-| 정본 9편의 초벌 마커 | 1,376 |
+| 정본 9편의 초벌 마커 (C118 편입 전 기준) | 1,376 |
 | 대장 확보 | **656 (47.7%)** |
 | └ `verdict=C` (Claude 채택) | 273 |
 | └ `verdict=G` (Gemini 채택) | 173 |
@@ -437,7 +437,7 @@ C30이 40%였던 것은 그 편이 유난히 나빴던 것이고 **전체 평균
 
 ## 관련
 
-- [`verified_transcripts/`](verified_transcripts/) — 정본 9편과 검수 규약
+- [`verified_transcripts/`](verified_transcripts/) — 정본과 검수 규약
 - [`verified_passages.md`](verified_passages.md) — 인용 대목의 원문 대조
 - [`screening_1922.md`](screening_1922.md) — 1922년 이전 선별
 - [`wolbo54_status/`](wolbo54_status/) — 지면 무결성과 v2 차단 기록
