@@ -52,3 +52,6 @@ logs/
 # ── ripgrep 검색 제외 목록 ──
 # ~/work/.ignore 를 가리키는 심볼릭 링크. 기기별 로컬 설정이라 추적하지 않는다.
 .ignore
+
+# WSL — 윈도우에서 내려받은 파일에 붙는 대체 스트림
+*:Zone.Identifier
